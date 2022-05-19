@@ -2,7 +2,7 @@
 /*小屏幕下(手机类)的样式*/
 @media only screen and (max-width: 601px) {
     .container {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -257,7 +257,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #efc0e5 0%, #e8a3d7 100%);
     opacity: 0.8;
 }
 
@@ -582,9 +582,9 @@ header .go-back i {
 
 .bg-cover .description {
     font-weight: 300;
-    font-size: 1.25rem;
-    line-height: 1.4em;
-    color: #eee;
+    font-size: 1.5rem;
+    line-height: 1.7em;
+    color: #ff0a85;
 }
 
 .bg-cover .post-title {
@@ -1319,7 +1319,7 @@ thead {
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+    background: linear-gradient(to right, #f275e9 0%, #ea28df 100%) !important;
 }
 
 .chip .tag-length {
@@ -1897,17 +1897,17 @@ footer .copy-right {
 .top-scroll {
     display: none;
     position: fixed;
-    right: 15px;
-    bottom: 15px;
-    padding-top: 15px;
+    right: 12px;
+    bottom: 12px;
+    padding-top: 12px;
     margin-bottom: 0;
     z-index: 998;
 }
 
 .top-scroll .btn-floating {
     background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
-    width: 48px;
-    height: 48px;
+    width: 30px;
+    height: 30px;
 }
 
 .top-scroll .btn-floating i {
