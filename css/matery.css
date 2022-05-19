@@ -1897,9 +1897,9 @@ footer .copy-right {
 .top-scroll {
     display: none;
     position: fixed;
-    right: 12px;
-    bottom: 12px;
-    padding-top: 12px;
+    right: 0px;
+    bottom: 0px;
+    padding-top: 0px;
     margin-bottom: 0;
     z-index: 998;
 }
