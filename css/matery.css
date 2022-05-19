@@ -1897,11 +1897,11 @@ footer .copy-right {
 .top-scroll {
     display: none;
     position: fixed;
-    right: 0px;
-    bottom: 0px;
-    padding-top: 0px;
+    right: 15px;
+    bottom: 15px;
+    padding-top: 15px;
     margin-bottom: 0;
-    z-index: 998;
+    z-index: 0;
 }
 
 .top-scroll .btn-floating {
@@ -2139,4 +2139,18 @@ footer .copy-right {
     height: 50px;
     padding: 0;
     margin: 0;
+}
+/*滚动条*/
+::-webkit-scrollbar-thumb {
+    background-color: #FF2A68;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    border-radius: 3em;
+}
+::-webkit-scrollbar-track {
+    background-color: #ffcacaff;
+    border-radius: 3em;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 15px;
 }
