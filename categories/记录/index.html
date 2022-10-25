@@ -37,7 +37,7 @@
 
    <style>
     body{
-       background-image: url(https://img1.baidu.com/it/u=3208161242,2128026207&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=675);
+       background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148901163.jpg?w=1480&t=st=1666668624~exp=1666669224~hmac=2c97d4cc16ce630016e3f3affe28cfb46209aedb296e3ad568fa0b768b965fe1);
        background-repeat:no-repeat;
        background-size:cover;
        background-attachment:fixed;
@@ -288,7 +288,9 @@
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
 
@@ -318,20 +320,20 @@
                 </a>
                 
                 
-                <a href="/categories/%E6%8F%90%E7%AC%94/" title="提笔: 2">
+                <a href="/categories/%E5%B0%8F%E7%BA%B8%E6%9D%A1/" title="小纸条: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">提笔
-                        <span class="tag-length">2</span>
+                            style="background-color: #F5EEF8;">小纸条
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E5%B0%8F%E7%BA%B8%E6%9D%A1/" title="小纸条: 1">
+                <a href="/categories/%E6%8F%90%E7%AC%94/" title="提笔: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">小纸条
-                        <span class="tag-length">1</span>
+                            style="background-color: #D5F5E3;">提笔
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
