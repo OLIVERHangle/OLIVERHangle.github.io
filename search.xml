@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Python学习：Chapter3</title>
+      <link href="/2022/11/06/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%203/"/>
+      <url>/2022/11/06/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%203/</url>
+      
+        <content type="html"><![CDATA[<h2 id="3-2-1修改列表元素"><a href="#3-2-1修改列表元素" class="headerlink" title="3.2.1修改列表元素"></a>3.2.1修改列表元素</h2><h3 id="lt-1-gt-修改其中的元素"><a href="#lt-1-gt-修改其中的元素" class="headerlink" title="<1>修改其中的元素"></a>&lt;1&gt;修改其中的元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']print(a)a[0]='4'print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['1', '2', '3']['4', '2', '3']</code></pre><p>列表相当于是一个数组</p><h3 id="lt-2-gt-插入元素"><a href="#lt-2-gt-插入元素" class="headerlink" title="<2>插入元素"></a>&lt;2&gt;插入元素</h3><h4 id="1-末尾插入：append"><a href="#1-末尾插入：append" class="headerlink" title="1 末尾插入：append"></a>1 末尾插入：append</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']print(a)a.append("5")#注意使用时用.来调用print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['1', '2', '3']['1', '2', '3', '5']</code></pre><h3 id="连续使用append可以连续在后面插入"><a href="#连续使用append可以连续在后面插入" class="headerlink" title="连续使用append可以连续在后面插入"></a>连续使用append可以连续在后面插入</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=[]print(a)a.append("1")a.append("2")a.append("3")print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>[]['1', '2', '3']</code></pre><h3 id="今早晨稍微学了cha3的一部分内容，"><a href="#今早晨稍微学了cha3的一部分内容，" class="headerlink" title="今早晨稍微学了cha3的一部分内容，"></a><strong>今早晨稍微学了cha3的一部分内容，</strong></h3><h3 id="尝试用jupyter-notebook生成md上传到"><a href="#尝试用jupyter-notebook生成md上传到" class="headerlink" title="尝试用jupyter notebook生成md上传到"></a><strong>尝试用jupyter notebook生成md上传到</strong></h3><h3 id="我和阿狐的page上"><a href="#我和阿狐的page上" class="headerlink" title="我和阿狐的page上"></a><strong>我和阿狐的page上</strong></h3><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>阿狐の小纸条</title>
       <link href="/2022/05/21/%E9%98%BF%E7%8B%90%E7%9A%84%E7%BA%B8%E6%9D%A1/"/>
       <url>/2022/05/21/%E9%98%BF%E7%8B%90%E7%9A%84%E7%BA%B8%E6%9D%A1/</url>
@@ -55,31 +80,6 @@
     
     <entry>
       <title>第一次为你提笔</title>
-      <link href="/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94%E6%9F%B4%E6%9F%B4/"/>
-      <url>/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94%E6%9F%B4%E6%9F%B4/</url>
-      
-        <content type="html"><![CDATA[<p><strong>我是凡夫俗子，</strong><br><strong>笔尖流不出华丽的词藻。</strong></p><p><strong>因为你</strong><br><strong>贫瘠土壤开出了文字的花。</strong></p><p><strong>我们都不想长大。</strong></p><p><strong>饱食人间烟火，</strong><br><strong>心却不曾沾染凡俗之气。</strong></p><p><strong>我爱你，</strong><br><strong>你是我生存的原因。</strong></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 提笔 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 柴柴 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>第一次为你提笔</title>
       <link href="/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94/"/>
       <url>/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94/</url>
       
@@ -96,6 +96,31 @@
         <tags>
             
             <tag> 阿狐姐姐 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第一次为你提笔</title>
+      <link href="/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94%E6%9F%B4%E6%9F%B4/"/>
+      <url>/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94%E6%9F%B4%E6%9F%B4/</url>
+      
+        <content type="html"><![CDATA[<p><strong>我是凡夫俗子，</strong><br><strong>笔尖流不出华丽的词藻。</strong></p><p><strong>因为你</strong><br><strong>贫瘠土壤开出了文字的花。</strong></p><p><strong>我们都不想长大。</strong></p><p><strong>饱食人间烟火，</strong><br><strong>心却不曾沾染凡俗之气。</strong></p><p><strong>我爱你，</strong><br><strong>你是我生存的原因。</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 提笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
             
         </tags>
       
