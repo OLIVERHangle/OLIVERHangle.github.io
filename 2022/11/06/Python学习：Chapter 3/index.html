@@ -30,8 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -414,7 +414,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    145
+                    751
                 </div>
                 
 
@@ -434,7 +434,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="3-2-1修改列表元素"><a href="#3-2-1修改列表元素" class="headerlink" title="3.2.1修改列表元素"></a>3.2.1修改列表元素</h2><h3 id="lt-1-gt-修改其中的元素"><a href="#lt-1-gt-修改其中的元素" class="headerlink" title="<1>修改其中的元素"></a>&lt;1&gt;修改其中的元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
+                <h2 id="3-1使用列表中的各个值"><a href="#3-1使用列表中的各个值" class="headerlink" title="3.1使用列表中的各个值"></a>3.1使用列表中的各个值</h2><p>注意！ 索引可以指定负数！</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
+print(a[-1])
+print(a[-2])
+print(a[-3])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>3
+2
+1
+</code></pre>
+<p>负数即倒数第几个</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">bicycles = ['trek','cannondale']
+message = f"my bicycle is a {bicycles[1].title()}."
+print(message)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>my bicycle is a Cannondale.
+</code></pre>
+<p>f花括号内可以写变量。</p>
+<h2 id="3-2修改列表元素"><a href="#3-2修改列表元素" class="headerlink" title="3.2修改列表元素"></a>3.2修改列表元素</h2><h3 id="lt-1-gt-修改其中的元素"><a href="#lt-1-gt-修改其中的元素" class="headerlink" title="<1>修改其中的元素"></a>&lt;1&gt;修改其中的元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
 print(a)
 
 a[0]='4'
@@ -453,7 +471,8 @@ print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <pre><code>['1', '2', '3']
 ['1', '2', '3', '5']
 </code></pre>
-<h3 id="连续使用append可以连续在后面插入"><a href="#连续使用append可以连续在后面插入" class="headerlink" title="连续使用append可以连续在后面插入"></a>连续使用append可以连续在后面插入</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=[]
+<p> 连续使用append可以连续在后面插入</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a=[]
 print(a)
 a.append("1")
 a.append("2")
@@ -463,7 +482,129 @@ print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <pre><code>[]
 ['1', '2', '3']
 </code></pre>
-<h3 id="今早晨稍微学了cha3的一部分内容，"><a href="#今早晨稍微学了cha3的一部分内容，" class="headerlink" title="今早晨稍微学了cha3的一部分内容，"></a><strong>今早晨稍微学了cha3的一部分内容，</strong></h3><h3 id="尝试用jupyter-notebook生成md上传到"><a href="#尝试用jupyter-notebook生成md上传到" class="headerlink" title="尝试用jupyter notebook生成md上传到"></a><strong>尝试用jupyter notebook生成md上传到</strong></h3><h3 id="我和阿狐的page上"><a href="#我和阿狐的page上" class="headerlink" title="我和阿狐的page上"></a><strong>我和阿狐的page上</strong></h3><hr>
+<h4 id="2-选定位置前：insert"><a href="#2-选定位置前：insert" class="headerlink" title="2 选定位置前：insert"></a>2 选定位置前：insert</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
+print(a)
+
+a.insert(0,'han')
+print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>['1', '2', '3']
+['han', '1', '2', '3']
+</code></pre>
+<p>注意！insert在指定元素   之前   插入！</p>
+<h3 id="lt-3-gt-删除元素"><a href="#lt-3-gt-删除元素" class="headerlink" title="<3>删除元素"></a>&lt;3&gt;删除元素</h3><h4 id="1-del-语句-删除-（需要指定索引）"><a href="#1-del-语句-删除-（需要指定索引）" class="headerlink" title="1 del 语句 删除 （需要指定索引）"></a>1 del 语句 删除 （需要指定索引）</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
+print(a)
+
+del a[0]
+print(a)
+
+del a[1]
+print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>['1', '2', '3']
+['2', '3']
+['2']
+</code></pre>
+<h4 id="2-pop-删除"><a href="#2-pop-删除" class="headerlink" title="2 pop() 删除"></a>2 pop() 删除</h4><h5 id="（）不含任何内容，默认最后一个值被弹出"><a href="#（）不含任何内容，默认最后一个值被弹出" class="headerlink" title="（）不含任何内容，默认最后一个值被弹出"></a>（）不含任何内容，默认最后一个值被弹出</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
+print(a)
+
+poped_a = a.pop()
+print(a)
+print(poped_a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>['1', '2', '3']
+['1', '2']
+3
+</code></pre>
+<p>a被pop之后，a最后一个元素被弹出，而a.pop函数返回值就是的被弹出的最后一个元素</p>
+<h5 id="指定索引，弹出任意位置处的元素"><a href="#指定索引，弹出任意位置处的元素" class="headerlink" title="指定索引，弹出任意位置处的元素"></a>指定索引，弹出任意位置处的元素</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
+print(a)
+
+poped_a1 = a.pop(1)
+print(a)
+print(poped_a1)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>['1', '2', '3']
+['1', '3']
+2
+</code></pre>
+<h4 id="根据值删除元素：remove-void返回类型"><a href="#根据值删除元素：remove-void返回类型" class="headerlink" title="根据值删除元素：remove (void返回类型)"></a>根据值删除元素：remove (void返回类型)</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
+print(a)
+
+a.remove('2')
+print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>['1', '2', '3']
+['1', '3']
+</code></pre>
+<h2 id="3-3-组织列表"><a href="#3-3-组织列表" class="headerlink" title="3.3 组织列表"></a>3.3 组织列表</h2><h3 id="sort-对列表永久排序-首字母顺序"><a href="#sort-对列表永久排序-首字母顺序" class="headerlink" title="sort() 对列表永久排序(首字母顺序)"></a>sort() 对列表永久排序(首字母顺序)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']
+print(a)
+
+a.sort()
+print(f"\n{a}")
+
+#如果想要反向排序，使用sort(reverse=True)
+a.sort(reverse=True)
+print(f"\n{a}")
+
+#注意：
+print(a.sort())
+
+#该语句不是打印a.sort（）后的 a,而是a.sort()函数的返回值，void无返回值。
+#所以先进行排序，后print。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>['c', 'b', 'z', 'a', 'd']
+
+['a', 'b', 'c', 'd', 'z']
+
+['z', 'd', 'c', 'b', 'a']
+None
+</code></pre>
+<h3 id="sorted-对列表临时排序"><a href="#sorted-对列表临时排序" class="headerlink" title="sorted() 对列表临时排序"></a>sorted() 对列表临时排序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']
+print(a)
+
+print("\n临时排序后的列表：")
+print(sorted(a))
+
+print("\n再输出原来的列表：")
+print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>['c', 'b', 'z', 'a', 'd']
+
+临时排序后的列表：
+['a', 'b', 'c', 'd', 'z']
+
+再输出原来的列表：
+['c', 'b', 'z', 'a', 'd']
+</code></pre>
+<p>注意：sorted()使用语法：sorted(列表) </p>
+<pre><code> 我们使用的是sorted的返回值（列表类），而sort对原列表不会有任何修改。
+</code></pre>
+<h3 id="reverse-对列表永久-原顺序反转"><a href="#reverse-对列表永久-原顺序反转" class="headerlink" title="reverse() 对列表永久 原顺序反转"></a>reverse() 对列表永久 原顺序反转</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']
+print(a)
+
+a.reverse()
+
+print(f"\n{a}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>['c', 'b', 'z', 'a', 'd']
+
+['d', 'a', 'z', 'b', 'c']
+</code></pre>
+<h3 id="len-确定列表长度"><a href="#len-确定列表长度" class="headerlink" title="len() 确定列表长度"></a>len() 确定列表长度</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']
+print(len(a))
+
+print("\n试图给b赋予a的长度：")
+b = len(a)
+print(f"a的长度是：{b}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>5
+
+试图给b赋予a的长度：
+a的长度是：5
+</code></pre>
+<h2 id="3-4-避免索引错误"><a href="#3-4-避免索引错误" class="headerlink" title="3.4 避免索引错误"></a>3.4 避免索引错误</h2><p>当出现循环时，可以使用len()知道长度，保证索引&lt;len()的值，注意len（）不能直接用</p>
 
                 
             </div>
@@ -1314,4 +1455,4 @@ $(function () {
     
     <script src="/js/sakura.js"></script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":190,"height":360},"mobile":{"show":true},"rect":"opacity:0.5","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":120,"height":300},"mobile":{"show":true},"rect":"opacity:0.5","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
