@@ -30,8 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -414,7 +414,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    712
+                    1.3k
                 </div>
                 
 
@@ -545,12 +545,112 @@ print(sum(digits))<span aria-hidden="true" class="line-numbers-rows"><span></spa
 <h3 id="4-3-4-列表解析"><a href="#4-3-4-列表解析" class="headerlink" title="4.3.4 列表解析"></a>4.3.4 列表解析</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#上面输入平方数的例子还可以用两行代码解决：
 square_list = [value ** 2 for value in range (1,11)]
 #本质是把一个列表转换成另一个列表
-#格式：列表1 = [表达式 for 变量 in 列表]
+#格式：列表1 = [表达式 for 变量 in 列表2]
 print(square_list)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 </code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="4-4-使用列表的一部分"><a href="#4-4-使用列表的一部分" class="headerlink" title="4.4 使用列表的一部分"></a>4.4 使用列表的一部分</h2><h3 id="使用切片"><a href="#使用切片" class="headerlink" title="使用切片"></a>使用切片</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
+
+print(digits[0:3])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>[1, 2, 3]
+</code></pre>
+<h4 id="切片使用方法：-列表-起点：终点"><a href="#切片使用方法：-列表-起点：终点" class="headerlink" title="切片使用方法： 列表[起点：终点]"></a>切片使用方法： 列表[起点：终点]</h4><p>如果写成 列表[:终点]，起点默认索引为0；<br>如果写成 列表[起点：]，则默认重点到列表最后一个</p>
+<h4 id="如何打印最后三个元素？"><a href="#如何打印最后三个元素？" class="headerlink" title="如何打印最后三个元素？"></a>如何打印最后三个元素？</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
+
+print(digits[-3:])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>[8, 9, 0]
+</code></pre>
+<p>列表[-倒数几个：]</p>
+<h4 id="每间隔两个元素就提取一个（在选取范围内）"><a href="#每间隔两个元素就提取一个（在选取范围内）" class="headerlink" title="每间隔两个元素就提取一个（在选取范围内）"></a>每间隔两个元素就提取一个（在选取范围内）</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
+
+print(digits[0:10:2])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>[1, 3, 5, 7, 9]
+</code></pre>
+<p>[起点：重点：步长]，步长不输入（没有第二个冒号）默认为1.</p>
+<h3 id="遍历切片：使用for循环-切片"><a href="#遍历切片：使用for循环-切片" class="headerlink" title="遍历切片：使用for循环+切片"></a>遍历切片：使用for循环+切片</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
+print("No 5 to No 9 number in my digits are:\n")
+for digit in digits[4:8]:        #利用单复数区别 列表 和 an
+    print(digit)#注意这里打印的是变量<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>No 5 to No 9 number in my digits are:
+
+5
+6
+7
+8
+</code></pre>
+<h3 id="复制列表-使用切片"><a href="#复制列表-使用切片" class="headerlink" title="复制列表 (使用切片)"></a>复制列表 (使用切片)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
+copy_digits = digits[:]
+
+digits.append(10)
+copy_digits.append(11)
+print(digits)
+print(copy_digits)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11]
+</code></pre>
+<h4 id="注意语法：-列表1-x3D-列表2"><a href="#注意语法：-列表1-x3D-列表2" class="headerlink" title="注意语法： 列表1 = 列表2[:]"></a>注意语法： 列表1 = 列表2[:]</h4><p>这样才是两个列表</p>
+<p>如果没有切片直接复制</p>
+<p>则两个列表指向同一个储存空间，本质上是一个列表</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
+copy_digits = digits
+
+digits.append(10)
+copy_digits.append(11)
+print(digits)
+print(copy_digits)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11]
+</code></pre>
+<h2 id="4-5-元组-不可改变的列表"><a href="#4-5-元组-不可改变的列表" class="headerlink" title="4.5 元组-不可改变的列表"></a>4.5 元组-不可改变的列表</h2><h3 id="定义语法："><a href="#定义语法：" class="headerlink" title="定义语法："></a>定义语法：</h3><p>元组名 = (元素1，元素2，…)</p>
+<p>访问和列表相同</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)
+print(a[0])
+print(a[1])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>30
+40
+</code></pre>
+<p>不能改变：指不能单独给其内元素赋值。(报错)</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)
+a[0] = 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+/var/folders/1j/k13fttf13b5d6j8_m4q12rgr0000gn/T/ipykernel_53119/1136073212.py in &lt;module&gt;
+      1 a = (30,40)
+----&gt; 2 a[0] = 1
+
+
+TypeError: 'tuple' object does not support item assignment
+</code></pre>
+<h3 id="遍历元组-和for循环"><a href="#遍历元组-和for循环" class="headerlink" title="遍历元组-和for循环"></a>遍历元组-和for循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40,50)
+
+for an in a:
+    print(an)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>30
+40
+50
+</code></pre>
+<h3 id="修改元组变量-重新定义"><a href="#修改元组变量-重新定义" class="headerlink" title="修改元组变量-重新定义"></a>修改元组变量-重新定义</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)
+print(a)
+
+a = (40,50)
+print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>(30, 40)
+(40, 50)
+</code></pre>
 
                 
             </div>
@@ -1401,6 +1501,6 @@ $(function () {
     
 
     
-    <script src="/js/sakura.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script src="/js/sakura.js"></script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":120,"height":300},"mobile":{"show":true},"rect":"opacity:0.5","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":120,"height":300},"mobile":{"show":true},"rect":"opacity:0.5","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>
