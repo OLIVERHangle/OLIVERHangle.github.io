@@ -30,8 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -414,7 +414,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    620
+                    913
                 </div>
                 
 
@@ -535,7 +535,7 @@ Value: black
 <h3 id="6-3-2-遍历字典中的所有键名变量-或者-键值"><a href="#6-3-2-遍历字典中的所有键名变量-或者-键值" class="headerlink" title="6.3.2 遍历字典中的所有键名变量 或者 键值"></a>6.3.2 遍历字典中的所有键名变量 或者 键值</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">for 键值变量an in 列表名.keys():
     执行块
     
-.keys()是让前面的变量对应键值名变量。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+.keys()是让前面的变量对应键值名变量。（访问以键值名构成的列表）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}
@@ -553,7 +553,7 @@ Key: Color
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">for 键值变量an in 列表名.values():
     执行块
     
-.values()是让前面的变量对应键值。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+.values()是让前面的变量对应键值。（访问以键值构成的列表）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}
@@ -580,6 +580,82 @@ for key in sorted(car.keys()):
 Key: Color
 
 Key: Price
+</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">favo_language = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python'
+}
+
+print("The following languages have been mentioned:")
+for language in  set(favo_language.values()):
+    print(language.title())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>The following languages have been mentioned:
+Ruby
+C
+Python
+</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#对列表去重处理： set(列表名)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="6-4-嵌套（套娃）"><a href="#6-4-嵌套（套娃）" class="headerlink" title="6.4 嵌套（套娃）"></a>6.4 嵌套（套娃）</h2><h3 id="6-4-1-6-字典列表"><a href="#6-4-1-6-字典列表" class="headerlink" title="6.4.1 6.字典列表"></a>6.4.1 6.字典列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car_1 = {'color':'black','price':3000}
+car_2 = {'color':'whilt','price':34000}
+car_3 = {'color':'yellow','price':342000}
+
+cars = [car_1,car_2,car_3]  #注意这里列表用的是方括号
+
+print(cars)
+
+for car in cars:
+    print(car)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>[{'color': 'black', 'price': 3000}, {'color': 'whilt', 'price': 34000}, {'color': 'yellow', 'price': 342000}]
+{'color': 'black', 'price': 3000}
+{'color': 'whilt', 'price': 34000}
+{'color': 'yellow', 'price': 342000}
+</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#创建多个的时候可以使用for（） 和 range（）
+aliens = []
+for alien_number in range(0,5):
+    new_alien = {'color':'green','speed':'slow'}
+    aliens.append(new_alien)
+
+for alien_number in range(5,30):
+    new_alien = {'color':'yellow','speed':'fast'}
+    aliens.append(new_alien)
+
+for alien in aliens[0:30:5]:
+    print(alien)
+print(len(aliens))
+    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>{'color': 'green', 'speed': 'slow'}
+{'color': 'yellow', 'speed': 'fast'}
+{'color': 'yellow', 'speed': 'fast'}
+{'color': 'yellow', 'speed': 'fast'}
+{'color': 'yellow', 'speed': 'fast'}
+{'color': 'yellow', 'speed': 'fast'}
+30
+</code></pre>
+<h3 id="6-4-2-在字典中储存列表"><a href="#6-4-2-在字典中储存列表" class="headerlink" title="6.4.2 在字典中储存列表"></a>6.4.2 在字典中储存列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">pizza = {
+    'crust':'thick',
+    'toppings':['mushrooms','extra cheese'],
+}
+for topping in pizza.get('toppings'): #也可以写成 pizza['toppingsb']
+    print(topping)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>mushrooms
+extra cheese
+</code></pre>
+<h3 id="6-4-3-在字典中储存字典"><a href="#6-4-3-在字典中储存字典" class="headerlink" title="6.4.3 在字典中储存字典"></a>6.4.3 在字典中储存字典</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">pizza = {
+    'toppings':{'first':'mushrooms','second':'extra cheese'}
+}
+for sequence,topping in pizza['toppings'].items():
+    print(f"{sequence}: {topping}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>first: mushrooms
+second: extra cheese
 </code></pre>
 
                 
