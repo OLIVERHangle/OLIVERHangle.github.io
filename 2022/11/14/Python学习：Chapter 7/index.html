@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Python学习：Chapter4, 阿狐和柴柴">
+    <meta name="keywords" content="Python学习：Chapter7, 阿狐和柴柴">
     <meta name="description" content="又是想rua小狐姐姐的一天">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python学习：Chapter4 | 阿狐和柴柴</title>
+    <title>Python学习：Chapter7 | 阿狐和柴柴</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -259,12 +259,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python学习：Chapter4</h1>
+                    <h1 class="description center-align post-title">Python学习：Chapter7</h1>
                 </div>
             </div>
         </div>
@@ -405,7 +405,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-11-08
+                    2022-11-14
                 </div>
                 
 
@@ -414,7 +414,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.3k
+                    232
                 </div>
                 
 
@@ -434,223 +434,70 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Chapter4-操作列表"><a href="#Chapter4-操作列表" class="headerlink" title="Chapter4 操作列表"></a>Chapter4 操作列表</h1><h2 id="4-1-for循环的使用"><a href="#4-1-for循环的使用" class="headerlink" title="4.1 for循环的使用"></a>4.1 for循环的使用</h2><h3 id="4-1-1-这是一个利用循环打印的例子："><a href="#4-1-1-这是一个利用循环打印的例子：" class="headerlink" title="4.1.1 这是一个利用循环打印的例子："></a>4.1.1 这是一个利用循环打印的例子：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']
-for an in a:   #冒号必不可少
-    print(an)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+                <h1 id="用户输入和while循环"><a href="#用户输入和while循环" class="headerlink" title="用户输入和while循环"></a>用户输入和while循环</h1><h2 id="7-1-input（）字符串输入"><a href="#7-1-input（）字符串输入" class="headerlink" title="7.1 input（）字符串输入"></a>7.1 input（）字符串输入</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">用户输入文本，把文本呈现给用户<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre><code>a
-b
-c
-d
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">message = input("请输入返回的文本：")
+print(message)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre><code>请输入返回的文本：12345
+12345
 </code></pre>
-<h3 id="4-1-2-利用for循环进行更多操作的例子："><a href="#4-1-2-利用for循环进行更多操作的例子：" class="headerlink" title="4.1.2 利用for循环进行更多操作的例子："></a>4.1.2 利用for循环进行更多操作的例子：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']
-for an in a:   #冒号必不可少
-    print(f"{an.title()} is uppercase of {an}")
-    print("next char is:\n")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="7-1-1-编写清晰的程序"><a href="#7-1-1-编写清晰的程序" class="headerlink" title="7.1.1 编写清晰的程序"></a>7.1.1 编写清晰的程序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">原理：
 
-<pre><code>A is uppercase of a
-next char is:
+变量 = input（参数 ：说明/指示） <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-B is uppercase of b
-next char is:
 
-C is uppercase of c
-next char is:
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name = input("please enter your name:")
+print(f"Hello,{name}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-D is uppercase of d
-next char is:
+<pre><code>please enter your name:Oliver
+Hello,Oliver
 </code></pre>
-<p>结果说明：<br>  缩进的都属于for循环<br>  an相当于计数器变量作索引的a[i]。</p>
-<h3 id="4-1-2-在for循环结束后执行操作"><a href="#4-1-2-在for循环结束后执行操作" class="headerlink" title="4.1.2 在for循环结束后执行操作"></a>4.1.2 在for循环结束后执行操作</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']
-for an in a:   #冒号必不可少
-    print(f"{an.title()} is uppercase of {an}")
-print("test end.")  #当缩进没有的时候，默认为在for循环之外。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">echo = "语句1"
+#echo = echo + “语句2“ 可以写成：
+echo += "语句2"
 
-<pre><code>A is uppercase of a
-B is uppercase of b
-C is uppercase of c
-D is uppercase of d
-test end.
+print(echo)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>语句1语句2
 </code></pre>
-<h2 id="4-2-避免缩进错误"><a href="#4-2-避免缩进错误" class="headerlink" title="4.2 避免缩进错误"></a>4.2 避免缩进错误</h2><h3 id="4-2-1-忘记缩进"><a href="#4-2-1-忘记缩进" class="headerlink" title="4.2.1 忘记缩进"></a>4.2.1 忘记缩进</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']
-for an in a:
-print(an)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="7-1-2-int-：将input（）变成int型进行运算"><a href="#7-1-2-int-：将input（）变成int型进行运算" class="headerlink" title="7.1.2 int()：将input（）变成int型进行运算"></a>7.1.2 int()：将input（）变成int型进行运算</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">age = input("What’s your age?:")
+age = int(age)
+print(f"Your age is {age}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-
-<pre><code>  File "/var/folders/1j/k13fttf13b5d6j8_m4q12rgr0000gn/T/ipykernel_49995/1502029580.py", line 3
-    print(an)
-    ^
-IndentationError: expected an indented block
+<pre><code>What’s your age?:65
+Your age is 65
 </code></pre>
-<p>当没有缩进时，for循环找不到循环体，会报错。</p>
-<h3 id="原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号"><a href="#原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号" class="headerlink" title="原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号"></a>原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号</h3><h2 id="4-3-创建数值列表"><a href="#4-3-创建数值列表" class="headerlink" title="4.3 创建数值列表"></a>4.3 创建数值列表</h2><h3 id="4-3-1-range-和list"><a href="#4-3-1-range-和list" class="headerlink" title="4.3.1 range()和list()"></a>4.3.1 range()和list()</h3><p>range()的三个用法：</p>
-<p>range(x)  和  range(0,x)一样<br>range(x,y)<br>range(x,y,z)</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(6)) #相当于默认从0开始数6个<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="7-1-3-求模运算符"><a href="#7-1-3-求模运算符" class="headerlink" title="7.1.3 求模运算符%"></a>7.1.3 求模运算符%</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">作用：将两个数相除并返回余数
+如果一个数可被另一个数字整除，%返回值为0
+常见用途：判断奇数偶数。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">5%3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 
-<pre><code>[0, 1, 2, 3, 4, 5]
+<pre><code>2
 </code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(0,6)) #指定从0开始数6个<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">6%3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 
-<pre><code>[0, 1, 2, 3, 4, 5]
+<pre><code>0
 </code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(3,12)) #相当于从3到12，步长为1，注意右括号12实际数到11<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">5%1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 
-<pre><code>[3, 4, 5, 6, 7, 8, 9, 10, 11]
+<pre><code>0
 </code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(3,12,2))#步长为2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-<pre><code>[3, 5, 7, 9, 11]
-</code></pre>
-<h3 id="4-3-2-用range-创建数字列表"><a href="#4-3-2-用range-创建数字列表" class="headerlink" title="4.3.2 用range()创建数字列表"></a>4.3.2 用range()创建数字列表</h3><h4 id="打印1-10的偶数"><a href="#打印1-10的偶数" class="headerlink" title="打印1-10的偶数"></a>打印1-10的偶数</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">even_num = list(range(2,11,2))  #注意，左边从2开始，右边界限为11（左面取得到，右面够不到）
-print(even_num)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<pre><code>[2, 4, 6, 8, 10]
-</code></pre>
-<h4 id="创建一个列表，包含1-10的平方"><a href="#创建一个列表，包含1-10的平方" class="headerlink" title="创建一个列表，包含1-10的平方"></a>创建一个列表，包含1-10的平方</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">square_list = [] #先创建一个空列表
-
-for value in range(1,11):
-    
-    square = value ** 2 #每一次线计算一下平方的值，再append到list里面
-    square_list.append(square)
-    #上面两行可以写成： spuare_list.append(value ** 2)
-    
-print(square_list)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-</code></pre>
-<h3 id="4-3-3-对数字列表执行简单的统计计算"><a href="#4-3-3-对数字列表执行简单的统计计算" class="headerlink" title="4.3.3 对数字列表执行简单的统计计算"></a>4.3.3 对数字列表执行简单的统计计算</h3><h4 id="找数字列表-元素为数字-的-最大值、最小值、总和"><a href="#找数字列表-元素为数字-的-最大值、最小值、总和" class="headerlink" title="找数字列表(元素为数字)  的   最大值、最小值、总和"></a>找数字列表(元素为数字)  的   最大值、最小值、总和</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-
-print(max(digits))
-
-print(min(digits))
-
-print(sum(digits))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>9
-0
-45
-</code></pre>
-<h3 id="4-3-4-列表解析"><a href="#4-3-4-列表解析" class="headerlink" title="4.3.4 列表解析"></a>4.3.4 列表解析</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#上面输入平方数的例子还可以用两行代码解决：
-square_list = [value ** 2 for value in range (1,11)]
-#本质是把一个列表转换成另一个列表
-#格式：列表1 = [表达式 for 变量 in 列表2]
-print(square_list)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-</code></pre>
-<h2 id="4-4-使用列表的一部分"><a href="#4-4-使用列表的一部分" class="headerlink" title="4.4 使用列表的一部分"></a>4.4 使用列表的一部分</h2><h3 id="使用切片"><a href="#使用切片" class="headerlink" title="使用切片"></a>使用切片</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-
-print(digits[0:3])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 2, 3]
-</code></pre>
-<h4 id="切片使用方法：-列表-起点：终点"><a href="#切片使用方法：-列表-起点：终点" class="headerlink" title="切片使用方法： 列表[起点：终点]"></a>切片使用方法： 列表[起点：终点]</h4><p>如果写成 列表[:终点]，起点默认索引为0；<br>如果写成 列表[起点：]，则默认重点到列表最后一个</p>
-<h4 id="如何打印最后三个元素？"><a href="#如何打印最后三个元素？" class="headerlink" title="如何打印最后三个元素？"></a>如何打印最后三个元素？</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-
-print(digits[-3:])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[8, 9, 0]
-</code></pre>
-<p>列表[-倒数几个：]</p>
-<h4 id="每间隔两个元素就提取一个（在选取范围内）"><a href="#每间隔两个元素就提取一个（在选取范围内）" class="headerlink" title="每间隔两个元素就提取一个（在选取范围内）"></a>每间隔两个元素就提取一个（在选取范围内）</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-
-print(digits[0:10:2])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 3, 5, 7, 9]
-</code></pre>
-<p>[起点：重点：步长]，步长不输入（没有第二个冒号）默认为1.</p>
-<h3 id="遍历切片：使用for循环-切片"><a href="#遍历切片：使用for循环-切片" class="headerlink" title="遍历切片：使用for循环+切片"></a>遍历切片：使用for循环+切片</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-print("No 5 to No 9 number in my digits are:\n")
-for digit in digits[4:8]:        #利用单复数区别 列表 和 an
-    print(digit)#注意这里打印的是变量<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>No 5 to No 9 number in my digits are:
-
-5
-6
-7
-8
-</code></pre>
-<h3 id="复制列表-使用切片"><a href="#复制列表-使用切片" class="headerlink" title="复制列表 (使用切片)"></a>复制列表 (使用切片)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-copy_digits = digits[:]
-
-digits.append(10)
-copy_digits.append(11)
-print(digits)
-print(copy_digits)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10]
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11]
-</code></pre>
-<h4 id="注意语法：-列表1-x3D-列表2"><a href="#注意语法：-列表1-x3D-列表2" class="headerlink" title="注意语法： 列表1 = 列表2[:]"></a>注意语法： 列表1 = 列表2[:]</h4><p>这样才是两个列表</p>
-<p>如果没有切片直接复制</p>
-<p>则两个列表指向同一个储存空间，本质上是一个列表</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-copy_digits = digits
-
-digits.append(10)
-copy_digits.append(11)
-print(digits)
-print(copy_digits)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11]
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11]
-</code></pre>
-<h2 id="4-5-元组-不可改变的列表"><a href="#4-5-元组-不可改变的列表" class="headerlink" title="4.5 元组-不可改变的列表"></a>4.5 元组-不可改变的列表</h2><h3 id="定义语法："><a href="#定义语法：" class="headerlink" title="定义语法："></a>定义语法：</h3><p>元组名 = (元素1，元素2，…)</p>
-<p>访问和列表相同</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)
-print(a[0])
-print(a[1])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>30
-40
-</code></pre>
-<p>不能改变：指不能单独给其内元素赋值。(报错)</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)
-a[0] = 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-<pre><code>---------------------------------------------------------------------------
-
-TypeError                                 Traceback (most recent call last)
-
-/var/folders/1j/k13fttf13b5d6j8_m4q12rgr0000gn/T/ipykernel_53119/1136073212.py in &lt;module&gt;
-      1 a = (30,40)
-----&gt; 2 a[0] = 1
-
-
-TypeError: 'tuple' object does not support item assignment
-</code></pre>
-<h3 id="遍历元组-和for循环"><a href="#遍历元组-和for循环" class="headerlink" title="遍历元组-和for循环"></a>遍历元组-和for循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40,50)
-
-for an in a:
-    print(an)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>30
-40
-50
-</code></pre>
-<h3 id="修改元组变量-重新定义"><a href="#修改元组变量-重新定义" class="headerlink" title="修改元组变量-重新定义"></a>修改元组变量-重新定义</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)
-print(a)
-
-a = (40,50)
-print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>(30, 40)
-(40, 50)
-</code></pre>
+<h2 id="7-2-while循环简介"><a href="#7-2-while循环简介" class="headerlink" title="7.2 while循环简介"></a>7.2 while循环简介</h2><h3 id="7-2-1-使用while循环"><a href="#7-2-1-使用while循环" class="headerlink" title="7.2.1 使用while循环"></a>7.2.1 使用while循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法
+while 条件：   #注意冒号！！！
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -677,7 +524,7 @@ print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://OLIVERHangle.github.io/2022/11/08/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%204/">http://OLIVERHangle.github.io/2022/11/08/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%204/</a>
+                    <a href="http://OLIVERHangle.github.io/2022/11/14/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%207/">http://OLIVERHangle.github.io/2022/11/14/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%207/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -939,17 +786,18 @@ print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2022/11/09/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%205/">
+                <a href="/2022/11/14/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%207/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Python学习：Chapter5">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Python学习：Chapter7">
                         
-                        <span class="card-title">Python学习：Chapter5</span>
+                        <span class="card-title">Python学习：Chapter7</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -959,9 +807,9 @@ print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -974,6 +822,7 @@ print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -992,13 +841,13 @@ print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/11/06/%E5%A4%A7%E7%89%A9%E7%AC%94%E8%AE%B0%E6%A2%B3%E7%90%86/">
+                <a href="/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BA%BF%E7%A8%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="大物笔记梳理">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="操作系统 Chapter3/4">
                         
-                        <span class="card-title">大物笔记梳理</span>
+                        <span class="card-title">操作系统 Chapter3/4</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1009,14 +858,14 @@ print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/" class="post-category">
-                                    大学物理
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
                                 </a>
                             
                             
