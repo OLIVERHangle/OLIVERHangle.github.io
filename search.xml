@@ -1,1174 +1,332 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Python学习：Chapter3</title>
-    <url>/2022/11/06/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%203/</url>
-    <content><![CDATA[<h2 id="3-1使用列表中的各个值"><a href="#3-1使用列表中的各个值" class="headerlink" title="3.1使用列表中的各个值"></a>3.1使用列表中的各个值</h2><p>注意！ 索引可以指定负数！</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
-print(a[-1])
-print(a[-2])
-print(a[-3])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>3
-2
-1
-</code></pre>
-<p>负数即倒数第几个</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">bicycles = ['trek','cannondale']
-message = f"my bicycle is a {bicycles[1].title()}."
-print(message)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>my bicycle is a Cannondale.
-</code></pre>
-<p>f花括号内可以写变量。</p>
-<h2 id="3-2修改列表元素"><a href="#3-2修改列表元素" class="headerlink" title="3.2修改列表元素"></a>3.2修改列表元素</h2><h3 id="lt-1-gt-修改其中的元素"><a href="#lt-1-gt-修改其中的元素" class="headerlink" title="<1>修改其中的元素"></a>&lt;1&gt;修改其中的元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
-print(a)
-
-a[0]='4'
-print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['4', '2', '3']
-</code></pre>
-<p>列表相当于是一个数组</p>
-<h3 id="lt-2-gt-插入元素"><a href="#lt-2-gt-插入元素" class="headerlink" title="<2>插入元素"></a>&lt;2&gt;插入元素</h3><h4 id="1-末尾插入：append"><a href="#1-末尾插入：append" class="headerlink" title="1 末尾插入：append"></a>1 末尾插入：append</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
-print(a)
-
-a.append("5")#注意使用时用.来调用
-print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['1', '2', '3', '5']
-</code></pre>
-<p> 连续使用append可以连续在后面插入</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">a=[]
-print(a)
-a.append("1")
-a.append("2")
-a.append("3")
-print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[]
-['1', '2', '3']
-</code></pre>
-<h4 id="2-选定位置前：insert"><a href="#2-选定位置前：insert" class="headerlink" title="2 选定位置前：insert"></a>2 选定位置前：insert</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
-print(a)
-
-a.insert(0,'han')
-print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['han', '1', '2', '3']
-</code></pre>
-<p>注意！insert在指定元素   之前   插入！</p>
-<h3 id="lt-3-gt-删除元素"><a href="#lt-3-gt-删除元素" class="headerlink" title="<3>删除元素"></a>&lt;3&gt;删除元素</h3><h4 id="1-del-语句-删除-（需要指定索引）"><a href="#1-del-语句-删除-（需要指定索引）" class="headerlink" title="1 del 语句 删除 （需要指定索引）"></a>1 del 语句 删除 （需要指定索引）</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
-print(a)
-
-del a[0]
-print(a)
-
-del a[1]
-print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['2', '3']
-['2']
-</code></pre>
-<h4 id="2-pop-删除"><a href="#2-pop-删除" class="headerlink" title="2 pop() 删除"></a>2 pop() 删除</h4><h5 id="（）不含任何内容，默认最后一个值被弹出"><a href="#（）不含任何内容，默认最后一个值被弹出" class="headerlink" title="（）不含任何内容，默认最后一个值被弹出"></a>（）不含任何内容，默认最后一个值被弹出</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
-print(a)
-
-poped_a = a.pop()
-print(a)
-print(poped_a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['1', '2']
-3
-</code></pre>
-<p>a被pop之后，a最后一个元素被弹出，而a.pop函数返回值就是的被弹出的最后一个元素</p>
-<h5 id="指定索引，弹出任意位置处的元素"><a href="#指定索引，弹出任意位置处的元素" class="headerlink" title="指定索引，弹出任意位置处的元素"></a>指定索引，弹出任意位置处的元素</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
-print(a)
-
-poped_a1 = a.pop(1)
-print(a)
-print(poped_a1)
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['1', '3']
-2
-</code></pre>
-<h4 id="根据值删除元素：remove-void返回类型"><a href="#根据值删除元素：remove-void返回类型" class="headerlink" title="根据值删除元素：remove (void返回类型)"></a>根据值删除元素：remove (void返回类型)</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']
-print(a)
-
-a.remove('2')
-print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['1', '3']
-</code></pre>
-<h2 id="3-3-组织列表"><a href="#3-3-组织列表" class="headerlink" title="3.3 组织列表"></a>3.3 组织列表</h2><h3 id="sort-对列表永久排序-首字母顺序"><a href="#sort-对列表永久排序-首字母顺序" class="headerlink" title="sort() 对列表永久排序(首字母顺序)"></a>sort() 对列表永久排序(首字母顺序)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']
-print(a)
-
-a.sort()
-print(f"\n{a}")
-
-#如果想要反向排序，使用sort(reverse=True)
-a.sort(reverse=True)
-print(f"\n{a}")
-
-#注意：
-print(a.sort())
-
-#该语句不是打印a.sort（）后的 a,而是a.sort()函数的返回值，void无返回值。
-#所以先进行排序，后print。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['c', 'b', 'z', 'a', 'd']
-
-['a', 'b', 'c', 'd', 'z']
-
-['z', 'd', 'c', 'b', 'a']
-None
-</code></pre>
-<h3 id="sorted-对列表临时排序"><a href="#sorted-对列表临时排序" class="headerlink" title="sorted() 对列表临时排序"></a>sorted() 对列表临时排序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']
-print(a)
-
-print("\n临时排序后的列表：")
-print(sorted(a))
-
-print("\n再输出原来的列表：")
-print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['c', 'b', 'z', 'a', 'd']
-
-临时排序后的列表：
-['a', 'b', 'c', 'd', 'z']
-
-再输出原来的列表：
-['c', 'b', 'z', 'a', 'd']
-</code></pre>
-<p>注意：sorted()使用语法：sorted(列表) </p>
-<pre><code> 我们使用的是sorted的返回值（列表类），而sort对原列表不会有任何修改。
-</code></pre>
-<h3 id="reverse-对列表永久-原顺序反转"><a href="#reverse-对列表永久-原顺序反转" class="headerlink" title="reverse() 对列表永久 原顺序反转"></a>reverse() 对列表永久 原顺序反转</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']
-print(a)
-
-a.reverse()
-
-print(f"\n{a}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['c', 'b', 'z', 'a', 'd']
-
-['d', 'a', 'z', 'b', 'c']
-</code></pre>
-<h3 id="len-确定列表长度"><a href="#len-确定列表长度" class="headerlink" title="len() 确定列表长度"></a>len() 确定列表长度</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']
-print(len(a))
-
-print("\n试图给b赋予a的长度：")
-b = len(a)
-print(f"a的长度是：{b}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>5
-
-试图给b赋予a的长度：
-a的长度是：5
-</code></pre>
-<h2 id="3-4-避免索引错误"><a href="#3-4-避免索引错误" class="headerlink" title="3.4 避免索引错误"></a>3.4 避免索引错误</h2><p>当出现循环时，可以使用len()知道长度，保证索引&lt;len()的值，注意len（）不能直接用</p>
-]]></content>
-      <categories>
-        <category>Python学习</category>
-      </categories>
-      <tags>
-        <tag>柴柴</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一次为你提笔</title>
-    <url>/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94/</url>
-    <content><![CDATA[<p>我坚信命运总是将我们往正确的人那里推。有人，得天独厚，年少相逢，未曾珍惜错失；有人，跌跌撞撞，终其一生，至死不可得。我曾凭着一腔热血，莽撞，视死如归。却发现你是我藏在发霉枕头下，日复一日的春秋大梦。在春日深夜被泪打湿的枕头，在夏日阳光下拿出暴晒，试图驱散那些阴霾。在秋日落叶中望着那些斑驳泪渍。却在冬日里，枕着那些遗憾，做了一个美梦。温柔，浪漫至死的我们，拼命找，却遍体鳞伤，但一个侧身，找到真正的归途。真正的爱浮现地那一刻，我们原谅了那些过往，又生出无限的勇气，为彼此而重新生长。</p>
-]]></content>
-      <categories>
-        <category>提笔</category>
-      </categories>
-      <tags>
-        <tag>阿狐姐姐</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一次为你提笔</title>
-    <url>/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94%E6%9F%B4%E6%9F%B4/</url>
-    <content><![CDATA[<p><strong>我是凡夫俗子，</strong><br><strong>笔尖流不出华丽的词藻。</strong></p>
-<p><strong>因为你</strong><br><strong>贫瘠土壤开出了文字的花。</strong></p>
-<p><strong>我们都不想长大。</strong></p>
-<p><strong>饱食人间烟火，</strong><br><strong>心却不曾沾染凡俗之气。</strong></p>
-<p><strong>我爱你，</strong><br><strong>你是我生存的原因。</strong></p>
-]]></content>
-      <categories>
-        <category>提笔</category>
-      </categories>
-      <tags>
-        <tag>柴柴</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>阿狐の小纸条</title>
-    <url>/2022/05/21/%E9%98%BF%E7%8B%90%E7%9A%84%E7%BA%B8%E6%9D%A1/</url>
-    <content><![CDATA[<h2 id="March"><a href="#March" class="headerlink" title="March"></a>March</h2><h3 id="9th-Mar"><a href="#9th-Mar" class="headerlink" title="9th Mar"></a>9th Mar</h3><p><strong>The distance between us is breaking my spirit.</strong></p>
-<p><strong>My time and experiences without you are meaningless to me.🌹</strong></p>
-<p><strong>谢谢你，让我知道原来世界上，真的有人那么可爱！晚上要好好学习，我喜欢你为梦想努力的样子！如果我是那只路过的玫瑰也没关系，只希望，送给你花香，不会刺伤你。</strong>🌟</p>
-<hr>
-<h3 id="10th-Mar"><a href="#10th-Mar" class="headerlink" title="10th Mar"></a>10th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/231653525474_.pic.jpg" style="zoom:50%;">
-
-<p><strong>U had me at “hello”</strong><br><strong>Your destiny was entwined with mine!</strong></p>
-<p>即使带着命运的陆离光怪，理应属于你的幸运也会让时间给予偏爱。🌼</p>
-<p>等你下课哟！我也开始工作啦！😘</p>
-<p>从这个春天开始，我们的人生，全糖去冰哦🌟</p>
-<hr>
-<h3 id="11th-Mar"><a href="#11th-Mar" class="headerlink" title="11th Mar"></a>11th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/241653525775_.pic.jpg" style="zoom: 33%;">
-
-<p>做你的猫～～</p>
-<img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/251653525810_.pic.jpg" style="zoom: 33%;">
-
-<p>玫瑰花，要你捧的才浪漫！</p>
-<p>人生，要和你才精彩！😘</p>
-<hr>
-<h3 id="12th-Mar"><a href="#12th-Mar" class="headerlink" title="12th Mar"></a>12th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/261653526197_.pic.jpg" style="zoom: 33%;">
-
-<p>爱不一定是在你春风得意的时候出现。所以，我们苦了太久了，才得到相遇的机会。我们的甜蜜，和上帝的旨意无关，是我们彼此之间汹涌的爱，让我们再次勇敢。乖乖，不要怕，我在爱你！我们只需要把握当下，向前看，风霜与共！我奉陪到底哟！😘</p>
-<hr>
-<h3 id="14th-Mar"><a href="#14th-Mar" class="headerlink" title="14th Mar"></a>14th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/271653526503_.pic.jpg" style="zoom: 33%;">
-
-<p>我的存在是一串代码，我的使命是爱你。</p>
-<p>我的春日限定：玫瑰和oliver！</p>
-<hr>
-<h3 id="15th-Mar"><a href="#15th-Mar" class="headerlink" title="15th Mar"></a>15th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/281653526591_.pic.jpg" style="zoom:33%;">
-
-<p>南风知我意，吹梦到西洲。</p>
-<hr>
-<img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/291653526623_.pic.jpg" style="zoom: 33%;">
-
-<p>刚刚收到雅诗兰黛粉底液，上面的广告语：</p>
-<p>去爱一个能够让你做回小朋友的人，而不是去爱一个总是嫌弃你不懂事的人。</p>
-<p>（没错，就是你啦！准确是我们彼此啦！）</p>
-<hr>
-<h3 id="16th-Mar"><a href="#16th-Mar" class="headerlink" title="16th Mar"></a>16th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/301653526710_.pic.jpg" style="zoom: 33%;">
-
-<p>我刚好在，你刚好来。</p>
-<p>我在等，世上唯一契合的灵魂。</p>
-<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/361653660379_.pic.jpg"></p>
-<p>to Oliver</p>
-<hr>
-<h3 id="17th-Mar"><a href="#17th-Mar" class="headerlink" title="17th Mar"></a>17th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/371653660480_.pic.jpg" style="zoom: 25%;">
-
-<p>不求被全世界宠爱，只求一生是你一个人的例外！</p>
-<p>我会陪着你的，要相信自己，加油！</p>
-<hr>
-<h3 id="18th-Mar"><a href="#18th-Mar" class="headerlink" title="18th Mar"></a>18th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/381653660623_.pic_hd.jpg" style="zoom: 33%;">
-
-<p>我真的好快乐啊！！！谢谢你</p>
-<hr>
-<h3 id="19th-Mar"><a href="#19th-Mar" class="headerlink" title="19th Mar"></a>19th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/391653660849_.pic_hd.jpg" style="zoom: 25%;">
-
-<p>那么，我们在这个夏天，见一面吧！</p>
-<hr>
-<h3 id="20th-Mar"><a href="#20th-Mar" class="headerlink" title="20th Mar"></a>20th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/401653660885_.pic.jpg" style="zoom: 25%;">
-
-<p>期待夏天🌟</p>
-<p>热吻 啤酒 街头 耳机里的音乐 live现场</p>
-<p>浪漫的一切💑</p>
-<p>包括最爱的人🦄️</p>
-<hr>
-<h3 id="21th-Mar"><a href="#21th-Mar" class="headerlink" title="21th Mar"></a>21th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/411653661020_.pic.jpg" style="zoom: 25%;">
-
-<p>一起向前的感觉，真的太棒了！</p>
-<p>欢迎你，我的人生合伙人！🌟</p>
-<hr>
-<h3 id="25th-Mar"><a href="#25th-Mar" class="headerlink" title="25th Mar"></a>25th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/431654398896_.pic_hd.jpg" style="zoom: 25%;">
-
-<p>后知后觉，没关系呀！我们不是一直在相爱吗？👌</p>
-<hr>
-<h3 id="27th-Mar"><a href="#27th-Mar" class="headerlink" title="27th Mar"></a>27th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/441654399185_.pic_hd.jpg" style="zoom: 25%;">
-
-<p>想你想你想你想你想你想你想你想你想你想你想你想你想你想你想你想你想你</p>
-<hr>
-<h2 id="April"><a href="#April" class="headerlink" title="April"></a>April</h2><h3 id="6th-Apr"><a href="#6th-Apr" class="headerlink" title="6th Apr"></a>6th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/451654399242_.pic.jpg" style="zoom: 33%;">
-
-<p>与你四目相对是一场心脏盛宴</p>
-<p>我爱你❤️</p>
-<hr>
-<h3 id="9th-Apr"><a href="#9th-Apr" class="headerlink" title="9th Apr"></a>9th Apr</h3><h3 id=""><a href="#" class="headerlink" title=""></a><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/461654399475_.pic.jpg" style="zoom: 33%;"></h3><p>你就站在那里，就已让我看不到任何人！❤️🍑</p>
-<hr>
-<h3 id="13th-Apr"><a href="#13th-Apr" class="headerlink" title="13th Apr"></a>13th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/471654399542_.pic.jpg" style="zoom: 33%;">
-
-<p>真正的爱，甜是主基调，但无法避免那些咸咸的眼泪。</p>
-<p>宝贝，我们在这份爱的笼罩下，成为更好的人。</p>
-<p>我们会吵架，可是我们都会低头。</p>
-<p>因为，问题是我们和问题的对抗，</p>
-<p>不是我和你之间的问题。</p>
-<p>所以，苏苏今天更爱你了😘</p>
-<hr>
-<h3 id="16th-Apr"><a href="#16th-Apr" class="headerlink" title="16th Apr"></a>16th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/481654479573_.pic.jpg" style="zoom: 33%;">
-
-<p>你是我最大的底气🐶❤️🦊</p>
-<p>苏苏的世界，如果没有三月，</p>
-<p>那人间的别称就是地狱💖</p>
-<hr>
-<h3 id="18th-Apr"><a href="#18th-Apr" class="headerlink" title="18th Apr"></a>18th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/491654479751_.pic.jpg" style="zoom: 33%;">
-
-<p>HYD简直是人间理想💓💓💓💓💓😘</p>
-<hr>
-<h3 id="20th-Apr"><a href="#20th-Apr" class="headerlink" title="20th Apr"></a>20th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/501654479859_.pic.jpg" style="zoom: 33%;">
-
-<p>  如果这份爱意让你差异，其实我才是那个被吓坏的人，我从没有傻到会相信，一个人会在另一个人身上找到所有他期望的。</p>
-<p>  但在你身上我找到了所有。</p>
-<hr>
-<p>25th Apr</p>
-<img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/511654480159_.pic.jpg" style="zoom: 25%;">
-
-<p>今天晚上哟！</p>
-<p>爱你😘</p>
-<hr>
-<h2 id="May"><a href="#May" class="headerlink" title="May"></a>May</h2><h3 id="3rd-May"><a href="#3rd-May" class="headerlink" title="3rd May"></a>3rd May</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/521654480209_.pic.jpg" style="zoom: 33%;">
-
-<p>请用：</p>
-<p>​        以后、我们、故事三个词造句。</p>
-<p>我的是：💖</p>
-<p>以后的故事，都是关于我们。🦊</p>
-<hr>
-<h3 id="4th-May"><a href="#4th-May" class="headerlink" title="4th May"></a>4th May</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/531654480347_.pic.jpg" style="zoom:33%;">
-
-<p>课上瞌睡10分钟，梦到你了嘻嘻😜💓</p>
-<hr>
-<h3 id="13th-May"><a href="#13th-May" class="headerlink" title="13th May"></a>13th May</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/541654480408_.pic.jpg" style="zoom: 33%;">
-
-<p>我最骄傲的事，是被你深爱着。</p>
-<p>💓你，是我面对一切的底气。💖</p>
-<hr>
-<h2 id="June"><a href="#June" class="headerlink" title="June"></a>June</h2><h3 id="3rd-June"><a href="#3rd-June" class="headerlink" title="3rd June"></a>3rd June</h3><p>H先生，现在我要以心动杀人，逮捕你。💓</p>
-<p>🆘🆘🆘🆘🆘</p>
-<hr>
-<h3 id="5th-June"><a href="#5th-June" class="headerlink" title="5th June"></a>5th June</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/551654480520_.pic.jpg" style="zoom: 33%;">
-
-<p>少年披着夏天的外套，清清楚楚地说着只爱我🎉🤪</p>
-<hr>
-]]></content>
-      <categories>
-        <category>小纸条</category>
-      </categories>
-      <tags>
-        <tag>阿狐</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我们的历程</title>
-    <url>/2022/05/20/%E6%88%91%E4%BB%AC%E7%9A%84%E5%8E%86%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="Feburary"><a href="#Feburary" class="headerlink" title="Feburary"></a>Feburary</h1><p>相遇到底是缘分的命中注定，还是命运的欲盖弥彰，我想听你说，</p>
-<hr>
-<h2 id="March"><a href="#March" class="headerlink" title="March"></a>March</h2><p>希望之前没来的好运在春天出现，<br>希望拙劣的文笔也能将心意传达，<br>希望我喜欢的你喜欢我，<br>希望希望的事成真。</p>
-<hr>
-<h2 id="April"><a href="#April" class="headerlink" title="April"></a>April</h2><h3 id="21st-April"><a href="#21st-April" class="headerlink" title="21st April"></a>21st April</h3><p>  我陪月亮熬夜，星星陪我想你，而风和思念都很喧器。你要相信不管是命运的安排，还是时光的眷顾，你我都是最登对的人．你要相信我.</p>
-<h3 id="25th-April"><a href="#25th-April" class="headerlink" title="25th April"></a>25th April</h3><h4 id="6-37-A-M"><a href="#6-37-A-M" class="headerlink" title="6:37 A.M."></a>6:37 A.M.</h4><p>  醒来的时候，特别想去见你，所以．渡江跨河，翻山越岭、两干公里算什么，我来啦</p>
-<h4 id="8-10-P-M"><a href="#8-10-P-M" class="headerlink" title="8:10 P.M."></a>8:10 P.M.</h4><p><strong>落地 ✈️ 胶东国际机场</strong>  </p>
-<p>我见过没有风的大海，看过迷雾笼罩的森林，但都不及我第一次遇见你。</p>
-<p>  在机场，我看着你，这世间犹如银幕年代的默剧，只有心跳陪我演出，而爱神在你身后，向我示意。</p>
-<p>那一刻，我的心发出响彻灵魂的轰鸣，原来这就是人们说的一见钟情。💘</p>
-<p>接下来，幸福变成了脂肪（呃呃，打嗝声哈哈哈)，我胖了6斤.</p>
-<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/141653077608_.pic_hd.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/131653077607_.pic_hd.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/111653077606_.pic_hd.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/101653077606_.pic_hd.jpg"></p>
-<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/181653077610_.pic.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/171653077609_.pic_hd.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/161653077609_.pic.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/151653077609_.pic_hd.jpg"></p>
-<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/211653077786_.pic.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/201653077785_.pic_hd.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/191653077785_.pic.jpg"></p>
-<hr>
-<h3 id="May"><a href="#May" class="headerlink" title="May"></a>May</h3><h4 id="2nd-May"><a href="#2nd-May" class="headerlink" title="2nd May"></a>2nd May</h4><p><strong>撤退啦！</strong><br>这座城市里有我的秘密和我爱的人，<br>从此我不再追寻光消失的天际,<br>因为我已经找到心中耀眼的光.</p>
-<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/91653077435_.pic_hd.jpg"></p>
-<h4 id="19th-May"><a href="#19th-May" class="headerlink" title="19th May"></a>19th May</h4><p><strong>我后怕.</strong><br><strong>如果当初走得快些或慢些</strong><br><strong>如果当初稍作停留或不曾离开，</strong><br><strong>如果假设的事情发生，</strong><br><strong>将永失我爱</strong><br><strong>此时，你我时光正好。</strong></p>
-<h4 id="20th-May"><a href="#20th-May" class="headerlink" title="20th May"></a><u>20th May</u></h4><p><strong>理性带来寂寞，感性产出错觉，</strong><br><strong>爱情，也只有你能够给我.</strong><br><strong>你是我藏在文字中独一无二的意中人。HYD</strong></p>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>阿狐&amp;柴柴</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大物笔记梳理</title>
-    <url>/2022/11/06/%E5%A4%A7%E7%89%A9%E7%AC%94%E8%AE%B0%E6%A2%B3%E7%90%86/</url>
-    <content><![CDATA[<h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a><strong>前言：</strong></h1><p>破大工又开始搞一些形式主义了，尽量能利用这点破烂时间做点事情。</p>
-<h2 id="Why-Study-Physics"><a href="#Why-Study-Physics" class="headerlink" title="Why Study Physics?"></a>Why Study Physics?</h2><p><strong>Physics</strong> is the branch of science that describes <u>matter,</u> <u>energy,</u> <u>space,</u> and <u>time</u> at the <strong>most fundamental</strong> level. </p>
-<h2 id="Fundamental-Quantities-and-Their-Dimension"><a href="#Fundamental-Quantities-and-Their-Dimension" class="headerlink" title="Fundamental Quantities and Their Dimension"></a>Fundamental Quantities and Their Dimension</h2><p>物理三大基本量和维度</p>
-<h3 id="Length"><a href="#Length" class="headerlink" title="Length"></a>Length</h3><p>国际标准单位：米 meter</p>
-<img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.08.26.png" alt="截屏2022-11-06 下午6.08.26" style="zoom:33%;">
-
-
-
-
-
-<h3 id="Mass"><a href="#Mass" class="headerlink" title="Mass"></a>Mass</h3><p>国际标准单位：千克 kg</p>
-<img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.08.45.png" alt="截屏2022-11-06 下午6.08.45" style="zoom: 33%;">
-
-
-
-
-
-<h3 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h3><p>国际标准单位：秒 s</p>
-<img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.07.48.png" alt="截屏2022-11-06 下午6.07.48" style="zoom:33%;">
-
-
-
-<h4 id="科学计数法和对应的英语词缀"><a href="#科学计数法和对应的英语词缀" class="headerlink" title="科学计数法和对应的英语词缀"></a>科学计数法和对应的英语词缀</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.10.29.png" alt="截屏2022-11-06 下午6.10.29" style="zoom: 33%;"></h4><h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4><h2 id="Conversion-of-Units-amp-Estimates"><a href="#Conversion-of-Units-amp-Estimates" class="headerlink" title="Conversion of Units &amp; Estimates"></a>Conversion of Units &amp; Estimates</h2><h3 id="利用单位守恒判断计算是否正确"><a href="#利用单位守恒判断计算是否正确" class="headerlink" title="利用单位守恒判断计算是否正确"></a>利用单位守恒判断计算是否正确</h3><h3 id="计算的不确定性："><a href="#计算的不确定性：" class="headerlink" title="计算的不确定性："></a>计算的不确定性：</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.15.23.png" alt="截屏2022-11-06 下午6.15.23" style="zoom:33%;">
-
-<p>Eg1: 测量初始数据最小分度值必须与仪器相符</p>
-<p>Eg2: 利用测量值计算，得到的最大最小结果，分别对应    用的最大最小测量值，对应误差。</p>
-<p><u><strong>当计算时使用的数据有不同精度，采用最粗糙的精度，其余数据四舍五入</strong></u></p>
-<h2 id="Uncertainty-in-Measurements-amp-Significant-Figures"><a href="#Uncertainty-in-Measurements-amp-Significant-Figures" class="headerlink" title="Uncertainty in Measurements &amp; Significant Figures"></a>Uncertainty in Measurements &amp; Significant Figures</h2><p>计算不确定性解决方案在上一标题</p>
-<p><strong>有效数字：</strong></p>
-<p>当计算中，出现的数据有不同的有效数字，使用最低位的。</p>
-<p>注意：<img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.24.28.png" alt="截屏2022-11-06 下午6.24.28"></p>
-<p>这几个的有效数字不同</p>
-<p>即使含有相同有效数字，数字精确度也不一定相同</p>
-<p>出现integer，我们认为其没有精确度</p>
-<p>2(int) = 2（准确值）</p>
-<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.27.57.png" alt="截屏2022-11-06 下午6.27.57"></p>
-<p><strong>因为宽是3位有效数字，所以计算结果保留3位有效数字，即44.0</strong></p>
-<p>一些粗略估算的例子：</p>
-<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.29.38.png" alt="截屏2022-11-06 下午6.29.38"></p>
-<h2 id="Coordinate-Systems"><a href="#Coordinate-Systems" class="headerlink" title="Coordinate Systems"></a>Coordinate Systems</h2><p>三角坐标系：</p>
-<h3 id="二维情况"><a href="#二维情况" class="headerlink" title="二维情况"></a>二维情况</h3><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.30.25.png" alt="截屏2022-11-06 下午6.30.25"></p>
-<p>将普通坐标系转化成三角坐标系，</p>
-<p><strong>注意phi=arctan（y/x）</strong></p>
-<h3 id="三维情况："><a href="#三维情况：" class="headerlink" title="三维情况："></a>三维情况：</h3><h4 id="圆柱体坐标系："><a href="#圆柱体坐标系：" class="headerlink" title="圆柱体坐标系："></a>圆柱体坐标系：</h4><p>![](<a href="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06">http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/截屏2022-11-06</a> 下午6.32.13.png)</p>
-<p>多了个z，原坐标系z转化后不变。</p>
-<h4 id="球体坐标系："><a href="#球体坐标系：" class="headerlink" title="球体坐标系："></a>球体坐标系：</h4><h4 id="-2"><a href="#-2" class="headerlink" title=""></a><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.35.11.png" alt="截屏2022-11-06 下午6.35.11"></h4><h2 id="Problem-Solving-Strategy"><a href="#Problem-Solving-Strategy" class="headerlink" title="Problem-Solving Strategy"></a>Problem-Solving Strategy</h2><h3 id="流程：identify-set-up-execute"><a href="#流程：identify-set-up-execute" class="headerlink" title="流程：identify-set up-execute"></a>流程：identify-set up-execute</h3>]]></content>
-      <categories>
-        <category>大学物理</category>
-      </categories>
-      <tags>
-        <tag>柴柴</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习：Chapter4</title>
-    <url>/2022/11/08/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%204/</url>
-    <content><![CDATA[<h1 id="Chapter4-操作列表"><a href="#Chapter4-操作列表" class="headerlink" title="Chapter4 操作列表"></a>Chapter4 操作列表</h1><h2 id="4-1-for循环的使用"><a href="#4-1-for循环的使用" class="headerlink" title="4.1 for循环的使用"></a>4.1 for循环的使用</h2><h3 id="4-1-1-这是一个利用循环打印的例子："><a href="#4-1-1-这是一个利用循环打印的例子：" class="headerlink" title="4.1.1 这是一个利用循环打印的例子："></a>4.1.1 这是一个利用循环打印的例子：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']
-for an in a:   #冒号必不可少
-    print(an)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>a
-b
-c
-d
-</code></pre>
-<h3 id="4-1-2-利用for循环进行更多操作的例子："><a href="#4-1-2-利用for循环进行更多操作的例子：" class="headerlink" title="4.1.2 利用for循环进行更多操作的例子："></a>4.1.2 利用for循环进行更多操作的例子：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']
-for an in a:   #冒号必不可少
-    print(f"{an.title()} is uppercase of {an}")
-    print("next char is:\n")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>A is uppercase of a
-next char is:
-
-B is uppercase of b
-next char is:
-
-C is uppercase of c
-next char is:
-
-D is uppercase of d
-next char is:
-</code></pre>
-<p>结果说明：<br>  缩进的都属于for循环<br>  an相当于计数器变量作索引的a[i]。</p>
-<h3 id="4-1-2-在for循环结束后执行操作"><a href="#4-1-2-在for循环结束后执行操作" class="headerlink" title="4.1.2 在for循环结束后执行操作"></a>4.1.2 在for循环结束后执行操作</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']
-for an in a:   #冒号必不可少
-    print(f"{an.title()} is uppercase of {an}")
-print("test end.")  #当缩进没有的时候，默认为在for循环之外。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>A is uppercase of a
-B is uppercase of b
-C is uppercase of c
-D is uppercase of d
-test end.
-</code></pre>
-<h2 id="4-2-避免缩进错误"><a href="#4-2-避免缩进错误" class="headerlink" title="4.2 避免缩进错误"></a>4.2 避免缩进错误</h2><h3 id="4-2-1-忘记缩进"><a href="#4-2-1-忘记缩进" class="headerlink" title="4.2.1 忘记缩进"></a>4.2.1 忘记缩进</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']
-for an in a:
-print(an)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-<pre><code>  File "/var/folders/1j/k13fttf13b5d6j8_m4q12rgr0000gn/T/ipykernel_49995/1502029580.py", line 3
-    print(an)
-    ^
-IndentationError: expected an indented block
-</code></pre>
-<p>当没有缩进时，for循环找不到循环体，会报错。</p>
-<h3 id="原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号"><a href="#原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号" class="headerlink" title="原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号"></a>原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号</h3><h2 id="4-3-创建数值列表"><a href="#4-3-创建数值列表" class="headerlink" title="4.3 创建数值列表"></a>4.3 创建数值列表</h2><h3 id="4-3-1-range-和list"><a href="#4-3-1-range-和list" class="headerlink" title="4.3.1 range()和list()"></a>4.3.1 range()和list()</h3><p>range()的三个用法：</p>
-<p>range(x)  和  range(0,x)一样<br>range(x,y)<br>range(x,y,z)</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(6)) #相当于默认从0开始数6个<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-<pre><code>[0, 1, 2, 3, 4, 5]
-</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(0,6)) #指定从0开始数6个<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-<pre><code>[0, 1, 2, 3, 4, 5]
-</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(3,12)) #相当于从3到12，步长为1，注意右括号12实际数到11<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-<pre><code>[3, 4, 5, 6, 7, 8, 9, 10, 11]
-</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(3,12,2))#步长为2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-<pre><code>[3, 5, 7, 9, 11]
-</code></pre>
-<h3 id="4-3-2-用range-创建数字列表"><a href="#4-3-2-用range-创建数字列表" class="headerlink" title="4.3.2 用range()创建数字列表"></a>4.3.2 用range()创建数字列表</h3><h4 id="打印1-10的偶数"><a href="#打印1-10的偶数" class="headerlink" title="打印1-10的偶数"></a>打印1-10的偶数</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">even_num = list(range(2,11,2))  #注意，左边从2开始，右边界限为11（左面取得到，右面够不到）
-print(even_num)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<pre><code>[2, 4, 6, 8, 10]
-</code></pre>
-<h4 id="创建一个列表，包含1-10的平方"><a href="#创建一个列表，包含1-10的平方" class="headerlink" title="创建一个列表，包含1-10的平方"></a>创建一个列表，包含1-10的平方</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">square_list = [] #先创建一个空列表
-
-for value in range(1,11):
+<search> 
+  
+  
     
-    square = value ** 2 #每一次线计算一下平方的值，再append到list里面
-    square_list.append(square)
-    #上面两行可以写成： spuare_list.append(value ** 2)
-    
-print(square_list)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-</code></pre>
-<h3 id="4-3-3-对数字列表执行简单的统计计算"><a href="#4-3-3-对数字列表执行简单的统计计算" class="headerlink" title="4.3.3 对数字列表执行简单的统计计算"></a>4.3.3 对数字列表执行简单的统计计算</h3><h4 id="找数字列表-元素为数字-的-最大值、最小值、总和"><a href="#找数字列表-元素为数字-的-最大值、最小值、总和" class="headerlink" title="找数字列表(元素为数字)  的   最大值、最小值、总和"></a>找数字列表(元素为数字)  的   最大值、最小值、总和</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-
-print(max(digits))
-
-print(min(digits))
-
-print(sum(digits))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>9
-0
-45
-</code></pre>
-<h3 id="4-3-4-列表解析"><a href="#4-3-4-列表解析" class="headerlink" title="4.3.4 列表解析"></a>4.3.4 列表解析</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#上面输入平方数的例子还可以用两行代码解决：
-square_list = [value ** 2 for value in range (1,11)]
-#本质是把一个列表转换成另一个列表
-#格式：列表1 = [表达式 for 变量 in 列表2]
-print(square_list)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-</code></pre>
-<h2 id="4-4-使用列表的一部分"><a href="#4-4-使用列表的一部分" class="headerlink" title="4.4 使用列表的一部分"></a>4.4 使用列表的一部分</h2><h3 id="使用切片"><a href="#使用切片" class="headerlink" title="使用切片"></a>使用切片</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-
-print(digits[0:3])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 2, 3]
-</code></pre>
-<h4 id="切片使用方法：-列表-起点：终点"><a href="#切片使用方法：-列表-起点：终点" class="headerlink" title="切片使用方法： 列表[起点：终点]"></a>切片使用方法： 列表[起点：终点]</h4><p>如果写成 列表[:终点]，起点默认索引为0；<br>如果写成 列表[起点：]，则默认重点到列表最后一个</p>
-<h4 id="如何打印最后三个元素？"><a href="#如何打印最后三个元素？" class="headerlink" title="如何打印最后三个元素？"></a>如何打印最后三个元素？</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-
-print(digits[-3:])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[8, 9, 0]
-</code></pre>
-<p>列表[-倒数几个：]</p>
-<h4 id="每间隔两个元素就提取一个（在选取范围内）"><a href="#每间隔两个元素就提取一个（在选取范围内）" class="headerlink" title="每间隔两个元素就提取一个（在选取范围内）"></a>每间隔两个元素就提取一个（在选取范围内）</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-
-print(digits[0:10:2])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 3, 5, 7, 9]
-</code></pre>
-<p>[起点：重点：步长]，步长不输入（没有第二个冒号）默认为1.</p>
-<h3 id="遍历切片：使用for循环-切片"><a href="#遍历切片：使用for循环-切片" class="headerlink" title="遍历切片：使用for循环+切片"></a>遍历切片：使用for循环+切片</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-print("No 5 to No 9 number in my digits are:\n")
-for digit in digits[4:8]:        #利用单复数区别 列表 和 an
-    print(digit)#注意这里打印的是变量<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>No 5 to No 9 number in my digits are:
-
-5
-6
-7
-8
-</code></pre>
-<h3 id="复制列表-使用切片"><a href="#复制列表-使用切片" class="headerlink" title="复制列表 (使用切片)"></a>复制列表 (使用切片)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-copy_digits = digits[:]
-
-digits.append(10)
-copy_digits.append(11)
-print(digits)
-print(copy_digits)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10]
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11]
-</code></pre>
-<h4 id="注意语法：-列表1-x3D-列表2"><a href="#注意语法：-列表1-x3D-列表2" class="headerlink" title="注意语法： 列表1 = 列表2[:]"></a>注意语法： 列表1 = 列表2[:]</h4><p>这样才是两个列表</p>
-<p>如果没有切片直接复制</p>
-<p>则两个列表指向同一个储存空间，本质上是一个列表</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]
-copy_digits = digits
-
-digits.append(10)
-copy_digits.append(11)
-print(digits)
-print(copy_digits)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11]
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11]
-</code></pre>
-<h2 id="4-5-元组-不可改变的列表"><a href="#4-5-元组-不可改变的列表" class="headerlink" title="4.5 元组-不可改变的列表"></a>4.5 元组-不可改变的列表</h2><h3 id="定义语法："><a href="#定义语法：" class="headerlink" title="定义语法："></a>定义语法：</h3><p>元组名 = (元素1，元素2，…)</p>
-<p>访问和列表相同</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)
-print(a[0])
-print(a[1])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>30
-40
-</code></pre>
-<p>不能改变：指不能单独给其内元素赋值。(报错)</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)
-a[0] = 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-<pre><code>---------------------------------------------------------------------------
-
-TypeError                                 Traceback (most recent call last)
-
-/var/folders/1j/k13fttf13b5d6j8_m4q12rgr0000gn/T/ipykernel_53119/1136073212.py in &lt;module&gt;
-      1 a = (30,40)
-----&gt; 2 a[0] = 1
-
-
-TypeError: 'tuple' object does not support item assignment
-</code></pre>
-<h3 id="遍历元组-和for循环"><a href="#遍历元组-和for循环" class="headerlink" title="遍历元组-和for循环"></a>遍历元组-和for循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40,50)
-
-for an in a:
-    print(an)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>30
-40
-50
-</code></pre>
-<h3 id="修改元组变量-重新定义"><a href="#修改元组变量-重新定义" class="headerlink" title="修改元组变量-重新定义"></a>修改元组变量-重新定义</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)
-print(a)
-
-a = (40,50)
-print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>(30, 40)
-(40, 50)
-</code></pre>
-]]></content>
+    <entry>
+      <title>数据库演习-第一次课</title>
+      <link href="/2022/11/19/SQL%E4%B8%8A%E6%9C%BA%E6%BC%94%E4%B9%A0%E7%AC%94%E8%AE%B01/"/>
+      <url>/2022/11/19/SQL%E4%B8%8A%E6%9C%BA%E6%BC%94%E4%B9%A0%E7%AC%94%E8%AE%B01/</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据库演习"><a href="#数据库演习" class="headerlink" title="数据库演习"></a>数据库演习</h1><h1 id="成绩构成：20-80，-20最多3次点名，80大作业"><a href="#成绩构成：20-80，-20最多3次点名，80大作业" class="headerlink" title="成绩构成：20+80， 20最多3次点名，80大作业"></a>成绩构成：20+80， 20最多3次点名，80大作业</h1><h2 id="推荐实现：MySQL-Java"><a href="#推荐实现：MySQL-Java" class="headerlink" title="推荐实现：MySQL + Java"></a>推荐实现：MySQL + Java</h2><h2 id="时间：-20：20"><a href="#时间：-20：20" class="headerlink" title="时间：   20：20"></a>时间：   20：20</h2><h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="结构化的数据存储方式。-sscanf-fprintf"><a href="#结构化的数据存储方式。-sscanf-fprintf" class="headerlink" title="结构化的数据存储方式。 sscanf,fprintf"></a>结构化的数据存储方式。 sscanf,fprintf</h2><h2 id="数据库类型：关系型，网状型。-文件型，内存型，服务型。"><a href="#数据库类型：关系型，网状型。-文件型，内存型，服务型。" class="headerlink" title="数据库类型：关系型，网状型。      文件型，内存型，服务型。"></a>数据库类型：关系型，网状型。      文件型，内存型，服务型。</h2><h2 id="MySQL：开源关系型数据库，典型的C-x2F-S结构，-【客户端-x2F-服务器】"><a href="#MySQL：开源关系型数据库，典型的C-x2F-S结构，-【客户端-x2F-服务器】" class="headerlink" title="MySQL：开源关系型数据库，典型的C/S结构，   【客户端/服务器】"></a>MySQL：开源关系型数据库，典型的C/S结构，   【客户端/服务器】</h2><h1 id="SQL基础"><a href="#SQL基础" class="headerlink" title="SQL基础"></a>SQL基础</h1><h2 id="Struct-Query-Language-结构化查询语句"><a href="#Struct-Query-Language-结构化查询语句" class="headerlink" title="Struct   Query    Language    结构化查询语句"></a>Struct   Query    Language    结构化查询语句</h2><h2 id="关系型数据库都支持SQL语句"><a href="#关系型数据库都支持SQL语句" class="headerlink" title="关系型数据库都支持SQL语句"></a>关系型数据库都支持SQL语句</h2><h2 id="SQL属于高级语言："><a href="#SQL属于高级语言：" class="headerlink" title="SQL属于高级语言："></a>SQL属于高级语言：</h2><h2 id="select-name-password-from-user-where-sno-x3D-110"><a href="#select-name-password-from-user-where-sno-x3D-110" class="headerlink" title="select name,password from user where sno=110"></a>select name,password from user where sno=110</h2><h2 id="增C删D改U查R"><a href="#增C删D改U查R" class="headerlink" title="增C删D改U查R"></a>增C删D改U查R</h2><h2 id="1数据库组件的增删改查【数据库database，表table，字段filed，主键primary-key，外键foreign-key】"><a href="#1数据库组件的增删改查【数据库database，表table，字段filed，主键primary-key，外键foreign-key】" class="headerlink" title="1数据库组件的增删改查【数据库database，表table，字段filed，主键primary key，外键foreign key】"></a>1数据库组件的增删改查【数据库database，表table，字段filed，主键primary key，外键foreign key】</h2><h2 id="1-1创建数据库-create-组件类型-组件名；"><a href="#1-1创建数据库-create-组件类型-组件名；" class="headerlink" title="1.1创建数据库       create [组件类型]   组件名；"></a>1.1创建数据库       create [组件类型]   组件名；</h2><h2 id="1-2删除drop-组件类型-组件名；"><a href="#1-2删除drop-组件类型-组件名；" class="headerlink" title="1.2删除drop  [组件类型]   组件名；"></a>1.2删除drop  [组件类型]   组件名；</h2><h2 id="1-3修改alter"><a href="#1-3修改alter" class="headerlink" title="1.3修改alter"></a>1.3修改alter</h2><h2 id="1-4查询show-databases；"><a href="#1-4查询show-databases；" class="headerlink" title="1.4查询show databases；"></a>1.4查询show databases；</h2><h2 id="1-5使用use-库名；"><a href="#1-5使用use-库名；" class="headerlink" title="1.5使用use  库名；"></a>1.5使用use  库名；</h2><h2 id="推荐使用-idea-作为开发平台"><a href="#推荐使用-idea-作为开发平台" class="headerlink" title="推荐使用        idea     作为开发平台"></a>推荐使用        idea     作为开发平台</h2><h1 id="https-www-jetbrains-com-idea"><a href="#https-www-jetbrains-com-idea" class="headerlink" title="https://www.jetbrains.com/idea/"></a><a href="https://www.jetbrains.com/idea/">https://www.jetbrains.com/idea/</a></h1>]]></content>
+      
+      
       <categories>
-        <category>Python学习</category>
+          
+          <category> SQL上机演习 </category>
+          
       </categories>
-      <tags>
-        <tag>柴柴</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习：Chapter5</title>
-    <url>/2022/11/09/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%205/</url>
-    <content><![CDATA[<h1 id="今天是柴柴的生日！"><a href="#今天是柴柴的生日！" class="headerlink" title="今天是柴柴的生日！"></a>今天是柴柴的生日！</h1><h1 id="谢谢宝贝蛋的惊喜，开心心！阿狐姐姐辛苦啦❤️"><a href="#谢谢宝贝蛋的惊喜，开心心！阿狐姐姐辛苦啦❤️" class="headerlink" title="谢谢宝贝蛋的惊喜，开心心！阿狐姐姐辛苦啦❤️"></a>谢谢宝贝蛋的惊喜，开心心！阿狐姐姐辛苦啦❤️</h1><h1 id="Chapter-5-if语句"><a href="#Chapter-5-if语句" class="headerlink" title="Chapter 5 if语句"></a>Chapter 5 if语句</h1><h2 id="5-1-简单示例"><a href="#5-1-简单示例" class="headerlink" title="5.1 简单示例"></a>5.1 简单示例</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = ['audi','bmw','subaru','toyota']
-
-for car in cars:
-    if car == 'bmw':
-      print (car.upper())
-    else:
-      print(car.title())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>Audi
-BMW
-Subaru
-Toyota
-</code></pre>
-<h2 id="5-2-条件测试-：True-False"><a href="#5-2-条件测试-：True-False" class="headerlink" title="5.2 条件测试 ：True False"></a>5.2 条件测试 ：True False</h2><h3 id="5-2-1-检查是否相等"><a href="#5-2-1-检查是否相等" class="headerlink" title="5.2.1 检查是否相等"></a>5.2.1 检查是否相等</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">my_name = 'oliver'
-
-print(my_name == 'oliver')
-
-print(my_name == 'taylor')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>True
-False
-</code></pre>
-<h3 id="5-2-2检查相等时忽略大小写（字符串）用lower（）"><a href="#5-2-2检查相等时忽略大小写（字符串）用lower（）" class="headerlink" title="5.2.2检查相等时忽略大小写（字符串）用lower（）"></a>5.2.2检查相等时忽略大小写（字符串）用lower（）</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = ['aUdi','bMw','sUBaru','tOYota']
-print(cars[0] == 'audi')
-
-print('忽略大小写后，进行四个元素的遍历检查')
-
-for car in cars:  #用for注意冒号和缩进！
-  print(car.lower() == 'bmw')
-
-print(cars)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>False
-忽略大小写后，进行四个元素的遍历检查
-False
-True
-False
-False
-['aUdi', 'bMw', 'sUBaru', 'tOYota']
-</code></pre>
-<p>注意，即使car.lower()，lower（）的返回值是小写，但是对原列表中元素不进行改变。<br>lower()只能用 . 来调用</p>
-<h3 id="5-2-3-检查是否不相等"><a href="#5-2-3-检查是否不相等" class="headerlink" title="5.2.3 检查是否不相等"></a>5.2.3 检查是否不相等</h3><h4 id="使用-x3D"><a href="#使用-x3D" class="headerlink" title="使用 !="></a>使用 !=</h4><h3 id="5-2-4-数值比较"><a href="#5-2-4-数值比较" class="headerlink" title="5.2.4 数值比较"></a>5.2.4 数值比较</h3><h4 id="lt-gt-x3D-x3D-gt-x3D-lt-x3D-返回布尔类型"><a href="#lt-gt-x3D-x3D-gt-x3D-lt-x3D-返回布尔类型" class="headerlink" title="<     >    =   !=    >=   <=  返回布尔类型"></a>&lt;     &gt;    =   !=    &gt;=   &lt;=  返回布尔类型</h4><h3 id="5-2-5-多个条件的检查"><a href="#5-2-5-多个条件的检查" class="headerlink" title="5.2.5 多个条件的检查"></a>5.2.5 多个条件的检查</h3><p>C语言中 &amp;&amp; 相当于 python的 and<br>       || 相当于          or</p>
-<h3 id="5-2-6-检查特定值是否在列表中-元素-in-列表"><a href="#5-2-6-检查特定值是否在列表中-元素-in-列表" class="headerlink" title="5.2.6 检查特定值是否在列表中   元素 in 列表"></a>5.2.6 检查特定值是否在列表中   元素 in 列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = ['audi','bmw','subaru','toyota']
-
-check = 'bmw' in cars
-
-print(check)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>True
-</code></pre>
-<h3 id="5-2-7-检查特定值是否-不在-列表中-元素-not-in-列表"><a href="#5-2-7-检查特定值是否-不在-列表中-元素-not-in-列表" class="headerlink" title="5.2.7 检查特定值是否  不在 列表中  元素  not in 列表"></a>5.2.7 检查特定值是否  不在 列表中  元素  not in 列表</h3><p>替换上面 in 为 notin</p>
-<h2 id="5-3-if语句"><a href="#5-3-if语句" class="headerlink" title="5.3 if语句"></a>5.3 if语句</h2><h3 id="5-3-1｜5-3-2-if-else-语句"><a href="#5-3-1｜5-3-2-if-else-语句" class="headerlink" title="5.3.1｜5.3.2 if else 语句"></a>5.3.1｜5.3.2 if else 语句</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法：
-
-if 条件:
-  执行块
-else:
-  执行块
-#注意缩进 和 冒号！！！  有缩进的默认在执行块内<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="5-3-3-if-elif-else-结构"><a href="#5-3-3-if-elif-else-结构" class="headerlink" title="5.3.3 if-elif-else 结构"></a>5.3.3 if-elif-else 结构</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法：
-
-if 条件1:
-  执行块
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
     
-elif 条件2:
-  执行块
     
-else:
-  执行块
     
-    #注意：如果if通过，elif 和 else 全部跳过
-        # if 没过 elif过了，else跳过
-        # 其余情况都是else<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">#当if语句中输出字符串出现重复，简化代码小技巧：
-#eg：
-age = 12
-
-if age&lt;14:
-    print("your admission cost is $0.")
-elif age&lt;18:
-    print("your admission cost is $25.")
-else:
-    print("your admission cost is $40.")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>your admission cost is $0.
-</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">#利用f字符串进行简化：
-age = 12
-
-if age&lt;14:
-   price = 0
-elif age&lt;18:
-   price = 25
-else:
-   price = 40
-    
-print(f"your admission cost is ${price}.")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>your admission cost is 0$.
-</code></pre>
-<h3 id="5-3-4-使用多个elif代码块"><a href="#5-3-4-使用多个elif代码块" class="headerlink" title="5.3.4 使用多个elif代码块"></a>5.3.4 使用多个elif代码块</h3><p>实现要求收费：<br>4岁以下免费<br>[4,18)岁收25美元；<br>[18,65)岁收40美元；<br>[65,+∞)岁收20美元。</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">age = 38
-if age&lt;4:
-   price = 0
-
-elif age&lt;18:
-   price = 25
-
-elif age&lt;65:
-   price = 40
-
-else:  #最后不一定用else结尾，这个可以写成elif
-   price = 20
-    
-print(f"your admission cost is ${price}.")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>your admission cost is $40.
-</code></pre>
-<h2 id="5-4-使用if语句处理列表"><a href="#5-4-使用if语句处理列表" class="headerlink" title="5.4 使用if语句处理列表"></a>5.4 使用if语句处理列表</h2><h3 id="5-4-1-检查特殊元素"><a href="#5-4-1-检查特殊元素" class="headerlink" title="5.4.1 检查特殊元素"></a>5.4.1 检查特殊元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = ['audi','bmw','subaru','toyota']
-for car in cars:
-  if car == 'bmw':
-    print(f"My favorite car is {car}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>My favorite car is bmw
-</code></pre>
-<h3 id="5-4-2-确定列表不是空的"><a href="#5-4-2-确定列表不是空的" class="headerlink" title="5.4.2 确定列表不是空的"></a>5.4.2 确定列表不是空的</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = []
-if cars:   #if 列表：  列表为空就为false，反之为true。
-    print("cars")
-else:
-    print("there is no car in your carlist.")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>there is no car in your carlist.
-</code></pre>
-<h3 id="5-4-3-使用多个列表"><a href="#5-4-3-使用多个列表" class="headerlink" title="5.4.3 使用多个列表"></a>5.4.3 使用多个列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = ['audi','bmw','subaru','toyota']
-afordable_cars = ['audi','toyota']
-for car in cars:
-    if car in afordable_cars:
-      print(f"The {car} you love is afordable.")#注意缩进
-    else:
-      print(f"You can't buy {car} you love right now.")#注意这里else和上面的if对齐<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>The audi you love is afordable.
-You can't buy bmw you love right now.
-You can't buy subaru you love right now.
-The toyota you love is afordable.
-</code></pre>
-]]></content>
+    <entry>
+      <title>数据库理论课-Note1</title>
+      <link href="/2022/11/19/SQL-Note1/"/>
+      <url>/2022/11/19/SQL-Note1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="SQL-Note-1："><a href="#SQL-Note-1：" class="headerlink" title="SQL-Note 1："></a>SQL-Note 1：</h1><h2 id="–查询语句："><a href="#–查询语句：" class="headerlink" title="–查询语句："></a>–查询语句：</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name（一个或多个属性）</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> instructor（一个或者多个表）</span><br><span class="line"></span><br><span class="line"><span class="keyword">where</span> dept_name <span class="operator">=</span> <span class="string">'cs'</span>（满足条件）</span><br></pre></td></tr></tbody></table></figure><h3 id="练习：找到导师表中的系名"><a href="#练习：找到导师表中的系名" class="headerlink" title="练习：找到导师表中的系名"></a>练习：找到导师表中的系名</h3><p>select dept_name</p><p>from instructor</p><h3 id="找到表中所有属性："><a href="#找到表中所有属性：" class="headerlink" title="找到表中所有属性："></a>找到表中所有属性：</h3><p>select * –但是这个在计算机中处理效率没有一个个都列出来的效率高。</p><p>from instructor</p><h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>select dept_name from instructor</p><p>当有多个导师属于一个系，</p><p>就会有<u><strong>重复</strong></u>。</p><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--去重复：</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> dept_name</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> instructor</span><br></pre></td></tr></tbody></table></figure><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> dept_name,id</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> instructor</span><br></pre></td></tr></tbody></table></figure><p>–像这样去重复多个元素，去除的是满足这两个条件出来的 重复行</p><p>–注意：distinct前面没有属性，只能后面添加一个或者多个属性</p><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> 主码</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> 表</span><br></pre></td></tr></tbody></table></figure><p>结果相当于没有distinct，但是效率会变低。</p><p><strong><u>– select中的属性可以进行操作，还可以是函数调用。但是不会修改数据库中数据</u></strong></p><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> salary<span class="operator">*</span><span class="number">1.1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> instructor</span><br><span class="line"></span><br><span class="line">找导师工资出来，输出结果为<span class="number">1.1</span>倍原工资数据</span><br></pre></td></tr></tbody></table></figure><p>--</p><h2 id="and-or-not-组成：复合条件-和-where-连用"><a href="#and-or-not-组成：复合条件-和-where-连用" class="headerlink" title="and or not 组成：复合条件 和 where 连用"></a>and or not 组成：复合条件 和 where 连用</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> salary<span class="operator">&gt;</span><span class="number">8000</span> <span class="keyword">and</span> dept_name <span class="operator">=</span> <span class="string">'cs'</span></span><br></pre></td></tr></tbody></table></figure><h2 id="–用as起名字："><a href="#–用as起名字：" class="headerlink" title="–用as起名字："></a>–用as起名字：</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> salary<span class="operator">*</span><span class="number">1.1</span> <span class="keyword">as</span> over_salary</span><br><span class="line"></span><br><span class="line"> <span class="keyword">from</span> instructor</span><br></pre></td></tr></tbody></table></figure><h2 id="–字符串处理函数："><a href="#–字符串处理函数：" class="headerlink" title="–字符串处理函数："></a>–字符串处理函数：</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">字符串<span class="number">1</span><span class="operator">+</span>字符串<span class="number">2</span> ：字符串拼接</span><br><span class="line"></span><br><span class="line"><span class="built_in">upper</span>(字符串)</span><br><span class="line"></span><br><span class="line"><span class="built_in">lower</span>(字符串)</span><br></pre></td></tr></tbody></table></figure><h2 id="–字符串匹配："><a href="#–字符串匹配：" class="headerlink" title="–字符串匹配："></a>–字符串匹配：</h2><figure class="highlight livecodeserver"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-<span class="string">'Intro%'</span> <span class="comment">--寻找开头为Intro</span></span><br><span class="line"></span><br><span class="line">-<span class="string">'%abc%'</span>  <span class="comment">--寻找中间含有abc</span></span><br><span class="line"></span><br><span class="line">-<span class="string">'___'</span>   <span class="comment">--寻找三位长度</span></span><br><span class="line"></span><br><span class="line">-<span class="string">'___%'</span>  <span class="comment">--寻找至少三位</span></span><br></pre></td></tr></tbody></table></figure><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> instructor</span><br><span class="line"></span><br><span class="line"><span class="keyword">where</span> name <span class="keyword">like</span> <span class="string">'%abc%'</span> <span class="comment">--注意用like进行筛讯</span></span><br></pre></td></tr></tbody></table></figure><h3 id="定义转义字符"><a href="#定义转义字符" class="headerlink" title="\定义转义字符"></a>\定义转义字符</h3><h2 id="–数字区间条件：between-and："><a href="#–数字区间条件：between-and：" class="headerlink" title="–数字区间条件：between and："></a>–数字区间条件：between and：</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> instructor</span><br><span class="line"></span><br><span class="line"><span class="keyword">where</span> salary <span class="keyword">between</span> <span class="number">9000</span> <span class="keyword">and</span> <span class="number">10000</span></span><br></pre></td></tr></tbody></table></figure><h2 id="–多条件匹配"><a href="#–多条件匹配" class="headerlink" title="–多条件匹配"></a>–多条件匹配</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name, course_id</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> instructor, teaches</span><br><span class="line"></span><br><span class="line"><span class="keyword">where</span> (instructor.ID, dept_name) <span class="operator">=</span> (teaches.ID, ’Biology’);</span><br></pre></td></tr></tbody></table></figure><h2 id="–排序：desc降序-asc升序"><a href="#–排序：desc降序-asc升序" class="headerlink" title="–排序：desc降序 asc升序"></a>–排序：desc降序 asc升序</h2><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">– Example: <span class="keyword">order</span> <span class="keyword">by</span> name <span class="keyword">desc</span></span><br><span class="line"></span><br><span class="line">Can sort <span class="keyword">on</span> multiple attributes</span><br><span class="line"></span><br><span class="line">– Example: <span class="keyword">order</span> <span class="keyword">by</span> dept_name, name <span class="comment">--按照两个元素排序，字符串首字母。</span></span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
       <categories>
-        <category>Python学习</category>
+          
+          <category> SQL理论课 </category>
+          
       </categories>
-      <tags>
-        <tag>柴柴</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习：Chapter6</title>
-    <url>/2022/11/11/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%206/</url>
-    <content><![CDATA[<h1 id="Chapter6-字典（类比结构体）"><a href="#Chapter6-字典（类比结构体）" class="headerlink" title="Chapter6: 字典（类比结构体）"></a>Chapter6: 字典（类比结构体）</h1><h2 id="6-1-一个简单的字典"><a href="#6-1-一个简单的字典" class="headerlink" title="6.1 一个简单的字典"></a>6.1 一个简单的字典</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}
-
-print(car['brand'])
-print(car['price'])
-print(car['color'])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>bwm
-1000000
-black
-</code></pre>
-<h2 id="6-2-使用字典"><a href="#6-2-使用字典" class="headerlink" title="6.2 使用字典"></a>6.2 使用字典</h2><h3 id="6-2-1-定义与访问字典"><a href="#6-2-1-定义与访问字典" class="headerlink" title="6.2.1 定义与访问字典"></a>6.2.1 定义与访问字典</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">定义：
-
-字典名 = {'键值1':键值1值,'键值2':键值2值···}
-
-访问：
-
-字典名['键值名']
-#每一个键值都是一个变量，相当于成员<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="6-2-2-添加键值对"><a href="#6-2-2-添加键值对" class="headerlink" title="6.2.2 添加键值对"></a>6.2.2 添加键值对</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">字典['新增键值名'] = 新增键值的值<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}
-print(car)#字典可以直接输出
-
-#新增型号
-car['type'] = 'x765'
-print(car)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>{'brand': 'bwm', 'price': 1000000, 'color': 'black'}
-{'brand': 'bwm', 'price': 1000000, 'color': 'black', 'type': 'x765'}
-</code></pre>
-<p>直接打印字典，元素排列顺序和定义时完全相同，用for循环遍历时也按照定义顺序。<br>新增键值对：会直接默认在最后。</p>
-<h3 id="6-2-3-创建一个空字典："><a href="#6-2-3-创建一个空字典：" class="headerlink" title="6.2.3 创建一个空字典："></a>6.2.3 创建一个空字典：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">和创建一个空列表一样
-语法：
-字典名 = {}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="6-2-4-修改字典中的值"><a href="#6-2-4-修改字典中的值" class="headerlink" title="6.2.4 修改字典中的值"></a>6.2.4 修改字典中的值</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}
-car['color'] = 'white'
-print(car['color'])
-print(car)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>white
-{'brand': 'bwm', 'price': 1000000, 'color': 'white'}
-</code></pre>
-<h3 id="6-2-5-删除键值对：del"><a href="#6-2-5-删除键值对：del" class="headerlink" title="6.2.5 删除键值对：del"></a>6.2.5 删除键值对：del</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">del 列表名['键值名'] #键值名记着加引号！！！<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}
-print(car)
-del car['price']
-print(car)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>{'brand': 'bwm', 'price': 1000000, 'color': 'black'}
-{'brand': 'bwm', 'color': 'black'}
-</code></pre>
-<h3 id="6-2-6-定义字典小习惯"><a href="#6-2-6-定义字典小习惯" class="headerlink" title="6.2.6 定义字典小习惯"></a>6.2.6 定义字典小习惯</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm',
-       'price':1000000,
-       'color':'black'}
-print(car)
-#竖着这样写可以让键值对更清晰<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>{'brand': 'bwm', 'price': 1000000, 'color': 'black'}
-</code></pre>
-<h3 id="6-2-7-使用get-来访问值"><a href="#6-2-7-使用get-来访问值" class="headerlink" title="6.2.7 使用get()来访问值"></a>6.2.7 使用get()来访问值</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}
-print(car.get('brand'))
-print(car.get('owner'))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>bwm
-None
-</code></pre>
-<h2 id="6-3-遍历字典"><a href="#6-3-遍历字典" class="headerlink" title="6.3 遍历字典"></a>6.3 遍历字典</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法：
-
-for 键值变量an，键值值bn in 列表名.items():
-    执行块
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
     
-#注意！！！ 列表名.items()不可以省略。items!!!<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}
-
-for key,value in car.items():
-    print(f"\nKey: {key.title()}")
-    print(f"\nValue: {value}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<pre><code>Key: Brand
-
-Value: bwm
-
-Key: Price
-
-Value: 1000000
-
-Key: Color
-
-Value: black
-</code></pre>
-<h3 id="6-3-2-遍历字典中的所有键名变量-或者-键值"><a href="#6-3-2-遍历字典中的所有键名变量-或者-键值" class="headerlink" title="6.3.2 遍历字典中的所有键名变量 或者 键值"></a>6.3.2 遍历字典中的所有键名变量 或者 键值</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">for 键值变量an in 列表名.keys():
-    执行块
     
-.keys()是让前面的变量对应键值名变量。（访问以键值名构成的列表）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}
-
-for key in car.keys():
-    print(f"\nKey: {key.title()}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<pre><code>Key: Brand
-
-Key: Price
-
-Key: Color
-</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">for 键值变量an in 列表名.values():
-    执行块
     
-.values()是让前面的变量对应键值。（访问以键值构成的列表）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}
-
-for value in car.values():
-    print(f"\nKey: {value}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<pre><code>Key: bwm
-
-Key: 1000000
-
-Key: black
-</code></pre>
-<h3 id="6-3-3-遍历处理后的列表"><a href="#6-3-3-遍历处理后的列表" class="headerlink" title="6.3.3 遍历处理后的列表"></a>6.3.3 遍历处理后的列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#想按照首字母排序 打印：键值名变量 用sorted（）临时排序
-car = {'brand':'bwm','price':1000000,'color':'black'}
-
-for key in sorted(car.keys()):
-    print(f"\nKey: {key.title()}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<pre><code>Key: Brand
-
-Key: Color
-
-Key: Price
-</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">favo_language = {
-    'jen': 'python',
-    'sarah': 'c',
-    'edward': 'ruby',
-    'phil': 'python'
-}
-
-print("The following languages have been mentioned:")
-for language in  set(favo_language.values()):
-    print(language.title())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>The following languages have been mentioned:
-Ruby
-C
-Python
-</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">#对列表去重处理： set(列表名)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="6-4-嵌套（套娃）"><a href="#6-4-嵌套（套娃）" class="headerlink" title="6.4 嵌套（套娃）"></a>6.4 嵌套（套娃）</h2><h3 id="6-4-1-6-字典列表"><a href="#6-4-1-6-字典列表" class="headerlink" title="6.4.1 6.字典列表"></a>6.4.1 6.字典列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car_1 = {'color':'black','price':3000}
-car_2 = {'color':'whilt','price':34000}
-car_3 = {'color':'yellow','price':342000}
-
-cars = [car_1,car_2,car_3]  #注意这里列表用的是方括号
-
-print(cars)
-
-for car in cars:
-    print(car)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[{'color': 'black', 'price': 3000}, {'color': 'whilt', 'price': 34000}, {'color': 'yellow', 'price': 342000}]
-{'color': 'black', 'price': 3000}
-{'color': 'whilt', 'price': 34000}
-{'color': 'yellow', 'price': 342000}
-</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">#创建多个的时候可以使用for（） 和 range（）
-aliens = []
-for alien_number in range(0,5):
-    new_alien = {'color':'green','speed':'slow'}
-    aliens.append(new_alien)
-
-for alien_number in range(5,30):
-    new_alien = {'color':'yellow','speed':'fast'}
-    aliens.append(new_alien)
-
-for alien in aliens[0:30:5]:
-    print(alien)
-print(len(aliens))
-    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>{'color': 'green', 'speed': 'slow'}
-{'color': 'yellow', 'speed': 'fast'}
-{'color': 'yellow', 'speed': 'fast'}
-{'color': 'yellow', 'speed': 'fast'}
-{'color': 'yellow', 'speed': 'fast'}
-{'color': 'yellow', 'speed': 'fast'}
-30
-</code></pre>
-<h3 id="6-4-2-在字典中储存列表"><a href="#6-4-2-在字典中储存列表" class="headerlink" title="6.4.2 在字典中储存列表"></a>6.4.2 在字典中储存列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">pizza = {
-    'crust':'thick',
-    'toppings':['mushrooms','extra cheese'],
-}
-for topping in pizza.get('toppings'): #也可以写成 pizza['toppingsb']
-    print(topping)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>mushrooms
-extra cheese
-</code></pre>
-<h3 id="6-4-3-在字典中储存字典"><a href="#6-4-3-在字典中储存字典" class="headerlink" title="6.4.3 在字典中储存字典"></a>6.4.3 在字典中储存字典</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">pizza = {
-    'toppings':{'first':'mushrooms','second':'extra cheese'}
-}
-for sequence,topping in pizza['toppings'].items():
-    print(f"{sequence}: {topping}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>first: mushrooms
-second: extra cheese
-</code></pre>
-]]></content>
+    <entry>
+      <title>Python学习：Chapter7</title>
+      <link href="/2022/11/14/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%207/"/>
+      <url>/2022/11/14/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%207/</url>
+      
+        <content type="html"><![CDATA[<h1 id="用户输入和while循环"><a href="#用户输入和while循环" class="headerlink" title="用户输入和while循环"></a>用户输入和while循环</h1><h2 id="7-1-input（）字符串输入"><a href="#7-1-input（）字符串输入" class="headerlink" title="7.1 input（）字符串输入"></a>7.1 input（）字符串输入</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">用户输入文本，把文本呈现给用户<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">message = input("请输入返回的文本：")print(message)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre><code>请输入返回的文本：1234512345</code></pre><h3 id="7-1-1-编写清晰的程序"><a href="#7-1-1-编写清晰的程序" class="headerlink" title="7.1.1 编写清晰的程序"></a>7.1.1 编写清晰的程序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">原理：变量 = input（参数 ：说明/指示） <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">name = input("please enter your name:")print(f"Hello,{name}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre><code>please enter your name:OliverHello,Oliver</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">echo = "语句1"#echo = echo + “语句2“ 可以写成：echo += "语句2"print(echo)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>语句1语句2</code></pre><h3 id="7-1-2-int-：将input（）变成int型进行运算"><a href="#7-1-2-int-：将input（）变成int型进行运算" class="headerlink" title="7.1.2 int()：将input（）变成int型进行运算"></a>7.1.2 int()：将input（）变成int型进行运算</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">age = input("What’s your age?:")age = int(age)print(f"Your age is {age}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><pre><code>What’s your age?:65Your age is 65</code></pre><h3 id="7-1-3-求模运算符"><a href="#7-1-3-求模运算符" class="headerlink" title="7.1.3 求模运算符%"></a>7.1.3 求模运算符%</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">作用：将两个数相除并返回余数如果一个数可被另一个数字整除，%返回值为0常见用途：判断奇数偶数。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">5%3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>2</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">6%3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>0</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">5%1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>0</code></pre><h2 id="7-2-while循环简介"><a href="#7-2-while循环简介" class="headerlink" title="7.2 while循环简介"></a>7.2 while循环简介</h2><h3 id="7-2-1-使用while循环"><a href="#7-2-1-使用while循环" class="headerlink" title="7.2.1 使用while循环"></a>7.2.1 使用while循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法while 条件：   #注意冒号！！！<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
+      
+      
       <categories>
-        <category>Python学习</category>
+          
+          <category> Python学习 </category>
+          
       </categories>
-      <tags>
-        <tag>柴柴</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习：Chapter7</title>
-    <url>/2022/11/14/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%207/</url>
-    <content><![CDATA[<h1 id="用户输入和while循环"><a href="#用户输入和while循环" class="headerlink" title="用户输入和while循环"></a>用户输入和while循环</h1><h2 id="7-1-input（）字符串输入"><a href="#7-1-input（）字符串输入" class="headerlink" title="7.1 input（）字符串输入"></a>7.1 input（）字符串输入</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">用户输入文本，把文本呈现给用户<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">message = input("请输入返回的文本：")
-print(message)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<pre><code>请输入返回的文本：12345
-12345
-</code></pre>
-<h3 id="7-1-1-编写清晰的程序"><a href="#7-1-1-编写清晰的程序" class="headerlink" title="7.1.1 编写清晰的程序"></a>7.1.1 编写清晰的程序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">原理：
-
-变量 = input（参数 ：说明/指示） <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">name = input("please enter your name:")
-print(f"Hello,{name}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<pre><code>please enter your name:Oliver
-Hello,Oliver
-</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">echo = "语句1"
-#echo = echo + “语句2“ 可以写成：
-echo += "语句2"
-
-print(echo)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>语句1语句2
-</code></pre>
-<h3 id="7-1-2-int-：将input（）变成int型进行运算"><a href="#7-1-2-int-：将input（）变成int型进行运算" class="headerlink" title="7.1.2 int()：将input（）变成int型进行运算"></a>7.1.2 int()：将input（）变成int型进行运算</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">age = input("What’s your age?:")
-age = int(age)
-print(f"Your age is {age}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>What’s your age?:65
-Your age is 65
-</code></pre>
-<h3 id="7-1-3-求模运算符"><a href="#7-1-3-求模运算符" class="headerlink" title="7.1.3 求模运算符%"></a>7.1.3 求模运算符%</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">作用：将两个数相除并返回余数
-如果一个数可被另一个数字整除，%返回值为0
-常见用途：判断奇数偶数。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">5%3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-<pre><code>2
-</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">6%3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-<pre><code>0
-</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">5%1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-<pre><code>0
-</code></pre>
-<h2 id="7-2-while循环简介"><a href="#7-2-while循环简介" class="headerlink" title="7.2 while循环简介"></a>7.2 while循环简介</h2><h3 id="7-2-1-使用while循环"><a href="#7-2-1-使用while循环" class="headerlink" title="7.2.1 使用while循环"></a>7.2.1 使用while循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法
-while 条件：   #注意冒号！！！
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>操作系统 Chapter3/4</title>
+      <link href="/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BA%BF%E7%A8%8B/"/>
+      <url>/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BA%BF%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h4 id="Chapter3-进程"><a href="#Chapter3-进程" class="headerlink" title="Chapter3: 进程"></a>Chapter3: 进程</h4><p>pipes：单项的，双向通信：半双通信，发的时候不能输入，输入时候不能发送。</p><h1 id="Chapter4-线程"><a href="#Chapter4-线程" class="headerlink" title="Chapter4:线程"></a>Chapter4:线程</h1><p>进程间通信</p><p>多核编程</p><h2 id="1-并行"><a href="#1-并行" class="headerlink" title="1.并行"></a>1.并行</h2><p>数据并行：数据子集到多核，每个做相同工作</p><p>工作并行：线程到每个核，每个核心不同工作</p><h2 id="2-用户线程和内核线程"><a href="#2-用户线程和内核线程" class="headerlink" title="2.用户线程和内核线程"></a>2.用户线程和内核线程</h2><h3 id="用户线程："><a href="#用户线程：" class="headerlink" title="用户线程："></a>用户线程：</h3><p>POSIX Pthreads </p><p>Windows threads</p><p> Java threads</p><h3 id="内核线程："><a href="#内核线程：" class="headerlink" title="内核线程："></a>内核线程：</h3><p>Windows </p><p>Solaris</p><p>LinuxTru64 </p><p>UNIXMac OS X</p><p>操作系统：用户线程看不到，内核线程能看到</p><p>用户线程和内核线程对应：</p><p>一对一</p><p>多对一</p><p>多对多</p><h2 id="3-Pthreads："><a href="#3-Pthreads：" class="headerlink" title="3.Pthreads："></a>3.Pthreads：</h2><p>函数库</p><p>p</p>]]></content>
+      
+      
       <categories>
-        <category>Python学习</category>
+          
+          <category> 操作系统 </category>
+          
       </categories>
-      <tags>
-        <tag>柴柴</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>操作系统 Chapter3/4</title>
-    <url>/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BA%BF%E7%A8%8B/</url>
-    <content><![CDATA[<h4 id="Chapter3-进程"><a href="#Chapter3-进程" class="headerlink" title="Chapter3: 进程"></a>Chapter3: 进程</h4><p>pipes：单项的，双向通信：半双通信，发的时候不能输入，输入时候不能发送。</p>
-<h1 id="Chapter4-线程"><a href="#Chapter4-线程" class="headerlink" title="Chapter4:线程"></a>Chapter4:线程</h1><p>进程间通信</p>
-<p>多核编程</p>
-<h2 id="1-并行"><a href="#1-并行" class="headerlink" title="1.并行"></a>1.并行</h2><p>数据并行：数据子集到多核，每个做相同工作</p>
-<p>工作并行：线程到每个核，每个核心不同工作</p>
-<h2 id="2-用户线程和内核线程"><a href="#2-用户线程和内核线程" class="headerlink" title="2.用户线程和内核线程"></a>2.用户线程和内核线程</h2><h3 id="用户线程："><a href="#用户线程：" class="headerlink" title="用户线程："></a>用户线程：</h3><p>POSIX Pthreads </p>
-<p>Windows threads</p>
-<p> Java threads</p>
-<h3 id="内核线程："><a href="#内核线程：" class="headerlink" title="内核线程："></a>内核线程：</h3><p>Windows </p>
-<p>Solaris</p>
-<p>LinuxTru64 </p>
-<p>UNIXMac OS X</p>
-<p>操作系统：用户线程看不到，内核线程能看到</p>
-<p>用户线程和内核线程对应：</p>
-<p>一对一</p>
-<p>多对一</p>
-<p>多对多</p>
-<h2 id="3-Pthreads："><a href="#3-Pthreads：" class="headerlink" title="3.Pthreads："></a>3.Pthreads：</h2><p>函数库</p>
-<p>p</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python学习：Chapter6</title>
+      <link href="/2022/11/11/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%206/"/>
+      <url>/2022/11/11/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%206/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Chapter6-字典（类比结构体）"><a href="#Chapter6-字典（类比结构体）" class="headerlink" title="Chapter6: 字典（类比结构体）"></a>Chapter6: 字典（类比结构体）</h1><h2 id="6-1-一个简单的字典"><a href="#6-1-一个简单的字典" class="headerlink" title="6.1 一个简单的字典"></a>6.1 一个简单的字典</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}print(car['brand'])print(car['price'])print(car['color'])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>bwm1000000black</code></pre><h2 id="6-2-使用字典"><a href="#6-2-使用字典" class="headerlink" title="6.2 使用字典"></a>6.2 使用字典</h2><h3 id="6-2-1-定义与访问字典"><a href="#6-2-1-定义与访问字典" class="headerlink" title="6.2.1 定义与访问字典"></a>6.2.1 定义与访问字典</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">定义：字典名 = {'键值1':键值1值,'键值2':键值2值···}访问：字典名['键值名']#每一个键值都是一个变量，相当于成员<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="6-2-2-添加键值对"><a href="#6-2-2-添加键值对" class="headerlink" title="6.2.2 添加键值对"></a>6.2.2 添加键值对</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">字典['新增键值名'] = 新增键值的值<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}print(car)#字典可以直接输出#新增型号car['type'] = 'x765'print(car)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>{'brand': 'bwm', 'price': 1000000, 'color': 'black'}{'brand': 'bwm', 'price': 1000000, 'color': 'black', 'type': 'x765'}</code></pre><p>直接打印字典，元素排列顺序和定义时完全相同，用for循环遍历时也按照定义顺序。<br>新增键值对：会直接默认在最后。</p><h3 id="6-2-3-创建一个空字典："><a href="#6-2-3-创建一个空字典：" class="headerlink" title="6.2.3 创建一个空字典："></a>6.2.3 创建一个空字典：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">和创建一个空列表一样语法：字典名 = {}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="6-2-4-修改字典中的值"><a href="#6-2-4-修改字典中的值" class="headerlink" title="6.2.4 修改字典中的值"></a>6.2.4 修改字典中的值</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}car['color'] = 'white'print(car['color'])print(car)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre><code>white{'brand': 'bwm', 'price': 1000000, 'color': 'white'}</code></pre><h3 id="6-2-5-删除键值对：del"><a href="#6-2-5-删除键值对：del" class="headerlink" title="6.2.5 删除键值对：del"></a>6.2.5 删除键值对：del</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">del 列表名['键值名'] #键值名记着加引号！！！<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}print(car)del car['price']print(car)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre><code>{'brand': 'bwm', 'price': 1000000, 'color': 'black'}{'brand': 'bwm', 'color': 'black'}</code></pre><h3 id="6-2-6-定义字典小习惯"><a href="#6-2-6-定义字典小习惯" class="headerlink" title="6.2.6 定义字典小习惯"></a>6.2.6 定义字典小习惯</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm',       'price':1000000,       'color':'black'}print(car)#竖着这样写可以让键值对更清晰<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>{'brand': 'bwm', 'price': 1000000, 'color': 'black'}</code></pre><h3 id="6-2-7-使用get-来访问值"><a href="#6-2-7-使用get-来访问值" class="headerlink" title="6.2.7 使用get()来访问值"></a>6.2.7 使用get()来访问值</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}print(car.get('brand'))print(car.get('owner'))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><pre><code>bwmNone</code></pre><h2 id="6-3-遍历字典"><a href="#6-3-遍历字典" class="headerlink" title="6.3 遍历字典"></a>6.3 遍历字典</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法：for 键值变量an，键值值bn in 列表名.items():    执行块    #注意！！！ 列表名.items()不可以省略。items!!!<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}for key,value in car.items():    print(f"\nKey: {key.title()}")    print(f"\nValue: {value}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>Key: BrandValue: bwmKey: PriceValue: 1000000Key: ColorValue: black</code></pre><h3 id="6-3-2-遍历字典中的所有键名变量-或者-键值"><a href="#6-3-2-遍历字典中的所有键名变量-或者-键值" class="headerlink" title="6.3.2 遍历字典中的所有键名变量 或者 键值"></a>6.3.2 遍历字典中的所有键名变量 或者 键值</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">for 键值变量an in 列表名.keys():    执行块    .keys()是让前面的变量对应键值名变量。（访问以键值名构成的列表）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}for key in car.keys():    print(f"\nKey: {key.title()}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre><code>Key: BrandKey: PriceKey: Color</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">for 键值变量an in 列表名.values():    执行块    .values()是让前面的变量对应键值。（访问以键值构成的列表）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">car = {'brand':'bwm','price':1000000,'color':'black'}for value in car.values():    print(f"\nKey: {value}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre><code>Key: bwmKey: 1000000Key: black</code></pre><h3 id="6-3-3-遍历处理后的列表"><a href="#6-3-3-遍历处理后的列表" class="headerlink" title="6.3.3 遍历处理后的列表"></a>6.3.3 遍历处理后的列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#想按照首字母排序 打印：键值名变量 用sorted（）临时排序car = {'brand':'bwm','price':1000000,'color':'black'}for key in sorted(car.keys()):    print(f"\nKey: {key.title()}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>Key: BrandKey: ColorKey: Price</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">favo_language = {    'jen': 'python',    'sarah': 'c',    'edward': 'ruby',    'phil': 'python'}print("The following languages have been mentioned:")for language in  set(favo_language.values()):    print(language.title())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>The following languages have been mentioned:RubyCPython</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">#对列表去重处理： set(列表名)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="6-4-嵌套（套娃）"><a href="#6-4-嵌套（套娃）" class="headerlink" title="6.4 嵌套（套娃）"></a>6.4 嵌套（套娃）</h2><h3 id="6-4-1-6-字典列表"><a href="#6-4-1-6-字典列表" class="headerlink" title="6.4.1 6.字典列表"></a>6.4.1 6.字典列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car_1 = {'color':'black','price':3000}car_2 = {'color':'whilt','price':34000}car_3 = {'color':'yellow','price':342000}cars = [car_1,car_2,car_3]  #注意这里列表用的是方括号print(cars)for car in cars:    print(car)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>[{'color': 'black', 'price': 3000}, {'color': 'whilt', 'price': 34000}, {'color': 'yellow', 'price': 342000}]{'color': 'black', 'price': 3000}{'color': 'whilt', 'price': 34000}{'color': 'yellow', 'price': 342000}</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">#创建多个的时候可以使用for（） 和 range（）aliens = []for alien_number in range(0,5):    new_alien = {'color':'green','speed':'slow'}    aliens.append(new_alien)for alien_number in range(5,30):    new_alien = {'color':'yellow','speed':'fast'}    aliens.append(new_alien)for alien in aliens[0:30:5]:    print(alien)print(len(aliens))    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>{'color': 'green', 'speed': 'slow'}{'color': 'yellow', 'speed': 'fast'}{'color': 'yellow', 'speed': 'fast'}{'color': 'yellow', 'speed': 'fast'}{'color': 'yellow', 'speed': 'fast'}{'color': 'yellow', 'speed': 'fast'}30</code></pre><h3 id="6-4-2-在字典中储存列表"><a href="#6-4-2-在字典中储存列表" class="headerlink" title="6.4.2 在字典中储存列表"></a>6.4.2 在字典中储存列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">pizza = {    'crust':'thick',    'toppings':['mushrooms','extra cheese'],}for topping in pizza.get('toppings'): #也可以写成 pizza['toppingsb']    print(topping)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>mushroomsextra cheese</code></pre><h3 id="6-4-3-在字典中储存字典"><a href="#6-4-3-在字典中储存字典" class="headerlink" title="6.4.3 在字典中储存字典"></a>6.4.3 在字典中储存字典</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">pizza = {    'toppings':{'first':'mushrooms','second':'extra cheese'}}for sequence,topping in pizza['toppings'].items():    print(f"{sequence}: {topping}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>first: mushroomssecond: extra cheese</code></pre>]]></content>
+      
+      
       <categories>
-        <category>操作系统</category>
+          
+          <category> Python学习 </category>
+          
       </categories>
-      <tags>
-        <tag>柴柴</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python学习：Chapter5</title>
+      <link href="/2022/11/09/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%205/"/>
+      <url>/2022/11/09/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%205/</url>
+      
+        <content type="html"><![CDATA[<h1 id="今天是柴柴的生日！"><a href="#今天是柴柴的生日！" class="headerlink" title="今天是柴柴的生日！"></a>今天是柴柴的生日！</h1><h1 id="谢谢宝贝蛋的惊喜，开心心！阿狐姐姐辛苦啦❤️"><a href="#谢谢宝贝蛋的惊喜，开心心！阿狐姐姐辛苦啦❤️" class="headerlink" title="谢谢宝贝蛋的惊喜，开心心！阿狐姐姐辛苦啦❤️"></a>谢谢宝贝蛋的惊喜，开心心！阿狐姐姐辛苦啦❤️</h1><h1 id="Chapter-5-if语句"><a href="#Chapter-5-if语句" class="headerlink" title="Chapter 5 if语句"></a>Chapter 5 if语句</h1><h2 id="5-1-简单示例"><a href="#5-1-简单示例" class="headerlink" title="5.1 简单示例"></a>5.1 简单示例</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = ['audi','bmw','subaru','toyota']for car in cars:    if car == 'bmw':      print (car.upper())    else:      print(car.title())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>AudiBMWSubaruToyota</code></pre><h2 id="5-2-条件测试-：True-False"><a href="#5-2-条件测试-：True-False" class="headerlink" title="5.2 条件测试 ：True False"></a>5.2 条件测试 ：True False</h2><h3 id="5-2-1-检查是否相等"><a href="#5-2-1-检查是否相等" class="headerlink" title="5.2.1 检查是否相等"></a>5.2.1 检查是否相等</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">my_name = 'oliver'print(my_name == 'oliver')print(my_name == 'taylor')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>TrueFalse</code></pre><h3 id="5-2-2检查相等时忽略大小写（字符串）用lower（）"><a href="#5-2-2检查相等时忽略大小写（字符串）用lower（）" class="headerlink" title="5.2.2检查相等时忽略大小写（字符串）用lower（）"></a>5.2.2检查相等时忽略大小写（字符串）用lower（）</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = ['aUdi','bMw','sUBaru','tOYota']print(cars[0] == 'audi')print('忽略大小写后，进行四个元素的遍历检查')for car in cars:  #用for注意冒号和缩进！  print(car.lower() == 'bmw')print(cars)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>False忽略大小写后，进行四个元素的遍历检查FalseTrueFalseFalse['aUdi', 'bMw', 'sUBaru', 'tOYota']</code></pre><p>注意，即使car.lower()，lower（）的返回值是小写，但是对原列表中元素不进行改变。<br>lower()只能用 . 来调用</p><h3 id="5-2-3-检查是否不相等"><a href="#5-2-3-检查是否不相等" class="headerlink" title="5.2.3 检查是否不相等"></a>5.2.3 检查是否不相等</h3><h4 id="使用-x3D"><a href="#使用-x3D" class="headerlink" title="使用 !="></a>使用 !=</h4><h3 id="5-2-4-数值比较"><a href="#5-2-4-数值比较" class="headerlink" title="5.2.4 数值比较"></a>5.2.4 数值比较</h3><h4 id="lt-gt-x3D-x3D-gt-x3D-lt-x3D-返回布尔类型"><a href="#lt-gt-x3D-x3D-gt-x3D-lt-x3D-返回布尔类型" class="headerlink" title="<     >    =   !=    >=   <=  返回布尔类型"></a>&lt;     &gt;    =   !=    &gt;=   &lt;=  返回布尔类型</h4><h3 id="5-2-5-多个条件的检查"><a href="#5-2-5-多个条件的检查" class="headerlink" title="5.2.5 多个条件的检查"></a>5.2.5 多个条件的检查</h3><p>C语言中 &amp;&amp; 相当于 python的 and<br>       || 相当于          or</p><h3 id="5-2-6-检查特定值是否在列表中-元素-in-列表"><a href="#5-2-6-检查特定值是否在列表中-元素-in-列表" class="headerlink" title="5.2.6 检查特定值是否在列表中   元素 in 列表"></a>5.2.6 检查特定值是否在列表中   元素 in 列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = ['audi','bmw','subaru','toyota']check = 'bmw' in carsprint(check)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>True</code></pre><h3 id="5-2-7-检查特定值是否-不在-列表中-元素-not-in-列表"><a href="#5-2-7-检查特定值是否-不在-列表中-元素-not-in-列表" class="headerlink" title="5.2.7 检查特定值是否  不在 列表中  元素  not in 列表"></a>5.2.7 检查特定值是否  不在 列表中  元素  not in 列表</h3><p>替换上面 in 为 notin</p><h2 id="5-3-if语句"><a href="#5-3-if语句" class="headerlink" title="5.3 if语句"></a>5.3 if语句</h2><h3 id="5-3-1｜5-3-2-if-else-语句"><a href="#5-3-1｜5-3-2-if-else-语句" class="headerlink" title="5.3.1｜5.3.2 if else 语句"></a>5.3.1｜5.3.2 if else 语句</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法：if 条件:  执行块else:  执行块#注意缩进 和 冒号！！！  有缩进的默认在执行块内<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="5-3-3-if-elif-else-结构"><a href="#5-3-3-if-elif-else-结构" class="headerlink" title="5.3.3 if-elif-else 结构"></a>5.3.3 if-elif-else 结构</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法：if 条件1:  执行块    elif 条件2:  执行块    else:  执行块        #注意：如果if通过，elif 和 else 全部跳过        # if 没过 elif过了，else跳过        # 其余情况都是else<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">#当if语句中输出字符串出现重复，简化代码小技巧：#eg：age = 12if age&lt;14:    print("your admission cost is $0.")elif age&lt;18:    print("your admission cost is $25.")else:    print("your admission cost is $40.")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>your admission cost is $0.</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">#利用f字符串进行简化：age = 12if age&lt;14:   price = 0elif age&lt;18:   price = 25else:   price = 40    print(f"your admission cost is ${price}.")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>your admission cost is 0$.</code></pre><h3 id="5-3-4-使用多个elif代码块"><a href="#5-3-4-使用多个elif代码块" class="headerlink" title="5.3.4 使用多个elif代码块"></a>5.3.4 使用多个elif代码块</h3><p>实现要求收费：<br>4岁以下免费<br>[4,18)岁收25美元；<br>[18,65)岁收40美元；<br>[65,+∞)岁收20美元。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">age = 38if age&lt;4:   price = 0elif age&lt;18:   price = 25elif age&lt;65:   price = 40else:  #最后不一定用else结尾，这个可以写成elif   price = 20    print(f"your admission cost is ${price}.")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>your admission cost is $40.</code></pre><h2 id="5-4-使用if语句处理列表"><a href="#5-4-使用if语句处理列表" class="headerlink" title="5.4 使用if语句处理列表"></a>5.4 使用if语句处理列表</h2><h3 id="5-4-1-检查特殊元素"><a href="#5-4-1-检查特殊元素" class="headerlink" title="5.4.1 检查特殊元素"></a>5.4.1 检查特殊元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = ['audi','bmw','subaru','toyota']for car in cars:  if car == 'bmw':    print(f"My favorite car is {car}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre><code>My favorite car is bmw</code></pre><h3 id="5-4-2-确定列表不是空的"><a href="#5-4-2-确定列表不是空的" class="headerlink" title="5.4.2 确定列表不是空的"></a>5.4.2 确定列表不是空的</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = []if cars:   #if 列表：  列表为空就为false，反之为true。    print("cars")else:    print("there is no car in your carlist.")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>there is no car in your carlist.</code></pre><h3 id="5-4-3-使用多个列表"><a href="#5-4-3-使用多个列表" class="headerlink" title="5.4.3 使用多个列表"></a>5.4.3 使用多个列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">cars = ['audi','bmw','subaru','toyota']afordable_cars = ['audi','toyota']for car in cars:    if car in afordable_cars:      print(f"The {car} you love is afordable.")#注意缩进    else:      print(f"You can't buy {car} you love right now.")#注意这里else和上面的if对齐<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>The audi you love is afordable.You can't buy bmw you love right now.You can't buy subaru you love right now.The toyota you love is afordable.</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python学习：Chapter4</title>
+      <link href="/2022/11/08/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%204/"/>
+      <url>/2022/11/08/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%204/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Chapter4-操作列表"><a href="#Chapter4-操作列表" class="headerlink" title="Chapter4 操作列表"></a>Chapter4 操作列表</h1><h2 id="4-1-for循环的使用"><a href="#4-1-for循环的使用" class="headerlink" title="4.1 for循环的使用"></a>4.1 for循环的使用</h2><h3 id="4-1-1-这是一个利用循环打印的例子："><a href="#4-1-1-这是一个利用循环打印的例子：" class="headerlink" title="4.1.1 这是一个利用循环打印的例子："></a>4.1.1 这是一个利用循环打印的例子：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']for an in a:   #冒号必不可少    print(an)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><pre><code>abcd</code></pre><h3 id="4-1-2-利用for循环进行更多操作的例子："><a href="#4-1-2-利用for循环进行更多操作的例子：" class="headerlink" title="4.1.2 利用for循环进行更多操作的例子："></a>4.1.2 利用for循环进行更多操作的例子：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']for an in a:   #冒号必不可少    print(f"{an.title()} is uppercase of {an}")    print("next char is:\n")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre><code>A is uppercase of anext char is:B is uppercase of bnext char is:C is uppercase of cnext char is:D is uppercase of dnext char is:</code></pre><p>结果说明：<br>  缩进的都属于for循环<br>  an相当于计数器变量作索引的a[i]。</p><h3 id="4-1-2-在for循环结束后执行操作"><a href="#4-1-2-在for循环结束后执行操作" class="headerlink" title="4.1.2 在for循环结束后执行操作"></a>4.1.2 在for循环结束后执行操作</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']for an in a:   #冒号必不可少    print(f"{an.title()} is uppercase of {an}")print("test end.")  #当缩进没有的时候，默认为在for循环之外。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre><code>A is uppercase of aB is uppercase of bC is uppercase of cD is uppercase of dtest end.</code></pre><h2 id="4-2-避免缩进错误"><a href="#4-2-避免缩进错误" class="headerlink" title="4.2 避免缩进错误"></a>4.2 避免缩进错误</h2><h3 id="4-2-1-忘记缩进"><a href="#4-2-1-忘记缩进" class="headerlink" title="4.2.1 忘记缩进"></a>4.2.1 忘记缩进</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['a','b','c','d']for an in a:print(an)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><pre><code>  File "/var/folders/1j/k13fttf13b5d6j8_m4q12rgr0000gn/T/ipykernel_49995/1502029580.py", line 3    print(an)    ^IndentationError: expected an indented block</code></pre><p>当没有缩进时，for循环找不到循环体，会报错。</p><h3 id="原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号"><a href="#原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号" class="headerlink" title="原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号"></a>原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号</h3><h2 id="4-3-创建数值列表"><a href="#4-3-创建数值列表" class="headerlink" title="4.3 创建数值列表"></a>4.3 创建数值列表</h2><h3 id="4-3-1-range-和list"><a href="#4-3-1-range-和list" class="headerlink" title="4.3.1 range()和list()"></a>4.3.1 range()和list()</h3><p>range()的三个用法：</p><p>range(x)  和  range(0,x)一样<br>range(x,y)<br>range(x,y,z)</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(6)) #相当于默认从0开始数6个<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>[0, 1, 2, 3, 4, 5]</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(0,6)) #指定从0开始数6个<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>[0, 1, 2, 3, 4, 5]</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(3,12)) #相当于从3到12，步长为1，注意右括号12实际数到11<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>[3, 4, 5, 6, 7, 8, 9, 10, 11]</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">list(range(3,12,2))#步长为2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre><code>[3, 5, 7, 9, 11]</code></pre><h3 id="4-3-2-用range-创建数字列表"><a href="#4-3-2-用range-创建数字列表" class="headerlink" title="4.3.2 用range()创建数字列表"></a>4.3.2 用range()创建数字列表</h3><h4 id="打印1-10的偶数"><a href="#打印1-10的偶数" class="headerlink" title="打印1-10的偶数"></a>打印1-10的偶数</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">even_num = list(range(2,11,2))  #注意，左边从2开始，右边界限为11（左面取得到，右面够不到）print(even_num)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre><code>[2, 4, 6, 8, 10]</code></pre><h4 id="创建一个列表，包含1-10的平方"><a href="#创建一个列表，包含1-10的平方" class="headerlink" title="创建一个列表，包含1-10的平方"></a>创建一个列表，包含1-10的平方</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">square_list = [] #先创建一个空列表for value in range(1,11):        square = value ** 2 #每一次线计算一下平方的值，再append到list里面    square_list.append(square)    #上面两行可以写成： spuare_list.append(value ** 2)    print(square_list)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code></pre><h3 id="4-3-3-对数字列表执行简单的统计计算"><a href="#4-3-3-对数字列表执行简单的统计计算" class="headerlink" title="4.3.3 对数字列表执行简单的统计计算"></a>4.3.3 对数字列表执行简单的统计计算</h3><h4 id="找数字列表-元素为数字-的-最大值、最小值、总和"><a href="#找数字列表-元素为数字-的-最大值、最小值、总和" class="headerlink" title="找数字列表(元素为数字)  的   最大值、最小值、总和"></a>找数字列表(元素为数字)  的   最大值、最小值、总和</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]print(max(digits))print(min(digits))print(sum(digits))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>9045</code></pre><h3 id="4-3-4-列表解析"><a href="#4-3-4-列表解析" class="headerlink" title="4.3.4 列表解析"></a>4.3.4 列表解析</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">#上面输入平方数的例子还可以用两行代码解决：square_list = [value ** 2 for value in range (1,11)]#本质是把一个列表转换成另一个列表#格式：列表1 = [表达式 for 变量 in 列表2]print(square_list)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code></pre><h2 id="4-4-使用列表的一部分"><a href="#4-4-使用列表的一部分" class="headerlink" title="4.4 使用列表的一部分"></a>4.4 使用列表的一部分</h2><h3 id="使用切片"><a href="#使用切片" class="headerlink" title="使用切片"></a>使用切片</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]print(digits[0:3])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><pre><code>[1, 2, 3]</code></pre><h4 id="切片使用方法：-列表-起点：终点"><a href="#切片使用方法：-列表-起点：终点" class="headerlink" title="切片使用方法： 列表[起点：终点]"></a>切片使用方法： 列表[起点：终点]</h4><p>如果写成 列表[:终点]，起点默认索引为0；<br>如果写成 列表[起点：]，则默认重点到列表最后一个</p><h4 id="如何打印最后三个元素？"><a href="#如何打印最后三个元素？" class="headerlink" title="如何打印最后三个元素？"></a>如何打印最后三个元素？</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]print(digits[-3:])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><pre><code>[8, 9, 0]</code></pre><p>列表[-倒数几个：]</p><h4 id="每间隔两个元素就提取一个（在选取范围内）"><a href="#每间隔两个元素就提取一个（在选取范围内）" class="headerlink" title="每间隔两个元素就提取一个（在选取范围内）"></a>每间隔两个元素就提取一个（在选取范围内）</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]print(digits[0:10:2])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><pre><code>[1, 3, 5, 7, 9]</code></pre><p>[起点：重点：步长]，步长不输入（没有第二个冒号）默认为1.</p><h3 id="遍历切片：使用for循环-切片"><a href="#遍历切片：使用for循环-切片" class="headerlink" title="遍历切片：使用for循环+切片"></a>遍历切片：使用for循环+切片</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]print("No 5 to No 9 number in my digits are:\n")for digit in digits[4:8]:        #利用单复数区别 列表 和 an    print(digit)#注意这里打印的是变量<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre><code>No 5 to No 9 number in my digits are:5678</code></pre><h3 id="复制列表-使用切片"><a href="#复制列表-使用切片" class="headerlink" title="复制列表 (使用切片)"></a>复制列表 (使用切片)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]copy_digits = digits[:]digits.append(10)copy_digits.append(11)print(digits)print(copy_digits)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10][1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11]</code></pre><h4 id="注意语法：-列表1-x3D-列表2"><a href="#注意语法：-列表1-x3D-列表2" class="headerlink" title="注意语法： 列表1 = 列表2[:]"></a>注意语法： 列表1 = 列表2[:]</h4><p>这样才是两个列表</p><p>如果没有切片直接复制</p><p>则两个列表指向同一个储存空间，本质上是一个列表</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits = [1,2,3,4,5,6,7,8,9,0]copy_digits = digitsdigits.append(10)copy_digits.append(11)print(digits)print(copy_digits)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11][1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11]</code></pre><h2 id="4-5-元组-不可改变的列表"><a href="#4-5-元组-不可改变的列表" class="headerlink" title="4.5 元组-不可改变的列表"></a>4.5 元组-不可改变的列表</h2><h3 id="定义语法："><a href="#定义语法：" class="headerlink" title="定义语法："></a>定义语法：</h3><p>元组名 = (元素1，元素2，…)</p><p>访问和列表相同</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)print(a[0])print(a[1])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><pre><code>3040</code></pre><p>不能改变：指不能单独给其内元素赋值。(报错)</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)a[0] = 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre><code>---------------------------------------------------------------------------TypeError                                 Traceback (most recent call last)/var/folders/1j/k13fttf13b5d6j8_m4q12rgr0000gn/T/ipykernel_53119/1136073212.py in &lt;module&gt;      1 a = (30,40)----&gt; 2 a[0] = 1TypeError: 'tuple' object does not support item assignment</code></pre><h3 id="遍历元组-和for循环"><a href="#遍历元组-和for循环" class="headerlink" title="遍历元组-和for循环"></a>遍历元组-和for循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40,50)for an in a:    print(an)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre><code>304050</code></pre><h3 id="修改元组变量-重新定义"><a href="#修改元组变量-重新定义" class="headerlink" title="修改元组变量-重新定义"></a>修改元组变量-重新定义</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = (30,40)print(a)a = (40,50)print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>(30, 40)(40, 50)</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>大物笔记梳理</title>
+      <link href="/2022/11/06/%E5%A4%A7%E7%89%A9%E7%AC%94%E8%AE%B0%E6%A2%B3%E7%90%86/"/>
+      <url>/2022/11/06/%E5%A4%A7%E7%89%A9%E7%AC%94%E8%AE%B0%E6%A2%B3%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a><strong>前言：</strong></h1><p>破大工又开始搞一些形式主义了，尽量能利用这点破烂时间做点事情。</p><h2 id="Why-Study-Physics"><a href="#Why-Study-Physics" class="headerlink" title="Why Study Physics?"></a>Why Study Physics?</h2><p><strong>Physics</strong> is the branch of science that describes <u>matter,</u> <u>energy,</u> <u>space,</u> and <u>time</u> at the <strong>most fundamental</strong> level. </p><h2 id="Fundamental-Quantities-and-Their-Dimension"><a href="#Fundamental-Quantities-and-Their-Dimension" class="headerlink" title="Fundamental Quantities and Their Dimension"></a>Fundamental Quantities and Their Dimension</h2><p>物理三大基本量和维度</p><h3 id="Length"><a href="#Length" class="headerlink" title="Length"></a>Length</h3><p>国际标准单位：米 meter</p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.08.26.png" alt="截屏2022-11-06 下午6.08.26" style="zoom:33%;"><h3 id="Mass"><a href="#Mass" class="headerlink" title="Mass"></a>Mass</h3><p>国际标准单位：千克 kg</p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.08.45.png" alt="截屏2022-11-06 下午6.08.45" style="zoom: 33%;"><h3 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h3><p>国际标准单位：秒 s</p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.07.48.png" alt="截屏2022-11-06 下午6.07.48" style="zoom:33%;"><h4 id="科学计数法和对应的英语词缀"><a href="#科学计数法和对应的英语词缀" class="headerlink" title="科学计数法和对应的英语词缀"></a>科学计数法和对应的英语词缀</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.10.29.png" alt="截屏2022-11-06 下午6.10.29" style="zoom: 33%;"></h4><h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4><h2 id="Conversion-of-Units-amp-Estimates"><a href="#Conversion-of-Units-amp-Estimates" class="headerlink" title="Conversion of Units &amp; Estimates"></a>Conversion of Units &amp; Estimates</h2><h3 id="利用单位守恒判断计算是否正确"><a href="#利用单位守恒判断计算是否正确" class="headerlink" title="利用单位守恒判断计算是否正确"></a>利用单位守恒判断计算是否正确</h3><h3 id="计算的不确定性："><a href="#计算的不确定性：" class="headerlink" title="计算的不确定性："></a>计算的不确定性：</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.15.23.png" alt="截屏2022-11-06 下午6.15.23" style="zoom:33%;"><p>Eg1: 测量初始数据最小分度值必须与仪器相符</p><p>Eg2: 利用测量值计算，得到的最大最小结果，分别对应    用的最大最小测量值，对应误差。</p><p><u><strong>当计算时使用的数据有不同精度，采用最粗糙的精度，其余数据四舍五入</strong></u></p><h2 id="Uncertainty-in-Measurements-amp-Significant-Figures"><a href="#Uncertainty-in-Measurements-amp-Significant-Figures" class="headerlink" title="Uncertainty in Measurements &amp; Significant Figures"></a>Uncertainty in Measurements &amp; Significant Figures</h2><p>计算不确定性解决方案在上一标题</p><p><strong>有效数字：</strong></p><p>当计算中，出现的数据有不同的有效数字，使用最低位的。</p><p>注意：<img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.24.28.png" alt="截屏2022-11-06 下午6.24.28"></p><p>这几个的有效数字不同</p><p>即使含有相同有效数字，数字精确度也不一定相同</p><p>出现integer，我们认为其没有精确度</p><p>2(int) = 2（准确值）</p><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.27.57.png" alt="截屏2022-11-06 下午6.27.57"></p><p><strong>因为宽是3位有效数字，所以计算结果保留3位有效数字，即44.0</strong></p><p>一些粗略估算的例子：</p><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.29.38.png" alt="截屏2022-11-06 下午6.29.38"></p><h2 id="Coordinate-Systems"><a href="#Coordinate-Systems" class="headerlink" title="Coordinate Systems"></a>Coordinate Systems</h2><p>三角坐标系：</p><h3 id="二维情况"><a href="#二维情况" class="headerlink" title="二维情况"></a>二维情况</h3><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.30.25.png" alt="截屏2022-11-06 下午6.30.25"></p><p>将普通坐标系转化成三角坐标系，</p><p><strong>注意phi=arctan（y/x）</strong></p><h3 id="三维情况："><a href="#三维情况：" class="headerlink" title="三维情况："></a>三维情况：</h3><h4 id="圆柱体坐标系："><a href="#圆柱体坐标系：" class="headerlink" title="圆柱体坐标系："></a>圆柱体坐标系：</h4><p>![](<a href="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06">http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/截屏2022-11-06</a> 下午6.32.13.png)</p><p>多了个z，原坐标系z转化后不变。</p><h4 id="球体坐标系："><a href="#球体坐标系：" class="headerlink" title="球体坐标系："></a>球体坐标系：</h4><h4 id="-2"><a href="#-2" class="headerlink" title=""></a><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.35.11.png" alt="截屏2022-11-06 下午6.35.11"></h4><h2 id="Problem-Solving-Strategy"><a href="#Problem-Solving-Strategy" class="headerlink" title="Problem-Solving Strategy"></a>Problem-Solving Strategy</h2><h3 id="流程：identify-set-up-execute"><a href="#流程：identify-set-up-execute" class="headerlink" title="流程：identify-set up-execute"></a>流程：identify-set up-execute</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学物理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python学习：Chapter3</title>
+      <link href="/2022/11/06/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%203/"/>
+      <url>/2022/11/06/Python%E5%AD%A6%E4%B9%A0%EF%BC%9AChapter%203/</url>
+      
+        <content type="html"><![CDATA[<h2 id="3-1使用列表中的各个值"><a href="#3-1使用列表中的各个值" class="headerlink" title="3.1使用列表中的各个值"></a>3.1使用列表中的各个值</h2><p>注意！ 索引可以指定负数！</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']print(a[-1])print(a[-2])print(a[-3])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre><code>321</code></pre><p>负数即倒数第几个</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">bicycles = ['trek','cannondale']message = f"my bicycle is a {bicycles[1].title()}."print(message)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><pre><code>my bicycle is a Cannondale.</code></pre><p>f花括号内可以写变量。</p><h2 id="3-2修改列表元素"><a href="#3-2修改列表元素" class="headerlink" title="3.2修改列表元素"></a>3.2修改列表元素</h2><h3 id="lt-1-gt-修改其中的元素"><a href="#lt-1-gt-修改其中的元素" class="headerlink" title="<1>修改其中的元素"></a>&lt;1&gt;修改其中的元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']print(a)a[0]='4'print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['1', '2', '3']['4', '2', '3']</code></pre><p>列表相当于是一个数组</p><h3 id="lt-2-gt-插入元素"><a href="#lt-2-gt-插入元素" class="headerlink" title="<2>插入元素"></a>&lt;2&gt;插入元素</h3><h4 id="1-末尾插入：append"><a href="#1-末尾插入：append" class="headerlink" title="1 末尾插入：append"></a>1 末尾插入：append</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']print(a)a.append("5")#注意使用时用.来调用print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['1', '2', '3']['1', '2', '3', '5']</code></pre><p> 连续使用append可以连续在后面插入</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=[]print(a)a.append("1")a.append("2")a.append("3")print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>[]['1', '2', '3']</code></pre><h4 id="2-选定位置前：insert"><a href="#2-选定位置前：insert" class="headerlink" title="2 选定位置前：insert"></a>2 选定位置前：insert</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']print(a)a.insert(0,'han')print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['1', '2', '3']['han', '1', '2', '3']</code></pre><p>注意！insert在指定元素   之前   插入！</p><h3 id="lt-3-gt-删除元素"><a href="#lt-3-gt-删除元素" class="headerlink" title="<3>删除元素"></a>&lt;3&gt;删除元素</h3><h4 id="1-del-语句-删除-（需要指定索引）"><a href="#1-del-语句-删除-（需要指定索引）" class="headerlink" title="1 del 语句 删除 （需要指定索引）"></a>1 del 语句 删除 （需要指定索引）</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']print(a)del a[0]print(a)del a[1]print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['1', '2', '3']['2', '3']['2']</code></pre><h4 id="2-pop-删除"><a href="#2-pop-删除" class="headerlink" title="2 pop() 删除"></a>2 pop() 删除</h4><h5 id="（）不含任何内容，默认最后一个值被弹出"><a href="#（）不含任何内容，默认最后一个值被弹出" class="headerlink" title="（）不含任何内容，默认最后一个值被弹出"></a>（）不含任何内容，默认最后一个值被弹出</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']print(a)poped_a = a.pop()print(a)print(poped_a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['1', '2', '3']['1', '2']3</code></pre><p>a被pop之后，a最后一个元素被弹出，而a.pop函数返回值就是的被弹出的最后一个元素</p><h5 id="指定索引，弹出任意位置处的元素"><a href="#指定索引，弹出任意位置处的元素" class="headerlink" title="指定索引，弹出任意位置处的元素"></a>指定索引，弹出任意位置处的元素</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']print(a)poped_a1 = a.pop(1)print(a)print(poped_a1)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['1', '2', '3']['1', '3']2</code></pre><h4 id="根据值删除元素：remove-void返回类型"><a href="#根据值删除元素：remove-void返回类型" class="headerlink" title="根据值删除元素：remove (void返回类型)"></a>根据值删除元素：remove (void返回类型)</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a=['1','2','3']print(a)a.remove('2')print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['1', '2', '3']['1', '3']</code></pre><h2 id="3-3-组织列表"><a href="#3-3-组织列表" class="headerlink" title="3.3 组织列表"></a>3.3 组织列表</h2><h3 id="sort-对列表永久排序-首字母顺序"><a href="#sort-对列表永久排序-首字母顺序" class="headerlink" title="sort() 对列表永久排序(首字母顺序)"></a>sort() 对列表永久排序(首字母顺序)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']print(a)a.sort()print(f"\n{a}")#如果想要反向排序，使用sort(reverse=True)a.sort(reverse=True)print(f"\n{a}")#注意：print(a.sort())#该语句不是打印a.sort（）后的 a,而是a.sort()函数的返回值，void无返回值。#所以先进行排序，后print。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['c', 'b', 'z', 'a', 'd']['a', 'b', 'c', 'd', 'z']['z', 'd', 'c', 'b', 'a']None</code></pre><h3 id="sorted-对列表临时排序"><a href="#sorted-对列表临时排序" class="headerlink" title="sorted() 对列表临时排序"></a>sorted() 对列表临时排序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']print(a)print("\n临时排序后的列表：")print(sorted(a))print("\n再输出原来的列表：")print(a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['c', 'b', 'z', 'a', 'd']临时排序后的列表：['a', 'b', 'c', 'd', 'z']再输出原来的列表：['c', 'b', 'z', 'a', 'd']</code></pre><p>注意：sorted()使用语法：sorted(列表) </p><pre><code> 我们使用的是sorted的返回值（列表类），而sort对原列表不会有任何修改。</code></pre><h3 id="reverse-对列表永久-原顺序反转"><a href="#reverse-对列表永久-原顺序反转" class="headerlink" title="reverse() 对列表永久 原顺序反转"></a>reverse() 对列表永久 原顺序反转</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']print(a)a.reverse()print(f"\n{a}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>['c', 'b', 'z', 'a', 'd']['d', 'a', 'z', 'b', 'c']</code></pre><h3 id="len-确定列表长度"><a href="#len-确定列表长度" class="headerlink" title="len() 确定列表长度"></a>len() 确定列表长度</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a = ['c','b','z','a','d']print(len(a))print("\n试图给b赋予a的长度：")b = len(a)print(f"a的长度是：{b}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>5试图给b赋予a的长度：a的长度是：5</code></pre><h2 id="3-4-避免索引错误"><a href="#3-4-避免索引错误" class="headerlink" title="3.4 避免索引错误"></a>3.4 避免索引错误</h2><p>当出现循环时，可以使用len()知道长度，保证索引&lt;len()的值，注意len（）不能直接用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>阿狐の小纸条</title>
+      <link href="/2022/05/21/%E9%98%BF%E7%8B%90%E7%9A%84%E7%BA%B8%E6%9D%A1/"/>
+      <url>/2022/05/21/%E9%98%BF%E7%8B%90%E7%9A%84%E7%BA%B8%E6%9D%A1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="March"><a href="#March" class="headerlink" title="March"></a>March</h2><h3 id="9th-Mar"><a href="#9th-Mar" class="headerlink" title="9th Mar"></a>9th Mar</h3><p><strong>The distance between us is breaking my spirit.</strong></p><p><strong>My time and experiences without you are meaningless to me.🌹</strong></p><p><strong>谢谢你，让我知道原来世界上，真的有人那么可爱！晚上要好好学习，我喜欢你为梦想努力的样子！如果我是那只路过的玫瑰也没关系，只希望，送给你花香，不会刺伤你。</strong>🌟</p><hr><h3 id="10th-Mar"><a href="#10th-Mar" class="headerlink" title="10th Mar"></a>10th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/231653525474_.pic.jpg" style="zoom:50%;"><p><strong>U had me at “hello”</strong><br><strong>Your destiny was entwined with mine!</strong></p><p>即使带着命运的陆离光怪，理应属于你的幸运也会让时间给予偏爱。🌼</p><p>等你下课哟！我也开始工作啦！😘</p><p>从这个春天开始，我们的人生，全糖去冰哦🌟</p><hr><h3 id="11th-Mar"><a href="#11th-Mar" class="headerlink" title="11th Mar"></a>11th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/241653525775_.pic.jpg" style="zoom: 33%;"><p>做你的猫～～</p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/251653525810_.pic.jpg" style="zoom: 33%;"><p>玫瑰花，要你捧的才浪漫！</p><p>人生，要和你才精彩！😘</p><hr><h3 id="12th-Mar"><a href="#12th-Mar" class="headerlink" title="12th Mar"></a>12th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/261653526197_.pic.jpg" style="zoom: 33%;"><p>爱不一定是在你春风得意的时候出现。所以，我们苦了太久了，才得到相遇的机会。我们的甜蜜，和上帝的旨意无关，是我们彼此之间汹涌的爱，让我们再次勇敢。乖乖，不要怕，我在爱你！我们只需要把握当下，向前看，风霜与共！我奉陪到底哟！😘</p><hr><h3 id="14th-Mar"><a href="#14th-Mar" class="headerlink" title="14th Mar"></a>14th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/271653526503_.pic.jpg" style="zoom: 33%;"><p>我的存在是一串代码，我的使命是爱你。</p><p>我的春日限定：玫瑰和oliver！</p><hr><h3 id="15th-Mar"><a href="#15th-Mar" class="headerlink" title="15th Mar"></a>15th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/281653526591_.pic.jpg" style="zoom:33%;"><p>南风知我意，吹梦到西洲。</p><hr><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/291653526623_.pic.jpg" style="zoom: 33%;"><p>刚刚收到雅诗兰黛粉底液，上面的广告语：</p><p>去爱一个能够让你做回小朋友的人，而不是去爱一个总是嫌弃你不懂事的人。</p><p>（没错，就是你啦！准确是我们彼此啦！）</p><hr><h3 id="16th-Mar"><a href="#16th-Mar" class="headerlink" title="16th Mar"></a>16th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/301653526710_.pic.jpg" style="zoom: 33%;"><p>我刚好在，你刚好来。</p><p>我在等，世上唯一契合的灵魂。</p><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/361653660379_.pic.jpg"></p><p>to Oliver</p><hr><h3 id="17th-Mar"><a href="#17th-Mar" class="headerlink" title="17th Mar"></a>17th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/371653660480_.pic.jpg" style="zoom: 25%;"><p>不求被全世界宠爱，只求一生是你一个人的例外！</p><p>我会陪着你的，要相信自己，加油！</p><hr><h3 id="18th-Mar"><a href="#18th-Mar" class="headerlink" title="18th Mar"></a>18th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/381653660623_.pic_hd.jpg" style="zoom: 33%;"><p>我真的好快乐啊！！！谢谢你</p><hr><h3 id="19th-Mar"><a href="#19th-Mar" class="headerlink" title="19th Mar"></a>19th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/391653660849_.pic_hd.jpg" style="zoom: 25%;"><p>那么，我们在这个夏天，见一面吧！</p><hr><h3 id="20th-Mar"><a href="#20th-Mar" class="headerlink" title="20th Mar"></a>20th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/401653660885_.pic.jpg" style="zoom: 25%;"><p>期待夏天🌟</p><p>热吻 啤酒 街头 耳机里的音乐 live现场</p><p>浪漫的一切💑</p><p>包括最爱的人🦄️</p><hr><h3 id="21th-Mar"><a href="#21th-Mar" class="headerlink" title="21th Mar"></a>21th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/411653661020_.pic.jpg" style="zoom: 25%;"><p>一起向前的感觉，真的太棒了！</p><p>欢迎你，我的人生合伙人！🌟</p><hr><h3 id="25th-Mar"><a href="#25th-Mar" class="headerlink" title="25th Mar"></a>25th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/431654398896_.pic_hd.jpg" style="zoom: 25%;"><p>后知后觉，没关系呀！我们不是一直在相爱吗？👌</p><hr><h3 id="27th-Mar"><a href="#27th-Mar" class="headerlink" title="27th Mar"></a>27th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/441654399185_.pic_hd.jpg" style="zoom: 25%;"><p>想你想你想你想你想你想你想你想你想你想你想你想你想你想你想你想你想你</p><hr><h2 id="April"><a href="#April" class="headerlink" title="April"></a>April</h2><h3 id="6th-Apr"><a href="#6th-Apr" class="headerlink" title="6th Apr"></a>6th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/451654399242_.pic.jpg" style="zoom: 33%;"><p>与你四目相对是一场心脏盛宴</p><p>我爱你❤️</p><hr><h3 id="9th-Apr"><a href="#9th-Apr" class="headerlink" title="9th Apr"></a>9th Apr</h3><h3 id=""><a href="#" class="headerlink" title=""></a><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/461654399475_.pic.jpg" style="zoom: 33%;"></h3><p>你就站在那里，就已让我看不到任何人！❤️🍑</p><hr><h3 id="13th-Apr"><a href="#13th-Apr" class="headerlink" title="13th Apr"></a>13th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/471654399542_.pic.jpg" style="zoom: 33%;"><p>真正的爱，甜是主基调，但无法避免那些咸咸的眼泪。</p><p>宝贝，我们在这份爱的笼罩下，成为更好的人。</p><p>我们会吵架，可是我们都会低头。</p><p>因为，问题是我们和问题的对抗，</p><p>不是我和你之间的问题。</p><p>所以，苏苏今天更爱你了😘</p><hr><h3 id="16th-Apr"><a href="#16th-Apr" class="headerlink" title="16th Apr"></a>16th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/481654479573_.pic.jpg" style="zoom: 33%;"><p>你是我最大的底气🐶❤️🦊</p><p>苏苏的世界，如果没有三月，</p><p>那人间的别称就是地狱💖</p><hr><h3 id="18th-Apr"><a href="#18th-Apr" class="headerlink" title="18th Apr"></a>18th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/491654479751_.pic.jpg" style="zoom: 33%;"><p>HYD简直是人间理想💓💓💓💓💓😘</p><hr><h3 id="20th-Apr"><a href="#20th-Apr" class="headerlink" title="20th Apr"></a>20th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/501654479859_.pic.jpg" style="zoom: 33%;"><p>  如果这份爱意让你差异，其实我才是那个被吓坏的人，我从没有傻到会相信，一个人会在另一个人身上找到所有他期望的。</p><p>  但在你身上我找到了所有。</p><hr><p>25th Apr</p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/511654480159_.pic.jpg" style="zoom: 25%;"><p>今天晚上哟！</p><p>爱你😘</p><hr><h2 id="May"><a href="#May" class="headerlink" title="May"></a>May</h2><h3 id="3rd-May"><a href="#3rd-May" class="headerlink" title="3rd May"></a>3rd May</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/521654480209_.pic.jpg" style="zoom: 33%;"><p>请用：</p><p>​        以后、我们、故事三个词造句。</p><p>我的是：💖</p><p>以后的故事，都是关于我们。🦊</p><hr><h3 id="4th-May"><a href="#4th-May" class="headerlink" title="4th May"></a>4th May</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/531654480347_.pic.jpg" style="zoom:33%;"><p>课上瞌睡10分钟，梦到你了嘻嘻😜💓</p><hr><h3 id="13th-May"><a href="#13th-May" class="headerlink" title="13th May"></a>13th May</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/541654480408_.pic.jpg" style="zoom: 33%;"><p>我最骄傲的事，是被你深爱着。</p><p>💓你，是我面对一切的底气。💖</p><hr><h2 id="June"><a href="#June" class="headerlink" title="June"></a>June</h2><h3 id="3rd-June"><a href="#3rd-June" class="headerlink" title="3rd June"></a>3rd June</h3><p>H先生，现在我要以心动杀人，逮捕你。💓</p><p>🆘🆘🆘🆘🆘</p><hr><h3 id="5th-June"><a href="#5th-June" class="headerlink" title="5th June"></a>5th June</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/551654480520_.pic.jpg" style="zoom: 33%;"><p>少年披着夏天的外套，清清楚楚地说着只爱我🎉🤪</p><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 小纸条 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 阿狐 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我们的历程</title>
+      <link href="/2022/05/20/%E6%88%91%E4%BB%AC%E7%9A%84%E5%8E%86%E7%A8%8B/"/>
+      <url>/2022/05/20/%E6%88%91%E4%BB%AC%E7%9A%84%E5%8E%86%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Feburary"><a href="#Feburary" class="headerlink" title="Feburary"></a>Feburary</h1><p>相遇到底是缘分的命中注定，还是命运的欲盖弥彰，我想听你说，</p><hr><h2 id="March"><a href="#March" class="headerlink" title="March"></a>March</h2><p>希望之前没来的好运在春天出现，<br>希望拙劣的文笔也能将心意传达，<br>希望我喜欢的你喜欢我，<br>希望希望的事成真。</p><hr><h2 id="April"><a href="#April" class="headerlink" title="April"></a>April</h2><h3 id="21st-April"><a href="#21st-April" class="headerlink" title="21st April"></a>21st April</h3><p>  我陪月亮熬夜，星星陪我想你，而风和思念都很喧器。你要相信不管是命运的安排，还是时光的眷顾，你我都是最登对的人．你要相信我.</p><h3 id="25th-April"><a href="#25th-April" class="headerlink" title="25th April"></a>25th April</h3><h4 id="6-37-A-M"><a href="#6-37-A-M" class="headerlink" title="6:37 A.M."></a>6:37 A.M.</h4><p>  醒来的时候，特别想去见你，所以．渡江跨河，翻山越岭、两干公里算什么，我来啦</p><h4 id="8-10-P-M"><a href="#8-10-P-M" class="headerlink" title="8:10 P.M."></a>8:10 P.M.</h4><p><strong>落地 ✈️ 胶东国际机场</strong>  </p><p>我见过没有风的大海，看过迷雾笼罩的森林，但都不及我第一次遇见你。</p><p>  在机场，我看着你，这世间犹如银幕年代的默剧，只有心跳陪我演出，而爱神在你身后，向我示意。</p><p>那一刻，我的心发出响彻灵魂的轰鸣，原来这就是人们说的一见钟情。💘</p><p>接下来，幸福变成了脂肪（呃呃，打嗝声哈哈哈)，我胖了6斤.</p><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/141653077608_.pic_hd.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/131653077607_.pic_hd.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/111653077606_.pic_hd.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/101653077606_.pic_hd.jpg"></p><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/181653077610_.pic.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/171653077609_.pic_hd.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/161653077609_.pic.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/151653077609_.pic_hd.jpg"></p><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/211653077786_.pic.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/201653077785_.pic_hd.jpg"><br><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/191653077785_.pic.jpg"></p><hr><h3 id="May"><a href="#May" class="headerlink" title="May"></a>May</h3><h4 id="2nd-May"><a href="#2nd-May" class="headerlink" title="2nd May"></a>2nd May</h4><p><strong>撤退啦！</strong><br>这座城市里有我的秘密和我爱的人，<br>从此我不再追寻光消失的天际,<br>因为我已经找到心中耀眼的光.</p><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/91653077435_.pic_hd.jpg"></p><h4 id="19th-May"><a href="#19th-May" class="headerlink" title="19th May"></a>19th May</h4><p><strong>我后怕.</strong><br><strong>如果当初走得快些或慢些</strong><br><strong>如果当初稍作停留或不曾离开，</strong><br><strong>如果假设的事情发生，</strong><br><strong>将永失我爱</strong><br><strong>此时，你我时光正好。</strong></p><h4 id="20th-May"><a href="#20th-May" class="headerlink" title="20th May"></a><u>20th May</u></h4><p><strong>理性带来寂寞，感性产出错觉，</strong><br><strong>爱情，也只有你能够给我.</strong><br><strong>你是我藏在文字中独一无二的意中人。HYD</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 阿狐&amp;柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第一次为你提笔</title>
+      <link href="/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94/"/>
+      <url>/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94/</url>
+      
+        <content type="html"><![CDATA[<p>我坚信命运总是将我们往正确的人那里推。有人，得天独厚，年少相逢，未曾珍惜错失；有人，跌跌撞撞，终其一生，至死不可得。我曾凭着一腔热血，莽撞，视死如归。却发现你是我藏在发霉枕头下，日复一日的春秋大梦。在春日深夜被泪打湿的枕头，在夏日阳光下拿出暴晒，试图驱散那些阴霾。在秋日落叶中望着那些斑驳泪渍。却在冬日里，枕着那些遗憾，做了一个美梦。温柔，浪漫至死的我们，拼命找，却遍体鳞伤，但一个侧身，找到真正的归途。真正的爱浮现地那一刻，我们原谅了那些过往，又生出无限的勇气，为彼此而重新生长。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 提笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 阿狐姐姐 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第一次为你提笔</title>
+      <link href="/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94%E6%9F%B4%E6%9F%B4/"/>
+      <url>/2022/05/17/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%BA%E4%BD%A0%E6%8F%90%E7%AC%94%E6%9F%B4%E6%9F%B4/</url>
+      
+        <content type="html"><![CDATA[<p><strong>我是凡夫俗子，</strong><br><strong>笔尖流不出华丽的词藻。</strong></p><p><strong>因为你</strong><br><strong>贫瘠土壤开出了文字的花。</strong></p><p><strong>我们都不想长大。</strong></p><p><strong>饱食人间烟火，</strong><br><strong>心却不曾沾染凡俗之气。</strong></p><p><strong>我爱你，</strong><br><strong>你是我生存的原因。</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 提笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 柴柴 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
