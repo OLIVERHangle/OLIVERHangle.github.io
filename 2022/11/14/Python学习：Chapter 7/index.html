@@ -31,7 +31,8 @@
 <link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 6.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -414,7 +415,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    232
+                    571
                 </div>
                 
 
@@ -431,70 +432,131 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="用户输入和while循环"><a href="#用户输入和while循环" class="headerlink" title="用户输入和while循环"></a>用户输入和while循环</h1><h2 id="7-1-input（）字符串输入"><a href="#7-1-input（）字符串输入" class="headerlink" title="7.1 input（）字符串输入"></a>7.1 input（）字符串输入</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">用户输入文本，把文本呈现给用户<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="Chapter7-用户输入和while循环"><a href="#Chapter7-用户输入和while循环" class="headerlink" title="Chapter7 用户输入和while循环"></a>Chapter7 用户输入和while循环</h1><h2 id="7-1-input（）字符串输入"><a href="#7-1-input（）字符串输入" class="headerlink" title="7.1 input（）字符串输入"></a>7.1 input（）字符串输入</h2><pre class=" language-highlight python"><code class="language-highlight python">用户输入文本，把文本呈现给用户</code></pre>
 
 
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">message = input("请输入返回的文本：")
-print(message)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class=" language-highlight python">message = <span class="built_in">input</span>(<span class="string"><code class="language-highlight python">message = <span class="built_in">input</span>(<span class="string">"请输入返回的文本："</span>)
+<span class="built_in">print</span>(message)</code></pre>
 
 <pre><code>请输入返回的文本：12345
 12345
 </code></pre>
-<h3 id="7-1-1-编写清晰的程序"><a href="#7-1-1-编写清晰的程序" class="headerlink" title="7.1.1 编写清晰的程序"></a>7.1.1 编写清晰的程序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">原理：
+<h3 id="7-1-1-编写清晰的程序"><a href="#7-1-1-编写清晰的程序" class="headerlink" title="7.1.1 编写清晰的程序"></a>7.1.1 编写清晰的程序</h3><pre class=" language-highlight python"><code class="language-highlight python">原理：
 
-变量 = input（参数 ：说明/指示） <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+变量 = <span class="built_in">input</span>（参数 ：说明/指示）</code></pre>
 
 
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">name = input("please enter your name:")
-print(f"Hello,{name}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class=" language-highlight python">name = <span class="built_in">input</span>(<span class="string"><code class="language-highlight python">name = <span class="built_in">input</span>(<span class="string">"please enter your name:"</span>)
+<span class="built_in">print</span>(<span class="string">f"Hello,<span class="subst">{name}</span>"</span>)</code></pre>
 
 <pre><code>please enter your name:Oliver
 Hello,Oliver
 </code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">echo = "语句1"
-#echo = echo + “语句2“ 可以写成：
-echo += "语句2"
+<pre class=" language-highlight python">echo = <span class="string"><code class="language-highlight python">echo = <span class="string">"语句1"</span>
+<span class="comment">#echo = echo + “语句2“ 可以写成：</span>
+echo += <span class="string">"语句2"</span>
 
-print(echo)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="built_in">print</span>(echo)</code></pre>
 
 <pre><code>语句1语句2
 </code></pre>
-<h3 id="7-1-2-int-：将input（）变成int型进行运算"><a href="#7-1-2-int-：将input（）变成int型进行运算" class="headerlink" title="7.1.2 int()：将input（）变成int型进行运算"></a>7.1.2 int()：将input（）变成int型进行运算</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">age = input("What’s your age?:")
-age = int(age)
-print(f"Your age is {age}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="7-1-2-int-：将input（）变成int型进行运算"><a href="#7-1-2-int-：将input（）变成int型进行运算" class="headerlink" title="7.1.2 int()：将input（）变成int型进行运算"></a>7.1.2 int()：将input（）变成int型进行运算</h3><pre class=" language-highlight python">age = <span class="built_in">input</span>(<span class="string"><code class="language-highlight python">age = <span class="built_in">input</span>(<span class="string">"What’s your age?:"</span>)
+age = <span class="built_in">int</span>(age)
+<span class="built_in">print</span>(<span class="string">f"Your age is <span class="subst">{age}</span>"</span>)</code></pre>
 
 <pre><code>What’s your age?:65
 Your age is 65
 </code></pre>
-<h3 id="7-1-3-求模运算符"><a href="#7-1-3-求模运算符" class="headerlink" title="7.1.3 求模运算符%"></a>7.1.3 求模运算符%</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">作用：将两个数相除并返回余数
-如果一个数可被另一个数字整除，%返回值为0
-常见用途：判断奇数偶数。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="7-1-3-求模运算符"><a href="#7-1-3-求模运算符" class="headerlink" title="7.1.3 求模运算符%"></a>7.1.3 求模运算符%</h3><pre class=" language-highlight python"><code class="language-highlight python">作用：将两个数相除并返回余数
+如果一个数可被另一个数字整除，%返回值为<span class="number">0</span>
+常见用途：判断奇数偶数。</code></pre>
 
 
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">5%3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class=" language-highlight python"><span class="number">5</span>%<span class="number"><code class="language-highlight python"><span class="number">5</span>%<span class="number">3</span></code></pre>
 
 
 
 
 <pre><code>2
 </code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">6%3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class=" language-highlight python"><span class="number">6</span>%<span class="number"><code class="language-highlight python"><span class="number">6</span>%<span class="number">3</span></code></pre>
 
 
 
 
 <pre><code>0
 </code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">5%1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class=" language-highlight python"><span class="number">5</span>%<span class="number"><code class="language-highlight python"><span class="number">5</span>%<span class="number">1</span></code></pre>
 
 
 
 
 <pre><code>0
 </code></pre>
-<h2 id="7-2-while循环简介"><a href="#7-2-while循环简介" class="headerlink" title="7.2 while循环简介"></a>7.2 while循环简介</h2><h3 id="7-2-1-使用while循环"><a href="#7-2-1-使用while循环" class="headerlink" title="7.2.1 使用while循环"></a>7.2.1 使用while循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法
-while 条件：   #注意冒号！！！
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="7-2-while循环简介"><a href="#7-2-while循环简介" class="headerlink" title="7.2 while循环简介"></a>7.2 while循环简介</h2><h3 id="7-2-1-使用while循环"><a href="#7-2-1-使用while循环" class="headerlink" title="7.2.1 使用while循环"></a>7.2.1 使用while循环</h3><pre class=" language-highlight python"><code class="language-highlight python">语法
+<span class="keyword">while</span> 条件：   <span class="comment">#注意冒号！！！</span>
+  执行块 <span class="comment">#注意缩进</span></code></pre>
+
+<h3 id="7-2-2-设定退出值"><a href="#7-2-2-设定退出值" class="headerlink" title="7.2.2 设定退出值"></a>7.2.2 设定退出值</h3><pre class=" language-highlight python"><span class="comment"><code class="language-highlight python"><span class="comment">#空字符串</span>
+messag = <span class="string">""</span>
+<span class="comment">#空列表</span>
+message = []
+<span class="comment">#空字典</span>
+message = {}</code></pre>
+
+
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">while</span> message != 设定值：
+  执行块</code></pre>
+
+<h3 id="7-2-3-使用标志"><a href="#7-2-3-使用标志" class="headerlink" title="7.2.3 使用标志"></a>7.2.3 使用标志</h3><pre class=" language-highlight python"><code class="language-highlight python">标志本质上是一个： 变量
+用途：判断整个程序是否处于活动状态。
+当触发结束条件时，使标志 = false
+<span class="comment">#注意语法：</span>
+<span class="keyword">while</span> 标志：
+  执行块</code></pre>
+
+<h3 id="7-2-4-Break：直接跳出循环"><a href="#7-2-4-Break：直接跳出循环" class="headerlink" title="7.2.4 Break：直接跳出循环"></a>7.2.4 Break：直接跳出循环</h3><pre class=" language-highlight python"><code class="language-highlight python">语法：
+<span class="keyword">while</span> 循环条件：
+  执行块
+  <span class="keyword">if</span> 跳出条件：
+     <span class="keyword">break</span></code></pre>
+
+<h3 id="7-2-5-Continue：直接返回开头"><a href="#7-2-5-Continue：直接返回开头" class="headerlink" title="7.2.5 Continue：直接返回开头"></a>7.2.5 Continue：直接返回开头</h3><pre class=" language-highlight python">current_number = <span class="number"><code class="language-highlight python">current_number = <span class="number">0</span>
+<span class="keyword">while</span> current_number < <span class="number">10</span>:
+    current_number += <span class="number">1</span>
+    <span class="keyword">if</span> current_number %<span class="number">2</span> == <span class="number">0</span>:
+       <span class="keyword">continue</span>
+    <span class="built_in">print</span>(current_number)</code></pre>
+
+<pre><code>1
+3
+5
+7
+9
+</code></pre>
+<h3 id="7-2-6-避免无限循环"><a href="#7-2-6-避免无限循环" class="headerlink" title="7.2.6 避免无限循环"></a>7.2.6 避免无限循环</h3><p>注意循环条件不能始终为true</p>
+<h2 id="7-3-while处理循环列表和字典"><a href="#7-3-while处理循环列表和字典" class="headerlink" title="7.3 while处理循环列表和字典"></a>7.3 while处理循环列表和字典</h2><h3 id="7-3-1-在列表间移动元素"><a href="#7-3-1-在列表间移动元素" class="headerlink" title="7.3.1 在列表间移动元素"></a>7.3.1 在列表间移动元素</h3><pre class=" language-highlight python"><span class="comment"><code class="language-highlight python"><span class="comment">#当列表为空时，while会认为它是false。</span>
+an = [元素<span class="number">1</span>，元素<span class="number">2</span>，元素<span class="number">3</span>···]
+bn = []
+
+<span class="keyword">while</span> an:
+    b = an.pop()
+    对b（an弹出元素的一些操作）
+    bn.append(b)
+
+注意：bn中的顺序是an相反。</code></pre>
+
+<h3 id="7-3-2-while-remove-删除列表中-为某值的-所有元素"><a href="#7-3-2-while-remove-删除列表中-为某值的-所有元素" class="headerlink" title="7.3.2 while +  remove()删除列表中 为某值的 所有元素"></a>7.3.2 while +  remove()删除列表中 为某值的 所有元素</h3><pre class=" language-highlight python"><span class="comment"><code class="language-highlight python"><span class="comment">#注意特殊语法：</span>
+
+<span class="keyword">while</span> 删除元素 <span class="keyword">in</span> 列表:
+    列表.remove(删除元素)</code></pre>
+
+<h3 id="7-3-3-用户输入填充字典："><a href="#7-3-3-用户输入填充字典：" class="headerlink" title="7.3.3 用户输入填充字典："></a>7.3.3 用户输入填充字典：</h3><pre class=" language-highlight python"><span class="comment"><code class="language-highlight python"><span class="comment">#复习语法：</span>
+  字典插入新的键值对：
+  字典[新增键] = 新增值
+
+新增值 = <span class="built_in">input</span>（“提示”）
+  字典[新增键] = 新增值</code></pre>
 
                 
             </div>
@@ -902,6 +964,12 @@ while 条件：   #注意冒号！！！
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>
