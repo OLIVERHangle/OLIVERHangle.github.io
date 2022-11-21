@@ -36,7 +36,7 @@
 body {
     background-color: #eaeaea;
     margin: 0;
-    color: #34495e;
+    color: #FF69B4;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -116,7 +116,7 @@ pre {
     height: 12px;
     top: 0;
     left: 12px;
-    margin-top: 12px;
+    margin-top: 20px;
     -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
     box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
@@ -362,7 +362,7 @@ header .side-nav .menu-list li {
 header .side-nav .menu-list a {
     height: 50px;
     line-height: 50px;
-    color: #34495e !important;
+    color: #f073b1 !important;
 }
 
 .mobile-menu-list a i {
@@ -1918,17 +1918,17 @@ footer .copy-right {
 .top-scroll {
     display: none;
     position: fixed;
-    right: 15px;
-    bottom: 15px;
+    right: 21px;
+    bottom: 80px;
     padding-top: 15px;
     margin-bottom: 0;
-    z-index: 0;
+    z-index: 998;
 }
 
 .top-scroll .btn-floating {
     background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
-    width: 30px;
-    height: 30px;
+    width: 48px;
+    height: 48px;
 }
 
 .top-scroll .btn-floating i {
