@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>SQL理论课-Note 1</title>
-      <link href="/posts/SQL1.html"/>
-      <url>/posts/SQL1.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="SQL-Note-1："><a href="#SQL-Note-1：" class="headerlink" title="SQL-Note 1："></a>SQL-Note 1：</h1><h2 id="–查询语句："><a href="#–查询语句：" class="headerlink" title="–查询语句："></a>–查询语句：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name（一个或多个属性）<span class="token keyword">from</span> instructor（一个或者多个表）<span class="token keyword">where</span> dept_name <span class="token operator">=</span> <span class="token string">'cs'</span>（满足条件）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="练习：找到导师表中的系名"><a href="#练习：找到导师表中的系名" class="headerlink" title="练习：找到导师表中的系名"></a>练习：找到导师表中的系名</h3><p>select dept_name</p><p>from instructor</p><h3 id="找到表中所有属性："><a href="#找到表中所有属性：" class="headerlink" title="找到表中所有属性："></a>找到表中所有属性：</h3><p>select * –但是这个在计算机中处理效率没有一个个都列出来的效率高。</p><p>from instructor</p><h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>select dept_name from instructor</p><p>当有多个导师属于一个系，</p><p>就会有<u><strong>重复</strong></u>。</p><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">--去重复：</span><span class="token keyword">select</span> <span class="token keyword">distinct</span> dept_name<span class="token keyword">from</span> instructor<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> dept_name<span class="token punctuation">,</span>id<span class="token keyword">from</span> instructor<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>–像这样去重复多个元素，去除的是满足这两个条件出来的 重复行</p><p>–注意：distinct前面没有属性，只能后面添加一个或者多个属性</p><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> 主码<span class="token keyword">from</span> 表<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>结果相当于没有distinct，但是效率会变低。</p><p><strong><u>– select中的属性可以进行操作，还可以是函数调用。但是不会修改数据库中数据</u></strong></p><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> salary<span class="token operator">*</span><span class="token number">1.1</span><span class="token keyword">from</span> instructor找导师工资出来，输出结果为<span class="token number">1.1</span>倍原工资数据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>--</p><h2 id="and-or-not-组成：复合条件-和-where-连用"><a href="#and-or-not-组成：复合条件-和-where-连用" class="headerlink" title="and or not 组成：复合条件 和 where 连用"></a>and or not 组成：复合条件 和 where 连用</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> salary<span class="token operator">&gt;</span><span class="token number">8000</span> <span class="token operator">and</span> dept_name <span class="token operator">=</span> <span class="token string">'cs'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="–用as起名字："><a href="#–用as起名字：" class="headerlink" title="–用as起名字："></a>–用as起名字：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> salary<span class="token operator">*</span><span class="token number">1.1</span> <span class="token keyword">as</span> over_salary <span class="token keyword">from</span> instructor<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="–字符串处理函数："><a href="#–字符串处理函数：" class="headerlink" title="–字符串处理函数："></a>–字符串处理函数：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">字符串<span class="token number">1</span><span class="token operator">+</span>字符串<span class="token number">2</span> ：字符串拼接upper<span class="token punctuation">(</span>字符串<span class="token punctuation">)</span>lower<span class="token punctuation">(</span>字符串<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="–字符串匹配："><a href="#–字符串匹配：" class="headerlink" title="–字符串匹配："></a>–字符串匹配：</h2><pre class="line-numbers language-none"><code class="language-none">-'Intro%' --寻找开头为Intro-'%abc%'  --寻找中间含有abc-'___'   --寻找三位长度-'___%'  --寻找至少三位<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name<span class="token keyword">from</span> instructor<span class="token keyword">where</span> name <span class="token operator">like</span> <span class="token string">'%abc%'</span> <span class="token comment">--注意用like进行筛讯</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="定义转义字符"><a href="#定义转义字符" class="headerlink" title="\定义转义字符"></a>\定义转义字符</h3><h2 id="–数字区间条件：between-and："><a href="#–数字区间条件：between-and：" class="headerlink" title="–数字区间条件：between and："></a>–数字区间条件：between and：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name<span class="token keyword">from</span> instructor<span class="token keyword">where</span> salary <span class="token operator">between</span> <span class="token number">9000</span> <span class="token operator">and</span> <span class="token number">10000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="–多条件匹配"><a href="#–多条件匹配" class="headerlink" title="–多条件匹配"></a>–多条件匹配</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name<span class="token punctuation">,</span> course_id<span class="token keyword">from</span> instructor<span class="token punctuation">,</span> teaches<span class="token keyword">where</span> <span class="token punctuation">(</span>instructor<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> dept_name<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span>teaches<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> ’Biology’<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="–排序：desc降序-asc升序"><a href="#–排序：desc降序-asc升序" class="headerlink" title="–排序：desc降序 asc升序"></a>–排序：desc降序 asc升序</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">– Example: <span class="token keyword">order</span> <span class="token keyword">by</span> name <span class="token keyword">desc</span>Can sort <span class="token keyword">on</span> multiple attributes– Example: <span class="token keyword">order</span> <span class="token keyword">by</span> dept_name<span class="token punctuation">,</span> name <span class="token comment">--按照两个元素排序，字符串首字母。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> SQL学习 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> SQL </tag>
-            
-            <tag> 理论 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数据库演习-Class1</title>
       <link href="/posts/SQL_1.html"/>
       <url>/posts/SQL_1.html</url>
@@ -50,6 +23,33 @@
             <tag> SQL </tag>
             
             <tag> 上机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SQL理论课-Note 1</title>
+      <link href="/posts/SQL1.html"/>
+      <url>/posts/SQL1.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="SQL-Note-1："><a href="#SQL-Note-1：" class="headerlink" title="SQL-Note 1："></a>SQL-Note 1：</h1><h2 id="–查询语句："><a href="#–查询语句：" class="headerlink" title="–查询语句："></a>–查询语句：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name（一个或多个属性）<span class="token keyword">from</span> instructor（一个或者多个表）<span class="token keyword">where</span> dept_name <span class="token operator">=</span> <span class="token string">'cs'</span>（满足条件）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="练习：找到导师表中的系名"><a href="#练习：找到导师表中的系名" class="headerlink" title="练习：找到导师表中的系名"></a>练习：找到导师表中的系名</h3><p>select dept_name</p><p>from instructor</p><h3 id="找到表中所有属性："><a href="#找到表中所有属性：" class="headerlink" title="找到表中所有属性："></a>找到表中所有属性：</h3><p>select * –但是这个在计算机中处理效率没有一个个都列出来的效率高。</p><p>from instructor</p><h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>select dept_name from instructor</p><p>当有多个导师属于一个系，</p><p>就会有<u><strong>重复</strong></u>。</p><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">--去重复：</span><span class="token keyword">select</span> <span class="token keyword">distinct</span> dept_name<span class="token keyword">from</span> instructor<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> dept_name<span class="token punctuation">,</span>id<span class="token keyword">from</span> instructor<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>–像这样去重复多个元素，去除的是满足这两个条件出来的 重复行</p><p>–注意：distinct前面没有属性，只能后面添加一个或者多个属性</p><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> 主码<span class="token keyword">from</span> 表<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>结果相当于没有distinct，但是效率会变低。</p><p><strong><u>– select中的属性可以进行操作，还可以是函数调用。但是不会修改数据库中数据</u></strong></p><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> salary<span class="token operator">*</span><span class="token number">1.1</span><span class="token keyword">from</span> instructor找导师工资出来，输出结果为<span class="token number">1.1</span>倍原工资数据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>--</p><h2 id="and-or-not-组成：复合条件-和-where-连用"><a href="#and-or-not-组成：复合条件-和-where-连用" class="headerlink" title="and or not 组成：复合条件 和 where 连用"></a>and or not 组成：复合条件 和 where 连用</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> salary<span class="token operator">&gt;</span><span class="token number">8000</span> <span class="token operator">and</span> dept_name <span class="token operator">=</span> <span class="token string">'cs'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="–用as起名字："><a href="#–用as起名字：" class="headerlink" title="–用as起名字："></a>–用as起名字：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> salary<span class="token operator">*</span><span class="token number">1.1</span> <span class="token keyword">as</span> over_salary <span class="token keyword">from</span> instructor<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="–字符串处理函数："><a href="#–字符串处理函数：" class="headerlink" title="–字符串处理函数："></a>–字符串处理函数：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">字符串<span class="token number">1</span><span class="token operator">+</span>字符串<span class="token number">2</span> ：字符串拼接upper<span class="token punctuation">(</span>字符串<span class="token punctuation">)</span>lower<span class="token punctuation">(</span>字符串<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="–字符串匹配："><a href="#–字符串匹配：" class="headerlink" title="–字符串匹配："></a>–字符串匹配：</h2><pre class="line-numbers language-none"><code class="language-none">-'Intro%' --寻找开头为Intro-'%abc%'  --寻找中间含有abc-'___'   --寻找三位长度-'___%'  --寻找至少三位<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name<span class="token keyword">from</span> instructor<span class="token keyword">where</span> name <span class="token operator">like</span> <span class="token string">'%abc%'</span> <span class="token comment">--注意用like进行筛讯</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="定义转义字符"><a href="#定义转义字符" class="headerlink" title="\定义转义字符"></a>\定义转义字符</h3><h2 id="–数字区间条件：between-and："><a href="#–数字区间条件：between-and：" class="headerlink" title="–数字区间条件：between and："></a>–数字区间条件：between and：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name<span class="token keyword">from</span> instructor<span class="token keyword">where</span> salary <span class="token operator">between</span> <span class="token number">9000</span> <span class="token operator">and</span> <span class="token number">10000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="–多条件匹配"><a href="#–多条件匹配" class="headerlink" title="–多条件匹配"></a>–多条件匹配</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name<span class="token punctuation">,</span> course_id<span class="token keyword">from</span> instructor<span class="token punctuation">,</span> teaches<span class="token keyword">where</span> <span class="token punctuation">(</span>instructor<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> dept_name<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span>teaches<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> ’Biology’<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="–排序：desc降序-asc升序"><a href="#–排序：desc降序-asc升序" class="headerlink" title="–排序：desc降序 asc升序"></a>–排序：desc降序 asc升序</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">– Example: <span class="token keyword">order</span> <span class="token keyword">by</span> name <span class="token keyword">desc</span>Can sort <span class="token keyword">on</span> multiple attributes– Example: <span class="token keyword">order</span> <span class="token keyword">by</span> dept_name<span class="token punctuation">,</span> name <span class="token comment">--按照两个元素排序，字符串首字母。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> SQL学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SQL </tag>
+            
+            <tag> 理论 </tag>
             
         </tags>
       
@@ -286,34 +286,7 @@
       
         <tags>
             
-            <tag> 日常 </tag>
-            
             <tag> 历程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>第一次为你提笔-阿狐</title>
-      <link href="/posts/experience2.html"/>
-      <url>/posts/experience2.html</url>
-      
-        <content type="html"><![CDATA[<p><strong>我坚信命运总是将我们往正确的人那里推。有人，得天独厚，年少相逢，未曾珍惜错失；有人，跌跌撞撞，终其一生，至死不可得。我曾凭着一腔热血，莽撞，视死如归。却发现你是我藏在发霉枕头下，日复一日的春秋大梦。在春日深夜被泪打湿的枕头，在夏日阳光下拿出暴晒，试图驱散那些阴霾。在秋日落叶中望着那些斑驳泪渍。却在冬日里，枕着那些遗憾，做了一个美梦。温柔，浪漫至死的我们，拼命找，却遍体鳞伤，但一个侧身，找到真正的归途。真正的爱浮现地那一刻，我们原谅了那些过往，又生出无限的勇气，为彼此而重新生长。</strong></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 记录 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 记录 </tag>
             
             <tag> 日常 </tag>
             
@@ -340,9 +313,36 @@
       
         <tags>
             
+            <tag> 提笔 </tag>
+            
             <tag> 记录 </tag>
             
-            <tag> 提笔 </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第一次为你提笔-阿狐</title>
+      <link href="/posts/experience2.html"/>
+      <url>/posts/experience2.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>我坚信命运总是将我们往正确的人那里推。有人，得天独厚，年少相逢，未曾珍惜错失；有人，跌跌撞撞，终其一生，至死不可得。我曾凭着一腔热血，莽撞，视死如归。却发现你是我藏在发霉枕头下，日复一日的春秋大梦。在春日深夜被泪打湿的枕头，在夏日阳光下拿出暴晒，试图驱散那些阴霾。在秋日落叶中望着那些斑驳泪渍。却在冬日里，枕着那些遗憾，做了一个美梦。温柔，浪漫至死的我们，拼命找，却遍体鳞伤，但一个侧身，找到真正的归途。真正的爱浮现地那一刻，我们原谅了那些过往，又生出无限的勇气，为彼此而重新生长。</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 日常 </tag>
+            
+            <tag> 记录 </tag>
             
         </tags>
       
