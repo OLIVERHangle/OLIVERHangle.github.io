@@ -100,8 +100,8 @@ blockquote {
     background-color: rgba(66, 185, 131, .1);
 }
 pre {
-    padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;
-    margin: 1rem 0 !important;
+    padding: 2.5rem 2rem 2rem 3.3rem !important;
+    margin: 1.5rem 0 !important;
     background: #272822;
     overflow: auto;
     border-radius: 0.35rem;
@@ -115,16 +115,16 @@ pre {
     width: 12px;
     height: 12px;
     top: 0;
-    left: 12px;
-    margin-top: 20px;
+    left: 8px;
+    margin-top: 12px;
     -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
     box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
 code {
-    padding: 1px 5px;
-    top: 13px !important;
+    padding: 5px 5px;
+    top: 20px !important;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
-    font-size: 0.91rem;
+    font-size: 1rem;
     color: #e96900;
     background-color: #f8f8f8;
     border-radius: 2px;
@@ -149,7 +149,7 @@ code {
     position: absolute;
     top: 1.2rem;
     right: 46px;
-    line-height: 0;
+    line-height: 2;
     font-weight: bold;
     font-family: normal;
     z-index: 1;
@@ -162,7 +162,7 @@ code {
     top: 4px;
     right: 0px;
     filter: invert(50%);
-    padding: 7px;
+    padding: 15px;
     z-index: 999 !important;
     cursor: pointer;
     transition: all .3s;
@@ -200,7 +200,7 @@ pre[class*="language-"] {
 }
 
 .line-numbers {
-    padding: 1.5rem 1.5rem 1.5rem 3.2rem !important;
+    padding: 2rem 9rem 1.5rem 5rem !important;
     margin: 1rem 0 !important;
     background: #272822;
     overflow: auto;
@@ -1187,7 +1187,7 @@ article .article-tags .chip {
 
 #articleContent p {
     margin: 2px 2px 10px;
-    font-size: 1.05rem;
+    font-size: 1.6rem;
     line-height: 1.85rem;
 }
 
