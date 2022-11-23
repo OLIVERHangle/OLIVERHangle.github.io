@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="阿狐和我的小纸条, Fox">
+    <meta name="keywords" content="数据库演习-Class2, Fox">
     <meta name="description" content="又是想rua小狐姐姐的一天">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>阿狐和我的小纸条 | 阿狐和柴柴</title>
+    <title>数据库演习-Class2 | 阿狐和柴柴</title>
 
     <link rel="icon" type="image/jpeg" href="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg">
 
@@ -519,12 +519,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">阿狐和我的小纸条</h1>
+                    <h1 class="description center-align post-title">数据库演习-Class2</h1>
                 </div>
             </div>
         </div>
@@ -645,12 +645,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                <span class="chip bg-color">日常</span>
+                            <a href="/tags/SQL/">
+                                <span class="chip bg-color">SQL</span>
                             </a>
                         
-                            <a href="/tags/%E5%B0%8F%E7%BA%B8%E6%9D%A1/">
-                                <span class="chip bg-color">小纸条</span>
+                            <a href="/tags/%E4%B8%8A%E6%9C%BA/">
+                                <span class="chip bg-color">上机</span>
                             </a>
                         
                     </div>
@@ -661,8 +661,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B0%8F%E6%97%A5%E5%B8%B8/" class="post-category">
-                                小日常
+                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                SQL学习
                             </a>
                         
                     </div>
@@ -674,28 +674,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-21
+                    2022-11-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-21
+                    2022-11-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    919
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -713,144 +713,125 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="March"><a href="#March" class="headerlink" title="March"></a>March</h2><h3 id="9th-Mar"><a href="#9th-Mar" class="headerlink" title="9th Mar"></a>9th Mar</h3><p><strong>The distance between us is breaking my spirit.</strong></p>
-<p><strong>My time and experiences without you are meaningless to me.🌹</strong></p>
-<p><strong>谢谢你，让我知道原来世界上，真的有人那么可爱！晚上要好好学习，我喜欢你为梦想努力的样子！如果我是那只路过的玫瑰也没关系，只希望，送给你花香，不会刺伤你。</strong>🌟</p>
-<hr>
-<h3 id="10th-Mar"><a href="#10th-Mar" class="headerlink" title="10th Mar"></a>10th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/231653525474_.pic.jpg" style="zoom:50%;">
+                <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#写SQL习惯注意：</span>
+<span class="token comment"># 语法问题：</span>
+<span class="token comment"># 1.执行语句后面用分号;</span>
+<span class="token comment"># 2.设置主键外键的限制语句：用反引号！</span>
+<span class="token comment"># 3.表最后一个设定没有符号</span>
 
-<p><strong>U had me at “hello”</strong><br><strong>Your destiny was entwined with mine!</strong></p>
-<p>即使带着命运的陆离光怪，理应属于你的幸运也会让时间给予偏爱。🌼</p>
-<p>等你下课哟！我也开始工作啦！😘</p>
-<p>从这个春天开始，我们的人生，全糖去冰哦🌟</p>
-<hr>
-<h3 id="11th-Mar"><a href="#11th-Mar" class="headerlink" title="11th Mar"></a>11th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/241653525775_.pic.jpg" style="zoom: 33%;">
+<span class="token comment">##1.1创建数据库</span>
+<span class="token keyword">drop</span> <span class="token keyword">database</span> <span class="token keyword">if</span> <span class="token keyword">exists</span> dlut002<span class="token punctuation">;</span>
+<span class="token keyword">create</span> <span class="token keyword">database</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> dlut002<span class="token punctuation">;</span>
+<span class="token comment">#原则1：语句不能依赖上下文，这样有就删除再创建，没有就创建。</span>
 
-<p>做你的猫～～</p>
-<img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/251653525810_.pic.jpg" style="zoom: 33%;">
+<span class="token comment">#使用数据库,后面的操作都在该数据库里面运行：</span>
+<span class="token keyword">use</span> dlut002 <span class="token punctuation">;</span>
 
-<p>玫瑰花，要你捧的才浪漫！</p>
-<p>人生，要和你才精彩！😘</p>
-<hr>
-<h3 id="12th-Mar"><a href="#12th-Mar" class="headerlink" title="12th Mar"></a>12th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/261653526197_.pic.jpg" style="zoom: 33%;">
+<span class="token comment">#创建表：，，，，</span>
+<span class="token comment">#原则2：删除时先删除外键所在的表中该元素，再删除主键所在表，</span>
+<span class="token comment">#下面例子中要删除学生，先删除映射表中的学号，再删除主键（学生）中的学号</span>
+<span class="token comment">#首先认识数据之间的关系：</span>
+<span class="token comment"># 学号-学生--玉兰卡-卡号    玉兰卡的学号是外码，学生的学号是主码</span>
+<span class="token comment"># ｜         ｜</span>
+<span class="token comment"># ｜-映射表  学号</span>
+<span class="token comment"># ｜</span>
+<span class="token comment"># 教师--教工号，</span>
+<span class="token comment"># ｜</span>
+<span class="token comment"># 姓名</span>
 
-<p>爱不一定是在你春风得意的时候出现。所以，我们苦了太久了，才得到相遇的机会。我们的甜蜜，和上帝的旨意无关，是我们彼此之间汹涌的爱，让我们再次勇敢。乖乖，不要怕，我在爱你！我们只需要把握当下，向前看，风霜与共！我奉陪到底哟！😘</p>
-<hr>
-<h3 id="14th-Mar"><a href="#14th-Mar" class="headerlink" title="14th Mar"></a>14th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/271653526503_.pic.jpg" style="zoom: 33%;">
+<span class="token comment">#多对多的对应关系，比如学生对老师，老师对学生，在这个关系中间弄个中间表-叫映射表</span>
+<span class="token comment">#在这个例子中，映射表三个属性：编号，学号，教工号</span>
+<span class="token comment">#映射表里面挑的属性，主键和外键，主键独一无二区分（编号），学号教工号这样的叫外键</span>
+<span class="token comment">#上面的关系：ER图，  实体：矩形  虚体：椭圆形</span>
 
-<p>我的存在是一串代码，我的使命是爱你。</p>
-<p>我的春日限定：玫瑰和oliver！</p>
-<hr>
-<h3 id="15th-Mar"><a href="#15th-Mar" class="headerlink" title="15th Mar"></a>15th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/281653526591_.pic.jpg" style="zoom:33%;">
+<span class="token comment">#原则3：创建时先创建主键所在表</span>
+<span class="token comment">#注意写表的语法，这样写才满足原则1。</span>
+<span class="token keyword">drop</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token keyword">exists</span> mapper<span class="token punctuation">;</span>
+<span class="token keyword">drop</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token keyword">exists</span> card<span class="token punctuation">;</span>
+<span class="token keyword">drop</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token keyword">exists</span> teacher<span class="token punctuation">;</span>
+<span class="token keyword">drop</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token keyword">exists</span> student<span class="token punctuation">;</span>
+<span class="token comment">#满足原则1，2</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> student<span class="token punctuation">(</span>
+       sid <span class="token keyword">integer</span> <span class="token keyword">auto_increment</span> <span class="token keyword">comment</span> <span class="token string">'学号'</span><span class="token punctuation">,</span>
+       sname <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span> <span class="token operator">not</span> <span class="token boolean">null</span> <span class="token keyword">comment</span> <span class="token string">'姓名'</span><span class="token punctuation">,</span>
+       phone <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token keyword">unique</span> <span class="token keyword">comment</span> <span class="token string">'电话'</span><span class="token punctuation">,</span>
+       uptime <span class="token keyword">timestamp</span> <span class="token keyword">default</span> <span class="token keyword">current_timestamp</span> <span class="token keyword">on</span> <span class="token keyword">update</span> <span class="token keyword">current_timestamp</span> <span class="token keyword">comment</span> <span class="token string">'更新时间'</span><span class="token punctuation">,</span>
+    <span class="token comment">#current——timestamp，这个是当前时间戳，生成时插入系统时间,修改时再插入修改时的当时时间</span>
+                                      <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token identifier"><span class="token punctuation">`</span>s_pk<span class="token punctuation">`</span></span> <span class="token punctuation">(</span><span class="token identifier"><span class="token punctuation">`</span>sid<span class="token punctuation">`</span></span><span class="token punctuation">)</span> <span class="token comment">#主键设置放最后比较好，··是反向单引号，表示主键名字的！</span>
+    <span class="token comment">#设定主键后，编译器默认主键不能为空，可以为null。注意：主键还不能重复。</span>
+<span class="token punctuation">)</span><span class="token keyword">comment</span> <span class="token string">'学生表'</span><span class="token punctuation">;</span>
+<span class="token comment">#sid是行名字，当行号每多一行，自动增长sid。</span>
+<span class="token comment">#数据表字段的设计：</span>
+<span class="token comment">#1. 主键建议使用： 整数</span>
+<span class="token comment">#2. 字段的约束【unique唯一，not null，default（默认值）】</span>
+<span class="token comment">#3. '' 单引号表示字符串 ！ ··是反向单引号，表示主键名字的</span>
 
-<p>南风知我意，吹梦到西洲。</p>
-<hr>
-<img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/291653526623_.pic.jpg" style="zoom: 33%;">
+<span class="token comment"># create table if not exists teacher;</span>
+<span class="token comment"># create table if not exists card;</span>
+<span class="token comment"># create table if not exists mapper;</span>
 
-<p>刚刚收到雅诗兰黛粉底液，上面的广告语：</p>
-<p>去爱一个能够让你做回小朋友的人，而不是去爱一个总是嫌弃你不懂事的人。</p>
-<p>（没错，就是你啦！准确是我们彼此啦！）</p>
-<hr>
-<h3 id="16th-Mar"><a href="#16th-Mar" class="headerlink" title="16th Mar"></a>16th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/301653526710_.pic.jpg" style="zoom: 33%;">
+<span class="token comment">#玉兰卡和学生一一对应，如何写约束关系？</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> card<span class="token punctuation">(</span>
+    cid <span class="token keyword">integer</span> <span class="token keyword">auto_increment</span> <span class="token keyword">comment</span> <span class="token string">'卡号'</span><span class="token punctuation">,</span>
+    cmoney <span class="token keyword">double</span> <span class="token keyword">default</span> <span class="token number">0.0</span> <span class="token keyword">comment</span> <span class="token string">'余额'</span><span class="token punctuation">,</span>
+    csid <span class="token keyword">integer</span> <span class="token operator">not</span> <span class="token boolean">null</span> <span class="token keyword">comment</span> <span class="token string">'学号'</span><span class="token punctuation">,</span>
+    <span class="token comment">#如果csid写成sid，会导致查询sid时查询到两个表中的sid，产生歧义。这个是区分。</span>
+    uptime <span class="token keyword">timestamp</span> <span class="token keyword">default</span> <span class="token keyword">current_timestamp</span> <span class="token keyword">on</span> <span class="token keyword">update</span> <span class="token keyword">current_timestamp</span><span class="token punctuation">,</span>
+    <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token identifier"><span class="token punctuation">`</span>c_pk<span class="token punctuation">`</span></span><span class="token punctuation">(</span><span class="token identifier"><span class="token punctuation">`</span>cid<span class="token punctuation">`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">#约束条件在这里：</span>
+    <span class="token keyword">constraint</span> <span class="token keyword">foreign</span> <span class="token keyword">key</span> <span class="token identifier"><span class="token punctuation">`</span>c_to_s_fk<span class="token punctuation">`</span></span> <span class="token punctuation">(</span><span class="token identifier"><span class="token punctuation">`</span>csid<span class="token punctuation">`</span></span><span class="token punctuation">)</span> <span class="token keyword">references</span> <span class="token identifier"><span class="token punctuation">`</span>student<span class="token punctuation">`</span></span><span class="token punctuation">(</span><span class="token identifier"><span class="token punctuation">`</span>sid<span class="token punctuation">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token keyword">comment</span> <span class="token string">'玉兰卡'</span><span class="token punctuation">;</span>
 
-<p>我刚好在，你刚好来。</p>
-<p>我在等，世上唯一契合的灵魂。</p>
-<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/361653660379_.pic.jpg"></p>
-<p>to Oliver</p>
-<hr>
-<h3 id="17th-Mar"><a href="#17th-Mar" class="headerlink" title="17th Mar"></a>17th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/371653660480_.pic.jpg" style="zoom: 25%;">
+<span class="token comment">#删除记录：</span>
+<span class="token comment"># delete from card where cid =2;</span>
 
-<p>不求被全世界宠爱，只求一生是你一个人的例外！</p>
-<p>我会陪着你的，要相信自己，加油！</p>
-<hr>
-<h3 id="18th-Mar"><a href="#18th-Mar" class="headerlink" title="18th Mar"></a>18th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/381653660623_.pic_hd.jpg" style="zoom: 33%;">
+<span class="token comment"># delete from card;#抹空数据</span>
+<span class="token comment"># truncate card;#截断，抹空数据把自动增长的计数器也抹空</span>
 
-<p>我真的好快乐啊！！！谢谢你</p>
-<hr>
-<h3 id="19th-Mar"><a href="#19th-Mar" class="headerlink" title="19th Mar"></a>19th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/391653660849_.pic_hd.jpg" style="zoom: 25%;">
+<span class="token comment">#构建教师表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span>  teacher<span class="token punctuation">(</span>
+    tid <span class="token keyword">integer</span> <span class="token keyword">auto_increment</span> <span class="token keyword">comment</span> <span class="token string">'教工号'</span><span class="token punctuation">,</span>
+    tname <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span> <span class="token operator">not</span> <span class="token boolean">null</span> <span class="token keyword">comment</span> <span class="token string">'姓名'</span><span class="token punctuation">,</span>
+    salary <span class="token keyword">double</span> <span class="token keyword">default</span> <span class="token number">0.0</span> <span class="token keyword">comment</span> <span class="token string">'薪水'</span><span class="token punctuation">,</span>
+    uptime <span class="token keyword">timestamp</span> <span class="token keyword">default</span> <span class="token keyword">current_timestamp</span> <span class="token keyword">on</span> <span class="token keyword">update</span> <span class="token keyword">current_timestamp</span> <span class="token keyword">comment</span> <span class="token string">'更新时间'</span><span class="token punctuation">,</span>
+    <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token identifier"><span class="token punctuation">`</span>t_pk<span class="token punctuation">`</span></span> <span class="token punctuation">(</span><span class="token identifier"><span class="token punctuation">`</span>tid<span class="token punctuation">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token keyword">comment</span> <span class="token string">'教师表'</span><span class="token punctuation">;</span>
 
-<p>那么，我们在这个夏天，见一面吧！</p>
-<hr>
-<h3 id="20th-Mar"><a href="#20th-Mar" class="headerlink" title="20th Mar"></a>20th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/401653660885_.pic.jpg" style="zoom: 25%;">
+<span class="token comment">#构建映射表</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> mapper<span class="token punctuation">(</span>
+    mid <span class="token keyword">integer</span> <span class="token keyword">auto_increment</span> <span class="token keyword">comment</span><span class="token string">'映射号'</span><span class="token punctuation">,</span>
+    msid <span class="token keyword">integer</span> <span class="token operator">not</span> <span class="token boolean">null</span> <span class="token keyword">comment</span><span class="token string">'学号'</span><span class="token punctuation">,</span>
+    mtid <span class="token keyword">integer</span> <span class="token operator">not</span> <span class="token boolean">null</span> <span class="token keyword">comment</span><span class="token string">'教工号'</span><span class="token punctuation">,</span>
+    uptime <span class="token keyword">timestamp</span> <span class="token keyword">default</span> <span class="token keyword">current_timestamp</span> <span class="token keyword">on</span> <span class="token keyword">update</span> <span class="token keyword">current_timestamp</span> <span class="token keyword">comment</span><span class="token string">'更新时间'</span><span class="token punctuation">,</span>
+    <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token identifier"><span class="token punctuation">`</span>m_pk<span class="token punctuation">`</span></span><span class="token punctuation">(</span><span class="token identifier"><span class="token punctuation">`</span>mid<span class="token punctuation">`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">constraint</span> <span class="token keyword">foreign</span> <span class="token keyword">key</span> <span class="token identifier"><span class="token punctuation">`</span>m_to_s_fk<span class="token punctuation">`</span></span> <span class="token punctuation">(</span><span class="token identifier"><span class="token punctuation">`</span>msid<span class="token punctuation">`</span></span><span class="token punctuation">)</span> <span class="token keyword">references</span> <span class="token identifier"><span class="token punctuation">`</span>student<span class="token punctuation">`</span></span><span class="token punctuation">(</span><span class="token identifier"><span class="token punctuation">`</span>sid<span class="token punctuation">`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">constraint</span> <span class="token keyword">foreign</span> <span class="token keyword">key</span> <span class="token identifier"><span class="token punctuation">`</span>m_to_t_fk<span class="token punctuation">`</span></span> <span class="token punctuation">(</span><span class="token identifier"><span class="token punctuation">`</span>mtid<span class="token punctuation">`</span></span><span class="token punctuation">)</span> <span class="token keyword">references</span> <span class="token identifier"><span class="token punctuation">`</span>teacher<span class="token punctuation">`</span></span><span class="token punctuation">(</span><span class="token identifier"><span class="token punctuation">`</span>tid<span class="token punctuation">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token keyword">comment</span> <span class="token string">'学生和教师映射表_多对多'</span><span class="token punctuation">;</span>
 
-<p>期待夏天🌟</p>
-<p>热吻 啤酒 街头 耳机里的音乐 live现场</p>
-<p>浪漫的一切💑</p>
-<p>包括最爱的人🦄️</p>
-<hr>
-<h3 id="21th-Mar"><a href="#21th-Mar" class="headerlink" title="21th Mar"></a>21th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/411653661020_.pic.jpg" style="zoom: 25%;">
+<span class="token comment">#查询</span>
+<span class="token keyword">show</span> <span class="token keyword">tables</span><span class="token punctuation">;</span><span class="token comment">#列出当前数据库中所有的表</span>
+<span class="token keyword">show</span> <span class="token keyword">create</span> <span class="token keyword">table</span> mapper<span class="token punctuation">;</span><span class="token comment">#查创建组间时的SQL语句</span>
 
-<p>一起向前的感觉，真的太棒了！</p>
-<p>欢迎你，我的人生合伙人！🌟</p>
-<hr>
-<h3 id="25th-Mar"><a href="#25th-Mar" class="headerlink" title="25th Mar"></a>25th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/431654398896_.pic_hd.jpg" style="zoom: 25%;">
-
-<p>后知后觉，没关系呀！我们不是一直在相爱吗？👌</p>
-<hr>
-<h3 id="27th-Mar"><a href="#27th-Mar" class="headerlink" title="27th Mar"></a>27th Mar</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/441654399185_.pic_hd.jpg" style="zoom: 25%;">
-
-<p>想你想你想你想你想你想你想你想你想你想你想你想你想你想你想你想你想你</p>
-<hr>
-<h2 id="April"><a href="#April" class="headerlink" title="April"></a>April</h2><h3 id="6th-Apr"><a href="#6th-Apr" class="headerlink" title="6th Apr"></a>6th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/451654399242_.pic.jpg" style="zoom: 33%;">
-
-<p>与你四目相对是一场心脏盛宴</p>
-<p>我爱你❤️</p>
-<hr>
-<h3 id="9th-Apr"><a href="#9th-Apr" class="headerlink" title="9th Apr"></a>9th Apr</h3><h3 id=""><a href="#" class="headerlink" title=""></a><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/461654399475_.pic.jpg" style="zoom: 33%;"></h3><p>你就站在那里，就已让我看不到任何人！❤️🍑</p>
-<hr>
-<h3 id="13th-Apr"><a href="#13th-Apr" class="headerlink" title="13th Apr"></a>13th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/471654399542_.pic.jpg" style="zoom: 33%;">
-
-<p>真正的爱，甜是主基调，但无法避免那些咸咸的眼泪。</p>
-<p>宝贝，我们在这份爱的笼罩下，成为更好的人。</p>
-<p>我们会吵架，可是我们都会低头。</p>
-<p>因为，问题是我们和问题的对抗，</p>
-<p>不是我和你之间的问题。</p>
-<p>所以，苏苏今天更爱你了😘</p>
-<hr>
-<h3 id="16th-Apr"><a href="#16th-Apr" class="headerlink" title="16th Apr"></a>16th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/481654479573_.pic.jpg" style="zoom: 33%;">
-
-<p>你是我最大的底气🐶❤️🦊</p>
-<p>苏苏的世界，如果没有三月，</p>
-<p>那人间的别称就是地狱💖</p>
-<hr>
-<h3 id="18th-Apr"><a href="#18th-Apr" class="headerlink" title="18th Apr"></a>18th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/491654479751_.pic.jpg" style="zoom: 33%;">
-
-<p>HYD简直是人间理想💓💓💓💓💓😘</p>
-<hr>
-<h3 id="20th-Apr"><a href="#20th-Apr" class="headerlink" title="20th Apr"></a>20th Apr</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/501654479859_.pic.jpg" style="zoom: 33%;">
-
-<p>  如果这份爱意让你差异，其实我才是那个被吓坏的人，我从没有傻到会相信，一个人会在另一个人身上找到所有他期望的。</p>
-<p>  但在你身上我找到了所有。</p>
-<hr>
-<p>25th Apr</p>
-<img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/511654480159_.pic.jpg" style="zoom: 25%;">
-
-<p>今天晚上哟！</p>
-<p>爱你😘</p>
-<hr>
-<h2 id="May"><a href="#May" class="headerlink" title="May"></a>May</h2><h3 id="3rd-May"><a href="#3rd-May" class="headerlink" title="3rd May"></a>3rd May</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/521654480209_.pic.jpg" style="zoom: 33%;">
-
-<p>请用：</p>
-<p>​        以后、我们、故事三个词造句。</p>
-<p>我的是：💖</p>
-<p>以后的故事，都是关于我们。🦊</p>
-<hr>
-<h3 id="4th-May"><a href="#4th-May" class="headerlink" title="4th May"></a>4th May</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/531654480347_.pic.jpg" style="zoom:33%;">
-
-<p>课上瞌睡10分钟，梦到你了嘻嘻😜💓</p>
-<hr>
-<h3 id="13th-May"><a href="#13th-May" class="headerlink" title="13th May"></a>13th May</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/541654480408_.pic.jpg" style="zoom: 33%;">
-
-<p>我最骄傲的事，是被你深爱着。</p>
-<p>💓你，是我面对一切的底气。💖</p>
-<hr>
-<h2 id="June"><a href="#June" class="headerlink" title="June"></a>June</h2><h3 id="3rd-June"><a href="#3rd-June" class="headerlink" title="3rd June"></a>3rd June</h3><p>H先生，现在我要以心动杀人，逮捕你。💓</p>
-<p>🆘🆘🆘🆘🆘</p>
-<hr>
-<h3 id="5th-June"><a href="#5th-June" class="headerlink" title="5th June"></a>5th June</h3><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/551654480520_.pic.jpg" style="zoom: 33%;">
-
-<p>少年披着夏天的外套，清清楚楚地说着只爱我🎉🤪</p>
-<hr>
+<span class="token comment">#数据的操作</span>
+<span class="token comment">#增删改查，应用程序猿 CRUD程序员</span>
+<span class="token comment">#插入多行数据：：</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> student<span class="token punctuation">(</span>sname<span class="token punctuation">,</span> phone<span class="token punctuation">)</span> <span class="token keyword">value</span> <span class="token punctuation">(</span><span class="token string">'zs'</span><span class="token punctuation">,</span><span class="token string">'110'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'ls'</span><span class="token punctuation">,</span><span class="token string">'120'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'ww'</span><span class="token punctuation">,</span><span class="token string">'130'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">#当要插入很大量数据，使用循环</span>
+<span class="token comment"># 数据库里面的函数叫   存储过程</span>
+<span class="token keyword">delimiter</span> $$
+<span class="token keyword">create</span> <span class="token keyword">procedure</span> sp_bs<span class="token punctuation">(</span><span class="token operator">IN</span> nums <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token comment">#声明储存过程这样写，注意形参的写法</span>
+<span class="token keyword">BEGIN</span>
+    <span class="token keyword">declare</span> count <span class="token keyword">int</span> <span class="token keyword">default</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> count <span class="token operator">&lt;=</span> nums <span class="token keyword">do</span>
+        <span class="token keyword">insert</span> <span class="token keyword">into</span> student<span class="token punctuation">(</span>sname<span class="token punctuation">,</span>phone<span class="token punctuation">)</span>
+        <span class="token keyword">values</span> <span class="token punctuation">(</span>concat<span class="token punctuation">(</span><span class="token string">'stu'</span><span class="token punctuation">,</span>count<span class="token punctuation">)</span><span class="token punctuation">,</span>concat<span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">,</span>FLOOR<span class="token punctuation">(</span>rand<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">8999999999</span><span class="token operator">+</span><span class="token number">1000000000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">#concat类似python的字符串f</span>
+        <span class="token keyword">set</span> count <span class="token operator">=</span> count <span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span> <span class="token keyword">while</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span>$$
+<span class="token keyword">delimiter</span> <span class="token punctuation">;</span>
+<span class="token comment">#调用存储过程</span>
+<span class="token keyword">call</span> sp_bs<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">#记不住存储过程去查一下</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -877,7 +858,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://thripear.space/posts/paper.html">http://thripear.space/posts/paper.html</a>
+                    <a href="http://thripear.space/posts/SQL_2.html">http://thripear.space/posts/SQL_2.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -915,12 +896,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                    <span class="chip bg-color">日常</span>
+                                <a href="/tags/SQL/">
+                                    <span class="chip bg-color">SQL</span>
                                 </a>
                             
-                                <a href="/tags/%E5%B0%8F%E7%BA%B8%E6%9D%A1/">
-                                    <span class="chip bg-color">小纸条</span>
+                                <a href="/tags/%E4%B8%8A%E6%9C%BA/">
+                                    <span class="chip bg-color">上机</span>
                                 </a>
                             
                         </div>
@@ -1392,17 +1373,18 @@ new Valine({
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/Python3.html">
+                <a href="/posts/SQL_2.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Python学习-Chapter3 列表">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="数据库演习-Class2">
                         
-                        <span class="card-title">Python学习-Chapter3 列表</span>
+                        <span class="card-title">数据库演习-Class2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1412,30 +1394,31 @@ new Valine({
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    Python学习
+                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    SQL学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/SQL/">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
-                    <a href="/tags/%E5%88%97%E8%A1%A8/">
-                        <span class="chip bg-color">列表</span>
+                    <a href="/tags/%E4%B8%8A%E6%9C%BA/">
+                        <span class="chip bg-color">上机</span>
                     </a>
                     
                 </div>
@@ -1449,13 +1432,13 @@ new Valine({
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/%20experience.html">
+                <a href="/posts/SQL1.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="我们的历程">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="SQL理论课-Note 1">
                         
-                        <span class="card-title">我们的历程</span>
+                        <span class="card-title">SQL理论课-Note 1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1466,14 +1449,14 @@ new Valine({
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    记录
+                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    SQL学习
                                 </a>
                             
                             
@@ -1483,12 +1466,12 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8E%86%E7%A8%8B/">
-                        <span class="chip bg-color">历程</span>
+                    <a href="/tags/SQL/">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
-                    <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                        <span class="chip bg-color">日常</span>
+                    <a href="/tags/%E7%90%86%E8%AE%BA/">
+                        <span class="chip bg-color">理论</span>
                     </a>
                     
                 </div>
