@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, Fox">
+    <meta name="keywords" content="分类: 微信小程序, Fox">
     <meta name="description" content="又是想rua小狐姐姐的一天">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | 阿狐和柴柴</title>
+    <title>分类: 微信小程序 | 阿狐和柴柴</title>
 
     <link rel="icon" type="image/jpeg" href="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg">
 
@@ -563,7 +563,7 @@
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-default "
-                                  style="background-color: #DAB042;">                                               
+                                  style="background-color: #FF98FF;">                                               
                               <div class="notebook-skin
                                    chip-default "
                                   >Python学习                                  
@@ -580,7 +580,7 @@
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-default "
-                                  style="background-color: #52399B;">                                               
+                                  style="background-color: #1A7018;">                                               
                               <div class="notebook-skin
                                    chip-default "
                                   >SQL学习                                  
@@ -597,7 +597,7 @@
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-default "
-                                  style="background-color: #5A37F3;">                                               
+                                  style="background-color: #098A75;">                                               
                               <div class="notebook-skin
                                    chip-default "
                                   >大学物理                                  
@@ -613,10 +613,10 @@
                   <div class="moleskine-wrapper">
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
-                           chip-default "
-                                  style="background-color: #324A20;">                                               
+                           chip-active "
+                                  style="background-color: #00EE68;">                                               
                               <div class="notebook-skin
-                                   chip-default "
+                                   chip-active "
                                   >微信小程序                                  
                               </div>
                           </div>
@@ -631,7 +631,7 @@
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-default "
-                                  style="background-color: #D235B9;">                                               
+                                  style="background-color: #88E86B;">                                               
                               <div class="notebook-skin
                                    chip-default "
                                   >操作系统学习                                  
@@ -648,7 +648,7 @@
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-default "
-                                  style="background-color: #AD154E;">                                               
+                                  style="background-color: #032BF5;">                                               
                               <div class="notebook-skin
                                    chip-default "
                                   >记录                                  
@@ -665,7 +665,7 @@
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-default "
-                                  style="background-color: #93F60D;">                                               
+                                  style="background-color: #82DCD8;">                                               
                               <div class="notebook-skin
                                    chip-default "
                                   >小日常                                  
@@ -793,65 +793,77 @@
     </style>
 
     
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/miniapp.html">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="微信小程序编写课程笔记">
+                            
+                            <span class="card-title">微信小程序编写课程笔记</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                微信小程序编写框架结构app部分小程序包含一个描述整体程序的 app 和多个描述各自页面的 page。
+一个小程序主体部分由三个文件组成，必须放在项目的根目录，如下：
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
 
-    
 
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"Python学习","max":10},{"name":"SQL学习","max":10},{"name":"大学物理","max":10},{"name":"微信小程序","max":10},{"name":"操作系统学习","max":10},{"name":"记录","max":10},{"name":"小日常","max":10}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [5,9,1,1,1,3,1],
-                    name : '文章分类数量'
-                }
-            ]
-        }]
-    };
+文件
+必需
+作用
 
-    radarChart.setOption(option);
-</script>
 
-    
 
+app.js
+是
+小程序逻辑
+
+
+app.
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-31
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
+                                    微信小程序
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                            <span class="chip bg-color">微信小程序</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
