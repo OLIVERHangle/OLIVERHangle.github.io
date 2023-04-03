@@ -722,8 +722,7 @@
 
 <pre><code>bwm
 1000000
-black
-</code></pre>
+black</code></pre>
 <h2 id="6-2-使用字典"><a href="#6-2-使用字典" class="headerlink" title="6.2 使用字典"></a>6.2 使用字典</h2><h3 id="6-2-1-定义与访问字典"><a href="#6-2-1-定义与访问字典" class="headerlink" title="6.2.1 定义与访问字典"></a>6.2.1 定义与访问字典</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">定义：
 
 字典名 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'键值1'</span><span class="token punctuation">:</span>键值<span class="token number">1</span>值<span class="token punctuation">,</span><span class="token string">'键值2'</span><span class="token punctuation">:</span>键值<span class="token number">2</span>值···<span class="token punctuation">}</span>
@@ -744,8 +743,7 @@ car<span class="token punctuation">[</span><span class="token string">'type'</sp
 <span class="token keyword">print</span><span class="token punctuation">(</span>car<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>{'brand': 'bwm', 'price': 1000000, 'color': 'black'}
-{'brand': 'bwm', 'price': 1000000, 'color': 'black', 'type': 'x765'}
-</code></pre>
+{'brand': 'bwm', 'price': 1000000, 'color': 'black', 'type': 'x765'}</code></pre>
 <p>直接打印字典，元素排列顺序和定义时完全相同，用for循环遍历时也按照定义顺序。<br>新增键值对：会直接默认在最后。</p>
 <h3 id="6-2-3-创建一个空字典："><a href="#6-2-3-创建一个空字典：" class="headerlink" title="6.2.3 创建一个空字典："></a>6.2.3 创建一个空字典：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">和创建一个空列表一样
 语法：
@@ -757,8 +755,7 @@ car<span class="token punctuation">[</span><span class="token string">'color'</s
 <span class="token keyword">print</span><span class="token punctuation">(</span>car<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>white
-{'brand': 'bwm', 'price': 1000000, 'color': 'white'}
-</code></pre>
+{'brand': 'bwm', 'price': 1000000, 'color': 'white'}</code></pre>
 <h3 id="6-2-5-删除键值对：del"><a href="#6-2-5-删除键值对：del" class="headerlink" title="6.2.5 删除键值对：del"></a>6.2.5 删除键值对：del</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">del</span> 列表名<span class="token punctuation">[</span><span class="token string">'键值名'</span><span class="token punctuation">]</span> <span class="token comment">#键值名记着加引号！！！</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
@@ -768,23 +765,20 @@ car<span class="token punctuation">[</span><span class="token string">'color'</s
 <span class="token keyword">print</span><span class="token punctuation">(</span>car<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>{'brand': 'bwm', 'price': 1000000, 'color': 'black'}
-{'brand': 'bwm', 'color': 'black'}
-</code></pre>
+{'brand': 'bwm', 'color': 'black'}</code></pre>
 <h3 id="6-2-6-定义字典小习惯"><a href="#6-2-6-定义字典小习惯" class="headerlink" title="6.2.6 定义字典小习惯"></a>6.2.6 定义字典小习惯</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'brand'</span><span class="token punctuation">:</span><span class="token string">'bwm'</span><span class="token punctuation">,</span>
        <span class="token string">'price'</span><span class="token punctuation">:</span><span class="token number">1000000</span><span class="token punctuation">,</span>
        <span class="token string">'color'</span><span class="token punctuation">:</span><span class="token string">'black'</span><span class="token punctuation">}</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>car<span class="token punctuation">)</span>
 <span class="token comment">#竖着这样写可以让键值对更清晰</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre><code>{'brand': 'bwm', 'price': 1000000, 'color': 'black'}
-</code></pre>
+<pre><code>{'brand': 'bwm', 'price': 1000000, 'color': 'black'}</code></pre>
 <h3 id="6-2-7-使用get-来访问值"><a href="#6-2-7-使用get-来访问值" class="headerlink" title="6.2.7 使用get()来访问值"></a>6.2.7 使用get()来访问值</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'brand'</span><span class="token punctuation">:</span><span class="token string">'bwm'</span><span class="token punctuation">,</span><span class="token string">'price'</span><span class="token punctuation">:</span><span class="token number">1000000</span><span class="token punctuation">,</span><span class="token string">'color'</span><span class="token punctuation">:</span><span class="token string">'black'</span><span class="token punctuation">}</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>car<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'brand'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>car<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'owner'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>bwm
-None
-</code></pre>
+None</code></pre>
 <h2 id="6-3-遍历字典"><a href="#6-3-遍历字典" class="headerlink" title="6.3 遍历字典"></a>6.3 遍历字典</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法：
 
 <span class="token keyword">for</span> 键值变量an，键值值bn <span class="token keyword">in</span> 列表名<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -810,8 +804,7 @@ Value: 1000000
 
 Key: Color
 
-Value: black
-</code></pre>
+Value: black</code></pre>
 <h3 id="6-3-2-遍历字典中的所有键名变量-或者-键值"><a href="#6-3-2-遍历字典中的所有键名变量-或者-键值" class="headerlink" title="6.3.2 遍历字典中的所有键名变量 或者 键值"></a>6.3.2 遍历字典中的所有键名变量 或者 键值</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> 键值变量an <span class="token keyword">in</span> 列表名<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     执行块
     
@@ -828,8 +821,7 @@ Value: black
 
 Key: Price
 
-Key: Color
-</code></pre>
+Key: Color</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> 键值变量an <span class="token keyword">in</span> 列表名<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     执行块
     
@@ -846,8 +838,7 @@ Key: Color
 
 Key: 1000000
 
-Key: black
-</code></pre>
+Key: black</code></pre>
 <h3 id="6-3-3-遍历处理后的列表"><a href="#6-3-3-遍历处理后的列表" class="headerlink" title="6.3.3 遍历处理后的列表"></a>6.3.3 遍历处理后的列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#想按照首字母排序 打印：键值名变量 用sorted（）临时排序</span>
 car <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'brand'</span><span class="token punctuation">:</span><span class="token string">'bwm'</span><span class="token punctuation">,</span><span class="token string">'price'</span><span class="token punctuation">:</span><span class="token number">1000000</span><span class="token punctuation">,</span><span class="token string">'color'</span><span class="token punctuation">:</span><span class="token string">'black'</span><span class="token punctuation">}</span>
 
@@ -859,8 +850,7 @@ car <span class="token operator">=</span> <span class="token punctuation">{</spa
 
 Key: Color
 
-Key: Price
-</code></pre>
+Key: Price</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">favo_language <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">'jen'</span><span class="token punctuation">:</span> <span class="token string">'python'</span><span class="token punctuation">,</span>
     <span class="token string">'sarah'</span><span class="token punctuation">:</span> <span class="token string">'c'</span><span class="token punctuation">,</span>
@@ -875,8 +865,7 @@ Key: Price
 <pre><code>The following languages have been mentioned:
 Ruby
 C
-Python
-</code></pre>
+Python</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#对列表去重处理： set(列表名)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="6-4-嵌套（套娃）"><a href="#6-4-嵌套（套娃）" class="headerlink" title="6.4 嵌套（套娃）"></a>6.4 嵌套（套娃）</h2><h3 id="6-4-1-6-字典列表"><a href="#6-4-1-6-字典列表" class="headerlink" title="6.4.1 6.字典列表"></a>6.4.1 6.字典列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">car_1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'color'</span><span class="token punctuation">:</span><span class="token string">'black'</span><span class="token punctuation">,</span><span class="token string">'price'</span><span class="token punctuation">:</span><span class="token number">3000</span><span class="token punctuation">}</span>
@@ -893,8 +882,7 @@ cars <span class="token operator">=</span> <span class="token punctuation">[</sp
 <pre><code>[{'color': 'black', 'price': 3000}, {'color': 'whilt', 'price': 34000}, {'color': 'yellow', 'price': 342000}]
 {'color': 'black', 'price': 3000}
 {'color': 'whilt', 'price': 34000}
-{'color': 'yellow', 'price': 342000}
-</code></pre>
+{'color': 'yellow', 'price': 342000}</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#创建多个的时候可以使用for（） 和 range（）</span>
 aliens <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 <span class="token keyword">for</span> alien_number <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -916,8 +904,7 @@ aliens <span class="token operator">=</span> <span class="token punctuation">[</
 {'color': 'yellow', 'speed': 'fast'}
 {'color': 'yellow', 'speed': 'fast'}
 {'color': 'yellow', 'speed': 'fast'}
-30
-</code></pre>
+30</code></pre>
 <h3 id="6-4-2-在字典中储存列表"><a href="#6-4-2-在字典中储存列表" class="headerlink" title="6.4.2 在字典中储存列表"></a>6.4.2 在字典中储存列表</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">pizza <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">'crust'</span><span class="token punctuation">:</span><span class="token string">'thick'</span><span class="token punctuation">,</span>
     <span class="token string">'toppings'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'mushrooms'</span><span class="token punctuation">,</span><span class="token string">'extra cheese'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -926,8 +913,7 @@ aliens <span class="token operator">=</span> <span class="token punctuation">[</
     <span class="token keyword">print</span><span class="token punctuation">(</span>topping<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>mushrooms
-extra cheese
-</code></pre>
+extra cheese</code></pre>
 <h3 id="6-4-3-在字典中储存字典"><a href="#6-4-3-在字典中储存字典" class="headerlink" title="6.4.3 在字典中储存字典"></a>6.4.3 在字典中储存字典</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">pizza <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">'toppings'</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">'first'</span><span class="token punctuation">:</span><span class="token string">'mushrooms'</span><span class="token punctuation">,</span><span class="token string">'second'</span><span class="token punctuation">:</span><span class="token string">'extra cheese'</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -935,8 +921,7 @@ extra cheese
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>sequence<span class="token punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">{</span>topping<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>first: mushrooms
-second: extra cheese
-</code></pre>
+second: extra cheese</code></pre>
 
                 
             </div>
@@ -963,7 +948,7 @@ second: extra cheese
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://thripear.space/posts/python6.html">http://thripear.space/posts/python6.html</a>
+                    <a href="https://oliverhangle.github.io/posts/python6.html">https://oliverhangle.github.io/posts/python6.html</a>
                 </span>
             </div>
             <div class="reprint__notice">

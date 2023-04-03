@@ -722,15 +722,13 @@
 
 <pre><code>3
 2
-1
-</code></pre>
+1</code></pre>
 <p>负数即倒数第几个</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">bicycles <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'trek'</span><span class="token punctuation">,</span><span class="token string">'cannondale'</span><span class="token punctuation">]</span>
 message <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"my bicycle is a </span><span class="token interpolation"><span class="token punctuation">{</span>bicycles<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">."</span></span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<pre><code>my bicycle is a Cannondale.
-</code></pre>
+<pre><code>my bicycle is a Cannondale.</code></pre>
 <p>f花括号内可以写变量。</p>
 <h2 id="3-2修改列表元素"><a href="#3-2修改列表元素" class="headerlink" title="3.2修改列表元素"></a>3.2修改列表元素</h2><h3 id="lt-1-gt-修改其中的元素"><a href="#lt-1-gt-修改其中的元素" class="headerlink" title="<1>修改其中的元素"></a>&lt;1&gt;修改其中的元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
@@ -739,8 +737,7 @@ a<span class="token punctuation">[</span><span class="token number">0</span><spa
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>['1', '2', '3']
-['4', '2', '3']
-</code></pre>
+['4', '2', '3']</code></pre>
 <p>列表相当于是一个数组</p>
 <h3 id="lt-2-gt-插入元素"><a href="#lt-2-gt-插入元素" class="headerlink" title="<2>插入元素"></a>&lt;2&gt;插入元素</h3><h4 id="1-末尾插入：append"><a href="#1-末尾插入：append" class="headerlink" title="1 末尾插入：append"></a>1 末尾插入：append</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
@@ -749,8 +746,7 @@ a<span class="token punctuation">.</span>append<span class="token punctuation">(
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>['1', '2', '3']
-['1', '2', '3', '5']
-</code></pre>
+['1', '2', '3', '5']</code></pre>
 <p> 连续使用append可以连续在后面插入</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
@@ -760,8 +756,7 @@ a<span class="token punctuation">.</span>append<span class="token punctuation">(
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>[]
-['1', '2', '3']
-</code></pre>
+['1', '2', '3']</code></pre>
 <h4 id="2-选定位置前：insert"><a href="#2-选定位置前：insert" class="headerlink" title="2 选定位置前：insert"></a>2 选定位置前：insert</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
 
@@ -769,8 +764,7 @@ a<span class="token punctuation">.</span>insert<span class="token punctuation">(
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>['1', '2', '3']
-['han', '1', '2', '3']
-</code></pre>
+['han', '1', '2', '3']</code></pre>
 <p>注意！insert在指定元素   之前   插入！</p>
 <h3 id="lt-3-gt-删除元素"><a href="#lt-3-gt-删除元素" class="headerlink" title="<3>删除元素"></a>&lt;3&gt;删除元素</h3><h4 id="1-del-语句-删除-（需要指定索引）"><a href="#1-del-语句-删除-（需要指定索引）" class="headerlink" title="1 del 语句 删除 （需要指定索引）"></a>1 del 语句 删除 （需要指定索引）</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
@@ -783,8 +777,7 @@ a<span class="token punctuation">.</span>insert<span class="token punctuation">(
 
 <pre><code>['1', '2', '3']
 ['2', '3']
-['2']
-</code></pre>
+['2']</code></pre>
 <h4 id="2-pop-删除"><a href="#2-pop-删除" class="headerlink" title="2 pop() 删除"></a>2 pop() 删除</h4><h5 id="（）不含任何内容，默认最后一个值被弹出"><a href="#（）不含任何内容，默认最后一个值被弹出" class="headerlink" title="（）不含任何内容，默认最后一个值被弹出"></a>（）不含任何内容，默认最后一个值被弹出</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
 
@@ -794,8 +787,7 @@ poped_a <span class="token operator">=</span> a<span class="token punctuation">.
 
 <pre><code>['1', '2', '3']
 ['1', '2']
-3
-</code></pre>
+3</code></pre>
 <p>a被pop之后，a最后一个元素被弹出，而a.pop函数返回值就是的被弹出的最后一个元素</p>
 <h5 id="指定索引，弹出任意位置处的元素"><a href="#指定索引，弹出任意位置处的元素" class="headerlink" title="指定索引，弹出任意位置处的元素"></a>指定索引，弹出任意位置处的元素</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
@@ -807,8 +799,7 @@ poped_a1 <span class="token operator">=</span> a<span class="token punctuation">
 
 <pre><code>['1', '2', '3']
 ['1', '3']
-2
-</code></pre>
+2</code></pre>
 <h4 id="根据值删除元素：remove-void返回类型"><a href="#根据值删除元素：remove-void返回类型" class="headerlink" title="根据值删除元素：remove (void返回类型)"></a>根据值删除元素：remove (void返回类型)</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
 
@@ -816,8 +807,7 @@ a<span class="token punctuation">.</span>remove<span class="token punctuation">(
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>['1', '2', '3']
-['1', '3']
-</code></pre>
+['1', '3']</code></pre>
 <h2 id="3-3-组织列表"><a href="#3-3-组织列表" class="headerlink" title="3.3 组织列表"></a>3.3 组织列表</h2><h3 id="sort-对列表永久排序-首字母顺序"><a href="#sort-对列表永久排序-首字母顺序" class="headerlink" title="sort() 对列表永久排序(首字母顺序)"></a>sort() 对列表永久排序(首字母顺序)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'z'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
 
@@ -839,8 +829,7 @@ a<span class="token punctuation">.</span>sort<span class="token punctuation">(</
 ['a', 'b', 'c', 'd', 'z']
 
 ['z', 'd', 'c', 'b', 'a']
-None
-</code></pre>
+None</code></pre>
 <h3 id="sorted-对列表临时排序"><a href="#sorted-对列表临时排序" class="headerlink" title="sorted() 对列表临时排序"></a>sorted() 对列表临时排序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'z'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
 
@@ -856,11 +845,9 @@ None
 ['a', 'b', 'c', 'd', 'z']
 
 再输出原来的列表：
-['c', 'b', 'z', 'a', 'd']
-</code></pre>
+['c', 'b', 'z', 'a', 'd']</code></pre>
 <p>注意：sorted()使用语法：sorted(列表) </p>
-<pre><code> 我们使用的是sorted的返回值（列表类），而sort对原列表不会有任何修改。
-</code></pre>
+<pre><code> 我们使用的是sorted的返回值（列表类），而sort对原列表不会有任何修改。</code></pre>
 <h3 id="reverse-对列表永久-原顺序反转"><a href="#reverse-对列表永久-原顺序反转" class="headerlink" title="reverse() 对列表永久 原顺序反转"></a>reverse() 对列表永久 原顺序反转</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'z'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
 
@@ -870,8 +857,7 @@ a<span class="token punctuation">.</span>reverse<span class="token punctuation">
 
 <pre><code>['c', 'b', 'z', 'a', 'd']
 
-['d', 'a', 'z', 'b', 'c']
-</code></pre>
+['d', 'a', 'z', 'b', 'c']</code></pre>
 <h3 id="len-确定列表长度"><a href="#len-确定列表长度" class="headerlink" title="len() 确定列表长度"></a>len() 确定列表长度</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'z'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
@@ -882,8 +868,7 @@ b <span class="token operator">=</span> <span class="token builtin">len</span><s
 <pre><code>5
 
 试图给b赋予a的长度：
-a的长度是：5
-</code></pre>
+a的长度是：5</code></pre>
 <h2 id="3-4-避免索引错误"><a href="#3-4-避免索引错误" class="headerlink" title="3.4 避免索引错误"></a>3.4 避免索引错误</h2><p>当出现循环时，可以使用len()知道长度，保证索引&lt;len()的值，注意len（）不能直接用</p>
 
                 
@@ -911,7 +896,7 @@ a的长度是：5
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://thripear.space/posts/python3.html">http://thripear.space/posts/python3.html</a>
+                    <a href="https://oliverhangle.github.io/posts/python3.html">https://oliverhangle.github.io/posts/python3.html</a>
                 </span>
             </div>
             <div class="reprint__notice">

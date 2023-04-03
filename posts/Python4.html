@@ -721,8 +721,7 @@
 <pre><code>a
 b
 c
-d
-</code></pre>
+d</code></pre>
 <h3 id="4-1-2-利用for循环进行更多操作的例子："><a href="#4-1-2-利用for循环进行更多操作的例子：" class="headerlink" title="4.1.2 利用for循环进行更多操作的例子："></a>4.1.2 利用for循环进行更多操作的例子：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
 <span class="token keyword">for</span> an <span class="token keyword">in</span> a<span class="token punctuation">:</span>   <span class="token comment">#冒号必不可少</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>an<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string"> is uppercase of </span><span class="token interpolation"><span class="token punctuation">{</span>an<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
@@ -738,8 +737,7 @@ C is uppercase of c
 next char is:
 
 D is uppercase of d
-next char is:
-</code></pre>
+next char is:</code></pre>
 <p>结果说明：<br>  缩进的都属于for循环<br>  an相当于计数器变量作索引的a[i]。</p>
 <h3 id="4-1-2-在for循环结束后执行操作"><a href="#4-1-2-在for循环结束后执行操作" class="headerlink" title="4.1.2 在for循环结束后执行操作"></a>4.1.2 在for循环结束后执行操作</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
 <span class="token keyword">for</span> an <span class="token keyword">in</span> a<span class="token punctuation">:</span>   <span class="token comment">#冒号必不可少</span>
@@ -750,8 +748,7 @@ next char is:
 B is uppercase of b
 C is uppercase of c
 D is uppercase of d
-test end.
-</code></pre>
+test end.</code></pre>
 <h2 id="4-2-避免缩进错误"><a href="#4-2-避免缩进错误" class="headerlink" title="4.2 避免缩进错误"></a>4.2 避免缩进错误</h2><h3 id="4-2-1-忘记缩进"><a href="#4-2-1-忘记缩进" class="headerlink" title="4.2.1 忘记缩进"></a>4.2.1 忘记缩进</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
 <span class="token keyword">for</span> an <span class="token keyword">in</span> a<span class="token punctuation">:</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>an<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -760,8 +757,7 @@ test end.
 <pre><code>  File "/var/folders/1j/k13fttf13b5d6j8_m4q12rgr0000gn/T/ipykernel_49995/1502029580.py", line 3
     print(an)
     ^
-IndentationError: expected an indented block
-</code></pre>
+IndentationError: expected an indented block</code></pre>
 <p>当没有缩进时，for循环找不到循环体，会报错。</p>
 <h3 id="原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号"><a href="#原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号" class="headerlink" title="原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号"></a>原则：需要进循环体的加缩进，不需要的不加缩进，没有for循环不缩进，for循环不忘冒号</h3><h2 id="4-3-创建数值列表"><a href="#4-3-创建数值列表" class="headerlink" title="4.3 创建数值列表"></a>4.3 创建数值列表</h2><h3 id="4-3-1-range-和list"><a href="#4-3-1-range-和list" class="headerlink" title="4.3.1 range()和list()"></a>4.3.1 range()和list()</h3><p>range()的三个用法：</p>
 <p>range(x)  和  range(0,x)一样<br>range(x,y)<br>range(x,y,z)</p>
@@ -770,34 +766,29 @@ IndentationError: expected an indented block
 
 
 
-<pre><code>[0, 1, 2, 3, 4, 5]
-</code></pre>
+<pre><code>[0, 1, 2, 3, 4, 5]</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#指定从0开始数6个</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 
-<pre><code>[0, 1, 2, 3, 4, 5]
-</code></pre>
+<pre><code>[0, 1, 2, 3, 4, 5]</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#相当于从3到12，步长为1，注意右括号12实际数到11</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 
-<pre><code>[3, 4, 5, 6, 7, 8, 9, 10, 11]
-</code></pre>
+<pre><code>[3, 4, 5, 6, 7, 8, 9, 10, 11]</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#步长为2</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 
-<pre><code>[3, 5, 7, 9, 11]
-</code></pre>
+<pre><code>[3, 5, 7, 9, 11]</code></pre>
 <h3 id="4-3-2-用range-创建数字列表"><a href="#4-3-2-用range-创建数字列表" class="headerlink" title="4.3.2 用range()创建数字列表"></a>4.3.2 用range()创建数字列表</h3><h4 id="打印1-10的偶数"><a href="#打印1-10的偶数" class="headerlink" title="打印1-10的偶数"></a>打印1-10的偶数</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">even_num <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">#注意，左边从2开始，右边界限为11（左面取得到，右面够不到）</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>even_num<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<pre><code>[2, 4, 6, 8, 10]
-</code></pre>
+<pre><code>[2, 4, 6, 8, 10]</code></pre>
 <h4 id="创建一个列表，包含1-10的平方"><a href="#创建一个列表，包含1-10的平方" class="headerlink" title="创建一个列表，包含1-10的平方"></a>创建一个列表，包含1-10的平方</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">square_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">#先创建一个空列表</span>
 
 <span class="token keyword">for</span> value <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -808,8 +799,7 @@ IndentationError: expected an indented block
     
 <span class="token keyword">print</span><span class="token punctuation">(</span>square_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-</code></pre>
+<pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code></pre>
 <h3 id="4-3-3-对数字列表执行简单的统计计算"><a href="#4-3-3-对数字列表执行简单的统计计算" class="headerlink" title="4.3.3 对数字列表执行简单的统计计算"></a>4.3.3 对数字列表执行简单的统计计算</h3><h4 id="找数字列表-元素为数字-的-最大值、最小值、总和"><a href="#找数字列表-元素为数字-的-最大值、最小值、总和" class="headerlink" title="找数字列表(元素为数字)  的   最大值、最小值、总和"></a>找数字列表(元素为数字)  的   最大值、最小值、总和</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">max</span><span class="token punctuation">(</span>digits<span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -820,36 +810,31 @@ IndentationError: expected an indented block
 
 <pre><code>9
 0
-45
-</code></pre>
+45</code></pre>
 <h3 id="4-3-4-列表解析"><a href="#4-3-4-列表解析" class="headerlink" title="4.3.4 列表解析"></a>4.3.4 列表解析</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#上面输入平方数的例子还可以用两行代码解决：</span>
 square_list <span class="token operator">=</span> <span class="token punctuation">[</span>value <span class="token operator">**</span> <span class="token number">2</span> <span class="token keyword">for</span> value <span class="token keyword">in</span> <span class="token builtin">range</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 <span class="token comment">#本质是把一个列表转换成另一个列表</span>
 <span class="token comment">#格式：列表1 = [表达式 for 变量 in 列表2]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>square_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-</code></pre>
+<pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code></pre>
 <h2 id="4-4-使用列表的一部分"><a href="#4-4-使用列表的一部分" class="headerlink" title="4.4 使用列表的一部分"></a>4.4 使用列表的一部分</h2><h3 id="使用切片"><a href="#使用切片" class="headerlink" title="使用切片"></a>使用切片</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>digits<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<pre><code>[1, 2, 3]
-</code></pre>
+<pre><code>[1, 2, 3]</code></pre>
 <h4 id="切片使用方法：-列表-起点：终点"><a href="#切片使用方法：-列表-起点：终点" class="headerlink" title="切片使用方法： 列表[起点：终点]"></a>切片使用方法： 列表[起点：终点]</h4><p>如果写成 列表[:终点]，起点默认索引为0；<br>如果写成 列表[起点：]，则默认重点到列表最后一个</p>
 <h4 id="如何打印最后三个元素？"><a href="#如何打印最后三个元素？" class="headerlink" title="如何打印最后三个元素？"></a>如何打印最后三个元素？</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>digits<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<pre><code>[8, 9, 0]
-</code></pre>
+<pre><code>[8, 9, 0]</code></pre>
 <p>列表[-倒数几个：]</p>
 <h4 id="每间隔两个元素就提取一个（在选取范围内）"><a href="#每间隔两个元素就提取一个（在选取范围内）" class="headerlink" title="每间隔两个元素就提取一个（在选取范围内）"></a>每间隔两个元素就提取一个（在选取范围内）</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>digits<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<pre><code>[1, 3, 5, 7, 9]
-</code></pre>
+<pre><code>[1, 3, 5, 7, 9]</code></pre>
 <p>[起点：重点：步长]，步长不输入（没有第二个冒号）默认为1.</p>
 <h3 id="遍历切片：使用for循环-切片"><a href="#遍历切片：使用for循环-切片" class="headerlink" title="遍历切片：使用for循环+切片"></a>遍历切片：使用for循环+切片</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"No 5 to No 9 number in my digits are:\n"</span><span class="token punctuation">)</span>
@@ -861,8 +846,7 @@ square_list <span class="token operator">=</span> <span class="token punctuation
 5
 6
 7
-8
-</code></pre>
+8</code></pre>
 <h3 id="复制列表-使用切片"><a href="#复制列表-使用切片" class="headerlink" title="复制列表 (使用切片)"></a>复制列表 (使用切片)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">digits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span>
 copy_digits <span class="token operator">=</span> digits<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
 
@@ -872,9 +856,8 @@ copy_digits<span class="token punctuation">.</span>append<span class="token punc
 <span class="token keyword">print</span><span class="token punctuation">(</span>copy_digits<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10]
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11]
-</code></pre>
-<h4 id="注意语法：-列表1-x3D-列表2"><a href="#注意语法：-列表1-x3D-列表2" class="headerlink" title="注意语法： 列表1 = 列表2[:]"></a>注意语法： 列表1 = 列表2[:]</h4><p>这样才是两个列表</p>
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11]</code></pre>
+<h4 id="注意语法：-列表1-列表2"><a href="#注意语法：-列表1-列表2" class="headerlink" title="注意语法： 列表1 = 列表2[:]"></a>注意语法： 列表1 = 列表2[:]</h4><p>这样才是两个列表</p>
 <p>如果没有切片直接复制</p>
 <p>则两个列表指向同一个储存空间，本质上是一个列表</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">digits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span>
@@ -886,8 +869,7 @@ copy_digits<span class="token punctuation">.</span>append<span class="token punc
 <span class="token keyword">print</span><span class="token punctuation">(</span>copy_digits<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11]
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11]
-</code></pre>
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 11]</code></pre>
 <h2 id="4-5-元组-不可改变的列表"><a href="#4-5-元组-不可改变的列表" class="headerlink" title="4.5 元组-不可改变的列表"></a>4.5 元组-不可改变的列表</h2><h3 id="定义语法："><a href="#定义语法：" class="headerlink" title="定义语法："></a>定义语法：</h3><p>元组名 = (元素1，元素2，…)</p>
 <p>访问和列表相同</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">)</span>
@@ -895,8 +877,7 @@ copy_digits<span class="token punctuation">.</span>append<span class="token punc
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>30
-40
-</code></pre>
+40</code></pre>
 <p>不能改变：指不能单独给其内元素赋值。(报错)</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">)</span>
 a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -911,8 +892,7 @@ TypeError                                 Traceback (most recent call last)
 ----&gt; 2 a[0] = 1
 
 
-TypeError: 'tuple' object does not support item assignment
-</code></pre>
+TypeError: 'tuple' object does not support item assignment</code></pre>
 <h3 id="遍历元组-和for循环"><a href="#遍历元组-和for循环" class="headerlink" title="遍历元组-和for循环"></a>遍历元组-和for循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">)</span>
 
 <span class="token keyword">for</span> an <span class="token keyword">in</span> a<span class="token punctuation">:</span>
@@ -920,8 +900,7 @@ TypeError: 'tuple' object does not support item assignment
 
 <pre><code>30
 40
-50
-</code></pre>
+50</code></pre>
 <h3 id="修改元组变量-重新定义"><a href="#修改元组变量-重新定义" class="headerlink" title="修改元组变量-重新定义"></a>修改元组变量-重新定义</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
 
@@ -929,8 +908,7 @@ a <span class="token operator">=</span> <span class="token punctuation">(</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>(30, 40)
-(40, 50)
-</code></pre>
+(40, 50)</code></pre>
 
                 
             </div>
@@ -957,7 +935,7 @@ a <span class="token operator">=</span> <span class="token punctuation">(</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://thripear.space/posts/python4.html">http://thripear.space/posts/python4.html</a>
+                    <a href="https://oliverhangle.github.io/posts/python4.html">https://oliverhangle.github.io/posts/python4.html</a>
                 </span>
             </div>
             <div class="reprint__notice">

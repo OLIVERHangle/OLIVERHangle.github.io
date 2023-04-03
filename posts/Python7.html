@@ -721,8 +721,7 @@
 <span class="token keyword">print</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <pre><code>请输入返回的文本：12345
-12345
-</code></pre>
+12345</code></pre>
 <h3 id="7-1-1-编写清晰的程序"><a href="#7-1-1-编写清晰的程序" class="headerlink" title="7.1.1 编写清晰的程序"></a>7.1.1 编写清晰的程序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">原理：
 
 变量 <span class="token operator">=</span> <span class="token builtin">input</span>（参数 ：说明<span class="token operator">/</span>指示） <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -732,23 +731,20 @@
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Hello,</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <pre><code>please enter your name:Oliver
-Hello,Oliver
-</code></pre>
+Hello,Oliver</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">echo <span class="token operator">=</span> <span class="token string">"语句1"</span>
 <span class="token comment">#echo = echo + “语句2“ 可以写成：</span>
 echo <span class="token operator">+=</span> <span class="token string">"语句2"</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>echo<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre><code>语句1语句2
-</code></pre>
+<pre><code>语句1语句2</code></pre>
 <h3 id="7-1-2-int-：将input（）变成int型进行运算"><a href="#7-1-2-int-：将input（）变成int型进行运算" class="headerlink" title="7.1.2 int()：将input（）变成int型进行运算"></a>7.1.2 int()：将input（）变成int型进行运算</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">age <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"What’s your age?:"</span><span class="token punctuation">)</span>
 age <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Your age is </span><span class="token interpolation"><span class="token punctuation">{</span>age<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <pre><code>What’s your age?:65
-Your age is 65
-</code></pre>
+Your age is 65</code></pre>
 <h3 id="7-1-3-求模运算符"><a href="#7-1-3-求模运算符" class="headerlink" title="7.1.3 求模运算符%"></a>7.1.3 求模运算符%</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">作用：将两个数相除并返回余数
 如果一个数可被另一个数字整除，<span class="token operator">%</span>返回值为<span class="token number">0</span>
 常见用途：判断奇数偶数。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -759,22 +755,19 @@ Your age is 65
 
 
 
-<pre><code>2
-</code></pre>
+<pre><code>2</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">6</span><span class="token operator">%</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 
-<pre><code>0
-</code></pre>
+<pre><code>0</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">5</span><span class="token operator">%</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 
-<pre><code>0
-</code></pre>
+<pre><code>0</code></pre>
 <h2 id="7-2-while循环简介"><a href="#7-2-while循环简介" class="headerlink" title="7.2 while循环简介"></a>7.2 while循环简介</h2><h3 id="7-2-1-使用while循环"><a href="#7-2-1-使用while循环" class="headerlink" title="7.2.1 使用while循环"></a>7.2.1 使用while循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法
 <span class="token keyword">while</span> 条件：   <span class="token comment">#注意冒号！！！</span>
   执行块 <span class="token comment">#注意缩进</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -814,8 +807,7 @@ message <span class="token operator">=</span> <span class="token punctuation">{<
 3
 5
 7
-9
-</code></pre>
+9</code></pre>
 <h3 id="7-2-6-避免无限循环"><a href="#7-2-6-避免无限循环" class="headerlink" title="7.2.6 避免无限循环"></a>7.2.6 避免无限循环</h3><p><u>注意循环条件不能始终为true</u></p>
 <h2 id="7-3-while处理循环列表和字典"><a href="#7-3-while处理循环列表和字典" class="headerlink" title="7.3 while处理循环列表和字典"></a>7.3 while处理循环列表和字典</h2><h3 id="7-3-1-在列表间移动元素"><a href="#7-3-1-在列表间移动元素" class="headerlink" title="7.3.1 在列表间移动元素"></a>7.3.1 在列表间移动元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#当列表为空时，while会认为它是false。</span>
 an <span class="token operator">=</span> <span class="token punctuation">[</span>元素<span class="token number">1</span>，元素<span class="token number">2</span>，元素<span class="token number">3</span>···<span class="token punctuation">]</span>
@@ -865,7 +857,7 @@ bn <span class="token operator">=</span> <span class="token punctuation">[</span
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://thripear.space/posts/python7.html">http://thripear.space/posts/python7.html</a>
+                    <a href="https://oliverhangle.github.io/posts/python7.html">https://oliverhangle.github.io/posts/python7.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
