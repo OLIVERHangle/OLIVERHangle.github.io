@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SQL理论课-Class 2, Fox">
+    <meta name="keywords" content="第一次为你提笔-阿狐, Fox">
     <meta name="description" content="又是想rua阿狐姐姐的一天">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SQL理论课-Class 2 | 阿狐和柴柴</title>
+    <title>第一次为你提笔-阿狐 | 阿狐和柴柴</title>
 
     <link rel="icon" type="image/jpeg" href="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg">
 
@@ -520,12 +520,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SQL理论课-Class 2</h1>
+                    <h1 class="description center-align post-title">第一次为你提笔-阿狐</h1>
                 </div>
             </div>
         </div>
@@ -646,12 +646,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SQL/">
-                                <span class="chip bg-color">SQL</span>
+                            <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                                <span class="chip bg-color">记录</span>
                             </a>
                         
-                            <a href="/tags/%E7%90%86%E8%AE%BA/">
-                                <span class="chip bg-color">理论</span>
+                            <a href="/tags/%E6%97%A5%E5%B8%B8/">
+                                <span class="chip bg-color">日常</span>
                             </a>
                         
                     </div>
@@ -662,8 +662,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                SQL学习
+                            <a href="/categories/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                记录
                             </a>
                         
                     </div>
@@ -675,28 +675,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-24
+                    2022-05-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-26
+                    2023-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    595
+                    210
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -714,70 +714,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Class-2-新课"><a href="#Class-2-新课" class="headerlink" title="Class_2 新课"></a>Class_2 新课</h1><h2 id="多表查询-从多个表里面查询信息"><a href="#多表查询-从多个表里面查询信息" class="headerlink" title="多表查询 - 从多个表里面查询信息"></a>多表查询 - 从多个表里面查询信息</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">语法：
-<span class="token keyword">select</span> 需要的属性
-<span class="token keyword">from</span> 表<span class="token number">1</span>，表<span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="输出是表1和表2的笛卡尔积，结果没有意义。因为我们想要的是信息能对得上的。"><a href="#输出是表1和表2的笛卡尔积，结果没有意义。因为我们想要的是信息能对得上的。" class="headerlink" title="-输出是表1和表2的笛卡尔积，结果没有意义。因为我们想要的是信息能对得上的。"></a>-输出是表1和表2的笛卡尔积，结果没有意义。因为我们想要的是信息能对得上的。</h3><h3 id="需要使用where进行限定。"><a href="#需要使用where进行限定。" class="headerlink" title="-需要使用where进行限定。"></a>-需要使用where进行限定。</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">where</span> 表<span class="token number">1.</span>属性 <span class="token operator">=</span> 表<span class="token number">2.</span>属性（这里面的属性需要在两个表里面都一样）（这里的 表<span class="token number">1.</span>和 表<span class="token number">2.</span>不能省略。）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="表的连接：把两个及以上的表连接在一起"><a href="#表的连接：把两个及以上的表连接在一起" class="headerlink" title="表的连接：把两个及以上的表连接在一起"></a>表的连接：把两个及以上的表连接在一起</h2><h3 id="前提条件：有相同的属性（比如玉兰卡id和学号），当然可以有不同的属性。"><a href="#前提条件：有相同的属性（比如玉兰卡id和学号），当然可以有不同的属性。" class="headerlink" title="前提条件：有相同的属性（比如玉兰卡id和学号），当然可以有不同的属性。"></a>前提条件：有相同的属性（比如玉兰卡id和学号），当然可以有不同的属性。</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> dept_name 
-<span class="token keyword">from</span> course<span class="token punctuation">,</span>section
-<span class="token keyword">where</span> course<span class="token punctuation">.</span>course_id <span class="token operator">=</span> section<span class="token punctuation">.</span>course_id <span class="token operator">and</span> dept_name <span class="token operator">=</span> <span class="token string">'Comp.Sci'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span>
-<span class="token keyword">from</span> 表<span class="token number">1</span> <span class="token keyword">join</span> 表<span class="token number">2</span> <span class="token keyword">on</span> 表<span class="token number">1.</span>属性 <span class="token operator">=</span> 表<span class="token number">2.</span>属性
-还可以写成这样。效率比较高<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="如果想要把三个以上的表连接："><a href="#如果想要把三个以上的表连接：" class="headerlink" title="如果想要把三个以上的表连接："></a>如果想要把三个以上的表连接：</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">Select</span> <span class="token operator">*</span>
-
-<span class="token keyword">From</span> emp <span class="token keyword">join</span> dept <span class="token keyword">on</span> emp<span class="token punctuation">.</span>dpetno <span class="token operator">=</span> dept<span class="token punctuation">.</span>deptno
-
-<span class="token keyword">Where</span> loc <span class="token operator">=</span> <span class="token string">'new York'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="自然连接：每一个相同属性列仅留下一个拷贝。也就是连接属性（比如两个表里面的id）只会留一个，"><a href="#自然连接：每一个相同属性列仅留下一个拷贝。也就是连接属性（比如两个表里面的id）只会留一个，" class="headerlink" title="自然连接：每一个相同属性列仅留下一个拷贝。也就是连接属性（比如两个表里面的id）只会留一个，"></a>自然连接：每一个相同属性列仅留下一个拷贝。也就是连接属性（比如两个表里面的id）只会留一个，</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">from</span> 表<span class="token number">1</span> <span class="token keyword">natural</span> <span class="token keyword">join</span> 表<span class="token number">2</span> <span class="token keyword">on</span> 条件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="自然连接有危险，当连接多个表的时候，可能会出现目标数据查询损失。筛选过度。"><a href="#自然连接有危险，当连接多个表的时候，可能会出现目标数据查询损失。筛选过度。" class="headerlink" title="-自然连接有危险，当连接多个表的时候，可能会出现目标数据查询损失。筛选过度。"></a>-自然连接有危险，当连接多个表的时候，可能会出现目标数据查询损失。筛选过度。</h3><h3 id="自连接：自己和自己中的元素进行查询-关键在于更改名字"><a href="#自连接：自己和自己中的元素进行查询-关键在于更改名字" class="headerlink" title="自连接：自己和自己中的元素进行查询,关键在于更改名字"></a>自连接：自己和自己中的元素进行查询,关键在于更改名字</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> T<span class="token punctuation">.</span>name
-<span class="token keyword">from</span> instructor <span class="token keyword">as</span> T<span class="token punctuation">,</span>instructor <span class="token keyword">as</span> S
-<span class="token keyword">where</span> T<span class="token punctuation">.</span>salary <span class="token operator">&gt;</span> S<span class="token punctuation">.</span>salary <span class="token operator">and</span> S<span class="token punctuation">.</span>dept_name <span class="token operator">=</span> <span class="token string">'Comp.Sci.'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="集合运算："><a href="#集合运算：" class="headerlink" title="集合运算："></a>集合运算：</h2><h3 id="并集：union"><a href="#并集：union" class="headerlink" title="并集：union"></a>并集：union</h3><h3 id="交集：intersect"><a href="#交集：intersect" class="headerlink" title="交集：intersect"></a>交集：intersect</h3><h3 id="减法：except"><a href="#减法：except" class="headerlink" title="减法：except"></a>减法：except</h3><h4 id="前提：两个集合数据类型要一样"><a href="#前提：两个集合数据类型要一样" class="headerlink" title="前提：两个集合数据类型要一样"></a>前提：两个集合数据类型要一样</h4><h4 id="SQL的集合中没有重复元素，保留重复需要：union-all-intersect-all-和-except-all"><a href="#SQL的集合中没有重复元素，保留重复需要：union-all-intersect-all-和-except-all" class="headerlink" title="SQL的集合中没有重复元素，保留重复需要：union all,intersect all 和 except all"></a>SQL的集合中没有重复元素，保留重复需要：union all,intersect all 和 except all</h4><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">语法：
-<span class="token keyword">select</span> 属性<span class="token number">1</span> <span class="token keyword">from</span> 表<span class="token number">1</span> <span class="token keyword">where</span> 条件<span class="token number">1</span>
-集合运算符
-<span class="token keyword">select</span> 属性<span class="token number">2</span> <span class="token keyword">from</span> 表<span class="token number">2</span> <span class="token keyword">where</span> 条件<span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="空值-NULL"><a href="#空值-NULL" class="headerlink" title="空值 NULL"></a>空值 NULL</h3><p>数值 + null, null &lt;&gt; null null = null 结果是 unknown<br>所以选择值是unknown的：</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">where</span> 属性 <span class="token operator">is</span> <span class="token boolean">null</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>注意：空值参与排序。</p>
-<p>unknown 和 true 的逻辑运算以及结果：</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">OR</span>: <span class="token punctuation">(</span>unknown <span class="token operator">or</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
- <span class="token punctuation">(</span>unknown <span class="token operator">or</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token operator">=</span> unknown
-<span class="token punctuation">(</span>unknown <span class="token operator">or</span> unknown<span class="token punctuation">)</span> <span class="token operator">=</span> unknown
-
-– <span class="token operator">AND</span>: <span class="token punctuation">(</span><span class="token boolean">true</span> <span class="token operator">and</span> unknown<span class="token punctuation">)</span> <span class="token operator">=</span> unknown<span class="token punctuation">,</span> 
-<span class="token punctuation">(</span><span class="token boolean">false</span> <span class="token operator">and</span> unknown<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span>unknown <span class="token operator">and</span> unknown<span class="token punctuation">)</span> <span class="token operator">=</span> unknown
-
-– <span class="token operator">NOT</span>: <span class="token punctuation">(</span><span class="token operator">not</span> unknown<span class="token punctuation">)</span> <span class="token operator">=</span> unknown
-– “P <span class="token operator">is</span> unknown” evaluates <span class="token keyword">to</span> <span class="token boolean">true</span> <span class="token keyword">if</span> predicate P evaluates <span class="token keyword">to</span> unknown<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>小练习：</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">查询先修课的先修课的名字（自连接）
-<span class="token keyword">use</span> university
-<span class="token keyword">select</span> <span class="token keyword">distinct</span> P<span class="token punctuation">.</span>prereq_id
-<span class="token keyword">from</span> prereq <span class="token keyword">as</span> C<span class="token punctuation">,</span>prereq <span class="token keyword">as</span> P
-<span class="token keyword">where</span> C<span class="token punctuation">.</span>prereq_id <span class="token operator">=</span> P<span class="token punctuation">.</span>course_id
-查询两个工资相等的老师
-<span class="token keyword">select</span> <span class="token keyword">distinct</span> A<span class="token punctuation">.</span>name<span class="token punctuation">,</span>B<span class="token punctuation">.</span>name
-<span class="token keyword">from</span> instructor <span class="token keyword">as</span> A<span class="token punctuation">,</span>instructor <span class="token keyword">as</span> B
-<span class="token keyword">where</span> A<span class="token punctuation">.</span>salary <span class="token operator">=</span> B<span class="token punctuation">.</span>salary <span class="token operator">and</span> A<span class="token punctuation">.</span>name <span class="token operator">&lt;&gt;</span> B<span class="token punctuation">.</span>name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+                <p><strong>我坚信命运总是将我们往正确的人那里推。有人，得天独厚，年少相逢，未曾珍惜错失；有人，跌跌撞撞，终其一生，至死不可得。我曾凭着一腔热血，莽撞，视死如归。却发现你是我藏在发霉枕头下，日复一日的春秋大梦。在春日深夜被泪打湿的枕头，在夏日阳光下拿出暴晒，试图驱散那些阴霾。在秋日落叶中望着那些斑驳泪渍。却在冬日里，枕着那些遗憾，做了一个美梦。温柔，浪漫至死的我们，拼命找，却遍体鳞伤，但一个侧身，找到真正的归途。真正的爱浮现地那一刻，我们原谅了那些过往，又生出无限的勇气，为彼此而重新生长。</strong></p>
 
                 
             </div>
@@ -804,7 +741,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oliverhangle.github.io/posts/sql2.html">https://oliverhangle.github.io/posts/sql2.html</a>
+                    <a href="https://oliverhangle.github.io/posts/732b7af7.html">https://oliverhangle.github.io/posts/732b7af7.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -842,12 +779,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SQL/">
-                                    <span class="chip bg-color">SQL</span>
+                                <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                                    <span class="chip bg-color">记录</span>
                                 </a>
                             
-                                <a href="/tags/%E7%90%86%E8%AE%BA/">
-                                    <span class="chip bg-color">理论</span>
+                                <a href="/tags/%E6%97%A5%E5%B8%B8/">
+                                    <span class="chip bg-color">日常</span>
                                 </a>
                             
                         </div>
@@ -1323,13 +1260,13 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/sql1.1.html">
+                <a href="/posts/f433ca80.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="SQL理论课-Note 1_Revision">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="第一次为你提笔-柴柴">
                         
-                        <span class="card-title">SQL理论课-Note 1_Revision</span>
+                        <span class="card-title">第一次为你提笔-柴柴</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1340,14 +1277,14 @@ new Valine({
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-20
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    SQL学习
+                            <a href="/categories/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    记录
                                 </a>
                             
                             
@@ -1357,12 +1294,12 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL/">
-                        <span class="chip bg-color">SQL</span>
+                    <a href="/tags/%E6%8F%90%E7%AC%94/">
+                        <span class="chip bg-color">提笔</span>
                     </a>
                     
-                    <a href="/tags/%E7%90%86%E8%AE%BA/">
-                        <span class="chip bg-color">理论</span>
+                    <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                        <span class="chip bg-color">记录</span>
                     </a>
                     
                 </div>
@@ -1373,16 +1310,16 @@ new Valine({
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/posts/sql-3.html">
+                <a href="/posts/732b7af7.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="数据库演习-Class3 用户交互的数据库处理">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="第一次为你提笔-阿狐">
                         
-                        <span class="card-title">数据库演习-Class3 用户交互的数据库处理</span>
+                        <span class="card-title">第一次为你提笔-阿狐</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1393,29 +1330,30 @@ new Valine({
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    SQL学习
+                            <a href="/categories/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    记录
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL/">
-                        <span class="chip bg-color">SQL</span>
+                    <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                        <span class="chip bg-color">记录</span>
                     </a>
                     
-                    <a href="/tags/%E4%B8%8A%E6%9C%BA/">
-                        <span class="chip bg-color">上机</span>
+                    <a href="/tags/%E6%97%A5%E5%B8%B8/">
+                        <span class="chip bg-color">日常</span>
                     </a>
                     
                 </div>

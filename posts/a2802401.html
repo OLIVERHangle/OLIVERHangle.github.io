@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第一次为你提笔-阿狐, Fox">
+    <meta name="keywords" content="SQL理论课-Class 3, Fox">
     <meta name="description" content="又是想rua阿狐姐姐的一天">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>第一次为你提笔-阿狐 | 阿狐和柴柴</title>
+    <title>SQL理论课-Class 3 | 阿狐和柴柴</title>
 
     <link rel="icon" type="image/jpeg" href="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg">
 
@@ -520,12 +520,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第一次为你提笔-阿狐</h1>
+                    <h1 class="description center-align post-title">SQL理论课-Class 3</h1>
                 </div>
             </div>
         </div>
@@ -646,12 +646,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                <span class="chip bg-color">日常</span>
+                            <a href="/tags/SQL/">
+                                <span class="chip bg-color">SQL</span>
                             </a>
                         
-                            <a href="/tags/%E8%AE%B0%E5%BD%95/">
-                                <span class="chip bg-color">记录</span>
+                            <a href="/tags/%E7%90%86%E8%AE%BA/">
+                                <span class="chip bg-color">理论</span>
                             </a>
                         
                     </div>
@@ -662,8 +662,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%B0%E5%BD%95/" class="post-category">
-                                记录
+                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                SQL学习
                             </a>
                         
                     </div>
@@ -675,21 +675,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-20
+                    2022-11-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-21
+                    2023-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    210
+                    423
                 </div>
                 
 
@@ -714,7 +714,68 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>我坚信命运总是将我们往正确的人那里推。有人，得天独厚，年少相逢，未曾珍惜错失；有人，跌跌撞撞，终其一生，至死不可得。我曾凭着一腔热血，莽撞，视死如归。却发现你是我藏在发霉枕头下，日复一日的春秋大梦。在春日深夜被泪打湿的枕头，在夏日阳光下拿出暴晒，试图驱散那些阴霾。在秋日落叶中望着那些斑驳泪渍。却在冬日里，枕着那些遗憾，做了一个美梦。温柔，浪漫至死的我们，拼命找，却遍体鳞伤，但一个侧身，找到真正的归途。真正的爱浮现地那一刻，我们原谅了那些过往，又生出无限的勇气，为彼此而重新生长。</strong></p>
+                <h2 id="Class-2复习"><a href="#Class-2复习" class="headerlink" title="Class_2复习"></a>Class_2复习</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> b<span class="token punctuation">.</span>ENAME
+<span class="token keyword">from</span> EMP a<span class="token punctuation">,</span>EMP b
+<span class="token keyword">where</span> a<span class="token punctuation">.</span>mgr<span class="token operator">=</span>b<span class="token punctuation">.</span>empno
+
+<span class="token keyword">select</span> empno <span class="token keyword">from</span> emp <span class="token keyword">where</span> deptno <span class="token operator">=</span> <span class="token number">20</span>
+<span class="token keyword">intersect</span>
+<span class="token keyword">select</span> empno <span class="token keyword">from</span> emp <span class="token keyword">where</span> deptno <span class="token operator">=</span> <span class="token number">20</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="Class-3"><a href="#Class-3" class="headerlink" title="Class_3"></a>Class_3</h1><h2 id="聚集函数-Aggregate-Functions"><a href="#聚集函数-Aggregate-Functions" class="headerlink" title="聚集函数 Aggregate Functions"></a>聚集函数 Aggregate Functions</h2><h3 id="avg-min-max-sum-count"><a href="#avg-min-max-sum-count" class="headerlink" title="avg min max sum count"></a>avg min max sum count</h3><p>输入一个集合，输出一个值。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">avg<span class="token punctuation">,</span>sum <span class="token comment">#只能用于数值</span>
+min<span class="token punctuation">,</span>max<span class="token punctuation">,</span>count <span class="token comment">#可以用于除数值之外。</span>
+count <span class="token comment">#是用来计数的，非NULL记录+1，反之不积累。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#AVG例子：</span>
+<span class="token comment">#注意：相同数据不去重复。</span>
+<span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span>
+<span class="token keyword">from</span> instructor
+<span class="token keyword">where</span> dept_name <span class="token operator">=</span> <span class="token string">'Biology'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#加distinct去重复：</span>
+<span class="token keyword">select</span> 聚集函数<span class="token punctuation">(</span><span class="token keyword">distinct</span> 属性<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">count</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> 里面不能使用 <span class="token keyword">distinct</span>
+<span class="token keyword">distinct</span> 在 max 和 min 中一样。
+除了 <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>外所有的聚集函数都忽略输入集合中的空值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="如果输入的集合只有空值"><a href="#如果输入的集合只有空值" class="headerlink" title="如果输入的集合只有空值"></a>如果输入的集合只有空值</h3><p>avg , max, min 返回空值<br>count 输入空值，返回0</p>
+<h2 id="分组："><a href="#分组：" class="headerlink" title="分组："></a>分组：</h2><h3 id="举例：求多个系的工资平均值"><a href="#举例：求多个系的工资平均值" class="headerlink" title="举例：求多个系的工资平均值"></a>举例：求多个系的工资平均值</h3><p>先按照系分成多个组，每个组求一个工资平均值</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 注意：出现在select子句中但没有被聚集的属性必须出现在   group by  子句中</span>
+<span class="token keyword">select</span> 属性<span class="token number">1</span>，属性<span class="token number">2</span>，聚集函数<span class="token punctuation">(</span>属性<span class="token punctuation">)</span>
+<span class="token keyword">from</span> 表
+<span class="token keyword">group</span> <span class="token keyword">by</span> 属性<span class="token number">1</span>，属性<span class="token number">2</span>（按照属性<span class="token number">1</span>，属性<span class="token number">2</span>分组）
+
+<span class="token comment">-- 注意：筛选条件：分组后写条件用having，不分组用where</span>
+<span class="token keyword">select</span> 属性<span class="token number">1</span>，属性<span class="token number">2</span>，聚集函数<span class="token punctuation">(</span>属性<span class="token punctuation">)</span>
+<span class="token keyword">from</span> 表
+<span class="token keyword">group</span> <span class="token keyword">by</span> 属性<span class="token number">1</span>，属性<span class="token number">2</span>（按照属性<span class="token number">1</span>，属性<span class="token number">2</span>分组）
+<span class="token keyword">having</span> 条件
+这样先通过 <span class="token keyword">having</span> 过滤元组，然后再分组。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>计算机操作顺序：<br>From      where      Group BY    Having    Select    Order Bya</p>
+<h2 id="练习题："><a href="#练习题：" class="headerlink" title="练习题："></a>练习题：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>数字<span class="token punctuation">)</span>
+<span class="token keyword">from</span> instructor
+本质上就是数行数
+
+<span class="token keyword">select</span> dept_name<span class="token punctuation">,</span><span class="token function">max</span><span class="token punctuation">(</span>budget<span class="token punctuation">)</span>
+<span class="token keyword">from</span> department
+<span class="token keyword">group</span> <span class="token keyword">by</span> dept_name
+
+课后练习：
+
+<span class="token keyword">select</span> course_id<span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>ID<span class="token punctuation">)</span>
+<span class="token keyword">from</span> takes
+<span class="token keyword">group</span> <span class="token keyword">by</span> course_id
+
+<span class="token keyword">select</span> ID<span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span>course_id<span class="token punctuation">)</span>
+<span class="token keyword">from</span> takes
+<span class="token keyword">group</span> <span class="token keyword">by</span> ID
+<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>course_Id<span class="token punctuation">)</span><span class="token operator">&gt;=</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -741,7 +802,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oliverhangle.github.io/posts/experience2.html">https://oliverhangle.github.io/posts/experience2.html</a>
+                    <a href="https://oliverhangle.github.io/posts/a2802401.html">https://oliverhangle.github.io/posts/a2802401.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -779,12 +840,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                    <span class="chip bg-color">日常</span>
+                                <a href="/tags/SQL/">
+                                    <span class="chip bg-color">SQL</span>
                                 </a>
                             
-                                <a href="/tags/%E8%AE%B0%E5%BD%95/">
-                                    <span class="chip bg-color">记录</span>
+                                <a href="/tags/%E7%90%86%E8%AE%BA/">
+                                    <span class="chip bg-color">理论</span>
                                 </a>
                             
                         </div>
@@ -1260,13 +1321,13 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/tibi1.html">
+                <a href="/posts/3ce4b1a2.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="第一次为你提笔-柴柴">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="SQL理论课-Class 4">
                         
-                        <span class="card-title">第一次为你提笔-柴柴</span>
+                        <span class="card-title">SQL理论课-Class 4</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1277,14 +1338,14 @@ new Valine({
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-20
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-02
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    记录
+                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    SQL学习
                                 </a>
                             
                             
@@ -1294,12 +1355,12 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%8F%90%E7%AC%94/">
-                        <span class="chip bg-color">提笔</span>
+                    <a href="/tags/SQL/">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
-                    <a href="/tags/%E8%AE%B0%E5%BD%95/">
-                        <span class="chip bg-color">记录</span>
+                    <a href="/tags/%E7%90%86%E8%AE%BA/">
+                        <span class="chip bg-color">理论</span>
                     </a>
                     
                 </div>
@@ -1310,16 +1371,16 @@ new Valine({
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/experience2.html">
+                <a href="/posts/2e1f9be4.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="第一次为你提笔-阿狐">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="SQL理论课-Note 1_Revision">
                         
-                        <span class="card-title">第一次为你提笔-阿狐</span>
+                        <span class="card-title">SQL理论课-Note 1_Revision</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1330,30 +1391,29 @@ new Valine({
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-24
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    记录
+                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    SQL学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                        <span class="chip bg-color">日常</span>
+                    <a href="/tags/SQL/">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
-                    <a href="/tags/%E8%AE%B0%E5%BD%95/">
-                        <span class="chip bg-color">记录</span>
+                    <a href="/tags/%E7%90%86%E8%AE%BA/">
+                        <span class="chip bg-color">理论</span>
                     </a>
                     
                 </div>

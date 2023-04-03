@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="微信小程序编写课程笔记, Fox">
+    <meta name="keywords" content="操作系统-Note 1, Fox">
     <meta name="description" content="又是想rua阿狐姐姐的一天">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>微信小程序编写课程笔记 | 阿狐和柴柴</title>
+    <title>操作系统-Note 1 | 阿狐和柴柴</title>
 
     <link rel="icon" type="image/jpeg" href="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg">
 
@@ -520,12 +520,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">微信小程序编写课程笔记</h1>
+                    <h1 class="description center-align post-title">操作系统-Note 1</h1>
                 </div>
             </div>
         </div>
@@ -646,8 +646,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                                <span class="chip bg-color">微信小程序</span>
+                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">操作系统</span>
                             </a>
                         
                     </div>
@@ -658,8 +658,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
-                                微信小程序
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                操作系统学习
                             </a>
                         
                     </div>
@@ -671,28 +671,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-01-31
+                    2022-11-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-31
+                    2023-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    156
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -710,160 +710,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="微信小程序编写"><a href="#微信小程序编写" class="headerlink" title="微信小程序编写"></a>微信小程序编写</h1><h2 id="框架结构"><a href="#框架结构" class="headerlink" title="框架结构"></a>框架结构</h2><h3 id="app部分"><a href="#app部分" class="headerlink" title="app部分"></a>app部分</h3><p>小程序包含一个描述整体程序的 <code>app</code> 和多个描述各自页面的 <code>page</code>。</p>
-<p>一个小程序主体部分由三个文件组成，必须放在项目的根目录，如下：</p>
-<table>
-<thead>
-<tr>
-<th align="left">文件</th>
-<th align="left">必需</th>
-<th align="left">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/app.html">app.js</a></td>
-<td align="left">是</td>
-<td align="left">小程序逻辑</td>
-</tr>
-<tr>
-<td align="left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/config.html">app.json</a></td>
-<td align="left">是</td>
-<td align="left">小程序公共配置</td>
-</tr>
-<tr>
-<td align="left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html">app.wxss</a></td>
-<td align="left">否</td>
-<td align="left">小程序公共样式表</td>
-</tr>
-</tbody></table>
-<p>app.json用 对象:字符串数组 储存 用户可能访问的路径。(注意是相对于app.json这个文件的路径。)</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token string">"pages"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">"pages/about/about"</span><span class="token punctuation">,</span><span class="token string">"pages/selfpage/selfpage"</span><span class="token punctuation">]</span> 
-注意这样写先加载about，再加载selfpage<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>app.json写全局配置</p>
-<p>详细见：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html">https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html</a></p>
-<h3 id="pages部分"><a href="#pages部分" class="headerlink" title="pages部分"></a>pages部分</h3><p>一个page就是一个页面，由四个文件组成，分别是：</p>
-<table>
-<thead>
-<tr>
-<th align="left">文件类型</th>
-<th align="left">必需</th>
-<th align="left">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html">js</a></td>
-<td align="left">是</td>
-<td align="left">页面逻辑</td>
-</tr>
-<tr>
-<td align="left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/">wxml</a></td>
-<td align="left">是</td>
-<td align="left">页面结构</td>
-</tr>
-<tr>
-<td align="left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/config.html#%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE">json</a></td>
-<td align="left">否</td>
-<td align="left">页面配置</td>
-</tr>
-<tr>
-<td align="left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html">wxss</a></td>
-<td align="left">否</td>
-<td align="left">页面样式表</td>
-</tr>
-</tbody></table>
-<p>页面.js中写页面对象</p>
-<p>页面.wxml添加组件（内容），可调用wxml中的样式规则。</p>
-<p>页面.json是对整个页面底部及导航栏进行编辑。</p>
-<p>（详细配置可见<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html">https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html</a></p>
-<p>页面.wxml中写组件的详细参数（字体大小，位置等等）,用样式规则封装。</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-01-24%20%E4%B8%8B%E5%8D%883.39.28.png" alt="截屏2023-01-24 下午3.39.28" style="zoom:33%;">
-
-<p>所以page文件夹中每一个子文件夹就是一个page，都有四个文件，</p>
-<p>app在根目录。</p>
-<h2 id="内容编写"><a href="#内容编写" class="headerlink" title="内容编写"></a>内容编写</h2><h3 id="页面组件（元素）：wxml"><a href="#页面组件（元素）：wxml" class="headerlink" title="页面组件（元素）：wxml"></a>页面组件（元素）：wxml</h3><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">class</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">"</span>info<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>zbc<span class="token punctuation">"</span></span> <span class="token attr-name">style</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">bindtap</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>f0<span class="token punctuation">"</span></span> <span class="token attr-name">hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> 
-      <span class="token attr-name">data-user-name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Hello world <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
-class 引用配置类
-bindtap = "事件处理函数" 将该组件与事件处理函数绑定。
-hidden 设定是否隐藏
-data- 设定组件自定义的数据，封装在事件对象中，在事件发生的时候传递数据给 事件处理函数。
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>image</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>图片地址<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>image</span><span class="token punctuation">&gt;</span></span>
-如果是本地图片需要放在小程序的文件夹里面。新建一个images，和pages文件夹并列。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>wxml是微信的标签语法，和html类似。</p>
-<p>组件类别由两个&lt;&gt;封装，最后一个加/。</p>
-<p>第一个&lt;&gt;中可以写组件的参数。</p>
-<h4 id="样式控制"><a href="#样式控制" class="headerlink" title="样式控制"></a><view>样式控制</view></h4><p>为了让一些组件使用相同的配置类，使用view进行组件划分 (和html的div作用相同) 。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>image</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>image</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span>小狐狸的主页<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span>小狐狸的网站：thripear.space<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>view封装使用的配置写在第一个&lt;&gt;中，</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">"</span>配置名字<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-  ...
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="应用弹性盒子布局（各组件位置）"><a href="#应用弹性盒子布局（各组件位置）" class="headerlink" title="应用弹性盒子布局（各组件位置）"></a>应用弹性盒子布局（各组件位置）</h3><h5 id="传统方式："><a href="#传统方式：" class="headerlink" title="传统方式："></a>传统方式：</h5><p>编写位置：页面.wxss</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
-  <span class="token property">background-color</span><span class="token punctuation">:</span> #eee //加个背景颜色
-  <span class="token property">height</span><span class="token punctuation">:</span> 100vh<span class="token punctuation">;</span> //整个页面100%高度处
-  
-  <span class="token property">text-align</span><span class="token punctuation">:</span> center
-<span class="token punctuation">}</span>
-<span class="token selector">text</span> <span class="token punctuation">{</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>//一个文字组件一行
-<span class="token punctuation">}</span>
-
-<span class="token selector">image,text</span><span class="token punctuation">{</span>
-  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>//图片从下到上去给60像素的间隔
-
-<span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span> 图片圆形边框<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>问题：</strong></p>
-<p>1.赋值分散</p>
-<p>2.严重依赖页面结构和实际内容大小</p>
-<p>使用弹性盒子：</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.container</span> <span class="token punctuation">{</span>
-  <span class="token property">background-color</span><span class="token punctuation">:</span> #eee <span class="token punctuation">;</span>
-  <span class="token property">height</span><span class="token punctuation">:</span> 100vh<span class="token punctuation">;</span> 
-  
-  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>     //设置弹性盒子
-  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>     //从上到下竖直分布
-  <span class="token property">justify-content</span><span class="token punctuation">:</span> space-around<span class="token punctuation">;</span>      //上下均匀分布
-  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>      //中心分布
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>就算是新增组件也可以立刻分布，非常灵活。</p>
-<p>把弹性盒子的设定封装在container中，每个页面都可以调用。</p>
-<p>注意：container放在全局用（app.wxss），某个page的wxss中的东西不能给其他page用。</p>
-<h3 id="适应不同屏幕宽度"><a href="#适应不同屏幕宽度" class="headerlink" title="适应不同屏幕宽度"></a>适应不同屏幕宽度</h3><p>引入新的长度单位：rpx</p>
-<p>使用rpx，默认所有设备的屏幕高度为750rpx</p>
-<p>通常使用iPhone6的屏幕进行设计</p>
-<p>如果是100px，直接x2变200rpx。</p>
-<h3 id="使用导航连接：navigator组件"><a href="#使用导航连接：navigator组件" class="headerlink" title="使用导航连接：navigator组件"></a>使用导航连接：navigator组件</h3><p>注意：text中只能为纯文本</p>
-<p>text和navigator是并列，不能包含。</p>
-<p>Navigator的重要属性</p>
-<p>open-type属性</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">&lt;navigator url=<span class="token string">"/pages/selfpage/selfpage"</span> style=<span class="token string">"display: inline;"</span> open-type=<span class="token string">"redirect"</span>&gt;
-
-url后面写跳转地址，style设置组件display为inline，不会被弹性盒子给分开。
-opentype为redirect 进入页面后，左上角不会出现返回按钮。默认为navigate
-navigator可以使用text的一些设定。（比如我用了text的maintext封装）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<p>hover-class属性： 被选中是使用’中的’设定</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">&lt;navigator url=<span class="token string">"/pages/selfpage/selfpage"</span> style=<span class="token string">"display: inline;"</span> open-type=<span class="token string">"redirect"</span>&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<h1 id="声明："><a href="#声明：" class="headerlink" title="声明："></a>声明：</h1><p>  我的博客即将同步至腾讯云开发者社区，邀请大家一同入驻：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/support-plan?invite_code=48phd0m6k409">https://cloud.tencent.com/developer/support-plan?invite_code=48phd0m6k409</a></p>
+                <h4 id="Chapter3-进程"><a href="#Chapter3-进程" class="headerlink" title="Chapter3: 进程"></a>Chapter3: 进程</h4><p>pipes：单项的，双向通信：半双通信，发的时候不能输入，输入时候不能发送。</p>
+<h1 id="Chapter4-线程"><a href="#Chapter4-线程" class="headerlink" title="Chapter4:线程"></a>Chapter4:线程</h1><p>进程间通信</p>
+<p>多核编程</p>
+<h2 id="1-并行"><a href="#1-并行" class="headerlink" title="1.并行"></a>1.并行</h2><p>数据并行：数据子集到多核，每个做相同工作</p>
+<p>工作并行：线程到每个核，每个核心不同工作</p>
+<h2 id="2-用户线程和内核线程"><a href="#2-用户线程和内核线程" class="headerlink" title="2.用户线程和内核线程"></a>2.用户线程和内核线程</h2><h3 id="用户线程："><a href="#用户线程：" class="headerlink" title="用户线程："></a>用户线程：</h3><p>POSIX Pthreads </p>
+<p>Windows threads</p>
+<p> Java threads</p>
+<h3 id="内核线程："><a href="#内核线程：" class="headerlink" title="内核线程："></a>内核线程：</h3><p>Windows </p>
+<p>Solaris</p>
+<p>LinuxTru64 </p>
+<p>UNIXMac OS X</p>
+<p>操作系统：用户线程看不到，内核线程能看到</p>
+<p>用户线程和内核线程对应：</p>
+<p>一对一</p>
+<p>多对一</p>
+<p>多对多</p>
+<h2 id="3-Pthreads："><a href="#3-Pthreads：" class="headerlink" title="3.Pthreads："></a>3.Pthreads：</h2><p>函数库</p>
+<p>p</p>
 
                 
             </div>
@@ -890,7 +755,7 @@ navigator可以使用text的一些设定。（比如我用了text的maintext封�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oliverhangle.github.io/posts/miniapp.html">https://oliverhangle.github.io/posts/miniapp.html</a>
+                    <a href="https://oliverhangle.github.io/posts/df7c6eb3.html">https://oliverhangle.github.io/posts/df7c6eb3.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -928,8 +793,8 @@ navigator可以使用text的一些设定。（比如我用了text的maintext封�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                                    <span class="chip bg-color">微信小程序</span>
+                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">操作系统</span>
                                 </a>
                             
                         </div>
@@ -1401,18 +1266,17 @@ new Valine({
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/miniapp.html">
+                <a href="/posts/a93a9fbb.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="微信小程序编写课程笔记">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Python学习-Chapter7 用户输入和while循环">
                         
-                        <span class="card-title">微信小程序编写课程笔记</span>
+                        <span class="card-title">Python学习-Chapter7 用户输入和while循环</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1422,27 +1286,30 @@ new Valine({
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-31
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
-                                    微信小程序
+                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    Python学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                        <span class="chip bg-color">微信小程序</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BE%AA%E7%8E%AF/">
+                        <span class="chip bg-color">循环</span>
                     </a>
                     
                 </div>
@@ -1456,13 +1323,13 @@ new Valine({
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/sql5.html">
+                <a href="/posts/546d0d95.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="SQL理论课-Class 5">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Python学习-Chapter6 字典">
                         
-                        <span class="card-title">SQL理论课-Class 5</span>
+                        <span class="card-title">Python学习-Chapter6 字典</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1473,14 +1340,14 @@ new Valine({
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    SQL学习
+                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    Python学习
                                 </a>
                             
                             
@@ -1490,12 +1357,12 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL/">
-                        <span class="chip bg-color">SQL</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/%E7%90%86%E8%AE%BA/">
-                        <span class="chip bg-color">理论</span>
+                    <a href="/tags/%E5%AD%97%E5%85%B8/">
+                        <span class="chip bg-color">字典</span>
                     </a>
                     
                 </div>

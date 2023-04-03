@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SQL理论课-Note 1_Revision, Fox">
+    <meta name="keywords" content="SQL理论课-Class 1, Fox">
     <meta name="description" content="又是想rua阿狐姐姐的一天">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SQL理论课-Note 1_Revision | 阿狐和柴柴</title>
+    <title>SQL理论课-Class 1 | 阿狐和柴柴</title>
 
     <link rel="icon" type="image/jpeg" href="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg">
 
@@ -520,12 +520,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SQL理论课-Note 1_Revision</h1>
+                    <h1 class="description center-align post-title">SQL理论课-Class 1</h1>
                 </div>
             </div>
         </div>
@@ -675,21 +675,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-24
+                    2022-11-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-26
+                    2023-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    295
+                    438
                 </div>
                 
 
@@ -714,45 +714,107 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Class-1-复习"><a href="#Class-1-复习" class="headerlink" title="Class_1 复习"></a>Class_1 复习</h1><p>-len（） 函数返回字符串长度</p>
-<p>-补充：关于distinct：一个select语句只能有一个distinct。<br>-字符串输出：select，当里面有单引号的时候，单引号打成双引号，以免报错。</p>
-<p>-between and 是闭区间</p>
-<p>-where salary in (50000,60000) 这样写就是 salary = 50000 或者 salary = 60000</p>
-<p>-not in 的话就是既不是50000又不是60000<br> -当想要把%当成普通字符串处理，写成%，\定义转义字符</p>
-<h2 id="order-by-补充"><a href="#order-by-补充" class="headerlink" title="-order by 补充"></a>-order by 补充</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">-</span><span class="token keyword">order</span> <span class="token keyword">by</span> 默认升序
-<span class="token operator">-</span><span class="token keyword">order</span> <span class="token keyword">by</span> 属性<span class="token number">1</span>，属性<span class="token number">2</span>，先按照<span class="token number">1</span>排序，后按照<span class="token number">2</span>排序，属性可以不出现在该句<span class="token keyword">select</span>后。
-<span class="token operator">-</span>如果两个都想按照降序， <span class="token keyword">order</span> <span class="token keyword">by</span> 属性<span class="token number">1</span> <span class="token keyword">desc</span>，属性<span class="token number">2</span> <span class="token keyword">desc</span>
-<span class="token operator">-</span><span class="token keyword">order</span> <span class="token keyword">by</span> 聚集函数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="SQL-Note-1："><a href="#SQL-Note-1：" class="headerlink" title="SQL-Note 1："></a>SQL-Note 1：</h1><h2 id="–查询语句："><a href="#–查询语句：" class="headerlink" title="–查询语句："></a>–查询语句：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name（一个或多个属性）
 
-<h3 id="order-by-数字：按照-表里面的第（数字）列的属性-进行排序"><a href="#order-by-数字：按照-表里面的第（数字）列的属性-进行排序" class="headerlink" title="-order by 数字：按照 表里面的第（数字）列的属性 进行排序"></a>-order by 数字：按照 表里面的第（数字）列的属性 进行排序</h3><h3 id="order-by-3-4-按照第3，4列排序"><a href="#order-by-3-4-按照第3，4列排序" class="headerlink" title="-order by 3,4 按照第3，4列排序"></a>-order by 3,4 按照第3，4列排序</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name<span class="token punctuation">,</span>salary<span class="token operator">*</span><span class="token number">1.1</span> news<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'DUT'</span><span class="token punctuation">,</span><span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token keyword">from</span> instructor（一个或者多个表）
+
+<span class="token keyword">where</span> dept_name <span class="token operator">=</span> <span class="token string">'cs'</span>（满足条件）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="练习：找到导师表中的系名"><a href="#练习：找到导师表中的系名" class="headerlink" title="练习：找到导师表中的系名"></a>练习：找到导师表中的系名</h3><p>select dept_name</p>
+<p>from instructor</p>
+<h3 id="找到表中所有属性："><a href="#找到表中所有属性：" class="headerlink" title="找到表中所有属性："></a>找到表中所有属性：</h3><p>select * –但是这个在计算机中处理效率没有一个个都列出来的效率高。</p>
+<p>from instructor</p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>select dept_name from instructor</p>
+<p>当有多个导师属于一个系，</p>
+<p>就会有<u><strong>重复</strong></u>。</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">--去重复：</span>
+
+<span class="token keyword">select</span> <span class="token keyword">distinct</span> dept_name
+
+<span class="token keyword">from</span> instructor<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> dept_name<span class="token punctuation">,</span>id
+
+<span class="token keyword">from</span> instructor<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>–像这样去重复多个元素，去除的是满足这两个条件出来的 重复行</p>
+<p>–注意：distinct前面没有属性，只能后面添加一个或者多个属性</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> 主码
+
+<span class="token keyword">from</span> 表<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>结果相当于没有distinct，但是效率会变低。</p>
+<p><strong><u>– select中的属性可以进行操作，还可以是函数调用。但是不会修改数据库中数据</u></strong></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> salary<span class="token operator">*</span><span class="token number">1.1</span>
+
 <span class="token keyword">from</span> instructor
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+找导师工资出来，输出结果为<span class="token number">1.1</span>倍原工资数据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">Select</span> <span class="token keyword">distinct</span> ID
-<span class="token keyword">from</span> instructor<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> upper <span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token string">'It''s right'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>--</p>
+<h2 id="and-or-not-组成：复合条件-和-where-连用"><a href="#and-or-not-组成：复合条件-和-where-连用" class="headerlink" title="and or not 组成：复合条件 和 where 连用"></a>and or not 组成：复合条件 和 where 连用</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> salary<span class="token operator">&gt;</span><span class="token number">8000</span> <span class="token operator">and</span> dept_name <span class="token operator">=</span> <span class="token string">'cs'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name <span class="token punctuation">,</span>salary<span class="token punctuation">,</span>ID<span class="token punctuation">,</span>dept_name
+
+
+<h2 id="–用as起名字："><a href="#–用as起名字：" class="headerlink" title="–用as起名字："></a>–用as起名字：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> salary<span class="token operator">*</span><span class="token number">1.1</span> <span class="token keyword">as</span> over_salary
+
+ <span class="token keyword">from</span> instructor<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="–字符串处理函数："><a href="#–字符串处理函数：" class="headerlink" title="–字符串处理函数："></a>–字符串处理函数：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">字符串<span class="token number">1</span><span class="token operator">+</span>字符串<span class="token number">2</span> ：字符串拼接
+
+upper<span class="token punctuation">(</span>字符串<span class="token punctuation">)</span>
+
+lower<span class="token punctuation">(</span>字符串<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="–字符串匹配："><a href="#–字符串匹配：" class="headerlink" title="–字符串匹配："></a>–字符串匹配：</h2><pre class="line-numbers language-none"><code class="language-none">-'Intro%' --寻找开头为Intro
+
+-'%abc%'  --寻找中间含有abc
+
+-'___'   --寻找三位长度
+
+-'___%'  --寻找至少三位<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name
+
 <span class="token keyword">from</span> instructor
-<span class="token keyword">where</span> dept_name <span class="token operator">like</span> <span class="token string">'p2%'</span> <span class="token keyword">escape</span> <span class="token string">'2'</span>
 
-<span class="token keyword">where</span> salary <span class="token operator">not</span> <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token number">50000</span><span class="token punctuation">,</span><span class="token number">60000</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">where</span> name <span class="token operator">like</span> <span class="token string">'%abc%'</span> <span class="token comment">--注意用like进行筛讯</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span>
+
+
+<h3 id="定义转义字符"><a href="#定义转义字符" class="headerlink" title="\定义转义字符"></a>\定义转义字符</h3><h2 id="–数字区间条件：between-and："><a href="#–数字区间条件：between-and：" class="headerlink" title="–数字区间条件：between and："></a>–数字区间条件：between and：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name
+
 <span class="token keyword">from</span> instructor
-<span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> a<span class="token punctuation">.</span>course_id<span class="token punctuation">,</span>b<span class="token punctuation">.</span>prereq_id
-<span class="token keyword">from</span> prereq a<span class="token punctuation">,</span>prereq b
-<span class="token keyword">where</span> a<span class="token punctuation">.</span>prereq_id<span class="token operator">=</span>b<span class="token punctuation">.</span>course_id<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">where</span> salary <span class="token operator">between</span> <span class="token number">9000</span> <span class="token operator">and</span> <span class="token number">10000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span>
-<span class="token keyword">from</span> instructor a<span class="token punctuation">,</span>instructor b
-<span class="token keyword">where</span> a<span class="token punctuation">.</span>salary<span class="token operator">=</span>b<span class="token punctuation">.</span>salary <span class="token operator">and</span> a<span class="token punctuation">.</span>name<span class="token operator">&lt;&gt;</span>b<span class="token punctuation">.</span>name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+<h2 id="–多条件匹配"><a href="#–多条件匹配" class="headerlink" title="–多条件匹配"></a>–多条件匹配</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name<span class="token punctuation">,</span> course_id
+
+<span class="token keyword">from</span> instructor<span class="token punctuation">,</span> teaches
+
+<span class="token keyword">where</span> <span class="token punctuation">(</span>instructor<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> dept_name<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span>teaches<span class="token punctuation">.</span>ID<span class="token punctuation">,</span> ’Biology’<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="–排序：desc降序-asc升序"><a href="#–排序：desc降序-asc升序" class="headerlink" title="–排序：desc降序 asc升序"></a>–排序：desc降序 asc升序</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">– Example: <span class="token keyword">order</span> <span class="token keyword">by</span> name <span class="token keyword">desc</span>
+
+Can sort <span class="token keyword">on</span> multiple attributes
+
+– Example: <span class="token keyword">order</span> <span class="token keyword">by</span> dept_name<span class="token punctuation">,</span> name <span class="token comment">--按照两个元素排序，字符串首字母。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -780,7 +842,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oliverhangle.github.io/posts/sql1.1.html">https://oliverhangle.github.io/posts/sql1.1.html</a>
+                    <a href="https://oliverhangle.github.io/posts/4c8e452d.html">https://oliverhangle.github.io/posts/4c8e452d.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1299,13 +1361,13 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/sql3.html">
+                <a href="/posts/a8ebf2ca.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="SQL理论课-Class 3">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="数据库演习-Class1">
                         
-                        <span class="card-title">SQL理论课-Class 3</span>
+                        <span class="card-title">数据库演习-Class1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1316,7 +1378,7 @@ new Valine({
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-30
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-19
                         </span>
                         <span class="publish-author">
                             
@@ -1337,8 +1399,8 @@ new Valine({
                         <span class="chip bg-color">SQL</span>
                     </a>
                     
-                    <a href="/tags/%E7%90%86%E8%AE%BA/">
-                        <span class="chip bg-color">理论</span>
+                    <a href="/tags/%E4%B8%8A%E6%9C%BA/">
+                        <span class="chip bg-color">上机</span>
                     </a>
                     
                 </div>
@@ -1352,13 +1414,13 @@ new Valine({
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/sql2.html">
+                <a href="/posts/a93a9fbb.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="SQL理论课-Class 2">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Python学习-Chapter7 用户输入和while循环">
                         
-                        <span class="card-title">SQL理论课-Class 2</span>
+                        <span class="card-title">Python学习-Chapter7 用户输入和while循环</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1369,14 +1431,14 @@ new Valine({
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    SQL学习
+                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    Python学习
                                 </a>
                             
                             
@@ -1386,12 +1448,12 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL/">
-                        <span class="chip bg-color">SQL</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/%E7%90%86%E8%AE%BA/">
-                        <span class="chip bg-color">理论</span>
+                    <a href="/tags/%E5%BE%AA%E7%8E%AF/">
+                        <span class="chip bg-color">循环</span>
                     </a>
                     
                 </div>

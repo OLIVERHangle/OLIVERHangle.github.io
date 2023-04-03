@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python学习-Chapter3 列表, Fox">
+    <meta name="keywords" content="第一次为你提笔-柴柴, Fox">
     <meta name="description" content="又是想rua阿狐姐姐的一天">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python学习-Chapter3 列表 | 阿狐和柴柴</title>
+    <title>第一次为你提笔-柴柴 | 阿狐和柴柴</title>
 
     <link rel="icon" type="image/jpeg" href="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg">
 
@@ -520,12 +520,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python学习-Chapter3 列表</h1>
+                    <h1 class="description center-align post-title">第一次为你提笔-柴柴</h1>
                 </div>
             </div>
         </div>
@@ -646,12 +646,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/%E6%8F%90%E7%AC%94/">
+                                <span class="chip bg-color">提笔</span>
                             </a>
                         
-                            <a href="/tags/%E5%88%97%E8%A1%A8/">
-                                <span class="chip bg-color">列表</span>
+                            <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                                <span class="chip bg-color">记录</span>
                             </a>
                         
                     </div>
@@ -662,8 +662,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                Python学习
+                            <a href="/categories/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                记录
                             </a>
                         
                     </div>
@@ -675,28 +675,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-06
+                    2022-05-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-21
+                    2023-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    751
+                    64
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -714,162 +714,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="3-1使用列表中的各个值"><a href="#3-1使用列表中的各个值" class="headerlink" title="3.1使用列表中的各个值"></a>3.1使用列表中的各个值</h2><p>注意！ 索引可以指定负数！</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>3
-2
-1</code></pre>
-<p>负数即倒数第几个</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">bicycles <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'trek'</span><span class="token punctuation">,</span><span class="token string">'cannondale'</span><span class="token punctuation">]</span>
-message <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"my bicycle is a </span><span class="token interpolation"><span class="token punctuation">{</span>bicycles<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">."</span></span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>my bicycle is a Cannondale.</code></pre>
-<p>f花括号内可以写变量。</p>
-<h2 id="3-2修改列表元素"><a href="#3-2修改列表元素" class="headerlink" title="3.2修改列表元素"></a>3.2修改列表元素</h2><h3 id="lt-1-gt-修改其中的元素"><a href="#lt-1-gt-修改其中的元素" class="headerlink" title="<1>修改其中的元素"></a>&lt;1&gt;修改其中的元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-
-a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'4'</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['4', '2', '3']</code></pre>
-<p>列表相当于是一个数组</p>
-<h3 id="lt-2-gt-插入元素"><a href="#lt-2-gt-插入元素" class="headerlink" title="<2>插入元素"></a>&lt;2&gt;插入元素</h3><h4 id="1-末尾插入：append"><a href="#1-末尾插入：append" class="headerlink" title="1 末尾插入：append"></a>1 末尾插入：append</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-
-a<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"5"</span><span class="token punctuation">)</span><span class="token comment">#注意使用时用.来调用</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['1', '2', '3', '5']</code></pre>
-<p> 连续使用append可以连续在后面插入</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-a<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span>
-a<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"2"</span><span class="token punctuation">)</span>
-a<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"3"</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>[]
-['1', '2', '3']</code></pre>
-<h4 id="2-选定位置前：insert"><a href="#2-选定位置前：insert" class="headerlink" title="2 选定位置前：insert"></a>2 选定位置前：insert</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-
-a<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token string">'han'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['han', '1', '2', '3']</code></pre>
-<p>注意！insert在指定元素   之前   插入！</p>
-<h3 id="lt-3-gt-删除元素"><a href="#lt-3-gt-删除元素" class="headerlink" title="<3>删除元素"></a>&lt;3&gt;删除元素</h3><h4 id="1-del-语句-删除-（需要指定索引）"><a href="#1-del-语句-删除-（需要指定索引）" class="headerlink" title="1 del 语句 删除 （需要指定索引）"></a>1 del 语句 删除 （需要指定索引）</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-
-<span class="token keyword">del</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-
-<span class="token keyword">del</span> a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['2', '3']
-['2']</code></pre>
-<h4 id="2-pop-删除"><a href="#2-pop-删除" class="headerlink" title="2 pop() 删除"></a>2 pop() 删除</h4><h5 id="（）不含任何内容，默认最后一个值被弹出"><a href="#（）不含任何内容，默认最后一个值被弹出" class="headerlink" title="（）不含任何内容，默认最后一个值被弹出"></a>（）不含任何内容，默认最后一个值被弹出</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-
-poped_a <span class="token operator">=</span> a<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>poped_a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['1', '2']
-3</code></pre>
-<p>a被pop之后，a最后一个元素被弹出，而a.pop函数返回值就是的被弹出的最后一个元素</p>
-<h5 id="指定索引，弹出任意位置处的元素"><a href="#指定索引，弹出任意位置处的元素" class="headerlink" title="指定索引，弹出任意位置处的元素"></a>指定索引，弹出任意位置处的元素</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-
-poped_a1 <span class="token operator">=</span> a<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>poped_a1<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['1', '3']
-2</code></pre>
-<h4 id="根据值删除元素：remove-void返回类型"><a href="#根据值删除元素：remove-void返回类型" class="headerlink" title="根据值删除元素：remove (void返回类型)"></a>根据值删除元素：remove (void返回类型)</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-
-a<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'2'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['1', '2', '3']
-['1', '3']</code></pre>
-<h2 id="3-3-组织列表"><a href="#3-3-组织列表" class="headerlink" title="3.3 组织列表"></a>3.3 组织列表</h2><h3 id="sort-对列表永久排序-首字母顺序"><a href="#sort-对列表永久排序-首字母顺序" class="headerlink" title="sort() 对列表永久排序(首字母顺序)"></a>sort() 对列表永久排序(首字母顺序)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'z'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-
-a<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"\n</span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
-
-<span class="token comment">#如果想要反向排序，使用sort(reverse=True)</span>
-a<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"\n</span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
-
-<span class="token comment">#注意：</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token comment">#该语句不是打印a.sort（）后的 a,而是a.sort()函数的返回值，void无返回值。</span>
-<span class="token comment">#所以先进行排序，后print。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['c', 'b', 'z', 'a', 'd']
-
-['a', 'b', 'c', 'd', 'z']
-
-['z', 'd', 'c', 'b', 'a']
-None</code></pre>
-<h3 id="sorted-对列表临时排序"><a href="#sorted-对列表临时排序" class="headerlink" title="sorted() 对列表临时排序"></a>sorted() 对列表临时排序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'z'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n临时排序后的列表："</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">sorted</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n再输出原来的列表："</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['c', 'b', 'z', 'a', 'd']
-
-临时排序后的列表：
-['a', 'b', 'c', 'd', 'z']
-
-再输出原来的列表：
-['c', 'b', 'z', 'a', 'd']</code></pre>
-<p>注意：sorted()使用语法：sorted(列表) </p>
-<pre><code> 我们使用的是sorted的返回值（列表类），而sort对原列表不会有任何修改。</code></pre>
-<h3 id="reverse-对列表永久-原顺序反转"><a href="#reverse-对列表永久-原顺序反转" class="headerlink" title="reverse() 对列表永久 原顺序反转"></a>reverse() 对列表永久 原顺序反转</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'z'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-
-a<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"\n</span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>['c', 'b', 'z', 'a', 'd']
-
-['d', 'a', 'z', 'b', 'c']</code></pre>
-<h3 id="len-确定列表长度"><a href="#len-确定列表长度" class="headerlink" title="len() 确定列表长度"></a>len() 确定列表长度</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'z'</span><span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n试图给b赋予a的长度："</span><span class="token punctuation">)</span>
-b <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"a的长度是：</span><span class="token interpolation"><span class="token punctuation">{</span>b<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>5
-
-试图给b赋予a的长度：
-a的长度是：5</code></pre>
-<h2 id="3-4-避免索引错误"><a href="#3-4-避免索引错误" class="headerlink" title="3.4 避免索引错误"></a>3.4 避免索引错误</h2><p>当出现循环时，可以使用len()知道长度，保证索引&lt;len()的值，注意len（）不能直接用</p>
+                <p><strong>我是凡夫俗子，</strong><br><strong>笔尖流不出华丽的词藻。</strong></p>
+<p><strong>因为你</strong><br><strong>贫瘠土壤开出了文字的花。</strong></p>
+<p><strong>我们都不想长大。</strong></p>
+<p><strong>饱食人间烟火，</strong><br><strong>心却不曾沾染凡俗之气。</strong></p>
+<p><strong>我爱你，</strong><br><strong>你是我生存的原因。</strong></p>
 
                 
             </div>
@@ -896,7 +745,7 @@ a的长度是：5</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oliverhangle.github.io/posts/python3.html">https://oliverhangle.github.io/posts/python3.html</a>
+                    <a href="https://oliverhangle.github.io/posts/f433ca80.html">https://oliverhangle.github.io/posts/f433ca80.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -934,12 +783,12 @@ a的长度是：5</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
+                                <a href="/tags/%E6%8F%90%E7%AC%94/">
+                                    <span class="chip bg-color">提笔</span>
                                 </a>
                             
-                                <a href="/tags/%E5%88%97%E8%A1%A8/">
-                                    <span class="chip bg-color">列表</span>
+                                <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                                    <span class="chip bg-color">记录</span>
                                 </a>
                             
                         </div>
@@ -1415,13 +1264,13 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/physics1.html">
+                <a href="/posts/a826af6d.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="大学物理笔记-1">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="我们的历程">
                         
-                        <span class="card-title">大学物理笔记-1</span>
+                        <span class="card-title">我们的历程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1432,63 +1281,14 @@ new Valine({
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-20
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/" class="post-category">
-                                    大学物理
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/">
-                        <span class="chip bg-color">大学物理</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/paper.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="阿狐和我的小纸条">
-                        
-                        <span class="card-title">阿狐和我的小纸条</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-21
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B0%8F%E6%97%A5%E5%B8%B8/" class="post-category">
-                                    小日常
+                            <a href="/categories/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    记录
                                 </a>
                             
                             
@@ -1502,8 +1302,61 @@ new Valine({
                         <span class="chip bg-color">日常</span>
                     </a>
                     
-                    <a href="/tags/%E5%B0%8F%E7%BA%B8%E6%9D%A1/">
-                        <span class="chip bg-color">小纸条</span>
+                    <a href="/tags/%E5%8E%86%E7%A8%8B/">
+                        <span class="chip bg-color">历程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/732b7af7.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="第一次为你提笔-阿狐">
+                        
+                        <span class="card-title">第一次为你提笔-阿狐</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    记录
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%B0%E5%BD%95/">
+                        <span class="chip bg-color">记录</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%97%A5%E5%B8%B8/">
+                        <span class="chip bg-color">日常</span>
                     </a>
                     
                 </div>

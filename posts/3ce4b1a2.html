@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="大学物理笔记-1, Fox">
+    <meta name="keywords" content="SQL理论课-Class 4, Fox">
     <meta name="description" content="又是想rua阿狐姐姐的一天">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>大学物理笔记-1 | 阿狐和柴柴</title>
+    <title>SQL理论课-Class 4 | 阿狐和柴柴</title>
 
     <link rel="icon" type="image/jpeg" href="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/avatar.jpg">
 
@@ -520,12 +520,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">大学物理笔记-1</h1>
+                    <h1 class="description center-align post-title">SQL理论课-Class 4</h1>
                 </div>
             </div>
         </div>
@@ -646,8 +646,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/">
-                                <span class="chip bg-color">大学物理</span>
+                            <a href="/tags/SQL/">
+                                <span class="chip bg-color">SQL</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%90%86%E8%AE%BA/">
+                                <span class="chip bg-color">理论</span>
                             </a>
                         
                     </div>
@@ -658,8 +662,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/" class="post-category">
-                                大学物理
+                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                SQL学习
                             </a>
                         
                     </div>
@@ -671,21 +675,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-06
+                    2022-12-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-21
+                    2023-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    441
+                    405
                 </div>
                 
 
@@ -710,52 +714,78 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a><strong>前言：</strong></h1><p>破大工又开始搞一些形式主义了，尽量能利用这点破烂时间做点事情。</p>
-<h2 id="Why-Study-Physics"><a href="#Why-Study-Physics" class="headerlink" title="Why Study Physics?"></a>Why Study Physics?</h2><p><strong>Physics</strong> is the branch of science that describes <u>matter,</u> <u>energy,</u> <u>space,</u> and <u>time</u> at the <strong>most fundamental</strong> level. </p>
-<h2 id="Fundamental-Quantities-and-Their-Dimension"><a href="#Fundamental-Quantities-and-Their-Dimension" class="headerlink" title="Fundamental Quantities and Their Dimension"></a>Fundamental Quantities and Their Dimension</h2><p>物理三大基本量和维度</p>
-<h3 id="Length"><a href="#Length" class="headerlink" title="Length"></a>Length</h3><p>国际标准单位：米 meter</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.08.26.png" alt="截屏2022-11-06 下午6.08.26" style="zoom:33%;">
+                <h1 id="Class-4"><a href="#Class-4" class="headerlink" title="Class_4:"></a>Class_4:</h1><h2 id="嵌套子查询：（可以转换成表连接）"><a href="#嵌套子查询：（可以转换成表连接）" class="headerlink" title="嵌套子查询：（可以转换成表连接）"></a>嵌套子查询：（可以转换成表连接）</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 把查询语句嵌套在where筛选条件中：</span>
+
+<span class="token keyword">select</span> ename
+<span class="token keyword">from</span> emp
+<span class="token keyword">where</span> hiredate <span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token keyword">select</span> hiredate 
+                  <span class="token keyword">from</span> emp
+                  <span class="token keyword">where</span> ename <span class="token operator">=</span> <span class="token string">'king'</span><span class="token punctuation">)</span>
+
+<span class="token comment">-- 里面这个子查询返回一行可以直接使用比较运算符，因为就这一个人这个名字</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果子查询可能返回多行？<br>– 把运算符号换成in</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> ID <span class="token operator">in</span><span class="token punctuation">(</span>筛选出来的很多行<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
+<h2 id="用-in-和-not-in-查询是否存在于查询集合中："><a href="#用-in-和-not-in-查询是否存在于查询集合中：" class="headerlink" title="用 in 和 not in 查询是否存在于查询集合中："></a>用 in 和 not in 查询是否存在于查询集合中：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> ENAME<span class="token punctuation">,</span>EMPTNO<span class="token punctuation">,</span>SAL
+<span class="token keyword">from</span> EMP
+<span class="token keyword">where</span> DEPTNO <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">select</span> DEPTNO
+                 <span class="token keyword">from</span> DEPT
+                 <span class="token keyword">where</span> LOC <span class="token operator">=</span> <span class="token string">'NewYork'</span><span class="token punctuation">)</span>
+                
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span>
+<span class="token keyword">from</span> EMP
+<span class="token keyword">where</span> DEPTNO <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">Select</span> DEPTNO
+                <span class="token keyword">from</span> EMP
+                <span class="token keyword">where</span> ENAME <span class="token operator">=</span> <span class="token string">'blake'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="双嵌套："><a href="#双嵌套：" class="headerlink" title="双嵌套："></a>双嵌套：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> EMP
+<span class="token keyword">where</span> DETPNO <span class="token operator">not</span> <span class="token operator">in</span><span class="token punctuation">(</span><span class="token keyword">Select</span> DEPTNO
+                    <span class="token keyword">from</span> EMP
+                    <span class="token keyword">where</span> ENAME <span class="token operator">=</span> <span class="token string">'blake'</span><span class="token punctuation">)</span>  
+<span class="token operator">and</span> JOB <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">select</span> JOB
+            <span class="token keyword">from</span> EMP
+            <span class="token keyword">where</span> DEPTNO <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">Select</span> DEPTNO  <span class="token keyword">from</span> EMP  <span class="token keyword">where</span> ENAME <span class="token operator">=</span> <span class="token string">'blake'</span><span class="token punctuation">)</span>
+           <span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="SOME-和-ALL："><a href="#SOME-和-ALL：" class="headerlink" title="SOME 和 ALL："></a>SOME 和 ALL：</h2><h3 id="运算符-some：满足一个就行"><a href="#运算符-some：满足一个就行" class="headerlink" title="运算符+some：满足一个就行"></a>运算符+some：满足一个就行</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name 
+<span class="token keyword">from</span> instructor
+<span class="token keyword">where</span> salary <span class="token operator">&gt;</span> <span class="token keyword">some</span> <span class="token punctuation">(</span><span class="token keyword">select</span> salary <span class="token keyword">from</span> instructor <span class="token keyword">where</span> dept_name<span class="token operator">=</span><span class="token string">'Biology'</span><span class="token punctuation">)</span>
+<span class="token comment">-- 查找出来老师只要工资  比生物系最起码一个老师的工资高就行。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
-<h3 id="Mass"><a href="#Mass" class="headerlink" title="Mass"></a>Mass</h3><p>国际标准单位：千克 kg</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.08.45.png" alt="截屏2022-11-06 下午6.08.45" style="zoom: 33%;">
+
+<h2 id="运算符-all-：必须要全部满足才可以"><a href="#运算符-all-：必须要全部满足才可以" class="headerlink" title="运算符+all ：必须要全部满足才可以"></a>运算符+all ：必须要全部满足才可以</h2><h3 id="all-和-in-不是一个概念，in-是满足一个"><a href="#all-和-in-不是一个概念，in-是满足一个" class="headerlink" title="=all 和 in 不是一个概念，in 是满足一个"></a>=all 和 in 不是一个概念，in 是满足一个</h3><h3 id="lt-gt-some-和-not-in-不是一个概念some"><a href="#lt-gt-some-和-not-in-不是一个概念some" class="headerlink" title="<>some 和 not in 不是一个概念some="></a>&lt;&gt;some 和 not in 不是一个概念some=</h3><h3 id="lt-gt-all-和-not-in-一个概念"><a href="#lt-gt-all-和-not-in-一个概念" class="headerlink" title="<>all 和 not in 一个概念"></a>&lt;&gt;all 和 not in 一个概念</h3><h3 id="some-和-in-一个概念"><a href="#some-和-in-一个概念" class="headerlink" title="=some 和 in 一个概念"></a>=some 和 in 一个概念</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">         <span class="token operator">=</span>    <span class="token operator">&lt;&gt;</span>          <span class="token operator">&gt;=</span>     <span class="token operator">&lt;=</span>
+<span class="token keyword">some</span>    <span class="token operator">in</span>    <span class="token comment">--         &gt;=min    &lt;=max</span>
+<span class="token keyword">all</span>     <span class="token comment">--    not in     &lt;=max    &lt;=min</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name
+<span class="token keyword">from</span> student
+<span class="token keyword">where</span> id <span class="token operator">&lt;&gt;</span><span class="token keyword">all</span><span class="token punctuation">(</span><span class="token keyword">select</span> id
+               <span class="token keyword">from</span> takes
+               <span class="token keyword">where</span> course_id <span class="token operator">=</span> <span class="token string">'cd=347'</span><span class="token punctuation">)</span>
+               
+
+<span class="token keyword">select</span> DEPTNO<span class="token punctuation">,</span><span class="token function">AVG</span><span class="token punctuation">(</span>SAL<span class="token punctuation">)</span>
+<span class="token keyword">from</span> EMP
+<span class="token keyword">group</span> <span class="token keyword">by</span> DEPTNO
+<span class="token keyword">having</span> <span class="token function">AVG</span><span class="token punctuation">(</span>SAL<span class="token punctuation">)</span> <span class="token operator">&gt;</span><span class="token keyword">ALL</span> <span class="token function">AVG</span><span class="token punctuation">(</span><span class="token keyword">select</span> SAL <span class="token keyword">from</span> EMP <span class="token keyword">group</span> <span class="token keyword">by</span> DEPTNO<span class="token punctuation">)</span>
+
+<span class="token keyword">select</span> ENAME
+<span class="token keyword">from</span> EMP
+<span class="token keyword">where</span> EMPNO <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">select</span> MGR <span class="token keyword">from</span> EMP<span class="token punctuation">)</span>
+
+<span class="token comment">-- 陷阱：如果是not in，一定要小心NULL，因为NULL运算完了什么也找不到。</span>
+
+<span class="token comment">-- 加一个</span>
+EMPNO <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">NULL</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
-
-
-
-<h3 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h3><p>国际标准单位：秒 s</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.07.48.png" alt="截屏2022-11-06 下午6.07.48" style="zoom:33%;">
-
-
-
-<h4 id="科学计数法和对应的英语词缀"><a href="#科学计数法和对应的英语词缀" class="headerlink" title="科学计数法和对应的英语词缀"></a>科学计数法和对应的英语词缀</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.10.29.png" alt="截屏2022-11-06 下午6.10.29" style="zoom: 33%;"></h4><h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4><h2 id="Conversion-of-Units-amp-Estimates"><a href="#Conversion-of-Units-amp-Estimates" class="headerlink" title="Conversion of Units &amp; Estimates"></a>Conversion of Units &amp; Estimates</h2><h3 id="利用单位守恒判断计算是否正确"><a href="#利用单位守恒判断计算是否正确" class="headerlink" title="利用单位守恒判断计算是否正确"></a>利用单位守恒判断计算是否正确</h3><h3 id="计算的不确定性："><a href="#计算的不确定性：" class="headerlink" title="计算的不确定性："></a>计算的不确定性：</h3><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.15.23.png" alt="截屏2022-11-06 下午6.15.23" style="zoom:33%;">
-
-<p>Eg1: 测量初始数据最小分度值必须与仪器相符</p>
-<p>Eg2: 利用测量值计算，得到的最大最小结果，分别对应    用的最大最小测量值，对应误差。</p>
-<p><u><strong>当计算时使用的数据有不同精度，采用最粗糙的精度，其余数据四舍五入</strong></u></p>
-<h2 id="Uncertainty-in-Measurements-amp-Significant-Figures"><a href="#Uncertainty-in-Measurements-amp-Significant-Figures" class="headerlink" title="Uncertainty in Measurements &amp; Significant Figures"></a>Uncertainty in Measurements &amp; Significant Figures</h2><p>计算不确定性解决方案在上一标题</p>
-<p><strong>有效数字：</strong></p>
-<p>当计算中，出现的数据有不同的有效数字，使用最低位的。</p>
-<p>注意：<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.24.28.png" alt="截屏2022-11-06 下午6.24.28"></p>
-<p>这几个的有效数字不同</p>
-<p>即使含有相同有效数字，数字精确度也不一定相同</p>
-<p>出现integer，我们认为其没有精确度</p>
-<p>2(int) = 2（准确值）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.27.57.png" alt="截屏2022-11-06 下午6.27.57"></p>
-<p><strong>因为宽是3位有效数字，所以计算结果保留3位有效数字，即44.0</strong></p>
-<p>一些粗略估算的例子：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.29.38.png" alt="截屏2022-11-06 下午6.29.38"></p>
-<h2 id="Coordinate-Systems"><a href="#Coordinate-Systems" class="headerlink" title="Coordinate Systems"></a>Coordinate Systems</h2><p>三角坐标系：</p>
-<h3 id="二维情况"><a href="#二维情况" class="headerlink" title="二维情况"></a>二维情况</h3><p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.30.25.png" alt="截屏2022-11-06 下午6.30.25"></p>
-<p>将普通坐标系转化成三角坐标系，</p>
-<p><strong>注意phi=arctan（y/x）</strong></p>
-<h3 id="三维情况："><a href="#三维情况：" class="headerlink" title="三维情况："></a>三维情况：</h3><h4 id="圆柱体坐标系："><a href="#圆柱体坐标系：" class="headerlink" title="圆柱体坐标系："></a>圆柱体坐标系：</h4><p>![](<a target="_blank" rel="noopener" href="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06">http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/截屏2022-11-06</a> 下午6.32.13.png)</p>
-<p>多了个z，原坐标系z转化后不变。</p>
-<h4 id="球体坐标系："><a href="#球体坐标系：" class="headerlink" title="球体坐标系："></a>球体坐标系：</h4><h4 id="-2"><a href="#-2" class="headerlink" title=""></a><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2022-11-06%20%E4%B8%8B%E5%8D%886.35.11.png" alt="截屏2022-11-06 下午6.35.11"></h4><h2 id="Problem-Solving-Strategy"><a href="#Problem-Solving-Strategy" class="headerlink" title="Problem-Solving Strategy"></a>Problem-Solving Strategy</h2><h3 id="流程：identify-set-up-execute"><a href="#流程：identify-set-up-execute" class="headerlink" title="流程：identify-set up-execute"></a>流程：identify-set up-execute</h3>
                 
             </div>
             <hr/>
@@ -781,7 +811,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oliverhangle.github.io/posts/physics1.html">https://oliverhangle.github.io/posts/physics1.html</a>
+                    <a href="https://oliverhangle.github.io/posts/3ce4b1a2.html">https://oliverhangle.github.io/posts/3ce4b1a2.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -819,8 +849,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/">
-                                    <span class="chip bg-color">大学物理</span>
+                                <a href="/tags/SQL/">
+                                    <span class="chip bg-color">SQL</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%90%86%E8%AE%BA/">
+                                    <span class="chip bg-color">理论</span>
                                 </a>
                             
                         </div>
@@ -1296,13 +1330,13 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/python4.html">
+                <a href="/posts/4be38134.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Python学习-Chapter4 操作列表">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="SQL理论课-Class 5">
                         
-                        <span class="card-title">Python学习-Chapter4 操作列表</span>
+                        <span class="card-title">SQL理论课-Class 5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1313,14 +1347,14 @@ new Valine({
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-04
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    Python学习
+                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    SQL学习
                                 </a>
                             
                             
@@ -1330,12 +1364,12 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/SQL/">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
-                    <a href="/tags/%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/">
-                        <span class="chip bg-color">操作列表</span>
+                    <a href="/tags/%E7%90%86%E8%AE%BA/">
+                        <span class="chip bg-color">理论</span>
                     </a>
                     
                 </div>
@@ -1349,13 +1383,13 @@ new Valine({
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/python3.html">
+                <a href="/posts/a2802401.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Python学习-Chapter3 列表">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="SQL理论课-Class 3">
                         
-                        <span class="card-title">Python学习-Chapter3 列表</span>
+                        <span class="card-title">SQL理论课-Class 3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1366,14 +1400,14 @@ new Valine({
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    Python学习
+                            <a href="/categories/SQL%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    SQL学习
                                 </a>
                             
                             
@@ -1383,12 +1417,12 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/SQL/">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
-                    <a href="/tags/%E5%88%97%E8%A1%A8/">
-                        <span class="chip bg-color">列表</span>
+                    <a href="/tags/%E7%90%86%E8%AE%BA/">
+                        <span class="chip bg-color">理论</span>
                     </a>
                     
                 </div>
