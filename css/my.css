@@ -3,10 +3,15 @@
 @font-face{
     font-family: 'yusheng';
     src: url('../font/yusheng.ttf');
+    font-family: 'zcool';
+    src: url('https: //fonts.googleapis.com/css2?family=ZCOOL+小微& display=swap');
 }
 
 body{
     font-family: 'yusheng';
+}
+#artDetail {
+    font-family: 'zcool'; 
 }
 
 /* 增加每日一言模块 */
