@@ -77,7 +77,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="https://www.thripear.space/null" class="waves-effect waves-light">
+    <a href="https://www.thripear.space/" class="waves-effect waves-light">
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
@@ -264,7 +264,7 @@
         
         <li class="m-nav-item">
 	  
-		<a href="https://www.thripear.space/null" class="waves-effect waves-light">
+		<a href="https://www.thripear.space/" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
@@ -815,7 +815,6 @@
     <span class="token comment"># 模型实例化</span>
     model <span class="token operator">=</span> MyAlexNet<span class="token punctuation">(</span><span class="token punctuation">)</span>
     y <span class="token operator">=</span> model<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="2-train-py"><a href="#2-train-py" class="headerlink" title="2. train.py"></a>2. train.py</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch
 <span class="token keyword">from</span> torch <span class="token keyword">import</span> nn
 <span class="token keyword">from</span> model <span class="token keyword">import</span> MyAlexNet
@@ -1026,7 +1025,6 @@ matplot_loss<span class="token punctuation">(</span>loss_train<span class="token
 matplot_acc<span class="token punctuation">(</span>acc_train<span class="token punctuation">,</span> acc_val<span class="token punctuation">)</span>
  
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'done'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="3-predict-py"><a href="#3-predict-py" class="headerlink" title="3. predict.py"></a>3. predict.py</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch
 <span class="token keyword">from</span> model <span class="token keyword">import</span> MyAlexNet
 <span class="token keyword">from</span> torch<span class="token punctuation">.</span>autograd <span class="token keyword">import</span> Variable
@@ -1083,7 +1081,6 @@ model<span class="token punctuation">.</span><span class="token builtin">eval</s
         predicted<span class="token punctuation">,</span> actual <span class="token operator">=</span> classes<span class="token punctuation">[</span>torch<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>pred<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> classes<span class="token punctuation">[</span>y<span class="token punctuation">]</span>
         <span class="token comment"># 输出预测值与真实值</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'predicted:"</span><span class="token interpolation"><span class="token punctuation">{</span>predicted<span class="token punctuation">}</span></span><span class="token string">", actual:"</span><span class="token interpolation"><span class="token punctuation">{</span>actual<span class="token punctuation">}</span></span><span class="token string">"'</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="4-spilit-data-py"><a href="#4-spilit-data-py" class="headerlink" title="4. spilit_data.py"></a>4. spilit_data.py</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
 <span class="token keyword">from</span> shutil <span class="token keyword">import</span> copy
 <span class="token keyword">import</span> random
@@ -1142,7 +1139,6 @@ split_rate <span class="token operator">=</span> <span class="token number">0.2<
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
  
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"processing done!"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 
                 
             </div>
@@ -2016,7 +2012,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.6k</span>&nbsp;字
+                class="white-color">18.5k</span>&nbsp;字
             
             
             

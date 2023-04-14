@@ -77,7 +77,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="https://www.thripear.space/null" class="waves-effect waves-light">
+    <a href="https://www.thripear.space/" class="waves-effect waves-light">
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
@@ -264,7 +264,7 @@
         
         <li class="m-nav-item">
 	  
-		<a href="https://www.thripear.space/null" class="waves-effect waves-light">
+		<a href="https://www.thripear.space/" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
@@ -723,14 +723,10 @@
                   <span class="token keyword">where</span> ename <span class="token operator">=</span> <span class="token string">'king'</span><span class="token punctuation">)</span>
 
 <span class="token comment">-- 里面这个子查询返回一行可以直接使用比较运算符，因为就这一个人这个名字</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>如果子查询可能返回多行？<br>– 把运算符号换成in</p>
+<p>如果子查询可能返回多行？<br>— 把运算符号换成in</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name
 <span class="token keyword">from</span> student
 <span class="token keyword">where</span> ID <span class="token operator">in</span><span class="token punctuation">(</span>筛选出来的很多行<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
 <h2 id="用-in-和-not-in-查询是否存在于查询集合中："><a href="#用-in-和-not-in-查询是否存在于查询集合中：" class="headerlink" title="用 in 和 not in 查询是否存在于查询集合中："></a>用 in 和 not in 查询是否存在于查询集合中：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> ENAME<span class="token punctuation">,</span>EMPTNO<span class="token punctuation">,</span>SAL
 <span class="token keyword">from</span> EMP
 <span class="token keyword">where</span> DEPTNO <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">select</span> DEPTNO
@@ -742,7 +738,6 @@
 <span class="token keyword">where</span> DEPTNO <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">Select</span> DEPTNO
                 <span class="token keyword">from</span> EMP
                 <span class="token keyword">where</span> ENAME <span class="token operator">=</span> <span class="token string">'blake'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="双嵌套："><a href="#双嵌套：" class="headerlink" title="双嵌套："></a>双嵌套：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span>
 <span class="token keyword">from</span> EMP
 <span class="token keyword">where</span> DETPNO <span class="token operator">not</span> <span class="token operator">in</span><span class="token punctuation">(</span><span class="token keyword">Select</span> DEPTNO
@@ -752,18 +747,13 @@
             <span class="token keyword">from</span> EMP
             <span class="token keyword">where</span> DEPTNO <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">Select</span> DEPTNO  <span class="token keyword">from</span> EMP  <span class="token keyword">where</span> ENAME <span class="token operator">=</span> <span class="token string">'blake'</span><span class="token punctuation">)</span>
            <span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="SOME-和-ALL："><a href="#SOME-和-ALL：" class="headerlink" title="SOME 和 ALL："></a>SOME 和 ALL：</h2><h3 id="运算符-some：满足一个就行"><a href="#运算符-some：满足一个就行" class="headerlink" title="运算符+some：满足一个就行"></a>运算符+some：满足一个就行</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name 
 <span class="token keyword">from</span> instructor
 <span class="token keyword">where</span> salary <span class="token operator">&gt;</span> <span class="token keyword">some</span> <span class="token punctuation">(</span><span class="token keyword">select</span> salary <span class="token keyword">from</span> instructor <span class="token keyword">where</span> dept_name<span class="token operator">=</span><span class="token string">'Biology'</span><span class="token punctuation">)</span>
 <span class="token comment">-- 查找出来老师只要工资  比生物系最起码一个老师的工资高就行。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <h2 id="运算符-all-：必须要全部满足才可以"><a href="#运算符-all-：必须要全部满足才可以" class="headerlink" title="运算符+all ：必须要全部满足才可以"></a>运算符+all ：必须要全部满足才可以</h2><h3 id="all-和-in-不是一个概念，in-是满足一个"><a href="#all-和-in-不是一个概念，in-是满足一个" class="headerlink" title="=all 和 in 不是一个概念，in 是满足一个"></a>=all 和 in 不是一个概念，in 是满足一个</h3><h3 id="lt-gt-some-和-not-in-不是一个概念some"><a href="#lt-gt-some-和-not-in-不是一个概念some" class="headerlink" title="<>some 和 not in 不是一个概念some="></a>&lt;&gt;some 和 not in 不是一个概念some=</h3><h3 id="lt-gt-all-和-not-in-一个概念"><a href="#lt-gt-all-和-not-in-一个概念" class="headerlink" title="<>all 和 not in 一个概念"></a>&lt;&gt;all 和 not in 一个概念</h3><h3 id="some-和-in-一个概念"><a href="#some-和-in-一个概念" class="headerlink" title="=some 和 in 一个概念"></a>=some 和 in 一个概念</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">         <span class="token operator">=</span>    <span class="token operator">&lt;&gt;</span>          <span class="token operator">&gt;=</span>     <span class="token operator">&lt;=</span>
 <span class="token keyword">some</span>    <span class="token operator">in</span>    <span class="token comment">--         &gt;=min    &lt;=max</span>
 <span class="token keyword">all</span>     <span class="token comment">--    not in     &lt;=max    &lt;=min</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name
 <span class="token keyword">from</span> student
 <span class="token keyword">where</span> id <span class="token operator">&lt;&gt;</span><span class="token keyword">all</span><span class="token punctuation">(</span><span class="token keyword">select</span> id
@@ -784,7 +774,6 @@
 
 <span class="token comment">-- 加一个</span>
 EMPNO <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">NULL</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 
                 
             </div>
@@ -1662,7 +1651,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.6k</span>&nbsp;字
+                class="white-color">18.5k</span>&nbsp;字
             
             
             
