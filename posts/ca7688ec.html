@@ -714,14 +714,16 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="用户交互的数据库处理"><a href="#用户交互的数据库处理" class="headerlink" title="用户交互的数据库处理"></a>用户交互的数据库处理</h1><h2 id="ORM思想："><a href="#ORM思想：" class="headerlink" title="ORM思想："></a>ORM思想：</h2><h3 id="Object-Relation-Model-对象关系模型，映射到持久层【数据库】，存在-1-对-1-的映射关系"><a href="#Object-Relation-Model-对象关系模型，映射到持久层【数据库】，存在-1-对-1-的映射关系" class="headerlink" title="Object Relation Model 对象关系模型，映射到持久层【数据库】，存在 1 对 1 的映射关系"></a>Object Relation Model 对象关系模型，映射到持久层【数据库】，存在 1 对 1 的映射关系</h3><table>
+                <h1 id="用户交互的数据库处理"><a href="#用户交互的数据库处理" class="headerlink" title="用户交互的数据库处理"></a>用户交互的数据库处理</h1><h2 id="ORM思想："><a href="#ORM思想：" class="headerlink" title="ORM思想："></a>ORM思想：</h2><h3 id="Object-Relation-Model-对象关系模型，映射到持久层【数据库】，存在-1-对-1-的映射关系"><a href="#Object-Relation-Model-对象关系模型，映射到持久层【数据库】，存在-1-对-1-的映射关系" class="headerlink" title="Object Relation Model 对象关系模型，映射到持久层【数据库】，存在 1 对 1 的映射关系"></a>Object Relation Model 对象关系模型，映射到持久层【数据库】，存在 1 对 1 的映射关系</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>库</th>
 <th>项目</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>表</td>
 <td>类</td>
 </tr>
@@ -734,18 +736,20 @@
 <td>对象</td>
 </tr>
 <tr>
-<td>多表关联 【外键  – 主键】1：1</td>
+<td>多表关联 【外键  — 主键】1：1</td>
 <td>持有对方对象【属性】</td>
 </tr>
 <tr>
-<td>多表关联 【外键  – 主键】1：N</td>
+<td>多表关联 【外键  — 主键】1：N</td>
 <td>持有对方对象的框架集合【属性】</td>
 </tr>
 <tr>
 <td>中间映射表</td>
 <td>一般无需创建实体类，需要操作【订单】也可以创建实体类</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="Card表写成类："><a href="#Card表写成类：" class="headerlink" title="Card表写成类："></a>Card表写成类：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Timestamp</span><span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Card</span> <span class="token punctuation">{</span>
@@ -762,7 +766,6 @@
         <span class="token comment">//类需要具体实例化产生对象</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="Teacher表写成类"><a href="#Teacher表写成类" class="headerlink" title="Teacher表写成类"></a>Teacher表写成类</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">LinkedList</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span><span class="token punctuation">;</span>
 
@@ -773,7 +776,6 @@
     <span class="token comment">//一对多的映射，持有对方对象的集合</span>
     <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> students <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//这个用链表，方便插入</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="Student表写成类"><a href="#Student表写成类" class="headerlink" title="Student表写成类"></a>Student表写成类</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Array</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Timestamp</span><span class="token punctuation">;</span>
@@ -1665,7 +1667,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.6k</span>&nbsp;字
+                class="white-color">18.5k</span>&nbsp;字
             
             
             

@@ -714,7 +714,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、开发背景"><a href="#一、开发背景" class="headerlink" title="*一、开发背景*"></a><em><strong>*一、开发背景*</strong></em></h1><p><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=AlexNet&amp;spm=1001.2101.3001.7020">AlexNet</a>由Hinton和他的学生Alex Krizhevsky设计，模型名字来源于论文第一作者的姓名Alex。该模型以很大的优势获得了2012年ISLVRC竞赛的冠军网络，分类准确率由传统的 70%+提升到 80%+，自那年之后，深度学习开始迅速发展。</p>
+                <h1 id="一、开发背景"><a href="#一、开发背景" class="headerlink" title="\一、开发背景**"></a><strong><em>\</em>一、开发背景**</strong></h1><p><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=AlexNet&amp;spm=1001.2101.3001.7020">AlexNet</a>由Hinton和他的学生Alex Krizhevsky设计，模型名字来源于论文第一作者的姓名Alex。该模型以很大的优势获得了2012年ISLVRC竞赛的冠军网络，分类准确率由传统的 70%+提升到 80%+，自那年之后，深度学习开始迅速发展。</p>
 <p><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=ImageNet&amp;spm=1001.2101.3001.7020">ImageNet</a>是一个在2009年创建的图像数据集，从2010年开始到2017年举办了七届的ImageNet 挑战赛——ImageNet Large Scale Visual Recognition ChallengeI (LSVRC)，在这个挑战赛上诞生了AlexNet、ZFNet、OverFeat、VGG、Inception、ResNet、WideResNet、FractalNet、DenseNet、ResNeXt、DPN、SENet 等经典模型。</p>
 <h1 id="二、网络结构"><a href="#二、网络结构" class="headerlink" title="二、网络结构"></a>二、网络结构</h1><p>Alexnet模型为8层深度网络，由5个卷积层和3个全连接层构成，不计LRN层和池化层。AlexNet 跟 LeNet 结构类似，但使用了更多的卷积层和更大的参数空间来拟合大规模数据集 ImageNet。它是浅层神经网络和深度神经网络的分界线，如下图所示：</p>
 <p><img src="https://img-blog.csdnimg.cn/344db6347be04db3a7373d0f80403d87.png" alt="img"></p>
@@ -726,7 +726,7 @@
 <li>使用随机丢弃技术（dropout）以0.5的概率选择性地将隐藏层神经元的输出设置为零，以这种方式“dropped out”的神经元既不参与前向传播，也不参与反向传播，避免模型的过拟合；</li>
 <li>重叠最大池化（overlapping max pooling），池化的步长小于核尺寸，使得输出之间会有重叠和覆盖，提升了特征的丰富性，并且避免平均池化的模糊化效果；</li>
 <li>使用 LRN 局部响应归一化（Local Response Normalization）层，对局部神经元的活动创建竞争机制，使得响应较大的值变得相对更大，并抑制其他反馈较小的神经元，增强了模型的泛化能力，使准确率更高；</li>
-<li>进行数据增强，随机从256<em>256的原始图像中截取224</em>224大小的区域（以及水平翻转的镜像），相当于增强了（256-224）<em>（256-224）</em>2=2048倍的数据量，减轻过拟合，提升泛化能力。</li>
+<li>进行数据增强，随机从256<em>256的原始图像中截取224</em>224大小的区域（以及水平翻转的镜像），相当于增强了（256-224）<em>（256-224）</em>2=2048倍的数据量，减轻过拟合，提升泛化能力。 </li>
 </ol>
 <p><strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/32116277">为什么Dropout有效？</a></strong></p>
 <p>Dropout背后理念和集成模型很相似。在Drpout层，不同的神经元组合被关闭，这代表了一种不同的结构，所有这些不同的结构使用一个的子数据集并行地带权重训练，而权重总和为1。如果Dropout层有 n 个神经元，那么会形成 2n 个不同的子结构。在预测时，相当于集成这些模型并取均值。这种结构化的模型正则化技术有利于避免过拟合。Dropout有效的另外一个视点是：由于神经元是随机选择的，所以可以减少神经元之间的相互依赖，从而确保提取出相互独立的重要特征。</p>
@@ -737,7 +737,7 @@
 <li>spilit_data.py：划分给定的数据集为训练集和测试集</li>
 </ul>
 <p>注意：代码实现没有还原两个小型GPU同时运算的设计特点，而是在一个模型中运行</p>
-<h3 id="1-model-py"><a href="#1-model-py" class="headerlink" title="*1. model.py*"></a><em><strong>*1. model.py*</strong></em></h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 导入pytorch库</span>
+<h3 id="1-model-py"><a href="#1-model-py" class="headerlink" title="\1. model.py**"></a><strong><em>\</em>1. model.py**</strong></h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 导入pytorch库</span>
 <span class="token keyword">import</span> torch
 <span class="token comment"># 导入torch.nn模块</span>
 <span class="token keyword">from</span> torch <span class="token keyword">import</span> nn
@@ -815,7 +815,6 @@
     <span class="token comment"># 模型实例化</span>
     model <span class="token operator">=</span> MyAlexNet<span class="token punctuation">(</span><span class="token punctuation">)</span>
     y <span class="token operator">=</span> model<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="2-train-py"><a href="#2-train-py" class="headerlink" title="2. train.py"></a>2. train.py</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch
 <span class="token keyword">from</span> torch <span class="token keyword">import</span> nn
 <span class="token keyword">from</span> model <span class="token keyword">import</span> MyAlexNet
@@ -1026,7 +1025,6 @@ matplot_loss<span class="token punctuation">(</span>loss_train<span class="token
 matplot_acc<span class="token punctuation">(</span>acc_train<span class="token punctuation">,</span> acc_val<span class="token punctuation">)</span>
  
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'done'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="3-predict-py"><a href="#3-predict-py" class="headerlink" title="3. predict.py"></a>3. predict.py</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch
 <span class="token keyword">from</span> model <span class="token keyword">import</span> MyAlexNet
 <span class="token keyword">from</span> torch<span class="token punctuation">.</span>autograd <span class="token keyword">import</span> Variable
@@ -1083,7 +1081,6 @@ model<span class="token punctuation">.</span><span class="token builtin">eval</s
         predicted<span class="token punctuation">,</span> actual <span class="token operator">=</span> classes<span class="token punctuation">[</span>torch<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>pred<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> classes<span class="token punctuation">[</span>y<span class="token punctuation">]</span>
         <span class="token comment"># 输出预测值与真实值</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'predicted:"</span><span class="token interpolation"><span class="token punctuation">{</span>predicted<span class="token punctuation">}</span></span><span class="token string">", actual:"</span><span class="token interpolation"><span class="token punctuation">{</span>actual<span class="token punctuation">}</span></span><span class="token string">"'</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="4-spilit-data-py"><a href="#4-spilit-data-py" class="headerlink" title="4. spilit_data.py"></a>4. spilit_data.py</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
 <span class="token keyword">from</span> shutil <span class="token keyword">import</span> copy
 <span class="token keyword">import</span> random
@@ -1142,7 +1139,6 @@ split_rate <span class="token operator">=</span> <span class="token number">0.2<
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
  
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"processing done!"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 
                 
             </div>
@@ -2016,7 +2012,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.6k</span>&nbsp;字
+                class="white-color">18.5k</span>&nbsp;字
             
             
             

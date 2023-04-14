@@ -717,43 +717,28 @@
                 <h1 id="Class-2-新课"><a href="#Class-2-新课" class="headerlink" title="Class_2 新课"></a>Class_2 新课</h1><h2 id="多表查询-从多个表里面查询信息"><a href="#多表查询-从多个表里面查询信息" class="headerlink" title="多表查询 - 从多个表里面查询信息"></a>多表查询 - 从多个表里面查询信息</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">语法：
 <span class="token keyword">select</span> 需要的属性
 <span class="token keyword">from</span> 表<span class="token number">1</span>，表<span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="输出是表1和表2的笛卡尔积，结果没有意义。因为我们想要的是信息能对得上的。"><a href="#输出是表1和表2的笛卡尔积，结果没有意义。因为我们想要的是信息能对得上的。" class="headerlink" title="-输出是表1和表2的笛卡尔积，结果没有意义。因为我们想要的是信息能对得上的。"></a>-输出是表1和表2的笛卡尔积，结果没有意义。因为我们想要的是信息能对得上的。</h3><h3 id="需要使用where进行限定。"><a href="#需要使用where进行限定。" class="headerlink" title="-需要使用where进行限定。"></a>-需要使用where进行限定。</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">where</span> 表<span class="token number">1.</span>属性 <span class="token operator">=</span> 表<span class="token number">2.</span>属性（这里面的属性需要在两个表里面都一样）（这里的 表<span class="token number">1.</span>和 表<span class="token number">2.</span>不能省略。）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <h2 id="表的连接：把两个及以上的表连接在一起"><a href="#表的连接：把两个及以上的表连接在一起" class="headerlink" title="表的连接：把两个及以上的表连接在一起"></a>表的连接：把两个及以上的表连接在一起</h2><h3 id="前提条件：有相同的属性（比如玉兰卡id和学号），当然可以有不同的属性。"><a href="#前提条件：有相同的属性（比如玉兰卡id和学号），当然可以有不同的属性。" class="headerlink" title="前提条件：有相同的属性（比如玉兰卡id和学号），当然可以有不同的属性。"></a>前提条件：有相同的属性（比如玉兰卡id和学号），当然可以有不同的属性。</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> dept_name 
 <span class="token keyword">from</span> course<span class="token punctuation">,</span>section
 <span class="token keyword">where</span> course<span class="token punctuation">.</span>course_id <span class="token operator">=</span> section<span class="token punctuation">.</span>course_id <span class="token operator">and</span> dept_name <span class="token operator">=</span> <span class="token string">'Comp.Sci'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span>
 <span class="token keyword">from</span> 表<span class="token number">1</span> <span class="token keyword">join</span> 表<span class="token number">2</span> <span class="token keyword">on</span> 表<span class="token number">1.</span>属性 <span class="token operator">=</span> 表<span class="token number">2.</span>属性
 还可以写成这样。效率比较高<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="如果想要把三个以上的表连接："><a href="#如果想要把三个以上的表连接：" class="headerlink" title="如果想要把三个以上的表连接："></a>如果想要把三个以上的表连接：</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">Select</span> <span class="token operator">*</span>
 
 <span class="token keyword">From</span> emp <span class="token keyword">join</span> dept <span class="token keyword">on</span> emp<span class="token punctuation">.</span>dpetno <span class="token operator">=</span> dept<span class="token punctuation">.</span>deptno
 
 <span class="token keyword">Where</span> loc <span class="token operator">=</span> <span class="token string">'new York'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <h3 id="自然连接：每一个相同属性列仅留下一个拷贝。也就是连接属性（比如两个表里面的id）只会留一个，"><a href="#自然连接：每一个相同属性列仅留下一个拷贝。也就是连接属性（比如两个表里面的id）只会留一个，" class="headerlink" title="自然连接：每一个相同属性列仅留下一个拷贝。也就是连接属性（比如两个表里面的id）只会留一个，"></a>自然连接：每一个相同属性列仅留下一个拷贝。也就是连接属性（比如两个表里面的id）只会留一个，</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">from</span> 表<span class="token number">1</span> <span class="token keyword">natural</span> <span class="token keyword">join</span> 表<span class="token number">2</span> <span class="token keyword">on</span> 条件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <h3 id="自然连接有危险，当连接多个表的时候，可能会出现目标数据查询损失。筛选过度。"><a href="#自然连接有危险，当连接多个表的时候，可能会出现目标数据查询损失。筛选过度。" class="headerlink" title="-自然连接有危险，当连接多个表的时候，可能会出现目标数据查询损失。筛选过度。"></a>-自然连接有危险，当连接多个表的时候，可能会出现目标数据查询损失。筛选过度。</h3><h3 id="自连接：自己和自己中的元素进行查询-关键在于更改名字"><a href="#自连接：自己和自己中的元素进行查询-关键在于更改名字" class="headerlink" title="自连接：自己和自己中的元素进行查询,关键在于更改名字"></a>自连接：自己和自己中的元素进行查询,关键在于更改名字</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token keyword">distinct</span> T<span class="token punctuation">.</span>name
 <span class="token keyword">from</span> instructor <span class="token keyword">as</span> T<span class="token punctuation">,</span>instructor <span class="token keyword">as</span> S
 <span class="token keyword">where</span> T<span class="token punctuation">.</span>salary <span class="token operator">&gt;</span> S<span class="token punctuation">.</span>salary <span class="token operator">and</span> S<span class="token punctuation">.</span>dept_name <span class="token operator">=</span> <span class="token string">'Comp.Sci.'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
 <h2 id="集合运算："><a href="#集合运算：" class="headerlink" title="集合运算："></a>集合运算：</h2><h3 id="并集：union"><a href="#并集：union" class="headerlink" title="并集：union"></a>并集：union</h3><h3 id="交集：intersect"><a href="#交集：intersect" class="headerlink" title="交集：intersect"></a>交集：intersect</h3><h3 id="减法：except"><a href="#减法：except" class="headerlink" title="减法：except"></a>减法：except</h3><h4 id="前提：两个集合数据类型要一样"><a href="#前提：两个集合数据类型要一样" class="headerlink" title="前提：两个集合数据类型要一样"></a>前提：两个集合数据类型要一样</h4><h4 id="SQL的集合中没有重复元素，保留重复需要：union-all-intersect-all-和-except-all"><a href="#SQL的集合中没有重复元素，保留重复需要：union-all-intersect-all-和-except-all" class="headerlink" title="SQL的集合中没有重复元素，保留重复需要：union all,intersect all 和 except all"></a>SQL的集合中没有重复元素，保留重复需要：union all,intersect all 和 except all</h4><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">语法：
 <span class="token keyword">select</span> 属性<span class="token number">1</span> <span class="token keyword">from</span> 表<span class="token number">1</span> <span class="token keyword">where</span> 条件<span class="token number">1</span>
 集合运算符
 <span class="token keyword">select</span> 属性<span class="token number">2</span> <span class="token keyword">from</span> 表<span class="token number">2</span> <span class="token keyword">where</span> 条件<span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="空值-NULL"><a href="#空值-NULL" class="headerlink" title="空值 NULL"></a>空值 NULL</h3><p>数值 + null, null &lt;&gt; null null = null 结果是 unknown<br>所以选择值是unknown的：</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">where</span> 属性 <span class="token operator">is</span> <span class="token boolean">null</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p>注意：空值参与排序。</p>
 <p>unknown 和 true 的逻辑运算以及结果：</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">OR</span>: <span class="token punctuation">(</span>unknown <span class="token operator">or</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
@@ -766,7 +751,6 @@
 
 – <span class="token operator">NOT</span>: <span class="token punctuation">(</span><span class="token operator">not</span> unknown<span class="token punctuation">)</span> <span class="token operator">=</span> unknown
 – “P <span class="token operator">is</span> unknown” evaluates <span class="token keyword">to</span> <span class="token boolean">true</span> <span class="token keyword">if</span> predicate P evaluates <span class="token keyword">to</span> unknown<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>小练习：</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">查询先修课的先修课的名字（自连接）
 <span class="token keyword">use</span> university
@@ -777,7 +761,6 @@
 <span class="token keyword">select</span> <span class="token keyword">distinct</span> A<span class="token punctuation">.</span>name<span class="token punctuation">,</span>B<span class="token punctuation">.</span>name
 <span class="token keyword">from</span> instructor <span class="token keyword">as</span> A<span class="token punctuation">,</span>instructor <span class="token keyword">as</span> B
 <span class="token keyword">where</span> A<span class="token punctuation">.</span>salary <span class="token operator">=</span> B<span class="token punctuation">.</span>salary <span class="token operator">and</span> A<span class="token punctuation">.</span>name <span class="token operator">&lt;&gt;</span> B<span class="token punctuation">.</span>name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 
                 
             </div>
@@ -1655,7 +1638,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.6k</span>&nbsp;字
+                class="white-color">18.5k</span>&nbsp;字
             
             
             
