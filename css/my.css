@@ -1,17 +1,15 @@
 /* Here is your custom css styles. */
 
 @font-face{
-    font-family: 'yusheng';
-    src: url('../font/yusheng.ttf');
-    font-family: 'zcool';
-    src: url('https: //fonts.googleapis.com/css2?family=ZCOOL+小微& display=swap');
+    font-family: 'ZCOOLXiaoWei-Regular';
+    src: url('../font/ZCOOLXiaoWei-Regular.ttf');
 }
 
 body{
-    font-family: 'yusheng';
+    font-family: 'ZCOOLXiaoWei-Regular';
 }
 #artDetail {
-    font-family: 'zcool'; 
+    font-family: 'ZCOOLXiaoWei-Regular'; 
 }
 
 /* 增加每日一言模块 */
