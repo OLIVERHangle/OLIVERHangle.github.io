@@ -1,15 +1,14 @@
 /* Here is your custom css styles. */
 
 @font-face{
-    font-family: 'ZCOOLXiaoWei-Regular';
-    src: url('../font/ZCOOLXiaoWei-Regular.ttf');
+    font-family: 'myfont';
+    src: url('../font/myfont.ttf');
 }
-
 body{
-    font-family: 'ZCOOLXiaoWei-Regular';
+    font-family: 'myfont';
 }
 #artDetail {
-    font-family: 'ZCOOLXiaoWei-Regular'; 
+    font-family: 'myfont'; 
 }
 
 /* 增加每日一言模块 */
