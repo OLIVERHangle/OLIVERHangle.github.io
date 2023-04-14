@@ -65,7 +65,7 @@
             <div class="brand-logo">
                 <a href="https://www.thripear.space/" class="waves-effect waves-light">
                     
-                    <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
+                    <img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">阿狐和柴柴</span>
                 </a>
@@ -248,7 +248,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
+        <img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">阿狐和柴柴</div>
         <div class="logo-desc">
@@ -716,10 +716,7 @@
             <div id="articleContent">
                 <h1 id="1-1-卷积神经网络基础"><a href="#1-1-卷积神经网络基础" class="headerlink" title="1.1 卷积神经网络基础"></a>1.1 卷积神经网络基础</h1><p>CNN 卷积神经网络：包含卷积层的网络</p>
 <p>全连接层：由神经元连接而成</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.05.47.png" alt="截屏2023-04-08 下午7.05.47" style="zoom: 25%;">
-
-
-
+<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.05.47.png" alt="截屏2023-04-08 下午7.05.47" style="zoom: 25%;"></p>
 <h2 id="卷积层：一个滑动窗口在图像上滑动并计算"><a href="#卷积层：一个滑动窗口在图像上滑动并计算" class="headerlink" title="卷积层：一个滑动窗口在图像上滑动并计算"></a>卷积层：一个滑动窗口在图像上滑动并计算</h2><p>计算利用卷积核，将卷积核覆盖到图像上，再将卷积核上面的值与图像层相乘，最后相加得到该区域的值。</p>
 <p>不断滑动，得到各个位置的卷积值</p>
 <p>特性：1.具有局部感知机制 2.权值共享</p>
@@ -727,80 +724,85 @@
 <p>条件：1.输入特征矩阵深度与卷积核深度保持一致  2. 卷积完输出的特征矩阵（深度）与卷积核个数相同</p>
 <p>计算：各个深度的卷积层相同位置处，卷积出来的值相加，最后各个深度卷完成一层了</p>
 <p>当然卷积核不唯一，卷完之后拼接在一起</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.22.30.png" alt="截屏2023-04-08 下午7.22.30"></p>
+<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.22.30.png" alt="截屏2023-04-08 下午7.22.30"></p>
 <h3 id="具体计算细节问题："><a href="#具体计算细节问题：" class="headerlink" title="具体计算细节问题："></a>具体计算细节问题：</h3><ol>
 <li><h4 id="如何带上偏移量计算？-当前卷积核输出的卷积矩阵，减去偏移量bias"><a href="#如何带上偏移量计算？-当前卷积核输出的卷积矩阵，减去偏移量bias" class="headerlink" title="如何带上偏移量计算？   当前卷积核输出的卷积矩阵，减去偏移量bias"></a>如何带上偏移量计算？   当前卷积核输出的卷积矩阵，减去偏移量bias</h4></li>
 <li><h4 id="加上激活函数该如何计算？"><a href="#加上激活函数该如何计算？" class="headerlink" title="加上激活函数该如何计算？"></a>加上激活函数该如何计算？</h4><p>常用激活函数：</p>
-<p>sigmoid激活函数<br>$$<br>f(x) = \frac{1}{1+e^{-x}}<br>$$</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.37.46.png" alt="截屏2023-04-08 下午7.37.46" style="zoom: 25%;">
-
-
-
-
-
-<p>relu激活函数</p>
-</li>
+<p>sigmoid激活函数</p>
+<script type="math/tex; mode=display">
+f(x) = \frac{1}{1+e^{-x}}</script></li>
 </ol>
-<p>$$<br>f(x) = Max(0,x)<br>$$</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.38.28.png" alt="截屏2023-04-08 下午7.38.28" style="zoom:25%;">
-
+<p>   <img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.37.46.png" alt="截屏2023-04-08 下午7.37.46" style="zoom: 25%;"></p>
+<p>   relu激活函数</p>
+<script type="math/tex; mode=display">
+f(x) = Max(0,x)</script><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.38.28.png" alt="截屏2023-04-08 下午7.38.28" style="zoom:25%;"></p>
 <p>因为计算过程是一个线性过程，如果想要解决非线性问题，就需要引入非线性因素。</p>
 <h4 id="3-越界问题："><a href="#3-越界问题：" class="headerlink" title="3.越界问题："></a>3.越界问题：</h4><p>矩阵经过卷积操作后的尺寸由以下几个因数决定：</p>
 <p>&lt;1&gt;输入图片的大小 W x W</p>
 <p>&lt;2&gt;Filter大小F x F （卷积核滑动窗口大小）</p>
 <p>&lt;3&gt;步长S</p>
 <p>&lt;4&gt;padding的像素数 (补零的像素数) P</p>
-<p>经过卷积后的矩阵尺寸大小计算公式为：<br>$$<br>N = \frac{W-F+2P}{S+1}<br>$$</p>
-<h2 id="池化层：对特征图进行稀疏处理，减少数据运算量"><a href="#池化层：对特征图进行稀疏处理，减少数据运算量" class="headerlink" title="池化层：对特征图进行稀疏处理，减少数据运算量"></a>池化层：对特征图进行稀疏处理，减少数据运算量</h2><p>MaxPooling下采样层</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.51.54.png" alt="截屏2023-04-08 下午7.51.54" style="zoom:25%;">
-
+<p>经过卷积后的矩阵尺寸大小计算公式为：</p>
+<script type="math/tex; mode=display">
+N = \frac{W-F+2P}{S+1}</script><h2 id="池化层：对特征图进行稀疏处理，减少数据运算量"><a href="#池化层：对特征图进行稀疏处理，减少数据运算量" class="headerlink" title="池化层：对特征图进行稀疏处理，减少数据运算量"></a>池化层：对特征图进行稀疏处理，减少数据运算量</h2><p>MaxPooling下采样层</p>
+<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.51.54.png" alt="截屏2023-04-08 下午7.51.54" style="zoom:25%;"></p>
 <p>AveragePooling下采样层</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.52.41.png" alt="截屏2023-04-08 下午7.52.41" style="zoom:25%;">
-
+<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-08%20%E4%B8%8B%E5%8D%887.52.41.png" alt="截屏2023-04-08 下午7.52.41" style="zoom:25%;"></p>
 <p>·只改变特征矩阵的大小，不改变深度</p>
 <p>·一般池化核边长和步长相同</p>
-<h1 id="1-2-卷积神经网络基础补充"><a href="#1-2-卷积神经网络基础补充" class="headerlink" title="1.2 卷积神经网络基础补充"></a>1.2 卷积神经网络基础补充</h1><h2 id="误差的计算"><a href="#误差的计算" class="headerlink" title="误差的计算"></a>误差的计算</h2><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-09%20%E4%B8%8A%E5%8D%889.28.49.png" alt="截屏2023-04-09 上午9.28.49" style="zoom:25%;">
-
-<p>当前该节点的输出为：<br>$$<br>out = \sigma(x_1\times w_{11}^{(1)}+x_2\times w_{21}^{(1)}+b_1^{(1)})<br>$$<br>w指权重，b为偏置，x1,x2等为上一个神经元的输出，若上一层为输出层就直接输入数据</p>
+<h1 id="1-2-卷积神经网络基础补充"><a href="#1-2-卷积神经网络基础补充" class="headerlink" title="1.2 卷积神经网络基础补充"></a>1.2 卷积神经网络基础补充</h1><h2 id="误差的计算"><a href="#误差的计算" class="headerlink" title="误差的计算"></a>误差的计算</h2><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-09%20%E4%B8%8A%E5%8D%889.28.49.png" alt="截屏2023-04-09 上午9.28.49" style="zoom:25%;"></p>
+<p>当前该节点的输出为：</p>
+<script type="math/tex; mode=display">
+out = \sigma(x_1\times w_{11}^{(1)}+x_2\times w_{21}^{(1)}+b_1^{(1)})</script><p>w指权重，b为偏置，x1,x2等为上一个神经元的输出，若上一层为输出层就直接输入数据</p>
 <p>上标（1）指当前处于哪一层</p>
 <p>下表第一个数字是上一层第几个神经元，第二个数字是本层第几个神经元</p>
 <p>最后一层的激活函数是softmax</p>
-<p>softmax计算过程：<br>$$<br>o_i = \frac{e^{y_i}}{\sum_{j}e^{y_j}}<br>$$<br>比如上图，<br>$$<br>o_1 = \frac{e^{y_1}}{e^{y_1}+e^{y_2}}<br>$$</p>
-<p>$$<br>o_2 = \frac{e^{y_2}}{e^{y_1}+e^{y_2}}<br>$$</p>
-<h3 id="误差计算方法一：交叉熵损失"><a href="#误差计算方法一：交叉熵损失" class="headerlink" title="误差计算方法一：交叉熵损失"></a>误差计算方法一：交叉熵损失</h3><p>根据问题种类，有两种：</p>
-<p>1.针对多分类问题（softmax输出，所有输出概率和为1，分类之间没有包含关系）<br>$$<br>H = -\sum_i o_ i^* \times log(o_i)<br>$$<br>2.针对二分类问题 (sigmoid输出，每个输出节点之间互不相干,分类之间有包含关系)<br>$$<br>H = -\frac{1}{N}\sum_{i=1}^N[o_i^<em>\times logo_i+(1-o_i^</em>)\times log(1-o_i)]<br>$$<br>上述公式中，<br>$$<br>H（Loss）为损失，o^*_i为真实值标签，o_i为预测值，默认log以e为底是ln<br>$$</p>
-<h2 id="误差的反向传播"><a href="#误差的反向传播" class="headerlink" title="误差的反向传播"></a>误差的反向传播</h2><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-09%20%E4%B8%8A%E5%8D%8810.01.46.png" alt="截屏2023-04-09 上午10.01.46" style="zoom: 33%;">
-
-<p>最后带入得到：<br>$$<br>\frac{\part Loss}{\part w_{11}^{(2)}} = (o_2^<em>\times o_1-o_1^</em> \times o_2)\times a_1<br>$$</p>
-<h2 id="根据误差进行权重的更新"><a href="#根据误差进行权重的更新" class="headerlink" title="根据误差进行权重的更新"></a>根据误差进行权重的更新</h2><p>$$<br>w_{11}^{(2)}(new) = w_{11}^{(2)}(old)-learing_{rate}\times \frac{\part Loss}{\part w_{11}^{(2)}}(gradient)<br>$$</p>
-<p>问题：当分批次训练时，批次的损失梯度和整体sample的方向不一样</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-09%20%E4%B8%8A%E5%8D%8810.19.03.png" alt="截屏2023-04-09 上午10.19.03" style="zoom:25%;">
-
-
-
+<p>softmax计算过程：</p>
+<script type="math/tex; mode=display">
+o_i = \frac{e^{y_i}}{\sum_{j}e^{y_j}}</script><p>比如上图，</p>
+<script type="math/tex; mode=display">
+o_1 = \frac{e^{y_1}}{e^{y_1}+e^{y_2}}</script><script type="math/tex; mode=display">
+o_2 = \frac{e^{y_2}}{e^{y_1}+e^{y_2}}</script><h3 id="误差计算方法一：交叉熵损失"><a href="#误差计算方法一：交叉熵损失" class="headerlink" title="误差计算方法一：交叉熵损失"></a>误差计算方法一：交叉熵损失</h3><p>根据问题种类，有两种：</p>
+<p>1.针对多分类问题（softmax输出，所有输出概率和为1，分类之间没有包含关系）</p>
+<script type="math/tex; mode=display">
+H = -\sum_i o_ i^* \times log(o_i)</script><p>2.针对二分类问题 (sigmoid输出，每个输出节点之间互不相干,分类之间有包含关系)</p>
+<script type="math/tex; mode=display">
+H = -\frac{1}{N}\sum_{i=1}^N[o_i^*\times logo_i+(1-o_i^*)\times log(1-o_i)]</script><p>上述公式中，</p>
+<script type="math/tex; mode=display">
+H（Loss）为损失，o^*_i为真实值标签，o_i为预测值，默认log以e为底是ln</script><h2 id="误差的反向传播"><a href="#误差的反向传播" class="headerlink" title="误差的反向传播"></a>误差的反向传播</h2><p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-09%20%E4%B8%8A%E5%8D%8810.01.46.png" alt="截屏2023-04-09 上午10.01.46" style="zoom: 33%;"></p>
+<p>最后带入得到：</p>
+<script type="math/tex; mode=display">
+\frac{\part Loss}{\part w_{11}^{(2)}} = (o_2^*\times o_1-o_1^* \times o_2)\times a_1</script><h2 id="根据误差进行权重的更新"><a href="#根据误差进行权重的更新" class="headerlink" title="根据误差进行权重的更新"></a>根据误差进行权重的更新</h2><script type="math/tex; mode=display">
+w_{11}^{(2)}(new) = w_{11}^{(2)}(old)-learing_{rate}\times \frac{\part Loss}{\part w_{11}^{(2)}}(gradient)</script><p>问题：当分批次训练时，批次的损失梯度和整体sample的方向不一样</p>
+<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-09%20%E4%B8%8A%E5%8D%8810.19.03.png" alt="截屏2023-04-09 上午10.19.03" style="zoom:25%;"></p>
 <p>所以需要优化器：</p>
 <ol>
-<li><p>SGD优化器：<br>$$<br>w_{t+1} = w_t-\alpha \times g(w_t)<br>$$</p>
-<p>$$<br>\alpha为学习率，g(w_t)为t时刻对参数w_t的损失梯度<br>$$</p>
-</li>
+<li><p>SGD优化器：</p>
+<script type="math/tex; mode=display">
+w_{t+1} = w_t-\alpha \times g(w_t)</script><script type="math/tex; mode=display">
+\alpha为学习率，g(w_t)为t时刻对参数w_t的损失梯度</script></li>
 </ol>
 <p>优化器的缺点：</p>
 <p>1   容易受样本噪声的影响</p>
 <p>2   可能陷入局部最优解</p>
-<ol start="2">
-<li><p>SGD+Momentum优化器：<br>$$<br>v_t = \eta \times v_{t-1} + \alpha \times g(w_t)<br>$$</p>
-<p>$$<br>w_{t+1} = w_t - v_t<br>$$</p>
-<p>$$<br>\alpha为学习率，g(w_t)为t时刻对参数w_t的损失梯度，\eta(0.9)为动量系数。<br>$$</p>
-</li>
-<li><p>Adagrad优化器（自适应学习率）<br>$$<br>s_t = s_{t-1}+g(w_t)^2<br>$$</p>
-<p>$$<br>w_{t+1} = w_t - \frac {\alpha}{\sqrt{s_t+\epsilon}}*g(w_t)<br>$$</p>
-</li>
+<ol>
+<li><p>SGD+Momentum优化器：</p>
+<script type="math/tex; mode=display">
+v_t = \eta \times v_{t-1} + \alpha \times g(w_t)</script><script type="math/tex; mode=display">
+w_{t+1} = w_t - v_t</script><script type="math/tex; mode=display">
+\alpha为学习率，g(w_t)为t时刻对参数w_t的损失梯度，\eta(0.9)为动量系数。</script></li>
 </ol>
-<p>$$<br>\alpha 为学习率，g(w_t)为t时刻对参数w_t的损失梯度，\epsilon(10^{-7}为防止分母为0的小数)<br>$$</p>
-<p>缺点：学习率下降太快可能还没收敛就停止训练</p>
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-09%20%E4%B8%8A%E5%8D%8810.34.11.png" alt="截屏2023-04-09 上午10.34.11" style="zoom:25%;">
+<ol>
+<li><p>Adagrad优化器（自适应学习率）</p>
+<script type="math/tex; mode=display">
+s_t = s_{t-1}+g(w_t)^2</script><script type="math/tex; mode=display">
+w_{t+1} = w_t - \frac {\alpha}{\sqrt{s_t+\epsilon}}*g(w_t)</script></li>
+</ol>
+<script type="math/tex; mode=display">
+\alpha 为学习率，g(w_t)为t时刻对参数w_t的损失梯度，\epsilon(10^{-7}为防止分母为0的小数)</script><p>缺点：学习率下降太快可能还没收敛就停止训练</p>
+<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-09%20%E4%B8%8A%E5%8D%8810.34.11.png" alt="截屏2023-04-09 上午10.34.11" style="zoom:25%;"></p>
+<p><img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-09%20%E4%B8%8A%E5%8D%8810.34.44.png" alt="截屏2023-04-09 上午10.34.44" style="zoom:25%;"></p>
 
-<img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/%E6%88%AA%E5%B1%8F2023-04-09%20%E4%B8%8A%E5%8D%8810.34.44.png" alt="截屏2023-04-09 上午10.34.44" style="zoom:25%;">
                 
             </div>
             <hr/>
@@ -999,10 +1001,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://www.thripear.space/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://www.thripear.space/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1350,7 +1352,7 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/featureimages/22.jpg" class="responsive-img" alt="卷积神经网络基础">
+                        <img src="https://www.thripear.space/medias/featureimages/22.jpg" class="responsive-img" alt="卷积神经网络基础">
                         
                         <span class="card-title">卷积神经网络基础</span>
                     </div>
@@ -1404,7 +1406,7 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/featureimages/18.jpg" class="responsive-img" alt="AlexNet代码详解">
+                        <img src="https://www.thripear.space/medias/featureimages/18.jpg" class="responsive-img" alt="AlexNet代码详解">
                         
                         <span class="card-title">AlexNet代码详解</span>
                     </div>
@@ -1608,6 +1610,13 @@ new Valine({
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1745,7 +1754,7 @@ new Valine({
             
             <br>
             
-            <span id="icp"><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/icp.png" style="vertical-align: text-bottom;" />
+            <span id="icp"><img src="https://www.thripear.space/medias/icp.png" style="vertical-align: text-bottom;" />
                 <a href="https://www.icpapi.com/thripear.space/" target="_blank">鲁ICP备2022018351号-1</a>
             </span>
             
@@ -2020,11 +2029,6 @@ $(function () {
 
     
 
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 
 </html>
