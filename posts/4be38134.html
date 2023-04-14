@@ -65,7 +65,7 @@
             <div class="brand-logo">
                 <a href="https://www.thripear.space/" class="waves-effect waves-light">
                     
-                    <img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
+                    <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">阿狐和柴柴</span>
                 </a>
@@ -248,7 +248,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
+        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">阿狐和柴柴</div>
         <div class="logo-desc">
@@ -717,8 +717,9 @@
                 <h1 id="Class-5-子查询2"><a href="#Class-5-子查询2" class="headerlink" title="Class_5: 子查询2"></a>Class_5: 子查询2</h1><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> ENAME
 <span class="token keyword">from</span> EMP
 <span class="token keyword">where</span> salary <span class="token operator">=</span> <span class="token keyword">some</span> <span class="token punctuation">(</span><span class="token keyword">select</span> salary <span class="token keyword">from</span> EMP <span class="token keyword">where</span> EMPNO <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">)</span> <span class="token operator">and</span> deptno <span class="token operator">&lt;&gt;</span> <span class="token number">30</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="判断子查询是否存在：exists-和-not-exists（相关子查询）"><a href="#判断子查询是否存在：exists-和-not-exists（相关子查询）" class="headerlink" title="判断子查询是否存在：exists 和 not exists（相关子查询）"></a>判断子查询是否存在：exists 和 not exists（相关子查询）</h2><p>EXISTS用于检查子查询是否至少会返回一行数据，该子查询实际上并不返回任何数据，而是返回值True或False。</p>
-<h3 id="和-in-not-in-的区别："><a href="#和-in-not-in-的区别：" class="headerlink" title="和 in\not in 的区别："></a>和 in\not in 的区别：</h3><p>in 的子查询可以先执行，因为子查询和外部查询无关（无关子查询）<br>exists 先执行外部查询，因为子查询内部与外部查询可能有关（比如where条件中使用外部查询的别名）<br>— 注意：只要子查询能独立执行就是不相关。<br>— 外查询表中有多少行，就执行多少次exists，每一行都去测试。<br>— in 是子查询结束，进行筛选。</p>
+<h3 id="和-in-not-in-的区别："><a href="#和-in-not-in-的区别：" class="headerlink" title="和 in\not in 的区别："></a>和 in\not in 的区别：</h3><p>in 的子查询可以先执行，因为子查询和外部查询无关（无关子查询）<br>exists 先执行外部查询，因为子查询内部与外部查询可能有关（比如where条件中使用外部查询的别名）<br>– 注意：只要子查询能独立执行就是不相关。<br>– 外查询表中有多少行，就执行多少次exists，每一行都去测试。<br>– in 是子查询结束，进行筛选。</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name 
 <span class="token keyword">from</span> student <span class="token keyword">as</span> s
 <span class="token keyword">where</span> <span class="token operator">not</span> <span class="token keyword">exists</span> <span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token operator">*</span>  <span class="token comment">--exists子查询的select后面属性可以随便写，因为exists只判断是否符合条件。</span>
@@ -726,8 +727,9 @@
                   <span class="token keyword">where</span> s<span class="token punctuation">.</span>ID<span class="token operator">=</span>t<span class="token punctuation">.</span>ID <span class="token operator">and</span> course_id<span class="token operator">=</span><span class="token string">'cd-347'</span><span class="token punctuation">)</span>
 
 <span class="token comment">-- 注意：not exists 不会受表中数据存在NULL的影响。                                    </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="查找所有选了全部生物课的学生"><a href="#查找所有选了全部生物课的学生" class="headerlink" title="查找所有选了全部生物课的学生"></a>查找所有选了全部生物课的学生</h3><p>生物系的课 - 学生选的课 = 空，即子查询不会返回行。</p>
-<p><strong>— 判断条件：</strong><br><strong>not exists (生物系的课 except 学生选的课)</strong></p>
+<p><strong>– 判断条件：</strong><br><strong>not exists (生物系的课 except 学生选的课)</strong></p>
 <h3 id="练习：找出哪个部门包含了除了总经理以外的所有种类的职位"><a href="#练习：找出哪个部门包含了除了总经理以外的所有种类的职位" class="headerlink" title="练习：找出哪个部门包含了除了总经理以外的所有种类的职位"></a>练习：找出哪个部门包含了除了总经理以外的所有种类的职位</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> DEPTNO
 <span class="token keyword">from</span> EMP
 <span class="token keyword">where</span> <span class="token operator">not</span> <span class="token keyword">exists</span> <span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token keyword">distinct</span> job 
@@ -740,6 +742,7 @@
                    <span class="token keyword">from</span> EMP a 
                    <span class="token keyword">where</span> emp<span class="token punctuation">.</span>deptno <span class="token operator">=</span> a<span class="token punctuation">.</span>deptno<span class="token punctuation">)</span><span class="token comment">--减去部门包含的职位</span>
 <span class="token comment">-- 减去部门包含的职位这里，外面的emp.deptno = 里面a.deptno 说明子查询的职位对应部门，正在外部查询的部门   </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>​                </p>
 <h2 id="子查询可以出现在任何表出现的地方。"><a href="#子查询可以出现在任何表出现的地方。" class="headerlink" title="子查询可以出现在任何表出现的地方。"></a>子查询可以出现在任何表出现的地方。</h2><h3 id="比如说select-from，where，having"><a href="#比如说select-from，where，having" class="headerlink" title="比如说select, from，where，having"></a>比如说select, from，where，having</h3><p>select 里面可以相关，不相关子查询<br>from 不相关子查询<br>where 相关，不相关，标量子查询</p>
 <h2 id="标量子查询：子查询返回行数为1行："><a href="#标量子查询：子查询返回行数为1行：" class="headerlink" title="标量子查询：子查询返回行数为1行："></a>标量子查询：子查询返回行数为1行：</h2><p>可以出现在任何  值出现的地方：值运算符</p>
@@ -754,6 +757,9 @@
      由表<span class="token number">1</span>定义的表<span class="token number">2</span>
 <span class="token keyword">from</span> 表<span class="token number">1</span>，表<span class="token number">2</span>
 <span class="token keyword">where</span> 表<span class="token number">1</span>和表<span class="token number">2</span>条件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 <h2 id="重点习题："><a href="#重点习题：" class="headerlink" title="重点习题："></a>重点习题：</h2><h3 id="1-谁的工资比自己部门的平均工资高"><a href="#1-谁的工资比自己部门的平均工资高" class="headerlink" title="1.谁的工资比自己部门的平均工资高"></a>1.谁的工资比自己部门的平均工资高</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- from写法：</span>
 
 <span class="token keyword">select</span> ename
@@ -781,8 +787,12 @@
 <span class="token keyword">where</span> a<span class="token punctuation">.</span>sal <span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>sal<span class="token punctuation">)</span>
               <span class="token keyword">from</span> emp b
 			        <span class="token keyword">where</span> a<span class="token punctuation">.</span>DEPTNO<span class="token operator">=</span>b<span class="token punctuation">.</span>DEPTNO<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 <h3 id="2-标量子查询-查询每个员工的工资和平均工资的差，以及该部门有多少人。"><a href="#2-标量子查询-查询每个员工的工资和平均工资的差，以及该部门有多少人。" class="headerlink" title="2.(标量子查询)  查询每个员工的工资和平均工资的差，以及该部门有多少人。"></a>2.(标量子查询)  查询每个员工的工资和平均工资的差，以及该部门有多少人。</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> empno<span class="token punctuation">,</span>sal<span class="token operator">-</span><span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>sal<span class="token punctuation">)</span> <span class="token keyword">from</span> emp<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">from</span> emp b <span class="token keyword">where</span> a<span class="token punctuation">.</span>deptno<span class="token operator">=</span>b<span class="token punctuation">.</span>deptno<span class="token punctuation">)</span>
 <span class="token keyword">from</span> emp a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -982,10 +992,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://www.thripear.space/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://www.thripear.space/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1332,7 +1342,7 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="https://www.thripear.space/medias/featureimages/4.jpg" class="responsive-img" alt="微信小程序编写课程笔记">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/featureimages/4.jpg" class="responsive-img" alt="微信小程序编写课程笔记">
                         
                         <span class="card-title">微信小程序编写课程笔记</span>
                     </div>
@@ -1381,7 +1391,7 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="https://www.thripear.space/medias/featureimages/21.jpg" class="responsive-img" alt="SQL理论课-Class 4">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/featureimages/21.jpg" class="responsive-img" alt="SQL理论课-Class 4">
                         
                         <span class="card-title">SQL理论课-Class 4</span>
                     </div>
@@ -1656,7 +1666,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.5k</span>&nbsp;字
+                class="white-color">18.6k</span>&nbsp;字
             
             
             
@@ -1722,7 +1732,7 @@ new Valine({
             
             <br>
             
-            <span id="icp"><img src="https://www.thripear.space/medias/icp.png" style="vertical-align: text-bottom;" />
+            <span id="icp"><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/icp.png" style="vertical-align: text-bottom;" />
                 <a href="https://www.icpapi.com/thripear.space/" target="_blank">鲁ICP备2022018351号-1</a>
             </span>
             

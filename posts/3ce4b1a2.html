@@ -65,7 +65,7 @@
             <div class="brand-logo">
                 <a href="https://www.thripear.space/" class="waves-effect waves-light">
                     
-                    <img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
+                    <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">阿狐和柴柴</span>
                 </a>
@@ -248,7 +248,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
+        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">阿狐和柴柴</div>
         <div class="logo-desc">
@@ -723,10 +723,14 @@
                   <span class="token keyword">where</span> ename <span class="token operator">=</span> <span class="token string">'king'</span><span class="token punctuation">)</span>
 
 <span class="token comment">-- 里面这个子查询返回一行可以直接使用比较运算符，因为就这一个人这个名字</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>如果子查询可能返回多行？<br>— 把运算符号换成in</p>
+
+<p>如果子查询可能返回多行？<br>– 把运算符号换成in</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name
 <span class="token keyword">from</span> student
 <span class="token keyword">where</span> ID <span class="token operator">in</span><span class="token punctuation">(</span>筛选出来的很多行<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
 <h2 id="用-in-和-not-in-查询是否存在于查询集合中："><a href="#用-in-和-not-in-查询是否存在于查询集合中：" class="headerlink" title="用 in 和 not in 查询是否存在于查询集合中："></a>用 in 和 not in 查询是否存在于查询集合中：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> ENAME<span class="token punctuation">,</span>EMPTNO<span class="token punctuation">,</span>SAL
 <span class="token keyword">from</span> EMP
 <span class="token keyword">where</span> DEPTNO <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">select</span> DEPTNO
@@ -738,6 +742,7 @@
 <span class="token keyword">where</span> DEPTNO <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">Select</span> DEPTNO
                 <span class="token keyword">from</span> EMP
                 <span class="token keyword">where</span> ENAME <span class="token operator">=</span> <span class="token string">'blake'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="双嵌套："><a href="#双嵌套：" class="headerlink" title="双嵌套："></a>双嵌套：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span>
 <span class="token keyword">from</span> EMP
 <span class="token keyword">where</span> DETPNO <span class="token operator">not</span> <span class="token operator">in</span><span class="token punctuation">(</span><span class="token keyword">Select</span> DEPTNO
@@ -747,13 +752,18 @@
             <span class="token keyword">from</span> EMP
             <span class="token keyword">where</span> DEPTNO <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token keyword">Select</span> DEPTNO  <span class="token keyword">from</span> EMP  <span class="token keyword">where</span> ENAME <span class="token operator">=</span> <span class="token string">'blake'</span><span class="token punctuation">)</span>
            <span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="SOME-和-ALL："><a href="#SOME-和-ALL：" class="headerlink" title="SOME 和 ALL："></a>SOME 和 ALL：</h2><h3 id="运算符-some：满足一个就行"><a href="#运算符-some：满足一个就行" class="headerlink" title="运算符+some：满足一个就行"></a>运算符+some：满足一个就行</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name 
 <span class="token keyword">from</span> instructor
 <span class="token keyword">where</span> salary <span class="token operator">&gt;</span> <span class="token keyword">some</span> <span class="token punctuation">(</span><span class="token keyword">select</span> salary <span class="token keyword">from</span> instructor <span class="token keyword">where</span> dept_name<span class="token operator">=</span><span class="token string">'Biology'</span><span class="token punctuation">)</span>
 <span class="token comment">-- 查找出来老师只要工资  比生物系最起码一个老师的工资高就行。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="运算符-all-：必须要全部满足才可以"><a href="#运算符-all-：必须要全部满足才可以" class="headerlink" title="运算符+all ：必须要全部满足才可以"></a>运算符+all ：必须要全部满足才可以</h2><h3 id="all-和-in-不是一个概念，in-是满足一个"><a href="#all-和-in-不是一个概念，in-是满足一个" class="headerlink" title="=all 和 in 不是一个概念，in 是满足一个"></a>=all 和 in 不是一个概念，in 是满足一个</h3><h3 id="lt-gt-some-和-not-in-不是一个概念some"><a href="#lt-gt-some-和-not-in-不是一个概念some" class="headerlink" title="<>some 和 not in 不是一个概念some="></a>&lt;&gt;some 和 not in 不是一个概念some=</h3><h3 id="lt-gt-all-和-not-in-一个概念"><a href="#lt-gt-all-和-not-in-一个概念" class="headerlink" title="<>all 和 not in 一个概念"></a>&lt;&gt;all 和 not in 一个概念</h3><h3 id="some-和-in-一个概念"><a href="#some-和-in-一个概念" class="headerlink" title="=some 和 in 一个概念"></a>=some 和 in 一个概念</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">         <span class="token operator">=</span>    <span class="token operator">&lt;&gt;</span>          <span class="token operator">&gt;=</span>     <span class="token operator">&lt;=</span>
+
+
+
+<h2 id="运算符-all-：必须要全部满足才可以"><a href="#运算符-all-：必须要全部满足才可以" class="headerlink" title="运算符+all ：必须要全部满足才可以"></a>运算符+all ：必须要全部满足才可以</h2><h3 id="x3D-all-和-in-不是一个概念，in-是满足一个"><a href="#x3D-all-和-in-不是一个概念，in-是满足一个" class="headerlink" title="=all 和 in 不是一个概念，in 是满足一个"></a>=all 和 in 不是一个概念，in 是满足一个</h3><h3 id="lt-gt-some-和-not-in-不是一个概念some-x3D"><a href="#lt-gt-some-和-not-in-不是一个概念some-x3D" class="headerlink" title="<>some 和 not in 不是一个概念some="></a>&lt;&gt;some 和 not in 不是一个概念some=</h3><h3 id="lt-gt-all-和-not-in-一个概念"><a href="#lt-gt-all-和-not-in-一个概念" class="headerlink" title="<>all 和 not in 一个概念"></a>&lt;&gt;all 和 not in 一个概念</h3><h3 id="x3D-some-和-in-一个概念"><a href="#x3D-some-和-in-一个概念" class="headerlink" title="=some 和 in 一个概念"></a>=some 和 in 一个概念</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">         <span class="token operator">=</span>    <span class="token operator">&lt;&gt;</span>          <span class="token operator">&gt;=</span>     <span class="token operator">&lt;=</span>
 <span class="token keyword">some</span>    <span class="token operator">in</span>    <span class="token comment">--         &gt;=min    &lt;=max</span>
 <span class="token keyword">all</span>     <span class="token comment">--    not in     &lt;=max    &lt;=min</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> name
 <span class="token keyword">from</span> student
 <span class="token keyword">where</span> id <span class="token operator">&lt;&gt;</span><span class="token keyword">all</span><span class="token punctuation">(</span><span class="token keyword">select</span> id
@@ -774,6 +784,7 @@
 
 <span class="token comment">-- 加一个</span>
 EMPNO <span class="token operator">is</span> <span class="token operator">not</span> <span class="token boolean">NULL</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -973,10 +984,10 @@ EMPNO <span class="token operator">is</span> <span class="token operator">not</s
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://www.thripear.space/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://www.thripear.space/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1323,7 +1334,7 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="https://www.thripear.space/medias/featureimages/20.jpg" class="responsive-img" alt="SQL理论课-Class 5">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/featureimages/20.jpg" class="responsive-img" alt="SQL理论课-Class 5">
                         
                         <span class="card-title">SQL理论课-Class 5</span>
                     </div>
@@ -1376,7 +1387,7 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="https://www.thripear.space/medias/featureimages/22.jpg" class="responsive-img" alt="SQL理论课-Class 3">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/featureimages/22.jpg" class="responsive-img" alt="SQL理论课-Class 3">
                         
                         <span class="card-title">SQL理论课-Class 3</span>
                     </div>
@@ -1651,7 +1662,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.5k</span>&nbsp;字
+                class="white-color">18.6k</span>&nbsp;字
             
             
             
@@ -1717,7 +1728,7 @@ new Valine({
             
             <br>
             
-            <span id="icp"><img src="https://www.thripear.space/medias/icp.png" style="vertical-align: text-bottom;" />
+            <span id="icp"><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/icp.png" style="vertical-align: text-bottom;" />
                 <a href="https://www.icpapi.com/thripear.space/" target="_blank">鲁ICP备2022018351号-1</a>
             </span>
             

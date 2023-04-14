@@ -65,7 +65,7 @@
             <div class="brand-logo">
                 <a href="https://www.thripear.space/" class="waves-effect waves-light">
                     
-                    <img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
+                    <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">阿狐和柴柴</span>
                 </a>
@@ -248,7 +248,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
+        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">阿狐和柴柴</div>
         <div class="logo-desc">
@@ -715,71 +715,108 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Chapter7-用户输入和while循环"><a href="#Chapter7-用户输入和while循环" class="headerlink" title="Chapter7 用户输入和while循环"></a>Chapter7 用户输入和while循环</h1><h2 id="7-1-input（）字符串输入"><a href="#7-1-input（）字符串输入" class="headerlink" title="7.1 input（）字符串输入"></a>7.1 input（）字符串输入</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">用户输入文本，把文本呈现给用户<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">message <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"请输入返回的文本："</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <pre><code>请输入返回的文本：12345
 12345
-</code></pre><h3 id="7-1-1-编写清晰的程序"><a href="#7-1-1-编写清晰的程序" class="headerlink" title="7.1.1 编写清晰的程序"></a>7.1.1 编写清晰的程序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">原理：
+</code></pre>
+<h3 id="7-1-1-编写清晰的程序"><a href="#7-1-1-编写清晰的程序" class="headerlink" title="7.1.1 编写清晰的程序"></a>7.1.1 编写清晰的程序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">原理：
 
 变量 <span class="token operator">=</span> <span class="token builtin">input</span>（参数 ：说明<span class="token operator">/</span>指示） <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"please enter your name:"</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Hello,</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <pre><code>please enter your name:Oliver
 Hello,Oliver
-</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python">echo <span class="token operator">=</span> <span class="token string">"语句1"</span>
+</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">echo <span class="token operator">=</span> <span class="token string">"语句1"</span>
 <span class="token comment">#echo = echo + “语句2“ 可以写成：</span>
 echo <span class="token operator">+=</span> <span class="token string">"语句2"</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>echo<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre><code>语句1语句2
-</code></pre><h3 id="7-1-2-int-：将input（）变成int型进行运算"><a href="#7-1-2-int-：将input（）变成int型进行运算" class="headerlink" title="7.1.2 int()：将input（）变成int型进行运算"></a>7.1.2 int()：将input（）变成int型进行运算</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">age <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"What’s your age?:"</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="7-1-2-int-：将input（）变成int型进行运算"><a href="#7-1-2-int-：将input（）变成int型进行运算" class="headerlink" title="7.1.2 int()：将input（）变成int型进行运算"></a>7.1.2 int()：将input（）变成int型进行运算</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">age <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"What’s your age?:"</span><span class="token punctuation">)</span>
 age <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Your age is </span><span class="token interpolation"><span class="token punctuation">{</span>age<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <pre><code>What’s your age?:65
 Your age is 65
-</code></pre><h3 id="7-1-3-求模运算符"><a href="#7-1-3-求模运算符" class="headerlink" title="7.1.3 求模运算符%"></a>7.1.3 求模运算符%</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">作用：将两个数相除并返回余数
+</code></pre>
+<h3 id="7-1-3-求模运算符"><a href="#7-1-3-求模运算符" class="headerlink" title="7.1.3 求模运算符%"></a>7.1.3 求模运算符%</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">作用：将两个数相除并返回余数
 如果一个数可被另一个数字整除，<span class="token operator">%</span>返回值为<span class="token number">0</span>
 常见用途：判断奇数偶数。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">5</span><span class="token operator">%</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
 <pre><code>2
-</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">6</span><span class="token operator">%</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">6</span><span class="token operator">%</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
 <pre><code>0
-</code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">5</span><span class="token operator">%</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">5</span><span class="token operator">%</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
 <pre><code>0
-</code></pre><h2 id="7-2-while循环简介"><a href="#7-2-while循环简介" class="headerlink" title="7.2 while循环简介"></a>7.2 while循环简介</h2><h3 id="7-2-1-使用while循环"><a href="#7-2-1-使用while循环" class="headerlink" title="7.2.1 使用while循环"></a>7.2.1 使用while循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法
+</code></pre>
+<h2 id="7-2-while循环简介"><a href="#7-2-while循环简介" class="headerlink" title="7.2 while循环简介"></a>7.2 while循环简介</h2><h3 id="7-2-1-使用while循环"><a href="#7-2-1-使用while循环" class="headerlink" title="7.2.1 使用while循环"></a>7.2.1 使用while循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法
 <span class="token keyword">while</span> 条件：   <span class="token comment">#注意冒号！！！</span>
   执行块 <span class="token comment">#注意缩进</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="7-2-2-设定退出值"><a href="#7-2-2-设定退出值" class="headerlink" title="7.2.2 设定退出值"></a>7.2.2 设定退出值</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#空字符串</span>
 messag <span class="token operator">=</span> <span class="token string">""</span>
 <span class="token comment">#空列表</span>
 message <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 <span class="token comment">#空字典</span>
 message <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">while</span> message <span class="token operator">!=</span> 设定值：
   执行块<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <h3 id="7-2-3-使用标志"><a href="#7-2-3-使用标志" class="headerlink" title="7.2.3 使用标志"></a>7.2.3 使用标志</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">标志本质上是一个： 变量
 用途：判断整个程序是否处于活动状态。
 当触发结束条件时，使标志 <span class="token operator">=</span> false
 <span class="token comment">#注意语法：</span>
 <span class="token keyword">while</span> 标志：
   执行块<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="7-2-4-Break：直接跳出循环"><a href="#7-2-4-Break：直接跳出循环" class="headerlink" title="7.2.4 Break：直接跳出循环"></a>7.2.4 Break：直接跳出循环</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">语法：
 <span class="token keyword">while</span> 循环条件：
   执行块
   <span class="token keyword">if</span> 跳出条件：
      <span class="token keyword">break</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="7-2-5-Continue：直接返回开头"><a href="#7-2-5-Continue：直接返回开头" class="headerlink" title="7.2.5 Continue：直接返回开头"></a>7.2.5 Continue：直接返回开头</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">current_number <span class="token operator">=</span> <span class="token number">0</span>
 <span class="token keyword">while</span> current_number <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">:</span>
     current_number <span class="token operator">+=</span> <span class="token number">1</span>
     <span class="token keyword">if</span> current_number <span class="token operator">%</span><span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
        <span class="token keyword">continue</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span>current_number<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre><code>1
 3
 5
 7
 9
-</code></pre><h3 id="7-2-6-避免无限循环"><a href="#7-2-6-避免无限循环" class="headerlink" title="7.2.6 避免无限循环"></a>7.2.6 避免无限循环</h3><p><u>注意循环条件不能始终为true</u></p>
+</code></pre>
+<h3 id="7-2-6-避免无限循环"><a href="#7-2-6-避免无限循环" class="headerlink" title="7.2.6 避免无限循环"></a>7.2.6 避免无限循环</h3><p><u>注意循环条件不能始终为true</u></p>
 <h2 id="7-3-while处理循环列表和字典"><a href="#7-3-while处理循环列表和字典" class="headerlink" title="7.3 while处理循环列表和字典"></a>7.3 while处理循环列表和字典</h2><h3 id="7-3-1-在列表间移动元素"><a href="#7-3-1-在列表间移动元素" class="headerlink" title="7.3.1 在列表间移动元素"></a>7.3.1 在列表间移动元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#当列表为空时，while会认为它是false。</span>
 an <span class="token operator">=</span> <span class="token punctuation">[</span>元素<span class="token number">1</span>，元素<span class="token number">2</span>，元素<span class="token number">3</span>···<span class="token punctuation">]</span>
 bn <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
@@ -790,10 +827,12 @@ bn <span class="token operator">=</span> <span class="token punctuation">[</span
     bn<span class="token punctuation">.</span>append<span class="token punctuation">(</span>b<span class="token punctuation">)</span>
 
 注意：bn中的顺序是an相反。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="7-3-2-while-remove-删除列表中-为某值的-所有元素"><a href="#7-3-2-while-remove-删除列表中-为某值的-所有元素" class="headerlink" title="7.3.2 while +  remove()删除列表中 为某值的 所有元素"></a>7.3.2 while +  remove()删除列表中 为某值的 所有元素</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#注意特殊语法：</span>
 
 <span class="token keyword">while</span> 删除元素 <span class="token keyword">in</span> 列表<span class="token punctuation">:</span>
     列表<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>删除元素<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="7-3-3-用户输入填充字典："><a href="#7-3-3-用户输入填充字典：" class="headerlink" title="7.3.3 用户输入填充字典："></a>7.3.3 用户输入填充字典：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#复习语法：</span>
   字典插入新的键值对：
   字典<span class="token punctuation">[</span>新增键<span class="token punctuation">]</span> <span class="token operator">=</span> 新增值
@@ -999,10 +1038,10 @@ bn <span class="token operator">=</span> <span class="token punctuation">[</span
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://www.thripear.space/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://www.thripear.space/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1349,7 +1388,7 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="https://www.thripear.space/medias/featureimages/3.jpg" class="responsive-img" alt="数据库演习-Class1">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/featureimages/3.jpg" class="responsive-img" alt="数据库演习-Class1">
                         
                         <span class="card-title">数据库演习-Class1</span>
                     </div>
@@ -1402,7 +1441,7 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="https://www.thripear.space/medias/featureimages/11.jpg" class="responsive-img" alt="操作系统-Note 1">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/featureimages/11.jpg" class="responsive-img" alt="操作系统-Note 1">
                         
                         <span class="card-title">操作系统-Note 1</span>
                     </div>
@@ -1673,7 +1712,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.5k</span>&nbsp;字
+                class="white-color">18.6k</span>&nbsp;字
             
             
             
@@ -1739,7 +1778,7 @@ new Valine({
             
             <br>
             
-            <span id="icp"><img src="https://www.thripear.space/medias/icp.png" style="vertical-align: text-bottom;" />
+            <span id="icp"><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/icp.png" style="vertical-align: text-bottom;" />
                 <a href="https://www.icpapi.com/thripear.space/" target="_blank">鲁ICP备2022018351号-1</a>
             </span>
             

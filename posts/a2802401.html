@@ -65,7 +65,7 @@
             <div class="brand-logo">
                 <a href="https://www.thripear.space/" class="waves-effect waves-light">
                     
-                    <img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
+                    <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">阿狐和柴柴</span>
                 </a>
@@ -248,7 +248,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
+        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="http://oliverhangleblog.oss-cn-hangzhou.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">阿狐和柴柴</div>
         <div class="logo-desc">
@@ -721,20 +721,27 @@
 <span class="token keyword">select</span> empno <span class="token keyword">from</span> emp <span class="token keyword">where</span> deptno <span class="token operator">=</span> <span class="token number">20</span>
 <span class="token keyword">intersect</span>
 <span class="token keyword">select</span> empno <span class="token keyword">from</span> emp <span class="token keyword">where</span> deptno <span class="token operator">=</span> <span class="token number">20</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 <h1 id="Class-3"><a href="#Class-3" class="headerlink" title="Class_3"></a>Class_3</h1><h2 id="聚集函数-Aggregate-Functions"><a href="#聚集函数-Aggregate-Functions" class="headerlink" title="聚集函数 Aggregate Functions"></a>聚集函数 Aggregate Functions</h2><h3 id="avg-min-max-sum-count"><a href="#avg-min-max-sum-count" class="headerlink" title="avg min max sum count"></a>avg min max sum count</h3><p>输入一个集合，输出一个值。</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">avg<span class="token punctuation">,</span>sum <span class="token comment">#只能用于数值</span>
 min<span class="token punctuation">,</span>max<span class="token punctuation">,</span>count <span class="token comment">#可以用于除数值之外。</span>
 count <span class="token comment">#是用来计数的，非NULL记录+1，反之不积累。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#AVG例子：</span>
 <span class="token comment">#注意：相同数据不去重复。</span>
 <span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span>
 <span class="token keyword">from</span> instructor
 <span class="token keyword">where</span> dept_name <span class="token operator">=</span> <span class="token string">'Biology'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#加distinct去重复：</span>
 <span class="token keyword">select</span> 聚集函数<span class="token punctuation">(</span><span class="token keyword">distinct</span> 属性<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">count</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> 里面不能使用 <span class="token keyword">distinct</span>
 <span class="token keyword">distinct</span> 在 max 和 min 中一样。
 除了 <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>外所有的聚集函数都忽略输入集合中的空值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="如果输入的集合只有空值"><a href="#如果输入的集合只有空值" class="headerlink" title="如果输入的集合只有空值"></a>如果输入的集合只有空值</h3><p>avg , max, min 返回空值<br>count 输入空值，返回0</p>
 <h2 id="分组："><a href="#分组：" class="headerlink" title="分组："></a>分组：</h2><h3 id="举例：求多个系的工资平均值"><a href="#举例：求多个系的工资平均值" class="headerlink" title="举例：求多个系的工资平均值"></a>举例：求多个系的工资平均值</h3><p>先按照系分成多个组，每个组求一个工资平均值</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 注意：出现在select子句中但没有被聚集的属性必须出现在   group by  子句中</span>
@@ -748,6 +755,7 @@ count <span class="token comment">#是用来计数的，非NULL记录+1，反之
 <span class="token keyword">group</span> <span class="token keyword">by</span> 属性<span class="token number">1</span>，属性<span class="token number">2</span>（按照属性<span class="token number">1</span>，属性<span class="token number">2</span>分组）
 <span class="token keyword">having</span> 条件
 这样先通过 <span class="token keyword">having</span> 过滤元组，然后再分组。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>计算机操作顺序：<br>From      where      Group BY    Having    Select    Order Bya</p>
 <h2 id="练习题："><a href="#练习题：" class="headerlink" title="练习题："></a>练习题：</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>数字<span class="token punctuation">)</span>
 <span class="token keyword">from</span> instructor
@@ -767,6 +775,7 @@ count <span class="token comment">#是用来计数的，非NULL记录+1，反之
 <span class="token keyword">from</span> takes
 <span class="token keyword">group</span> <span class="token keyword">by</span> ID
 <span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>course_Id<span class="token punctuation">)</span><span class="token operator">&gt;=</span><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -966,10 +975,10 @@ count <span class="token comment">#是用来计数的，非NULL记录+1，反之
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://www.thripear.space/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://www.thripear.space/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1316,7 +1325,7 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="https://www.thripear.space/medias/featureimages/21.jpg" class="responsive-img" alt="SQL理论课-Class 4">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/featureimages/21.jpg" class="responsive-img" alt="SQL理论课-Class 4">
                         
                         <span class="card-title">SQL理论课-Class 4</span>
                     </div>
@@ -1369,7 +1378,7 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="https://www.thripear.space/medias/featureimages/22.jpg" class="responsive-img" alt="SQL理论课-Note 1_Revision">
+                        <img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/featureimages/22.jpg" class="responsive-img" alt="SQL理论课-Note 1_Revision">
                         
                         <span class="card-title">SQL理论课-Note 1_Revision</span>
                     </div>
@@ -1644,7 +1653,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.5k</span>&nbsp;字
+                class="white-color">18.6k</span>&nbsp;字
             
             
             
@@ -1710,7 +1719,7 @@ new Valine({
             
             <br>
             
-            <span id="icp"><img src="https://www.thripear.space/medias/icp.png" style="vertical-align: text-bottom;" />
+            <span id="icp"><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://www.thripear.space/medias/icp.png" style="vertical-align: text-bottom;" />
                 <a href="https://www.icpapi.com/thripear.space/" target="_blank">鲁ICP备2022018351号-1</a>
             </span>
             
